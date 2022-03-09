@@ -1,5 +1,5 @@
 import XCTest
-@testable import FellasDS
+//@testable import FellasDS
 
 final class FellasDSTests: XCTestCase {
     func testExample() throws {

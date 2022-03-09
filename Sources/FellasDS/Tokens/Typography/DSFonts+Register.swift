@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-extension FDSFont {
+extension DSTypographyStyle {
 
     static func registerFont(bundle: Bundle, fontName: String, fontExtension: String = "otf") {
         guard let fontURL = bundle.url(forResource: fontName, withExtension: fontExtension),

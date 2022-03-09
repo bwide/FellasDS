@@ -6,7 +6,14 @@
 //
 
 import Foundation
+import CoreGraphics
 
-public struct FDSOpacity {
-    
+public enum DSOpacity: CGFloat, CaseIterable {
+    case opaque = 1
+    case transparent = 0
+}
+
+public struct DSOpacities {
+    public var opaque = DSOpacity.opaque.rawValue
+    public var transparent = DSOpacity.transparent.rawValue
 }

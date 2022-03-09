@@ -8,10 +8,18 @@
 import Foundation
 import CoreGraphics
 
-public struct FDSCornerRadius {
-    public let small: CGFloat = 8
-    public let medium: CGFloat = 16
-    public let large: CGFloat = 24
+public enum DSCornerRadius: CGFloat, CaseIterable {
+    case small = 8
+    case medium = 16
+    case large = 24
     
-    public func round(_ width: CGFloat) -> CGFloat { width/2 }
+    static func round(width: CGFloat) -> CGFloat { width/2 }
+}
+
+public struct DSCornerRadii {
+    public var small = DSCornerRadius.small.rawValue
+    public var medium = DSCornerRadius.medium.rawValue
+    public var large = DSCornerRadius.large.rawValue
+
+    public func round(width: CGFloat) -> CGFloat { DSCornerRadius.round(width: width) }
 }
