@@ -16,7 +16,7 @@ public enum DSTextColor: String, DSColor, CaseIterable {
     case placeholder
     case link
 
-    var color: Color {
+    public var color: Color {
         switch self {
         case .primary: return Color(UIColor.label)
         case .secondary: return Color(UIColor.secondaryLabel)

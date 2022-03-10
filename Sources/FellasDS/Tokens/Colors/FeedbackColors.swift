@@ -14,7 +14,7 @@ public enum DSFeedbackColor: String, DSColor, CaseIterable {
     case warning
     case danger
 
-    var color: Color {
+    public var color: Color {
         switch self {
         case .success: return Color(UIColor.systemGreen)
         case .warning: return Color(UIColor.systemYellow)

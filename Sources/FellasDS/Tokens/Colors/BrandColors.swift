@@ -14,7 +14,7 @@ public enum DSBrandColor: String, DSColor, CaseIterable {
     case secondary
     case tertiary
 
-    var color: Color {
+    public var color: Color {
         switch self {
         case .primary: return Color.accentColor
         case .secondary: return Color(UIColor.systemPurple)

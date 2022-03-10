@@ -19,7 +19,7 @@ public extension View {
 }
 
 public extension CGFloat {
-    public static var ds = DSNumbers()
+    static var ds = DSNumbers()
 }
 
 public struct DSNumbers {
