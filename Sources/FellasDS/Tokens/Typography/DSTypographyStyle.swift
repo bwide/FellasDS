@@ -29,17 +29,17 @@ public enum DSTypographyStyle: String, CaseIterable {
 
     var font: Font {
         switch self {
-        case .largeTitle: return .largeTitle
-        case .title1: return .title
-        case .title2: return .title2
-        case .title3: return .title3
-        case .headline: return .headline
-        case .subhead: return .subheadline
-        case .body: return .body
-        case .callout: return .callout
-        case .footnote: return .footnote
-        case .caption1: return .caption
-        case .caption2: return .caption2
+        case .largeTitle: return .largeTitle.weight(.bold)
+        case .title1: return .title.weight(.bold)
+        case .title2: return .title2.weight(.semibold)
+        case .title3: return .title3.weight(.medium)
+        case .headline: return .headline.weight(.heavy)
+        case .subhead: return .subheadline.weight(.medium)
+        case .body: return .body.weight(.regular)
+        case .callout: return .callout.weight(.semibold)
+        case .footnote: return .footnote.weight(.semibold)
+        case .caption1: return .caption.weight(.semibold)
+        case .caption2: return .caption2.weight(.semibold)
         }
     }
 
@@ -49,13 +49,26 @@ public enum DSTypographyStyle: String, CaseIterable {
         case .title1: return DSTextColor.primary.color
         case .title2: return DSTextColor.primary.color
         case .title3: return DSTextColor.primary.color
-        case .headline: return DSTextColor.secondary.color
+        case .headline: return DSTextColor.primary.color
         case .subhead: return DSTextColor.secondary.color
         case .body: return DSTextColor.primary.color
-        case .callout: return DSTextColor.tertiary.color
+        case .callout: return DSTextColor.secondary.color
         case .footnote: return DSTextColor.tertiary.color
-        case .caption1: return DSTextColor.tertiary.color
+        case .caption1: return DSTextColor.secondary.color
         case .caption2: return DSTextColor.tertiary.color
         }
+    }
+}
+
+struct FontsStylesPreview: PreviewProvider {
+    static var previews: some View {
+        Group {
+            VStack(alignment: .leading, spacing: .ds.spacing.large) {
+                ForEach(DSTypographyStyle.allCases, id: \.self) { style in
+                    Text(style.rawValue).style(style)
+                }
+            }
+        }
+        .preferredColorScheme(.dark)
     }
 }

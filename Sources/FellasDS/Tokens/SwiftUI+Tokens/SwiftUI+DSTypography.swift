@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-extension Text {
+public extension Text {
     func style(_ style: DSTypographyStyle) -> some View {
         modifier(DSTextStyle(style: style))
     }

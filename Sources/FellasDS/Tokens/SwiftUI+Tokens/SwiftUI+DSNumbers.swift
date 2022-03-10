@@ -19,11 +19,11 @@ public extension View {
 }
 
 public extension CGFloat {
-    static var ds = DSNumbers()
+    public static var ds = DSNumbers()
 }
 
 public struct DSNumbers {
-    var spacing = DSSpacings()
-    var opacity = DSOpacities()
-    var cornerRadius = DSCornerRadii()
+    public var spacing = DSSpacings()
+    public var opacity = DSOpacities()
+    public var cornerRadius = DSCornerRadii()
 }
