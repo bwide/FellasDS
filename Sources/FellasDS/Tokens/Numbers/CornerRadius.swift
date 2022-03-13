@@ -9,7 +9,7 @@ import Foundation
 import CoreGraphics
 
 public enum DSCornerRadius: CGFloat, CaseIterable {
-    case small = 8
+    case small = 9
     case medium = 16
     case large = 24
     

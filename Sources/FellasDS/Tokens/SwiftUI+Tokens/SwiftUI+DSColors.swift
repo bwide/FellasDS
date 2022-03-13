@@ -19,7 +19,7 @@ public extension View {
 }
 
 public extension Color {
-    static var fds = FDSColors()
+    static var ds = FDSColors()
 }
 
 public struct FDSColors {

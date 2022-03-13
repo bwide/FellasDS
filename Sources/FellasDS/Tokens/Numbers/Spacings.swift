@@ -9,6 +9,7 @@ import Foundation
 import CoreGraphics
 
 public enum DSSpacing: CGFloat, CaseIterable {
+    case none = 0
     /// xxxs spacing: 2
     case xxxSmall = 2
     /// xxs spacing: 4
@@ -30,6 +31,8 @@ public enum DSSpacing: CGFloat, CaseIterable {
 }
 
 public struct DSSpacings {
+    /// zero spacing: 0
+    public var nones = DSSpacing.none.rawValue
     /// xxxs spacing: 2
     public var xxxSmall = DSSpacing.xxxSmall.rawValue
     /// xxs spacing: 4
