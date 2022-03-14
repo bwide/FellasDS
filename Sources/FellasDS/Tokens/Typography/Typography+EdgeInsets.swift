@@ -11,7 +11,7 @@ import SwiftUI
 extension DSTypographyStyle {
     var insets: EdgeInsets {
         switch self {
-        case .largeTitle: return EdgeInsets(top: .none, leading: .medium, bottom: .xxxSmall, trailing: .xxxSmall)
+        case .largeTitle: return EdgeInsets(top: .none, leading: .large, bottom: .xxxSmall, trailing: .xxxSmall)
         case .title1: return EdgeInsets(top: .none, leading: .none, bottom: .none, trailing: .none)
         case .title2: return EdgeInsets(top: .none, leading: .none, bottom: .none, trailing: .none)
         case .title3: return EdgeInsets(top: .none, leading: .none, bottom: .none, trailing: .none)

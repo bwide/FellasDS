@@ -8,7 +8,19 @@
 import Foundation
 import SwiftUI
 
-public extension Text {
+struct DSTextStyle: ViewModifier {
+
+    var style: DSTypographyStyle
+
+    func body(content: Content) -> some View {
+        content
+            .font(style.font)
+            .foregroundColor(style.color)
+    }
+}
+
+
+public extension View {
     @ViewBuilder
     func style(_ style: DSTypographyStyle, defaultPosition: Bool = true) -> some View {
         if defaultPosition {
@@ -47,17 +59,5 @@ private extension View {
         case .caption2:
             self.padding(style.insets)
         }
-    }
-}
-
-
-struct DSTextStyle: ViewModifier {
-
-    var style: DSTypographyStyle
-
-    func body(content: Content) -> some View {
-        content
-            .font(style.font)
-            .foregroundColor(style.color)
     }
 }
