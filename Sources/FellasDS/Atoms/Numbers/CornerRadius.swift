@@ -7,6 +7,25 @@
 
 import Foundation
 import CoreGraphics
+import SwiftUI
+
+struct RoundViewModifier: ViewModifier {
+
+    var axis: Axis
+
+    func body(content: Content) -> some View {
+        GeometryReader { geo in
+            content
+                .cornerRadius(axis == .horizontal ? geo.size.width/2 : geo.size.height/2)
+        }
+    }
+}
+
+extension View {
+    func roundCorners(axis: Axis = .vertical) -> some View {
+        modifier(RoundViewModifier(axis: axis))
+    }
+}
 
 public enum DSCornerRadius: CGFloat, CaseIterable {
     case small = 9
