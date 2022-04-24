@@ -7,22 +7,23 @@
 
 import Foundation
 import SwiftUI
-import UIKit
 
 public enum DSTextColor: String, DSColor, CaseIterable {
-    case primary
-    case secondary
-    case tertiary
-    case placeholder
-    case link
+
+    case primary = "Primary"
+    case secondary = "Secondary"
+    case tertiary = "Tertiary"
+    case placeholder = "Placeholder"
+    case link = "Link"
 
     public var color: Color {
+        Color("Text\(rawValue)", bundle: Bundle.module)
+    }
+
+    public var groupedColor: Color {
         switch self {
-        case .primary: return Color(UIColor.label)
-        case .secondary: return Color(UIColor.secondaryLabel)
-        case .tertiary: return Color(UIColor.tertiaryLabel)
-        case .placeholder: return Color(UIColor.placeholderText)
-        case .link: return Color(UIColor.link)
+        case .placeholder, .link: return color
+        default: return Color("TextGrouped\(rawValue)", bundle: Bundle.module)
         }
     }
 }

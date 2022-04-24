@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import UIKit
 
 public protocol DSColor {
     var rawValue: String { get }
@@ -15,16 +14,13 @@ public protocol DSColor {
 }
 
 public enum DSBackgroundColor: String, DSColor, CaseIterable {
-    case primary
-    case secondary
-    case tertiary
+
+    case primary = "Primary"
+    case secondary = "Secondary"
+    case tertiary = "Tertiary"
 
     public var color: Color {
-        switch self {
-        case .primary: return Color(UIColor.systemBackground)
-        case .secondary: return Color(UIColor.secondarySystemBackground)
-        case .tertiary: return Color(UIColor.tertiarySystemBackground)
-        }
+        Color("Background\(rawValue)", bundle: Bundle.module)
     }
 }
 

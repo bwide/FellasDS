@@ -22,12 +22,14 @@ struct RoundViewModifier: ViewModifier {
 }
 
 extension View {
+    /// returns a view with semi-circles on it's vertical or horizontal edges
     func roundCorners(axis: Axis = .vertical) -> some View {
         modifier(RoundViewModifier(axis: axis))
     }
 }
 
 public enum DSCornerRadius: CGFloat, CaseIterable {
+
     case small = 9
     case medium = 16
     case large = 24

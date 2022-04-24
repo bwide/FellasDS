@@ -7,19 +7,15 @@
 
 import Foundation
 import SwiftUI
-import UIKit
 
 public enum DSBrandColor: String, DSColor, CaseIterable {
-    case primary
-    case secondary
-    case tertiary
+
+    case primary = "Primary"
+    case secondary = "Secondary"
+    case tertiary = "Tertiary"
 
     public var color: Color {
-        switch self {
-        case .primary: return Color.accentColor
-        case .secondary: return Color(UIColor.systemPurple)
-        case .tertiary: return Color(UIColor.systemBlue)
-        }
+        Color("Brand\(rawValue)", bundle: Bundle.module)
     }
 }
 

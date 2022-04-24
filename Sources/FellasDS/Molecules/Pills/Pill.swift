@@ -14,7 +14,6 @@ struct Pill: View {
 
     var body: some View {
         Text("Pill")
-            .foregroundColor(.white)
             .style(.headline)
             .padding(.vertical, .ds.spacing.xSmall)
             .padding(.horizontal, .ds.spacing.medium)
@@ -23,8 +22,9 @@ struct Pill: View {
 
     var background: some View {
         Rectangle()
-            .fill(Color.ds.background.tertiary)
+            .fill(Color.ds.brand.primary)
             .roundCorners()
+            .frame(minWidth: .ds.spacing.xxxLarge)
     }
 }
 

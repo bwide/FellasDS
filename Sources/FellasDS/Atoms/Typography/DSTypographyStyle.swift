@@ -9,9 +9,7 @@ import Foundation
 import SwiftUI
 
 public enum DSTypographyStyle: String, CaseIterable {
-
     case largeTitle
-
     case title1
     case title2
     case title3
@@ -31,14 +29,14 @@ public enum DSTypographyStyle: String, CaseIterable {
         switch self {
         case .largeTitle: return .largeTitle.weight(.bold)
         case .title1: return .title.weight(.bold)
-        case .title2: return .title2.weight(.semibold)
+        case .title2: return .title2.weight(.bold)
         case .title3: return .title3.weight(.medium)
-        case .headline: return .headline.weight(.heavy)
-        case .subhead: return .subheadline.weight(.medium)
-        case .body: return .body.weight(.regular)
-        case .callout: return .callout.weight(.semibold)
-        case .footnote: return .footnote.weight(.semibold)
-        case .caption1: return .caption.weight(.semibold)
+        case .headline: return .headline.weight(.bold)
+        case .subhead: return .subheadline.weight(.semibold)
+        case .body: return .body.weight(.medium)
+        case .callout: return .callout.weight(.medium)
+        case .footnote: return .footnote.weight(.medium)
+        case .caption1: return .caption.weight(.medium)
         case .caption2: return .caption2.weight(.semibold)
         }
     }
@@ -49,7 +47,7 @@ public enum DSTypographyStyle: String, CaseIterable {
         case .title1: return DSTextColor.primary.color
         case .title2: return DSTextColor.primary.color
         case .title3: return DSTextColor.primary.color
-        case .headline: return DSTextColor.primary.color
+        case .headline: return .white
         case .subhead: return DSTextColor.secondary.color
         case .body: return DSTextColor.primary.color
         case .callout: return DSTextColor.secondary.color
@@ -65,10 +63,12 @@ struct FontsStylesPreview: PreviewProvider {
         Group {
             VStack(alignment: .leading, spacing: .ds.spacing.large) {
                 ForEach(DSTypographyStyle.allCases, id: \.self) { style in
-                    Text(style.rawValue).style(style)
+                    Text(style.rawValue)
+                        .style(style)
                 }
             }
+            .padding(.leading, .ds.spacing.medium)
         }
-        .preferredColorScheme(.dark)
+        .preferredColorScheme(.light)
     }
 }

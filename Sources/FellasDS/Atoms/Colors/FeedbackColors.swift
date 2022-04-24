@@ -7,24 +7,20 @@
 
 import Foundation
 import SwiftUI
-import UIKit
 
 public enum DSFeedbackColor: String, DSColor, CaseIterable {
-    case success
-    case warning
-    case danger
+
+    case success = "Success"
+    case warning = "Warning"
+    case error = "Error"
 
     public var color: Color {
-        switch self {
-        case .success: return Color(UIColor.systemGreen)
-        case .warning: return Color(UIColor.systemYellow)
-        case .danger: return Color(UIColor.systemRed)
-        }
+        Color("Feedback\(rawValue)", bundle: Bundle.module)
     }
 }
 
 public struct FDSFeedbackColors {
     public let success = DSFeedbackColor.success.color
     public let warning = DSFeedbackColor.warning.color
-    public let danger = DSFeedbackColor.danger.color
+    public let error = DSFeedbackColor.error.color
 }
