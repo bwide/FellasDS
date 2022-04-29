@@ -16,7 +16,7 @@ struct RoundViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         GeometryReader { geo in
             content
-                .cornerRadius(axis == .horizontal ? geo.size.width/2 : geo.size.height/2)
+                .cornerRadius(axis == .horizontal ? geo.size.width/2 : geo.size.height/2, antialiased: true)
         }
     }
 }
@@ -30,7 +30,7 @@ extension View {
 
 public enum DSCornerRadius: CGFloat, CaseIterable {
 
-    case small = 9
+    case small = 8
     case medium = 16
     case large = 24
     
@@ -38,8 +38,11 @@ public enum DSCornerRadius: CGFloat, CaseIterable {
 }
 
 public struct DSCornerRadii {
+    /// small: 8
     public var small = DSCornerRadius.small.rawValue
+    /// medium: 16
     public var medium = DSCornerRadius.medium.rawValue
+    /// large: 24
     public var large = DSCornerRadius.large.rawValue
 
     public func round(width: CGFloat) -> CGFloat { DSCornerRadius.round(width: width) }
