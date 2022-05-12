@@ -25,7 +25,9 @@ struct ToolbarPreview: PreviewProvider {
                                 .style(.title3)
                         }
                         ToolbarItem(placement: .primaryAction) {
-                            Button(systemIcon: "plus", action: {})
+                            Button(action: {}) {
+                                Label("add", image: "plus")
+                            }
                                 .style(.round)
                         }
 

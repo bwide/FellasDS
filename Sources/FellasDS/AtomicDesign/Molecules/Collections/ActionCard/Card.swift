@@ -27,7 +27,9 @@ public struct ActionCardView: View {
             HStack {
                 Text("Title").style(.title2)
                 Spacer()
-                Button(systemIcon: "plus", action: { })
+                Button(action: {}) {
+                    Label("add", image: "plus")
+                }
                     .style(.round)
             }
             HStack {

@@ -45,8 +45,10 @@ struct PillPreview: PreviewProvider {
             HStack {
                 Button("Text", action: {})
                     .style(.pill)
-                Button(systemIcon: "plus", action: {})
-                    .style(.round)
+                Button(action: {}) {
+                    Label("add", image: "plus")
+                }
+                    .style(.round) //TODO: remove title from here
             }
         }
     }

@@ -28,12 +28,3 @@ public extension Button {
         }
     }
 }
-
-// MARK: - System Icon
-
-public extension Button {
-    init(systemIcon: String, action: @escaping () -> Void) where Label == Text {
-        self.init("\(Image(systemName: systemIcon))",
-                  action: action)
-    }
-}
