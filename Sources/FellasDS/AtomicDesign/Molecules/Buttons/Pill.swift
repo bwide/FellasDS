@@ -11,8 +11,7 @@ import SwiftUI
 struct DSPillButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(DSTypographyStyle.headline.font)
-            .foregroundColor(DSTypographyStyle.headline.color)
+            .textStyle(.headline, color: .white)
             .padding(.vertical, .ds.spacing.xxSmall)
             .padding(.horizontal, .ds.spacing.small)
             .background(background)
@@ -28,8 +27,7 @@ struct DSPillButtonStyle: ButtonStyle {
 struct DSRoundButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(DSTypographyStyle.headline.font)
-            .foregroundColor(DSTypographyStyle.headline.color)
+            .textStyle(.headline, color: .white)
             .padding(.vertical, .ds.spacing.xxSmall)
             .padding(.horizontal, .ds.spacing.xxSmall)
             .background(

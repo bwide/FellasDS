@@ -41,13 +41,13 @@ public enum DSTypographyStyle: String, CaseIterable {
         }
     }
 
-    var color: Color {
+    var defaultColor: Color {
         switch self {
         case .largeTitle: return DSTextColor.primary.color
         case .title1: return DSTextColor.primary.color
         case .title2: return DSTextColor.primary.color
         case .title3: return DSTextColor.primary.color
-        case .headline: return .white
+        case .headline: return DSTextColor.primary.color
         case .subhead: return DSTextColor.secondary.color
         case .body: return DSTextColor.primary.color
         case .callout: return DSTextColor.secondary.color
@@ -64,7 +64,7 @@ struct FontsStylesPreview: PreviewProvider {
             VStack(alignment: .leading, spacing: .ds.spacing.large) {
                 ForEach(DSTypographyStyle.allCases, id: \.self) { style in
                     Text(style.rawValue)
-                        .style(style)
+                        .textStyle(style)
                 }
             }
             .padding(.leading, .ds.spacing.medium)

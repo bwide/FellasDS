@@ -11,19 +11,20 @@ import SwiftUI
 struct DSTextStyle: ViewModifier {
 
     var style: DSTypographyStyle
+    @State var color: Color?
 
     func body(content: Content) -> some View {
         content
             .font(style.font)
-            .foregroundColor(style.color)
+            .foregroundColor(color ?? style.defaultColor)
             .padding(style.insets)
     }
 }
 
 
-public extension Text {
+public extension View {
     @ViewBuilder
-    func style(_ style: DSTypographyStyle) -> some View {
-        modifier(DSTextStyle(style: style))
+    func textStyle(_ style: DSTypographyStyle, color: Color? = nil) -> some View {
+        modifier(DSTextStyle(style: style, color: color))
     }
 }

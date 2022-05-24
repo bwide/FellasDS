@@ -13,22 +13,22 @@ struct ColorsView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: .ds.spacing.large) {
                 Text("Background Colors")
-                    .style(.title1)
+                    .textStyle(.title1)
                 ForEach(DSBackgroundColor.allCases, id: \.self) { style in
                     cell(style: style)
                 }
                 Text("Text Colors")
-                    .style(.title1)
+                    .textStyle(.title1)
                 ForEach(DSTextColor.allCases, id: \.self) { style in
                     cell(style: style)
                 }
                 Text("Brand Colors")
-                    .style(.title1)
+                    .textStyle(.title1)
                 ForEach(DSBrandColor.allCases, id: \.self) { style in
                     cell(style: style)
                 }
                 Text("Feedback Colors")
-                    .style(.title1)
+                    .textStyle(.title1)
                 ForEach(DSFeedbackColor.allCases, id: \.self) { style in
                     cell(style: style)
                 }

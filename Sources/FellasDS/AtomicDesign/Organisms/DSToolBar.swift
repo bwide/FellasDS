@@ -22,7 +22,7 @@ struct ToolbarPreview: PreviewProvider {
                         }
                         ToolbarItem(placement: .principal) {
                             Text("Title")
-                                .style(.title3)
+                                .textStyle(.title3)
                         }
                         ToolbarItem(placement: .primaryAction) {
                             Button(action: {}) {

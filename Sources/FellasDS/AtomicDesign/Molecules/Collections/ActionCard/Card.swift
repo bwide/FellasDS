@@ -25,7 +25,7 @@ public struct ActionCardView: View {
     var content: some View {
         VStack {
             HStack {
-                Text("Title").style(.title2)
+                Text("Title").textStyle(.title2)
                 Spacer()
                 Button(action: {}) {
                     Label("add", image: "plus")
@@ -33,13 +33,13 @@ public struct ActionCardView: View {
                     .style(.round)
             }
             HStack {
-                Text("Subitle").style(.caption1)
+                Text("Subitle").textStyle(.caption1)
                 Spacer()
             }
             Spacer()
             HStack {
                 Spacer()
-                Text("Info").style(.title3)
+                Text("Info").textStyle(.title3)
             }
         }
     }
