@@ -48,7 +48,7 @@ public enum DSTypographyStyle: String, CaseIterable {
         case .title2: return DSTextColor.primary.color
         case .title3: return DSTextColor.primary.color
         case .headline: return DSTextColor.primary.color
-        case .subhead: return DSTextColor.secondary.color
+        case .subhead: return DSTextColor.tertiary.color
         case .body: return DSTextColor.primary.color
         case .callout: return DSTextColor.secondary.color
         case .footnote: return DSTextColor.tertiary.color

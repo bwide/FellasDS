@@ -25,6 +25,6 @@ struct DSTextStyle: ViewModifier {
 public extension View {
     @ViewBuilder
     func textStyle(_ style: DSTypographyStyle, color: Color? = nil) -> some View {
-        modifier(DSTextStyle(style: style, color: color))
+        modifier(DSTextStyle(style: style, color: color ?? style.defaultColor))
     }
 }
