@@ -20,7 +20,7 @@ struct DSPillButtonStyle: ButtonStyle {
     var background: some View {
         Rectangle()
             .fill(Color.ds.brand.primary)
-            .cornerRadius(.medium)
+            .cornerRadius(ds: .medium)
     }
 }
 

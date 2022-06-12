@@ -9,12 +9,11 @@ import Foundation
 import SwiftUI
 
 public extension View {
-    func cornerRadius(_ radius: DSCornerRadius) -> some View {
-        self.cornerRadius(radius.rawValue)
+    @inlinable func cornerRadius(ds radius: DSCornerRadius, antialiased: Bool = true) -> some View {
+        cornerRadius(radius.rawValue, antialiased: antialiased)
     }
-
-    func cornerRadius(_ radius: DSCornerRadius, antialiased: Bool) -> some View {
-        self.cornerRadius(radius.rawValue, antialiased: antialiased)
+    @inlinable func padding(_ edges: Edge.Set = .all, ds length: DSSpacing) -> some View {
+        padding(edges, length.rawValue)
     }
 }
 
@@ -26,4 +25,27 @@ public struct DSNumbers {
     public var spacing = DSSpacings()
     public var opacity = DSOpacities()
     public var cornerRadius = DSCornerRadii()
+}
+
+//MARK: - Size
+extension DSSize {
+    var cgSize: CGSize {
+        switch UITraitCollection.current.preferredContentSizeCategory {
+        default:
+            return CGSize(width: rawValue, height: rawValue)
+        }
+    }
+}
+
+
+extension CGSize {
+    static var ds = DSSizes()
+}
+
+public extension View {
+    func frame(ds size: DSSize, alignment: Alignment = .center) -> some View {
+        frame(width: size.cgSize.width,
+              height: size.cgSize.height,
+              alignment: alignment)
+    }
 }
