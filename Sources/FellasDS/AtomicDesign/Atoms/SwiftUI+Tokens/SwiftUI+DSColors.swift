@@ -20,6 +20,10 @@ public extension View {
 
 public extension Color {
     static var ds = FDSColors()
+    
+    @inlinable func opacity(ds opacity: DSOpacity) -> Color {
+        self.opacity(opacity.rawValue)
+    }
 }
 
 public struct FDSColors {

@@ -29,9 +29,22 @@ public enum DSTextColor: String, DSColor, CaseIterable {
 }
 
 public struct FDSTextColors {
-    public let primary = DSTextColor.primary.color
-    public let secondary = DSTextColor.secondary.color
-    public let tertiary = DSTextColor.tertiary.color
-    public let placeholder = DSTextColor.placeholder.color
-    public let link = DSTextColor.link.color
+    public let background = Background()
+    public let grouped = Grouped()
+    
+    public struct Background {
+        public let primary = DSTextColor.primary.color
+        public let secondary = DSTextColor.secondary.color
+        public let tertiary = DSTextColor.tertiary.color
+        public let placeholder = DSTextColor.placeholder.color
+        public let link = DSTextColor.link.color
+    }
+    
+    public struct Grouped {
+        public let primary = DSTextColor.primary.groupedColor
+        public let secondary = DSTextColor.secondary.groupedColor
+        public let tertiary = DSTextColor.tertiary.groupedColor
+        public let placeholder = DSTextColor.placeholder.groupedColor
+        public let link = DSTextColor.link.groupedColor
+    }
 }

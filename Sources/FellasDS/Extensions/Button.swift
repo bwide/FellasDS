@@ -12,6 +12,7 @@ import SwiftUI
 
 public enum DSButtonStyle {
     case pill
+    case action
     case round
 }
 
@@ -25,6 +26,9 @@ public extension Button {
         case .round:
             self
                 .buttonStyle(DSRoundButtonStyle())
+        case .action:
+            self
+                .buttonStyle(DSActionButtonStyle())
         }
     }
 }

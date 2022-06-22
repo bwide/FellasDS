@@ -54,7 +54,7 @@ public enum DSSpacing: CGFloat, CaseIterable {
 
 public struct DSSpacings {
     /// zero spacing: 0
-    public var nones = DSSpacing.none.rawValue
+    public var none = DSSpacing.none.rawValue
     /// xxxs spacing: 2
     public var xxxSmall = DSSpacing.xxxSmall.rawValue
     /// xxs spacing: 4
