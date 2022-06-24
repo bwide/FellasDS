@@ -9,22 +9,33 @@ import Foundation
 import SwiftUI
 
 struct DSPillButtonStyle: ButtonStyle {
+    @Environment(\.isEnabled) private var isEnabled: Bool
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .textStyle(.headline, color: .white)
             .padding(.vertical, .ds.spacing.xxSmall)
             .padding(.horizontal, .ds.spacing.small)
-            .background(background(configuration))
+            .background(
+                background(configuration,
+                           isEnabled: isEnabled)
+            )
     }
 }
 
 struct DSRoundButtonStyle: ButtonStyle {
+    @Environment(\.isEnabled) private var isEnabled: Bool
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .textStyle(.headline, color: .white)
             .padding(.vertical, .ds.spacing.xxSmall)
             .padding(.horizontal, .ds.spacing.xxSmall)
-            .background(background(configuration, shape: Circle()))
+            .background(
+                background(configuration,
+                           isEnabled: isEnabled,
+                           shape: Circle())
+            )
     }
 }
 
