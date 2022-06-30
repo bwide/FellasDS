@@ -10,10 +10,10 @@ import SwiftUI
 
 extension ButtonStyle {
     @ViewBuilder
-    func background(
+    func background<BackgroundShape: Shape>(
         _ configuration: Configuration,
         isEnabled: Bool,
-        shape: some Shape = Rectangle(),
+        shape: BackgroundShape, // TODO: some Shape
         dsColor: DSColor = DSBrandColor.primary
     ) -> some View {
         shape

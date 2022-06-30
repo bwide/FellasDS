@@ -18,7 +18,8 @@ struct DSPillButtonStyle: ButtonStyle {
             .padding(.horizontal, .ds.spacing.small)
             .background(
                 background(configuration,
-                           isEnabled: isEnabled)
+                           isEnabled: isEnabled,
+                           shape: Rectangle())
             )
     }
 }
