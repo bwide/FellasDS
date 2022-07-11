@@ -7,6 +7,9 @@
 
 import Foundation
 import SwiftUI
+#if canImport(UIKit)
+import UIKit
+#endif
 
 public extension View {
     @inlinable func cornerRadius(ds radius: DSCornerRadius, antialiased: Bool = true) -> some View {
@@ -30,10 +33,14 @@ public struct DSNumbers {
 //MARK: - Size
 extension DSSize {
     var cgSize: CGSize {
+        #if os(iOS)
         switch UITraitCollection.current.preferredContentSizeCategory {
         default:
             return CGSize(width: rawValue, height: rawValue)
         }
+        #else
+        return CGSize(width: rawValue, height: rawValue)
+        #endif
     }
 }
 
