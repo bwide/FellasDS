@@ -9,10 +9,12 @@ import Foundation
 import SwiftUI
 
 public extension View {
-    func background(_ style: DSBackgroundColor) -> some View {
+    @ViewBuilder
+    func background(style: DSBackgroundColor) -> some View {
         self.background(style.color)
     }
 
+    @ViewBuilder
     func foregroundColor(_ style: DSBrandColor) -> some View {
         self.foregroundColor(style.color)
     }
