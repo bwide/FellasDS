@@ -8,6 +8,19 @@
 import Foundation
 import SwiftUI
 
+public struct Background: View {
+    
+    public var style: DSBackgroundColor = .primary
+    
+    public init(style: DSBackgroundColor = .primary) {
+        self.style = style
+    }
+    
+    public var body: some View {
+        style.color
+    }
+}
+
 public extension View {
     @ViewBuilder
     func background(style: DSBackgroundColor) -> some View {
