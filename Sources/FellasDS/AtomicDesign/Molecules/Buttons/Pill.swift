@@ -16,6 +16,7 @@ struct DSPillButtonStyle: ButtonStyle {
             .textStyle(.headline, color: .white)
             .padding(.vertical, .ds.spacing.xxSmall)
             .padding(.horizontal, .ds.spacing.small)
+            .frame(minWidth: 67)
             .background(
                 background(configuration,
                            isEnabled: isEnabled,

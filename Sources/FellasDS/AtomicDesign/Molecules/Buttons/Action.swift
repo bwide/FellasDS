@@ -20,7 +20,7 @@ extension ButtonStyle {
             .fill(
                 dsColor.color
                     .opacity(ds:
-                                (!configuration.isPressed && isEnabled) ? .opaque : .disabled
+                                (configuration.isPressed || !isEnabled) ? .disabled : .opaque
                             )
             )
             .cornerRadius(ds: .medium)
