@@ -30,7 +30,7 @@ public struct ActionCardView: View {
                 Button(action: {}) {
                     Label("add", image: "plus")
                 }
-                    .style(.round)
+                    .buttonStyle(.dsRound)
             }
             HStack {
                 Text("Subitle").textStyle(.caption1)

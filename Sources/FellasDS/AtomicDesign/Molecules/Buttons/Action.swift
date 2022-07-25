@@ -27,10 +27,10 @@ extension ButtonStyle {
     }
 }
 
-struct DSActionButtonStyle: ButtonStyle {
+public struct DSActionButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) private var isEnabled: Bool
     
-    func makeBody(configuration: Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> some View {
         HStack {
             Spacer()
             configuration.label
@@ -51,7 +51,7 @@ struct DSActionPreview: PreviewProvider {
     static var previews: some View {
         Group {
             Button("Text", action: {})
-                .style(.action)
+                .buttonStyle(.dsAction)
         }
     }
 }

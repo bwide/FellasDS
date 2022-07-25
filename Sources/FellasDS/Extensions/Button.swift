@@ -16,19 +16,20 @@ public enum DSButtonStyle {
     case round
 }
 
-public extension Button {
-    @ViewBuilder
-    func style(_ style: DSButtonStyle) -> some View {
-        switch style {
-        case .pill:
-            self
-                .buttonStyle(DSPillButtonStyle())
-        case .round:
-            self
-                .buttonStyle(DSRoundButtonStyle())
-        case .action:
-            self
-                .buttonStyle(DSActionButtonStyle())
-        }
-    }
+public struct DSButtonStyles {
+    public let pill = DSPillButtonStyle()
+    public let action = DSActionButtonStyle()
+    public let round = DSRoundButtonStyle()
+}
+
+public extension ButtonStyle where Self == DSPillButtonStyle {
+    static var dsPill: DSPillButtonStyle { DSPillButtonStyle() }
+}
+
+public extension ButtonStyle where Self == DSActionButtonStyle {
+    static var dsAction: DSActionButtonStyle { DSActionButtonStyle() }
+}
+
+public extension ButtonStyle where Self == DSRoundButtonStyle {
+    static var dsRound: DSRoundButtonStyle { DSRoundButtonStyle() }
 }

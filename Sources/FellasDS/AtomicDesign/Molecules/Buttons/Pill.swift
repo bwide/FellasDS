@@ -8,10 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct DSPillButtonStyle: ButtonStyle {
+public struct DSPillButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) private var isEnabled: Bool
     
-    func makeBody(configuration: Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .textStyle(.headline, color: .white)
             .padding(.vertical, .ds.spacing.xxSmall)
@@ -25,10 +25,10 @@ struct DSPillButtonStyle: ButtonStyle {
     }
 }
 
-struct DSRoundButtonStyle: ButtonStyle {
+public struct DSRoundButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) private var isEnabled: Bool
     
-    func makeBody(configuration: Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .textStyle(.headline, color: .white)
             .padding(.vertical, .ds.spacing.xxSmall)
@@ -46,11 +46,11 @@ struct PillPreview: PreviewProvider {
         Group {
             HStack {
                 Button("Text", action: {})
-                    .style(.pill)
+                    .buttonStyle(.dsPill)
                 Button(action: {}) {
                     Label("add", image: "plus")
                 }
-                    .style(.round) //TODO: remove title from here
+                    .buttonStyle(.dsRound) //TODO: remove title from here
             }
         }
     }

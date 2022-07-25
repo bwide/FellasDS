@@ -18,7 +18,7 @@ struct ToolbarPreview: PreviewProvider {
                     .toolbar {
                         ToolbarItem(placement: .status) {
                             Button("Edit", action: {})
-                                .style(.pill)
+                                .buttonStyle(.dsPill)
                         }
                         ToolbarItem(placement: .principal) {
                             Text("Title")
@@ -28,7 +28,7 @@ struct ToolbarPreview: PreviewProvider {
                             Button(action: {}) {
                                 Label("add", image: "plus")
                             }
-                                .style(.round)
+                            .buttonStyle(.dsRound)
                         }
 
                     }
