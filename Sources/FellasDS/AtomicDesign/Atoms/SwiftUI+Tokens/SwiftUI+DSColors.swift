@@ -12,12 +12,12 @@ public struct Background: View {
     
     public var style: DSBackgroundColor = .primary
     
-    public init(style: DSBackgroundColor = .primary) {
+    public init(_ style: DSBackgroundColor = .primary) {
         self.style = style
     }
     
     public var body: some View {
-        style.color
+        style.color.ignoresSafeArea()
     }
 }
 
