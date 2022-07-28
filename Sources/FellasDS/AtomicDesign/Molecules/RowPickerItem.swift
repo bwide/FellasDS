@@ -43,6 +43,8 @@ public struct DSRowPickerItem<Content: View>: View {
         .onChange(of: selected) { newValue in
             if newValue {
                 vm.selection = tag
+            } else if vm.selection == tag {
+                vm.selection = nil
             }
         }
     }
@@ -109,7 +111,7 @@ public extension DSRowPickerItem {
                         tag: tag)
     }
     
-    func tag(_ tag: AnyHashable) -> DSRowPickerItem {
+    func withTag(_ tag: AnyHashable) -> DSRowPickerItem {
         DSRowPickerItem(content: content,
                         selected: selected,
                         style: style,

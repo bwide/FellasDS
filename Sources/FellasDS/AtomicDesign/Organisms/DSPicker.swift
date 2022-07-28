@@ -35,8 +35,7 @@ public enum DSPickerBuilder {
                 DSRowPickerItem {
                     components[index]
                 }
-                .tag(index)
-                .onTapGesture { print("selected index") }
+                .withTag(index)
             }
         }
         .padding(.horizontal, ds: .medium)
