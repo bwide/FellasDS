@@ -34,7 +34,7 @@ public struct DSActionButtonStyle: ButtonStyle {
         HStack {
             Spacer()
             configuration.label
-                .textStyle(.title2, color: .white)
+                .textStyle(ds: .title2, color: .white)
                 .padding(.vertical, .ds.spacing.medium)
                 .padding(.horizontal, .ds.spacing.medium)
             Spacer()

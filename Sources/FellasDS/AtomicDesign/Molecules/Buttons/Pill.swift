@@ -13,7 +13,7 @@ public struct DSPillButtonStyle: ButtonStyle {
     
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .textStyle(.headline, color: .white)
+            .textStyle(ds: .headline, color: .white)
             .padding(.vertical, .ds.spacing.xxSmall)
             .padding(.horizontal, .ds.spacing.small)
             .frame(minWidth: 67)
@@ -30,7 +30,7 @@ public struct DSRoundButtonStyle: ButtonStyle {
     
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .textStyle(.headline, color: .white)
+            .textStyle(ds: .headline, color: .white)
             .padding(.vertical, .ds.spacing.xxSmall)
             .padding(.horizontal, .ds.spacing.xxSmall)
             .background(

@@ -22,6 +22,25 @@ public struct DSRowPickerItem<Content: View>: View {
     }
     
     public var body: some View {
+        contentView
+            .onTapGesture { selected.toggle() }
+            .onAppear {
+                selected = tag == vm.selection
+            }
+            .onChange(of: vm.selection) { newValue in
+                selected = newValue == tag
+            }
+            .onChange(of: selected) { newValue in
+                if newValue {
+                    vm.selection = tag
+                } else if vm.selection == tag {
+                    vm.selection = nil
+                }
+            }
+    }
+    
+    @ViewBuilder
+    var contentView: some View {
         HStack(spacing: .ds.spacing.xxSmall) {
             content()
             Spacer()
@@ -30,21 +49,10 @@ public struct DSRowPickerItem<Content: View>: View {
         .padding(.ds.spacing.medium)
         .background { Background(.primary) }
         .clipShape(RoundedRectangle(cornerRadius: .ds.cornerRadius.medium))
-        .onTapGesture { selected.toggle() }
         .overlay {
             if selected {
                 RoundedRectangle(cornerRadius: .ds.cornerRadius.medium)
                     .strokeBorder(.black, lineWidth: 3)
-            }
-        }
-        .onChange(of: vm.selection) { newValue in
-            selected = newValue == tag
-        }
-        .onChange(of: selected) { newValue in
-            if newValue {
-                vm.selection = tag
-            } else if vm.selection == tag {
-                vm.selection = nil
             }
         }
     }

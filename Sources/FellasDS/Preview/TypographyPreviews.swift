@@ -12,7 +12,7 @@ struct TypographiesView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: .ds.spacing.large) {
             ForEach(DSTypographyStyle.allCases, id: \.self) { style in
-                Text(style.rawValue).textStyle(style)
+                Text(style.rawValue).textStyle(ds: style)
             }
         }
     }

@@ -64,7 +64,7 @@ struct FontsStylesPreview: PreviewProvider {
             VStack(alignment: .leading, spacing: .ds.spacing.large) {
                 ForEach(DSTypographyStyle.allCases, id: \.self) { style in
                     Text(style.rawValue)
-                        .textStyle(style)
+                        .textStyle(ds: style)
                 }
             }
             .padding(.leading, .ds.spacing.medium)
