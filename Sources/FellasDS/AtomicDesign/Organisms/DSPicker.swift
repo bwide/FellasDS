@@ -74,11 +74,7 @@ public enum DSPickerBuilder {
 }
 
 class DSPickerSelectionViewModel: ObservableObject {
-    @Published var selection: AnyHashable? {
-        didSet {
-            print(selection)
-        }
-    }
+    @Published var selection: AnyHashable?
 }
 
 struct DSPickerPreview: PreviewProvider {
