@@ -11,14 +11,17 @@ import Combine
 
 public struct DSPicker<Content: View, ID: Hashable>: View {
     
-    @StateObject var vm: DSPickerSelectionViewModel = DSPickerSelectionViewModel()
+    @ObservedObject var vm: DSPickerSelectionViewModel
     @Binding var selection: ID?
     public var content: () -> Content
     
     public init(selection: Binding<ID?>,
          @DSPickerBuilder content: @escaping () -> Content) {
-        self._selection = selection
         self.content = content
+        self._selection = selection
+        self.vm = DSPickerSelectionViewModel(
+            selection: selection.wrappedValue
+        )
     }
 
     public var body: some View {
@@ -75,6 +78,10 @@ public enum DSPickerBuilder {
 
 class DSPickerSelectionViewModel: ObservableObject {
     @Published var selection: AnyHashable?
+    
+    init(selection: AnyHashable?) {
+        self.selection = selection
+    }
 }
 
 struct DSPickerPreview: PreviewProvider {

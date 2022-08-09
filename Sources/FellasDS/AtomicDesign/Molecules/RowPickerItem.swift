@@ -15,7 +15,9 @@ public struct DSRowPickerItem<Content: View>: View {
     
     internal var tag: AnyHashable = UUID()
     @EnvironmentObject var vm: DSPickerSelectionViewModel
-    @State public var selected: Bool = false
+    var selected: Bool {
+        tag == vm.selection
+    }
     
     public init(@ViewBuilder content: @escaping () -> Content) {
         self.content = content
@@ -23,18 +25,11 @@ public struct DSRowPickerItem<Content: View>: View {
     
     public var body: some View {
         contentView
-            .onTapGesture { selected.toggle() }
-            .onAppear {
-                selected = tag == vm.selection
-            }
-            .onChange(of: vm.selection) { newValue in
-                selected = newValue == tag
-            }
-            .onChange(of: selected) { newValue in
-                if newValue {
-                    vm.selection = tag
-                } else if vm.selection == tag {
+            .onTapGesture {
+                if selected {
                     vm.selection = nil
+                } else {
+                    vm.selection = tag
                 }
             }
     }
@@ -103,32 +98,21 @@ public extension DSRowPickerItem {
     }
     
     internal init(content: @escaping () -> Content,
-                  selected: Bool,
                   style: DSRowPickerItem<Content>.Style,
                   tag: AnyHashable) {
         self.content = content
-        self.selected = selected
         self.style = style
         self.tag = tag
     }
     
     func selection(_ style: DSRowPickerItem<Content>.Style) -> DSRowPickerItem {
         DSRowPickerItem(content: content,
-                        selected: selected,
                         style: style,
                         tag: tag)
     }
     
     func withTag(_ tag: AnyHashable) -> DSRowPickerItem {
         DSRowPickerItem(content: content,
-                        selected: selected,
-                        style: style,
-                        tag: tag)
-    }
-    
-    func isSelected(_ selected: Bool) -> DSRowPickerItem {
-        DSRowPickerItem(content: content,
-                        selected: selected,
                         style: style,
                         tag: tag)
     }
