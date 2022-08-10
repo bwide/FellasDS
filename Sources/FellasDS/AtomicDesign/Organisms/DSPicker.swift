@@ -35,44 +35,46 @@ public struct DSPicker<Content: View, ID: Hashable>: View {
 
 @resultBuilder
 public enum DSPickerBuilder {
-    public static func buildBlock<Content: View>(_ components: Content...) -> some View {
-        VStack {
-            ForEach(0..<components.count, id: \.self) { index in
-                DSRowPickerItem {
-                    components[index]
-                }
-            }
+    
+    public static func buildFinalResult<Content: View>(_ content: Content) -> some View {
+        VStack(spacing: .ds.spacing.small) {
+            content
         }
         .padding(.horizontal, ds: .medium)
+    }
+    
+    public static func buildBlock<Content: View>(
+        _ components: Content...
+    ) -> ForEach<Range<Int>, Int, DSRowPickerItem<Content>> {
+        ForEach(0..<components.count, id: \.self) { index in
+            DSRowPickerItem {
+                components[index]
+            }
+            .withTag(index)
+        }
     }
     
     public static func buildBlock<ID, Data, Content>(
         _ loop: ForEach<Data, ID, Content>
     ) -> some View where ID: Hashable, Data: RandomAccessCollection, Data.Element: Identifiable, Content: View {
-        VStack(spacing: .ds.spacing.small) {
-            ForEach(loop.data) { data in
-                DSRowPickerItem {
-                    loop.content(data)
-                }
-                .withTag(data.id)
+        ForEach(loop.data) { data in
+            DSRowPickerItem {
+                loop.content(data)
             }
+            .withTag(data.id)
         }
-        .padding(.horizontal, ds: .medium)
     }
     
     public static func buildBlock<ID, Data, Content>(
         _ loop: ForEach<Data, ID, Content>
     ) -> some View where ID: Hashable, Data: RandomAccessCollection, Content: View {
-        VStack(spacing: .ds.spacing.small) {
-            ForEach(0..<loop.data.count, id: \.self) { index in
-                let data = loop.data[index as! Data.Index]
-                DSRowPickerItem {
-                    loop.content(data)
-                }
-                .withTag(index)
+        ForEach(0..<loop.data.count, id: \.self) { index in
+            let data = loop.data[index as! Data.Index]
+            DSRowPickerItem {
+                loop.content(data)
             }
+            .withTag(index)
         }
-        .padding(.horizontal, ds: .medium)
     }
 }
 
