@@ -47,6 +47,30 @@ public struct DSActionButtonStyle: ButtonStyle {
     }
 }
 
+public extension Button {
+    @ViewBuilder
+    func hoveringActionButton() -> some View {
+        HoveringActionButton {
+            self
+        }
+    }
+}
+
+struct HoveringActionButton<Button: View>: View {
+    
+    var button: () -> Button
+    
+    var body: some View {
+        VStack {
+            Spacer()
+            button()
+            .buttonStyle(.dsAction)
+        }
+        .padding(.bottom, ds: .small)
+        .padding(.horizontal, ds: .medium)
+    }
+}
+
 struct DSActionPreview: PreviewProvider {
     static var previews: some View {
         Group {
