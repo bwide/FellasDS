@@ -64,7 +64,7 @@ struct HoveringActionButton<Button: View>: View {
         VStack {
             Spacer()
             button()
-            .buttonStyle(.dsAction)
+                .buttonStyle(.dsAction)
         }
         .padding(.bottom, ds: .small)
         .padding(.horizontal, ds: .medium)
@@ -79,4 +79,3 @@ struct DSActionPreview: PreviewProvider {
         }
     }
 }
-
