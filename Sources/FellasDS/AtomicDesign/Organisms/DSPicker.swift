@@ -40,7 +40,6 @@ public enum DSPickerBuilder {
         VStack(spacing: .ds.spacing.small) {
             content
         }
-        .padding(.horizontal, ds: .medium)
     }
     
     public static func buildBlock<Content: View>(
