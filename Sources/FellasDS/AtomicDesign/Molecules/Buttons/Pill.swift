@@ -20,7 +20,8 @@ public struct DSPillButtonStyle: ButtonStyle {
             .background(
                 background(configuration,
                            isEnabled: isEnabled,
-                           shape: Rectangle())
+                           shape: Rectangle(),
+                           dsColor: DSBrandColor.secondary)
             )
     }
 }
@@ -36,7 +37,8 @@ public struct DSRoundButtonStyle: ButtonStyle {
             .background(
                 background(configuration,
                            isEnabled: isEnabled,
-                           shape: Circle())
+                           shape: Circle(),
+                           dsColor: DSBrandColor.secondary)
             )
     }
 }
