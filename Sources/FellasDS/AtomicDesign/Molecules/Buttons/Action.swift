@@ -8,25 +8,6 @@
 import Foundation
 import SwiftUI
 
-extension ButtonStyle {
-    @ViewBuilder
-    func background<BackgroundShape: Shape>(
-        _ configuration: Configuration,
-        isEnabled: Bool,
-        shape: BackgroundShape, // TODO: some Shape
-        dsColor: DSColor = DSBrandColor.primary
-    ) -> some View {
-        shape
-            .fill(
-                dsColor.color
-                    .opacity(ds:
-                                (configuration.isPressed || !isEnabled) ? .disabled : .opaque
-                            )
-            )
-            .cornerRadius(ds: .medium)
-    }
-}
-
 public struct DSActionButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) private var isEnabled: Bool
     

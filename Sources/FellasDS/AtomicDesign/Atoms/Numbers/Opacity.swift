@@ -15,7 +15,10 @@ public enum DSOpacity: CGFloat, CaseIterable {
 }
 
 public struct DSOpacities {
+    /// opacity: 1
     public var opaque = DSOpacity.opaque.rawValue
+    /// opacity: 0.5
     public var disabled = DSOpacity.disabled.rawValue
+    /// opacity: 0
     public var transparent = DSOpacity.transparent.rawValue
 }

@@ -14,12 +14,14 @@ public enum DSButtonStyle {
     case pill
     case action
     case round
+    case toolItem
 }
 
 public struct DSButtonStyles {
     public let pill = DSPillButtonStyle()
     public let action = DSActionButtonStyle()
     public let round = DSRoundButtonStyle()
+    public let toolItem = DSToolItemStyle()
 }
 
 public extension ButtonStyle where Self == DSPillButtonStyle {
@@ -32,4 +34,8 @@ public extension ButtonStyle where Self == DSActionButtonStyle {
 
 public extension ButtonStyle where Self == DSRoundButtonStyle {
     static var dsRound: DSRoundButtonStyle { DSRoundButtonStyle() }
+}
+
+public extension ButtonStyle where Self == DSToolItemStyle {
+    static var dsToolItem: DSToolItemStyle { DSToolItemStyle() }
 }
