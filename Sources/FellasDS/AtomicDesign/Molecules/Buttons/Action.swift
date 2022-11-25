@@ -22,9 +22,10 @@ public struct DSActionButtonStyle: ButtonStyle {
         }
             .background(
                 background(configuration,
-                           isEnabled: isEnabled,
-                           shape: RoundedRectangle(cornerRadius: .ds.cornerRadius.small))
+                           isEnabled: isEnabled)
             )
+            .withLoader()
+            .clipShape(RoundedRectangle(cornerRadius: .ds.cornerRadius.small))
     }
 }
 
@@ -55,8 +56,14 @@ struct HoveringActionButton<Button: View>: View {
 struct DSActionPreview: PreviewProvider {
     static var previews: some View {
         Group {
-            Button("Text", action: {})
-                .buttonStyle(.dsAction)
+            VStack {
+                Button("Text", action: {})
+                    .buttonStyle(.dsAction)
+                    .isLoading(false)
+                Button("Text", action: {})
+                    .buttonStyle(.dsAction)
+                    .isLoading(true)
+            }
         }
     }
 }

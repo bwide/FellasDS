@@ -20,8 +20,11 @@ public struct DSPillButtonStyle: ButtonStyle {
             .background(
                 background(configuration,
                            isEnabled: isEnabled,
-                           shape: Rectangle(),
                            dsColor: DSBrandColor.secondary)
+            )
+            .withLoader()
+            .clipShape(
+                RoundedRectangle(cornerRadius: .ds.cornerRadius.medium)
             )
     }
 }
@@ -37,9 +40,10 @@ public struct DSRoundButtonStyle: ButtonStyle {
             .background(
                 background(configuration,
                            isEnabled: isEnabled,
-                           shape: Circle(),
                            dsColor: DSBrandColor.secondary)
             )
+            .withLoader()
+            .clipShape(Circle())
     }
 }
 
@@ -50,7 +54,7 @@ struct PillPreview: PreviewProvider {
                 Button("Text", action: {})
                     .buttonStyle(.dsPill)
                 Button(action: {}) {
-                    Label("add", image: "plus")
+                    Image(systemName: "plus")
                 }
                     .buttonStyle(.dsRound) //TODO: remove title from here
             }

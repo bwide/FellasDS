@@ -10,18 +10,13 @@ import SwiftUI
 
 extension ButtonStyle {
     @ViewBuilder
-    func background<BackgroundShape: Shape>(
+    func background(
         _ configuration: Configuration,
         isEnabled: Bool,
-        shape: BackgroundShape, // TODO: some Shape
         dsColor: DSColor = DSBrandColor.primary
     ) -> some View {
-        shape
-            .fill(
-                dsColor.color
-                    .opacity(configuration.opacity(isEnabled: isEnabled))
-            )
-            .cornerRadius(ds: .medium)
+        dsColor.color
+            .opacity(configuration.opacity(isEnabled: isEnabled))
     }
 }
 
