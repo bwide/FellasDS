@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "container:../..">
+   </FileRef>
+   <FileRef
+      location = "group:../../Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../../README.md">
+   </FileRef>
+   <Group
+      location = "group:../../Sources"
+      name = "Sources">
+      <Group
+         location = "group:FellasDS"
+         name = "FellasDS">
+         <Group
+            location = "group:Extensions"
+            name = "Extensions">
+            <FileRef
+               location = "group:SafeArea.swift">
+            </FileRef>
+            <FileRef
+               location = "group:RoundedRect.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Button.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Preview"
+            name = "Preview">
+            <FileRef
+               location = "group:ColorPreviews.swift">
+            </FileRef>
+            <FileRef
+               location = "group:TypographyPreviews.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:AtomicDesign"
+            name = "AtomicDesign">
+            <Group
+               location = "group:Molecules"
+               name = "Molecules">
+               <FileRef
+                  location = "group:RowPickerItem.swift">
+               </FileRef>
+               <Group
+                  location = "group:Buttons"
+                  name = "Buttons">
+                  <FileRef
+                     location = "group:TabButton.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Button+Extensions.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Pill.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Action.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Loading"
+                  name = "Loading">
+                  <FileRef
+                     location = "group:SwiftUI+Loading.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Loaders.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Loaders+Interface.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Collections"
+                  name = "Collections">
+                  <Group
+                     location = "group:ActionCard"
+                     name = "ActionCard">
+                     <FileRef
+                        location = "group:Card.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:File.swift">
+                     </FileRef>
+                  </Group>
+               </Group>
+            </Group>
+            <Group
+               location = "group:Atoms"
+               name = "Atoms">
+               <Group
+                  location = "group:Numbers"
+                  name = "Numbers">
+                  <FileRef
+                     location = "group:Opacity.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Size.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Spacings.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:CornerRadius.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:SwiftUI+Tokens"
+                  name = "SwiftUI+Tokens">
+                  <FileRef
+                     location = "group:SwiftUI+DSColors.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:SwiftUI+DSTypography.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:SwiftUI+DSNumbers.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Colors"
+                  name = "Colors">
+                  <Group
+                     location = "group:Colors.xcassets"
+                     name = "Colors.xcassets">
+                     <Group
+                        location = "group:Background"
+                        name = "Background">
+                        <Group
+                           location = "group:BackgroundPrimary.colorset"
+                           name = "BackgroundPrimary.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:BackgroundTertiary.colorset"
+                           name = "BackgroundTertiary.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                        <FileRef
+                           location = "group:Contents.json">
+                        </FileRef>
+                        <Group
+                           location = "group:BackgroundSecondary.colorset"
+                           name = "BackgroundSecondary.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                     </Group>
+                     <Group
+                        location = "group:Brand"
+                        name = "Brand">
+                        <Group
+                           location = "group:BrandTertiary.colorset"
+                           name = "BrandTertiary.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:BrandSecondary.colorset"
+                           name = "BrandSecondary.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                        <FileRef
+                           location = "group:Contents.json">
+                        </FileRef>
+                        <Group
+                           location = "group:BrandPrimary.colorset"
+                           name = "BrandPrimary.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                     </Group>
+                     <Group
+                        location = "group:Feedback"
+                        name = "Feedback">
+                        <Group
+                           location = "group:FeedbackWarning.colorset"
+                           name = "FeedbackWarning.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:FeedbackSuccess.colorset"
+                           name = "FeedbackSuccess.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                        <FileRef
+                           location = "group:Contents.json">
+                        </FileRef>
+                        <Group
+                           location = "group:FeedbackError.colorset"
+                           name = "FeedbackError.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                     </Group>
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                     <Group
+                        location = "group:Text"
+                        name = "Text">
+                        <Group
+                           location = "group:TextGroupedTertiary.colorset"
+                           name = "TextGroupedTertiary.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:TextLink.colorset"
+                           name = "TextLink.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:TextSecondary.colorset"
+                           name = "TextSecondary.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:TextPrimary.colorset"
+                           name = "TextPrimary.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:TextGroupedSecondary.colorset"
+                           name = "TextGroupedSecondary.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                        <FileRef
+                           location = "group:Contents.json">
+                        </FileRef>
+                        <Group
+                           location = "group:TextGroupedPrimary.colorset"
+                           name = "TextGroupedPrimary.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:TextPlaceholder.colorset"
+                           name = "TextPlaceholder.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:TextTertiary.colorset"
+                           name = "TextTertiary.colorset">
+                           <FileRef
+                              location = "group:Contents.json">
+                           </FileRef>
+                        </Group>
+                     </Group>
+                  </Group>
+                  <FileRef
+                     location = "group:BrandColors.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:BackgroundColors.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:FeedbackColors.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:TextColors.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Typography"
+                  name = "Typography">
+                  <FileRef
+                     location = "group:DSFonts+Register.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:DSTypographyStyle.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Typography+EdgeInsets.swift">
+                  </FileRef>
+               </Group>
+            </Group>
+            <Group
+               location = "group:Templates"
+               name = "Templates">
+               <FileRef
+                  location = "group:Alert.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:BottomSheet.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Organisms"
+               name = "Organisms">
+               <FileRef
+                  location = "group:DSToolBar.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:DSPicker.swift">
+               </FileRef>
+            </Group>
+         </Group>
+      </Group>
+   </Group>
+   <Group
+      location = "group:../../Tests"
+      name = "Tests">
+      <Group
+         location = "group:FellasDSTests"
+         name = "FellasDSTests">
+         <FileRef
+            location = "group:FellasDSTests.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ColorTests.swift">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
