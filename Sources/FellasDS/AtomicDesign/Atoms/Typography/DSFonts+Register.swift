@@ -22,8 +22,7 @@ extension DSTypographyStyle {
 
     static func registerFonts() {
         for fontName in DSFontNames.allCases.map({ $0.rawValue }) {
-//            FDSFont.registerFont(bundle: .module, fontName: fontName)
-            print(fontName)
+            Self.registerFont(bundle: .module, fontName: fontName)
         }
     }
 }
