@@ -40,8 +40,8 @@ public extension SubscriptionPickerViewModelProtocol {
 }
 
 extension SubscriptionPickerViewModelProtocol {
-    var subscribeString: String { "subscribe" }
-    var restoreString: String { "restore" }
+    var subscribeString: String { .s.subscribe }
+    var restoreString: String { .s.restore }
 }
 
 class MockSubscriptionPickerViewModel: SubscriptionPickerViewModelProtocol {
