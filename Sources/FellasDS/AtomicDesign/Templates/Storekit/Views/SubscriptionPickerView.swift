@@ -23,6 +23,7 @@ public struct SubscriptionPickerView<VM: SubscriptionPickerViewModelProtocol>: V
             VStack(alignment: .leading, spacing: .ds.spacing.small) {
                 subscriptionHeadlines
                 subscriptionList
+                links
                 purchaseButton
             }
             .padding(.horizontal, ds: .medium)
@@ -82,6 +83,17 @@ public struct SubscriptionPickerView<VM: SubscriptionPickerViewModelProtocol>: V
                 Spacer()
             }
         }
+    }
+    
+    var links: some View {
+        HStack(spacing: .zero) {
+            Spacer()
+            Link(vm.privacyPolicyString, destination: vm.privacyPolicyURL)
+            Spacer()
+            Link(vm.termsOfUseString, destination: vm.termsOfUseURL)
+            Spacer()
+        }
+        .padding(ds: .medium)
     }
     
     var purchaseButton: some View {

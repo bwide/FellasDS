@@ -23,6 +23,22 @@ struct Strings {
             comment: "restore purchases button title"
         ).localizedCapitalized
     }
+    
+    var privacyPolicy: String {
+        NSLocalizedString(
+            "privacy policy",
+            bundle: .module,
+            comment: "url link"
+        ).localizedCapitalized
+    }
+    
+    var termsOfUse: String {
+        NSLocalizedString(
+            "terms of use",
+            bundle: .module,
+            comment: "url link"
+        ).localizedCapitalized
+    }
 }
 
 // TODO: not sure if i can inject a localization from code
