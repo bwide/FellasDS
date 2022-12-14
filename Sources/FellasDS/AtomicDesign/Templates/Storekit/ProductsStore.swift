@@ -7,6 +7,10 @@ public class ProductsStore: ObservableObject {
     @Published public private(set) var purchasedSubscriptions: [ProductProvider] = []
     @Published public private(set) var userSubscriptionStatus: RenewalState?
     
+    public var error: AnyPublisher<Error?, Never> {
+        provider.errorPublisher
+    }
+    
     private let provider: StoreProviderType
     
     public init(provider: StoreProviderType) {

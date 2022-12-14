@@ -29,6 +29,7 @@ public struct SubscriptionPickerView<VM: SubscriptionPickerViewModelProtocol>: V
             .padding(.horizontal, ds: .medium)
         }
         .toolbar { toolbar }
+        .alert(error: $vm.error)
     }
     
     var subscriptionHeadlines: some View {

@@ -29,3 +29,26 @@ public extension View {
             .modifier(AlertModifier(error: error))
     }
 }
+
+public struct AlertErrorModifier: ViewModifier {
+    
+    @Binding var error: Error?
+    @State var isPresented: Bool = false
+    
+    public func body(content: Content) -> some View {
+        content
+            .alert("Error", isPresented: .constant(error != nil)) {
+                Button("ok", role: .none, action: { error = nil })
+            } message: {
+                Text(error?.localizedDescription ?? "")
+            }
+    }
+}
+
+public extension View {
+    func alert(error: Binding<Error?>) -> some View {
+        self
+            .modifier(AlertErrorModifier(error: error))
+    }
+}
+

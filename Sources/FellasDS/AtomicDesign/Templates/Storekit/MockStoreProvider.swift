@@ -38,9 +38,10 @@ struct MockProduct: ProductProvider {
 }
 
 class MockStoreProvider {
-    @Published private(set) var subscriptions: [ProductProvider] = []
-    @Published private(set) var purchasedSubscriptions: [ProductProvider] = []
-    @Published private(set) var userSubscriptionStatus: RenewalState?
+    @Published private var subscriptions: [ProductProvider] = []
+    @Published private var purchasedSubscriptions: [ProductProvider] = []
+    @Published private var userSubscriptionStatus: RenewalState?
+    @Published private var error: Error?
     
     init() {
         subscriptions = [
@@ -57,6 +58,11 @@ class MockStoreProvider {
 }
 
 extension MockStoreProvider: StoreProviderType {
+    var errorPublisher: AnyPublisher<Error?, Never> {
+        $error
+            .eraseToAnyPublisher()
+    }
+    
     var subscriptionsPublisher: AnyPublisher<[ProductProvider], Never> {
         $subscriptions
             .eraseToAnyPublisher()

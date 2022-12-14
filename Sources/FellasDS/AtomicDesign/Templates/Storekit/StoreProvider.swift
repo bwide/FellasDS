@@ -21,6 +21,7 @@ public protocol StoreProviderType {
     var subscriptionsPublisher: AnyPublisher<[ProductProvider], Never> { get }
     var purchasedSubscriptionsPublisher: AnyPublisher<[ProductProvider], Never> { get }
     var userSubscriptionStatusPublisher: AnyPublisher<RenewalState?, Never> { get }
+    var errorPublisher: AnyPublisher<Error?, Never> { get }
     
     func purchase(_ product: ProductProvider) async throws -> Bool?
     func isPurchased(_ product: ProductProvider) async throws -> Bool
@@ -29,9 +30,10 @@ public protocol StoreProviderType {
 
 open class StoreProvider: NSObject {
     
-    @Published private(set) var subscriptions: [ProductProvider] = []
-    @Published private(set) var purchasedSubscriptions: [ProductProvider] = []
-    @Published private(set) var userSubscriptionStatus: RenewalState?
+    @Published private var subscriptions: [ProductProvider] = []
+    @Published private var purchasedSubscriptions: [ProductProvider] = []
+    @Published private var userSubscriptionStatus: RenewalState?
+    @Published private var error: Error?
     
     //MARK: - Private
     private var updateListenerTask: Task<Void, Error>? = nil
@@ -137,11 +139,16 @@ open class StoreProvider: NSObject {
         self.purchasedSubscriptions = purchasedSubscriptions
 
         // check subscription tier
-        userSubscriptionStatus = try? await subscriptions.first?.subscriptionStatus
+        userSubscriptionStatus = try? await purchasedSubscriptions.first?.subscriptionStatus
     }
 }
 
 extension StoreProvider: StoreProviderType {
+    public var errorPublisher: AnyPublisher<Error?, Never> {
+        $error
+            .eraseToAnyPublisher()
+    }
+    
     public var subscriptionsPublisher: AnyPublisher<[ProductProvider], Never> {
         $subscriptions
             .eraseToAnyPublisher()
@@ -194,14 +201,36 @@ extension StoreProvider: StoreProviderType {
 
 extension StoreProvider: SKPaymentTransactionObserver {
     public func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
-        print(#function)
+        print("\(#function) \(error.localizedDescription)")
+        self.error = error
     }
     
     public func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         print(#function)
         for transaction in transactions {
-            if transaction.transactionState == .restored {
-                print("restore")
+            switch transaction.transactionState {
+            case .purchased, .restored:
+                print("Purchased purchase/restored")
+                guard
+                    let product = subscriptions.first(with: transaction.payment.productIdentifier),
+                    !purchasedSubscriptions.contains(product)
+                else { break }
+                     
+                purchasedSubscriptions.append(product)
+                Task {
+                    userSubscriptionStatus = try? await purchasedSubscriptions.first?.subscriptionStatus
+                }
+                
+                paymentQueue.finishTransaction(transaction as SKPaymentTransaction)
+                break
+            case .failed:
+                print("Purchased Failed")
+                self.error = transaction.error
+                paymentQueue.finishTransaction(transaction as SKPaymentTransaction)
+                break
+            default:
+                print("default")
+                break
             }
         }
     }

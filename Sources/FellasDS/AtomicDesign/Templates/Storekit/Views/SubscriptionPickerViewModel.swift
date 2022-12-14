@@ -32,6 +32,9 @@ public protocol SubscriptionPickerViewModelProtocol: ObservableObject {
     var subscriptionReasons: [SubscriptionReason] { get set }
     var products: [ProductProvider] { get }
     
+    var isLoading: Bool { get set }
+    var error: Error? { get set }
+    
     var tappedPurchase: PassthroughSubject<Void, Never> { get }
     var tappedRestore: PassthroughSubject<Void, Never> { get }
 }
@@ -55,10 +58,10 @@ extension SubscriptionPickerViewModelProtocol {
 
 class MockSubscriptionPickerViewModel: SubscriptionPickerViewModelProtocol {
     
-    var privacyPolicyURL: URL { URL(string: "www.google.com")! }
-    var termsOfUseURL: URL { URL(string: "www.google.com")! }
-        
+    @Published var isLoading: Bool = false
+    @Published var error: Error?
     @Published var selectedProductIndex: Int?
+    
     var products: [ProductProvider] { store.subscriptions }
     
     var subscriptionReasons: [SubscriptionReason] = [
@@ -70,6 +73,9 @@ class MockSubscriptionPickerViewModel: SubscriptionPickerViewModelProtocol {
                   title: "title",
                   subtitle: "subtitle"),
     ]
+    
+    var privacyPolicyURL: URL { URL(string: "www.google.com")! }
+    var termsOfUseURL: URL { URL(string: "www.google.com")! }
     
     //MARK: - Combine
     var tappedPurchase: PassthroughSubject<Void, Never> = .init()
