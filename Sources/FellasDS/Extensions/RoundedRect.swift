@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 
+#if os(iOS)
+
 struct RoundedCorner: Shape {
 
     var radius: CGFloat = .infinity
@@ -24,3 +26,5 @@ extension View {
         clipShape( RoundedCorner(radius: radius.rawValue, corners: corners) )
     }
 }
+
+#endif

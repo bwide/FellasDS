@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 import StoreKit
 
+#if os(iOS)
+
 public struct SubscriptionPickerView<VM: SubscriptionPickerViewModelProtocol>: View {
     
     public init(vm: VM) {
@@ -124,3 +126,5 @@ struct SubscriptionPicker_Preview: PreviewProvider {
         .navigationBarTitleDisplayMode(.inline)
     }
 }
+
+#endif

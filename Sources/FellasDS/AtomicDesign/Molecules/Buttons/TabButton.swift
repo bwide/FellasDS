@@ -29,7 +29,7 @@ struct DSTabButtonStylePreview: PreviewProvider {
                 
             }, label: {
                 Image(systemName: "signature")
-                Text("signature")
+                Text(verbatim: "signature")
             })
             .buttonStyle(.dsToolItem)
         }

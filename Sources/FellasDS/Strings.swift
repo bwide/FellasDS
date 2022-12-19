@@ -39,6 +39,22 @@ struct Strings {
             comment: "url link"
         ).localizedCapitalized
     }
+    
+    var error: String {
+        NSLocalizedString(
+            "Error",
+            bundle: .module,
+            comment: "error alert title"
+        ).localizedCapitalized
+    }
+    
+    var ok: String {
+        NSLocalizedString(
+            "OK",
+            bundle: .module,
+            comment: "dismiss alert button"
+        ).localizedCapitalized
+    }
 }
 
 // TODO: not sure if i can inject a localization from code

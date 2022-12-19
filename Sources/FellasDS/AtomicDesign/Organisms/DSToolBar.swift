@@ -13,20 +13,28 @@ struct ToolbarPreview: PreviewProvider {
     static var previews: some View {
         Group {
             NavigationView {
-                Text("hello world")
-                Text("hello world 2")
+                Text(verbatim: "hello world")
+                Text(verbatim: "hello world 2")
                     .toolbar {
                         ToolbarItem(placement: .status) {
-                            Button("Edit", action: {})
+                            Button {
+                                
+                            } label: {
+                                Text(verbatim: "Edit")
+                            }
                                 .buttonStyle(.dsPill)
                         }
                         ToolbarItem(placement: .principal) {
-                            Text("Title")
+                            Text(verbatim: "Title")
                                 .textStyle(ds: .title3)
                         }
                         ToolbarItem(placement: .primaryAction) {
                             Button(action: {}) {
-                                Label("add", image: "plus")
+                                HStack {
+                                    Text(verbatim: "add")
+                                    Spacer()
+                                    Image(systemName: "plus")
+                                }
                             }
                             .buttonStyle(.dsRound)
                         }

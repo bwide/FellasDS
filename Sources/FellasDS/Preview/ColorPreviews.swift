@@ -12,22 +12,22 @@ struct ColorsView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: .ds.spacing.large) {
-                Text("Background Colors")
+                Text(verbatim: "Background Colors")
                     .textStyle(ds: .title1)
                 ForEach(DSBackgroundColor.allCases, id: \.self) { style in
                     cell(style: style)
                 }
-                Text("Text Colors")
+                Text(verbatim: "Text Colors")
                     .textStyle(ds: .title1)
                 ForEach(DSTextColor.allCases, id: \.self) { style in
                     cell(style: style)
                 }
-                Text("Brand Colors")
+                Text(verbatim: "Brand Colors")
                     .textStyle(ds: .title1)
                 ForEach(DSBrandColor.allCases, id: \.self) { style in
                     cell(style: style)
                 }
-                Text("Feedback Colors")
+                Text(verbatim: "Feedback Colors")
                     .textStyle(ds: .title1)
                 ForEach(DSFeedbackColor.allCases, id: \.self) { style in
                     cell(style: style)

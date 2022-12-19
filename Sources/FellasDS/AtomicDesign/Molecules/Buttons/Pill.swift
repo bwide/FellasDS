@@ -51,7 +51,10 @@ struct PillPreview: PreviewProvider {
     static var previews: some View {
         Group {
             HStack {
-                Button("Text", action: {})
+                Button {
+                } label: {
+                    Text(verbatim: "Text")
+                }                
                     .buttonStyle(.dsPill)
                 Button(action: {}) {
                     Image(systemName: "plus")

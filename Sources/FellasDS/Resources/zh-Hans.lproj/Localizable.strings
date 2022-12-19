@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Bruno Fulber Wide on 10/12/22.
+  
+*/
+
+"subscribe" = "订阅";
+
+"restore" = "恢复";
+
+"privacy policy" = "隐私政策";
+
+"terms of use" = "使用条款";

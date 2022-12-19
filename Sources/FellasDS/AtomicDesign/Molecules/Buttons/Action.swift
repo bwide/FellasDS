@@ -57,10 +57,16 @@ struct DSActionPreview: PreviewProvider {
     static var previews: some View {
         Group {
             VStack {
-                Button("Text", action: {})
+                Button {
+                } label: {
+                    Text(verbatim: "Text")
+                }
                     .buttonStyle(.dsAction)
                     .isLoading(false)
-                Button("Text", action: {})
+                Button {
+                } label: {
+                    Text(verbatim: "Text")
+                }
                     .buttonStyle(.dsAction)
                     .isLoading(true)
             }

@@ -66,11 +66,11 @@ struct DSRowPickerItemPreview: PreviewProvider {
             
             VStack {
                 DSRowPickerItem(content: {
-                    Text("teste")
+                    Text(verbatim: "teste")
                 })
                 
                 DSRowPickerItem(content: {
-                    Text("teste")
+                    Text(verbatim: "teste")
                 })
                 .selection(.multiple)
             }
