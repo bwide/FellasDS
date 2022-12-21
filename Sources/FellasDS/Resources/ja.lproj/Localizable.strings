@@ -30,3 +30,6 @@
 
 /* enjoying {x}%@? */
 "reviewPrompt.title" = "%@を楽しんでいますか?";
+
+/* free for {x}%@ */
+"subscription.offer" = "%@ で無料";

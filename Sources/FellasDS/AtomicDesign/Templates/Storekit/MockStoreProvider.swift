@@ -10,10 +10,16 @@ import Combine
 import StoreKit
 
 struct MockProduct: ProductProvider {
+    
     var id: String
     var displayName: String
+    var displayIntroductoryOffer: String {
+        String(describing: subscriptionIntroductoryOffer)
+    }
     var price: Decimal
     let locale: Locale = .current
+    
+    var subscriptionIntroductoryOffer: Product.SubscriptionPeriod.Unit? = .month
     
     var displayPrice: String {
         let id = locale.currencyCode!

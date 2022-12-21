@@ -30,3 +30,6 @@
 
 /* enjoying {x}%@? */
 "reviewPrompt.title" = "menikmati %@?";
+
+/* free for {x}%@ */
+"subscription.offer" = "gratis untuk %@";

@@ -16,6 +16,7 @@ class MockProductsStore: ProductsStore {
 
 
 struct MockMonthProduct: ProductProvider {
+    
     var id: String { "premiumMonth"}
     var displayName: String { "Month" }
     var price: Decimal { 4.99 }
@@ -23,6 +24,9 @@ struct MockMonthProduct: ProductProvider {
     var type: Product.ProductType { .autoRenewable }
     var subscriptionStatus: RenewalState? { .subscribed }
     var subscriptionPeriod: Product.SubscriptionPeriod.Unit? { .month }
+    
+    var displayIntroductoryOffer: String { "Free for the first week" }
+    var subscriptionIntroductoryOffer: Product.SubscriptionPeriod.Unit? { .week }
 }
 
 struct MockYearProduct: ProductProvider {
@@ -33,4 +37,7 @@ struct MockYearProduct: ProductProvider {
     var type: Product.ProductType { .autoRenewable }
     var subscriptionStatus: RenewalState? { .subscribed }
     var subscriptionPeriod: Product.SubscriptionPeriod.Unit? { .year }
+    
+    var displayIntroductoryOffer: String { "Free for the first month" }
+    var subscriptionIntroductoryOffer: Product.SubscriptionPeriod.Unit? { .month }
 }

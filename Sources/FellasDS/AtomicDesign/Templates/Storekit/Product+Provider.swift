@@ -14,13 +14,28 @@ public protocol ProductProvider {
     
     var price: Decimal { get }
     var displayPrice: String { get }
+    var displayIntroductoryOffer: String { get }
     
     var type: Product.ProductType { get }
     var subscriptionStatus: RenewalState? { get async throws }
     var subscriptionPeriod: Product.SubscriptionPeriod.Unit? { get }
+    var subscriptionIntroductoryOffer: Product.SubscriptionPeriod.Unit? { get }
 }
 
 extension Product: ProductProvider {
+    public var displayIntroductoryOffer: String {
+        guard
+            let offer = subscription?.introductoryOffer,
+            offer.paymentMode == .freeTrial
+        else { return "" }
+        
+        return String.s.introductoryOffer(period: "\(offer.period)")
+    }
+    
+    public var subscriptionIntroductoryOffer: SubscriptionPeriod.Unit? {
+        subscription?.introductoryOffer?.period.unit
+    }
+    
     public var subscriptionStatus: RenewalState? {
         get async throws {
             try await subscription?.status.first?.state

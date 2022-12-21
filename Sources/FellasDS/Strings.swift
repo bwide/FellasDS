@@ -100,6 +100,16 @@ struct Strings {
         
         return String(format: ans, appName)
     }
+    
+    func introductoryOffer(period: String) -> String {
+        let ans = NSLocalizedString(
+            "subscription.offer",
+            bundle: .module,
+            comment: "free for {x}%@"
+        ).localizedCapitalized
+        
+        return String(format: ans, period)
+    }
 }
 
 // TODO: not sure if i can inject a localization from code

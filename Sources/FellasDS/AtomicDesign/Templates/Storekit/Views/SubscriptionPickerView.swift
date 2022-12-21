@@ -79,9 +79,13 @@ public struct SubscriptionPickerView<VM: SubscriptionPickerViewModelProtocol>: V
                 VStack(alignment: .leading, spacing: .ds.spacing.small) {
                     Text(product.displayName)
                         .textStyle(ds: .title2)
-                    Text(product.displayPrice)
-                        .textStyle(ds: .headline)
-                    // number of free days
+                    HStack {
+                        Text(product.displayPrice)
+                            .textStyle(ds: .headline)
+                        Spacer()
+                        Text(product.displayIntroductoryOffer)
+                            .textStyle(ds: .footnote)
+                    }
                 }
                 Spacer()
             }
