@@ -13,3 +13,20 @@
 "privacy policy" = "プライバシーポリシー";
 
 "terms of use" = "利用規約";
+
+"OK" = "わかった";
+
+/* Cancel */
+"cancel" = "キャンセル";
+
+/* rate */
+"rate" = "割合";
+
+/* Send feedback */
+"sendFeedback.button" = "フィードバックを送信";
+
+/* If you like our app, consider giving it a review, you can also send us any feedback through email */
+"reviewprompt.message" = "私たちのアプリが気に入ったら、レビューを投稿することを検討してください。メールでフィードバックを送信することもできます";
+
+/* enjoying {x}%@? */
+"reviewPrompt.title" = "%@を楽しんでいますか?";

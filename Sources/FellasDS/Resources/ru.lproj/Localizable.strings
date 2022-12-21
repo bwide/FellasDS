@@ -13,3 +13,20 @@
 "privacy policy" = "политика конфиденциальности";
 
 "terms of use" = "Условия эксплуатации";
+
+"OK" = "ХОРОШО";
+
+/* Cancel */
+"cancel" = "Отмена";
+
+/* rate */
+"rate" = "ставка";
+
+/* Send feedback */
+"sendFeedback.button" = "Отправить отзыв";
+
+/* If you like our app, consider giving it a review, you can also send us any feedback through email */
+"reviewprompt.message" = "Если вам нравится наше приложение, подумайте о том, чтобы дать ему обзор, вы также можете отправить нам любой отзыв по электронной почте.";
+
+/* enjoying {x}%@? */
+"reviewPrompt.title" = "наслаждаетесь %@?";

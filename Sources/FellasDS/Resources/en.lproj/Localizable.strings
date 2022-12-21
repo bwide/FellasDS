@@ -6,3 +6,20 @@
 "privacy policy" = "privacy policy";
 
 "terms of use" = "terms of use";
+
+"OK" = "OK";
+
+/* Cancel */
+"cancel" = "Cancel";
+
+/* rate */
+"rate" = "rate";
+
+/* Send feedback */
+"sendFeedback.button" = "Send feedback";
+
+/* If you like our app, consider giving it a review, you can also send us any feedback through email */
+"reviewprompt.message" = "If you like our app, consider giving it a review, you can also send us any feedback through email";
+
+/* enjoying {x}%@? */
+"reviewPrompt.title" = "enjoying %@?";

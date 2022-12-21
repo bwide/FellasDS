@@ -13,3 +13,20 @@
 "privacy policy" = "Datenschutz-Bestimmungen";
 
 "terms of use" = "Nutzungsbedingungen";
+
+"OK" = "OK";
+
+/* Cancel */
+"cancel" = "Stornieren";
+
+/* rate */
+"rate" = "Bewertung";
+
+/* Send feedback */
+"sendFeedback.button" = "Feedback schicken";
+
+/* If you like our app, consider giving it a review, you can also send us any feedback through email */
+"reviewprompt.message" = "Wenn Ihnen unsere App gefällt, denken Sie darüber nach, sie zu bewerten. Sie können uns auch Feedback per E-Mail senden";
+
+/* enjoying {x}%@? */
+"reviewPrompt.title" = "genießt %@?";

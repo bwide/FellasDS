@@ -13,3 +13,20 @@
 "privacy policy" = "गोपनीयता नीति";
 
 "terms of use" = "उपयोग की शर्तें";
+
+"OK" = "ठीक है";
+
+/* Cancel */
+"cancel" = "रद्द करना";
+
+/* rate */
+"rate" = "दर";
+
+/* Send feedback */
+"sendFeedback.button" = "प्रतिक्रिया भेजें";
+
+/* If you like our app, consider giving it a review, you can also send us any feedback through email */
+"reviewprompt.message" = "यदि आप हमारे ऐप को पसंद करते हैं, तो इसे समीक्षा देने पर विचार करें, आप हमें ईमेल के माध्यम से कोई प्रतिक्रिया भी भेज सकते हैं";
+
+/* enjoying {x}%@? */
+"reviewPrompt.title" = "%@ का आनंद ले रहे हैं?";

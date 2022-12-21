@@ -13,3 +13,20 @@
 "privacy policy" = "Kebijakan pribadi";
 
 "terms of use" = "syarat Penggunaan";
+
+"OK" = "Oke";
+
+/* Cancel */
+"cancel" = "Membatalkan";
+
+/* rate */
+"rate" = "kecepatan";
+
+/* Send feedback */
+"sendFeedback.button" = "Kirim umpan balik";
+
+/* If you like our app, consider giving it a review, you can also send us any feedback through email */
+"reviewprompt.message" = "Jika Anda menyukai aplikasi kami, pertimbangkan untuk memberikan ulasan, Anda juga dapat mengirimkan umpan balik kepada kami melalui email";
+
+/* enjoying {x}%@? */
+"reviewPrompt.title" = "menikmati %@?";
