@@ -29,7 +29,11 @@ extension Product: ProductProvider {
             offer.paymentMode == .freeTrial
         else { return "" }
         
-        return String.s.introductoryOffer(period: "\(offer.period)")
+        if #available(iOS 15.4, *) {
+            return String.s.introductoryOffer(period: "\(offer.periodCount) \(offer.period.unit.localizedDescription)")
+        } else {
+            return String.s.introductoryOffer(period: "\(offer.period)")
+        }
     }
     
     public var subscriptionIntroductoryOffer: SubscriptionPeriod.Unit? {
