@@ -1,26 +1,27 @@
-/* 
-  Localizable.strings
-  
 
-  Created by Bruno Fulber Wide on 10/12/22.
-  
-*/
+/* subscribe to this subscription button title */
+"subscribe" = "订阅此订阅按钮标题";
 
-"subscribe" = "订阅";
+/* restore purchases button title */
+"restore" = "恢复购买按钮标题";
 
-"restore" = "恢复";
+/* url link */
+"privacy policy" = "网址链接";
 
-"privacy policy" = "隐私政策";
+/* url link */
+"terms of use" = "网址链接";
 
-"terms of use" = "使用条款";
+/* error alert title */
+"Error" = "错误提示标题";
 
-"OK" = "好的";
+/* dismiss alert button */
+"OK" = "关闭警报按钮";
 
 /* Cancel */
 "cancel" = "取消";
 
-/* rate */
-"rate" = "速度";
+/* rate {x} */
+"rate" = "费率";
 
 /* Send feedback */
 "sendFeedback.button" = "发送反馈";
@@ -28,8 +29,9 @@
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
 "reviewprompt.message" = "如果您喜欢我们的应用程序，请考虑给它一个评论，您也可以通过电子邮件向我们发送任何反馈";
 
-/* enjoying {x}%@? */
-"reviewPrompt.title" = "享受 %@？";
+/* enjoying %@? */
+"reviewPrompt.title" = "享受 ％@？";
 
 /* free for {x}%@ */
 "subscription.offer" = "%@ 免费";
+

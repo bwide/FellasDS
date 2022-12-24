@@ -1,26 +1,27 @@
-/* 
-  Localizable.strings
-  
 
-  Created by Bruno Fulber Wide on 10/12/22.
-  
-*/
+/* subscribe to this subscription button title */
+"subscribe" = "berlangganan judul tombol berlangganan ini";
 
-"subscribe" = "langganan";
+/* restore purchases button title */
+"restore" = "pulihkan judul tombol pembelian";
 
-"restore" = "memulihkan";
+/* url link */
+"privacy policy" = "tautan url";
 
-"privacy policy" = "Kebijakan pribadi";
+/* url link */
+"terms of use" = "tautan url";
 
-"terms of use" = "syarat Penggunaan";
+/* error alert title */
+"Error" = "judul peringatan kesalahan";
 
-"OK" = "Oke";
+/* dismiss alert button */
+"OK" = "tutup tombol peringatan";
 
 /* Cancel */
 "cancel" = "Membatalkan";
 
-/* rate */
-"rate" = "kecepatan";
+/* rate {x} */
+"rate" = "tarif";
 
 /* Send feedback */
 "sendFeedback.button" = "Kirim umpan balik";
@@ -28,8 +29,9 @@
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
 "reviewprompt.message" = "Jika Anda menyukai aplikasi kami, pertimbangkan untuk memberikan ulasan, Anda juga dapat mengirimkan umpan balik kepada kami melalui email";
 
-/* enjoying {x}%@? */
+/* enjoying %@? */
 "reviewPrompt.title" = "menikmati %@?";
 
 /* free for {x}%@ */
 "subscription.offer" = "gratis untuk %@";
+

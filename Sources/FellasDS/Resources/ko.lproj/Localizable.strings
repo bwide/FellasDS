@@ -1,25 +1,26 @@
-/* 
-  Localizable.strings
-  
 
-  Created by Bruno Fulber Wide on 10/12/22.
-  
-*/
+/* subscribe to this subscription button title */
+"subscribe" = "이 구독 버튼 제목 구독";
 
-"subscribe" = "구독하다";
+/* restore purchases button title */
+"restore" = "구매 복원 버튼 제목";
 
-"restore" = "복원";
+/* url link */
+"privacy policy" = "URL 링크";
 
-"privacy policy" = "개인 정보 정책";
+/* url link */
+"terms of use" = "URL 링크";
 
-"terms of use" = "이용약관";
+/* error alert title */
+"Error" = "오류 경고 제목";
 
-"OK" = "확인";
+/* dismiss alert button */
+"OK" = "알림 해제 버튼";
 
 /* Cancel */
 "cancel" = "취소";
 
-/* rate */
+/* rate {x} */
 "rate" = "비율";
 
 /* Send feedback */
@@ -28,8 +29,9 @@
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
 "reviewprompt.message" = "저희 앱이 마음에 드신다면 리뷰를 남겨주세요. 이메일을 통해 피드백을 보내주셔도 됩니다.";
 
-/* enjoying {x}%@? */
-"reviewPrompt.title" = "%@을(를) 즐기고 계십니까?";
+/* enjoying %@? */
+"reviewPrompt.title" = "%@을(를) 즐기고 계신가요?";
 
 /* free for {x}%@ */
 "subscription.offer" = "%@ 무료";
+

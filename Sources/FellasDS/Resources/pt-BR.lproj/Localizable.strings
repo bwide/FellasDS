@@ -1,26 +1,27 @@
-/* 
-  Localizable.strings
-  
 
-  Created by Bruno Fulber Wide on 10/12/22.
-  
-*/
+/* subscribe to this subscription button title */
+"subscribe" = "subscrever este título de botão de subscrição";
 
-"subscribe" = "se inscrever";
+/* restore purchases button title */
+"restore" = "restaurar o título do botão de compras";
 
-"restore" = "restaurar";
+/* url link */
+"privacy policy" = "url link";
 
-"privacy policy" = "política de Privacidade";
+/* url link */
+"terms of use" = "url link";
 
-"terms of use" = "termos de uso";
+/* error alert title */
+"Error" = "título do alerta de erro";
 
-"OK" = "OK";
+/* dismiss alert button */
+"OK" = "descartar botão de alerta";
 
 /* Cancel */
 "cancel" = "Cancelar";
 
-/* rate */
-"rate" = "avaliar";
+/* rate {x} */
+"rate" = "taxa";
 
 /* Send feedback */
 "sendFeedback.button" = "Enviar comentários";
@@ -28,8 +29,9 @@
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
 "reviewprompt.message" = "Se você gosta de nosso aplicativo, considere fazer uma revisão, você também pode nos enviar qualquer feedback por e-mail";
 
-/* enjoying {x}%@? */
-"reviewPrompt.title" = "curtindo %@?";
+/* enjoying %@? */
+"reviewPrompt.title" = "desfrutando %@?";
 
 /* free for {x}%@ */
 "subscription.offer" = "grátis por %@";
+

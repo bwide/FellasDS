@@ -1,26 +1,27 @@
-/* 
-  Localizable.strings
-  
 
-  Created by Bruno Fulber Wide on 10/12/22.
-  
-*/
+/* subscribe to this subscription button title */
+"subscribe" = "この購読ボタンのタイトルを購読する";
 
-"subscribe" = "申し込む";
+/* restore purchases button title */
+"restore" = "購入ボタンのタイトルを復元する";
 
-"restore" = "戻す";
+/* url link */
+"privacy policy" = "URLリンク";
 
-"privacy policy" = "プライバシーポリシー";
+/* url link */
+"terms of use" = "URLリンク";
 
-"terms of use" = "利用規約";
+/* error alert title */
+"Error" = "エラーアラートのタイトル";
 
-"OK" = "わかった";
+/* dismiss alert button */
+"OK" = "アラートボタンを閉じる";
 
 /* Cancel */
 "cancel" = "キャンセル";
 
-/* rate */
-"rate" = "割合";
+/* rate {x} */
+"rate" = "率";
 
 /* Send feedback */
 "sendFeedback.button" = "フィードバックを送信";
@@ -28,8 +29,9 @@
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
 "reviewprompt.message" = "私たちのアプリが気に入ったら、レビューを投稿することを検討してください。メールでフィードバックを送信することもできます";
 
-/* enjoying {x}%@? */
+/* enjoying %@? */
 "reviewPrompt.title" = "%@を楽しんでいますか?";
 
 /* free for {x}%@ */
 "subscription.offer" = "%@ で無料";
+

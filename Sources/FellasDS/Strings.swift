@@ -68,7 +68,7 @@ struct Strings {
         NSLocalizedString(
             "rate",
             bundle: .module,
-            comment: "rate"
+            comment: "rate {x}"
         ).localizedCapitalized
     }
     
