@@ -1,15 +1,6 @@
 
-/* subscribe {x} */
-"subscribe" = "abonnieren";
-
-/* restore {x} */
-"restore" = "wiederherstellen";
-
-/* privacy policy */
-"privacy policy" = "Datenschutz-Bestimmungen";
-
-/* terms of use */
-"terms of use" = "Nutzungsbedingungen";
+/* Cancel */
+"cancel" = "Stornieren";
 
 /* Error */
 "Error" = "Fehler";
@@ -17,14 +8,14 @@
 /* OK */
 "OK" = "OK";
 
-/* Cancel */
-"cancel" = "Stornieren";
+/* privacy policy */
+"privacy policy" = "Datenschutz-Bestimmungen";
 
 /* rate {x} */
 "rate" = "Rate";
 
-/* Send feedback */
-"sendFeedback.button" = "Feedback schicken";
+/* restore {x} */
+"restore" = "wiederherstellen";
 
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
 "reviewprompt.message" = "Wenn Ihnen unsere App gefällt, denken Sie darüber nach, sie zu bewerten. Sie können uns auch Feedback per E-Mail senden";
@@ -32,6 +23,15 @@
 /* enjoying {x}%@? */
 "reviewPrompt.title" = "genießt %@?";
 
+/* Send feedback */
+"sendFeedback.button" = "Feedback schicken";
+
+/* subscribe {x} */
+"subscribe" = "abonnieren";
+
 /* free for {x}%@ */
 "subscription.offer" = "kostenlos für %@";
+
+/* terms of use */
+"terms of use" = "Nutzungsbedingungen";
 

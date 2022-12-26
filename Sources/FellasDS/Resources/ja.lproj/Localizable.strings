@@ -1,15 +1,6 @@
 
-/* subscribe {x} */
-"subscribe" = "購読";
-
-/* restore {x} */
-"restore" = "を復元";
-
-/* privacy policy */
-"privacy policy" = "プライバシーポリシー";
-
-/* terms of use */
-"terms of use" = "利用規約";
+/* Cancel */
+"cancel" = "キャンセル";
 
 /* Error */
 "Error" = "エラー";
@@ -17,14 +8,14 @@
 /* OK */
 "OK" = "わかった";
 
-/* Cancel */
-"cancel" = "キャンセル";
+/* privacy policy */
+"privacy policy" = "プライバシーポリシー";
 
 /* rate {x} */
 "rate" = "率";
 
-/* Send feedback */
-"sendFeedback.button" = "フィードバックを送信";
+/* restore {x} */
+"restore" = "を復元";
 
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
 "reviewprompt.message" = "私たちのアプリが気に入ったら、レビューを投稿することを検討してください。メールでフィードバックを送信することもできます";
@@ -32,6 +23,15 @@
 /* enjoying {x}%@? */
 "reviewPrompt.title" = "%@を楽しんでいますか?";
 
+/* Send feedback */
+"sendFeedback.button" = "フィードバックを送信";
+
+/* subscribe {x} */
+"subscribe" = "購読";
+
 /* free for {x}%@ */
 "subscription.offer" = "%@ で無料";
+
+/* terms of use */
+"terms of use" = "利用規約";
 
