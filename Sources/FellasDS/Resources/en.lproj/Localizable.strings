@@ -1,21 +1,21 @@
 
-/* subscribe to this subscription button title */
-"subscribe" = "subscribe to this subscription button title";
+/* subscribe {x} */
+"subscribe" = "subscribe";
 
-/* restore purchases button title */
-"restore" = "restore purchases button title";
+/* restore {x} */
+"restore" = "restore";
 
-/* url link */
-"privacy policy" = "url link";
+/* privacy policy */
+"privacy policy" = "privacy policy";
 
-/* url link */
-"terms of use" = "url link";
+/* terms of use */
+"terms of use" = "terms of use";
 
-/* error alert title */
-"Error" = "error alert title";
+/* Error */
+"Error" = "Error";
 
-/* dismiss alert button */
-"OK" = "dismiss alert button";
+/* OK */
+"OK" = "OK";
 
 /* Cancel */
 "cancel" = "Cancel";
@@ -29,7 +29,7 @@
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
 "reviewprompt.message" = "If you like our app, consider giving it a review, you can also send us any feedback through email";
 
-/* enjoying %@? */
+/* enjoying {x}%@? */
 "reviewPrompt.title" = "enjoying %@?";
 
 /* free for {x}%@ */

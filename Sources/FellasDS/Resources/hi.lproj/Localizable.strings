@@ -1,21 +1,21 @@
 
-/* subscribe to this subscription button title */
-"subscribe" = "इस सदस्यता बटन शीर्षक की सदस्यता लें";
+/* subscribe {x} */
+"subscribe" = "सदस्यता लें";
 
-/* restore purchases button title */
-"restore" = "खरीदारी बटन शीर्षक पुनर्स्थापित करें";
+/* restore {x} */
+"restore" = "पुनर्स्थापित करें";
 
-/* url link */
-"privacy policy" = "यूआरएल लिंक";
+/* privacy policy */
+"privacy policy" = "गोपनीयता नीति";
 
-/* url link */
-"terms of use" = "यूआरएल लिंक";
+/* terms of use */
+"terms of use" = "उपयोग की शर्तें";
 
-/* error alert title */
-"Error" = "त्रुटि चेतावनी शीर्षक";
+/* Error */
+"Error" = "गलती";
 
-/* dismiss alert button */
-"OK" = "अलर्ट बटन खारिज करें";
+/* OK */
+"OK" = "ठीक है";
 
 /* Cancel */
 "cancel" = "रद्द करना";
@@ -29,8 +29,8 @@
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
 "reviewprompt.message" = "यदि आप हमारे ऐप को पसंद करते हैं, तो इसे समीक्षा देने पर विचार करें, आप हमें ईमेल के माध्यम से कोई प्रतिक्रिया भी भेज सकते हैं";
 
-/* enjoying %@? */
-"reviewPrompt.title" = "मजा आ %@?";
+/* enjoying {x}%@? */
+"reviewPrompt.title" = "%@ का आनंद ले रहे हैं?";
 
 /* free for {x}%@ */
 "subscription.offer" = "%@ के लिए निःशुल्क";

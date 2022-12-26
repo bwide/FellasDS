@@ -12,7 +12,7 @@ struct Strings {
         NSLocalizedString(
             "subscribe",
             bundle: .module,
-            comment: "subscribe to this subscription button title"
+            comment: "subscribe {x}"
         ).localizedCapitalized
     }
     
@@ -20,7 +20,7 @@ struct Strings {
         NSLocalizedString(
             "restore",
             bundle: .module,
-            comment: "restore purchases button title"
+            comment: "restore {x}"
         ).localizedCapitalized
     }
     
@@ -28,7 +28,7 @@ struct Strings {
         NSLocalizedString(
             "privacy policy",
             bundle: .module,
-            comment: "url link"
+            comment: "privacy policy"
         ).localizedCapitalized
     }
     
@@ -36,7 +36,7 @@ struct Strings {
         NSLocalizedString(
             "terms of use",
             bundle: .module,
-            comment: "url link"
+            comment: "terms of use"
         ).localizedCapitalized
     }
     
@@ -44,7 +44,7 @@ struct Strings {
         NSLocalizedString(
             "Error",
             bundle: .module,
-            comment: "error alert title"
+            comment: "Error"
         ).localizedCapitalized
     }
     
@@ -52,7 +52,7 @@ struct Strings {
         NSLocalizedString(
             "OK",
             bundle: .module,
-            comment: "dismiss alert button"
+            comment: "OK"
         ).localizedCapitalized
     }
     
@@ -95,7 +95,7 @@ struct Strings {
         let ans = NSLocalizedString(
             "reviewPrompt.title",
             bundle: .module,
-            comment: "enjoying %@?"
+            comment: "enjoying {x}%@?"
         ).localizedCapitalized
         
         return String(format: ans, appName)

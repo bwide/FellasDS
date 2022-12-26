@@ -1,21 +1,21 @@
 
-/* subscribe to this subscription button title */
-"subscribe" = "berlangganan judul tombol berlangganan ini";
+/* subscribe {x} */
+"subscribe" = "berlangganan";
 
-/* restore purchases button title */
-"restore" = "pulihkan judul tombol pembelian";
+/* restore {x} */
+"restore" = "pulihkan";
 
-/* url link */
-"privacy policy" = "tautan url";
+/* privacy policy */
+"privacy policy" = "Kebijakan pribadi";
 
-/* url link */
-"terms of use" = "tautan url";
+/* terms of use */
+"terms of use" = "syarat Penggunaan";
 
-/* error alert title */
-"Error" = "judul peringatan kesalahan";
+/* Error */
+"Error" = "Kesalahan";
 
-/* dismiss alert button */
-"OK" = "tutup tombol peringatan";
+/* OK */
+"OK" = "Oke";
 
 /* Cancel */
 "cancel" = "Membatalkan";
@@ -29,7 +29,7 @@
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
 "reviewprompt.message" = "Jika Anda menyukai aplikasi kami, pertimbangkan untuk memberikan ulasan, Anda juga dapat mengirimkan umpan balik kepada kami melalui email";
 
-/* enjoying %@? */
+/* enjoying {x}%@? */
 "reviewPrompt.title" = "menikmati %@?";
 
 /* free for {x}%@ */

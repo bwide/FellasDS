@@ -105,7 +105,7 @@ public struct SubscriptionPickerView<VM: SubscriptionPickerViewModelProtocol>: V
     
     var purchaseButton: some View {
         Button(vm.subscribeString) {
-            vm.tappedPurchase.send()
+            vm.onTappedPurchase.send()
         }
         .buttonStyle(.dsAction)
         .padding(.bottom, ds: .medium)
@@ -115,7 +115,7 @@ public struct SubscriptionPickerView<VM: SubscriptionPickerViewModelProtocol>: V
     var toolbar: some ToolbarContent {
         ToolbarItem {
             Button(vm.restoreString) {
-                vm.tappedRestore.send()
+                vm.onTappedRestore.send()
             }
             .buttonStyle(.dsPill)
         }

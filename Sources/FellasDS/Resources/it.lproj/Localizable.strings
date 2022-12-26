@@ -1,21 +1,21 @@
 
-/* subscribe to this subscription button title */
-"subscribe" = "iscriviti a questo titolo del pulsante di iscrizione";
+/* subscribe {x} */
+"subscribe" = "iscriviti";
 
-/* restore purchases button title */
-"restore" = "ripristinare il titolo del pulsante acquisti";
+/* restore {x} */
+"restore" = "ripristina";
 
-/* url link */
-"privacy policy" = "collegamento URL";
+/* privacy policy */
+"privacy policy" = "politica sulla riservatezza";
 
-/* url link */
-"terms of use" = "collegamento URL";
+/* terms of use */
+"terms of use" = "Condizioni d'uso";
 
-/* error alert title */
-"Error" = "titolo dell'avviso di errore";
+/* Error */
+"Error" = "Errore";
 
-/* dismiss alert button */
-"OK" = "pulsante di avviso di chiusura";
+/* OK */
+"OK" = "OK";
 
 /* Cancel */
 "cancel" = "Annulla";
@@ -27,9 +27,9 @@
 "sendFeedback.button" = "Invia feedback";
 
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
-"reviewprompt.message" = "Se ti piace la nostra app, considera di dargli una recensione, puoi anche inviarci qualsiasi feedback tramite e-mail";
+"reviewprompt.message" = "Se ti piace la nostra app, considera di darle una recensione, puoi anche inviarci qualsiasi feedback tramite e-mail";
 
-/* enjoying %@? */
+/* enjoying {x}%@? */
 "reviewPrompt.title" = "godendo %@?";
 
 /* free for {x}%@ */

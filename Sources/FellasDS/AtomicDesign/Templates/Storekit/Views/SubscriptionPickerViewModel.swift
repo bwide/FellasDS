@@ -35,8 +35,8 @@ public protocol SubscriptionPickerViewModelProtocol: ObservableObject {
     var isLoading: Bool { get set }
     var error: Error? { get set }
     
-    var tappedPurchase: PassthroughSubject<Void, Never> { get }
-    var tappedRestore: PassthroughSubject<Void, Never> { get }
+    var onTappedPurchase: PassthroughSubject<Void, Never> { get }
+    var onTappedRestore: PassthroughSubject<Void, Never> { get }
 }
 
 public extension SubscriptionPickerViewModelProtocol {
@@ -78,8 +78,8 @@ class MockSubscriptionPickerViewModel: SubscriptionPickerViewModelProtocol {
     var termsOfUseURL: URL { URL(string: "www.google.com")! }
     
     //MARK: - Combine
-    var tappedPurchase: PassthroughSubject<Void, Never> = .init()
-    var tappedRestore: PassthroughSubject<Void, Never> = .init()
+    let onTappedPurchase: PassthroughSubject<Void, Never> = .init()
+    let onTappedRestore: PassthroughSubject<Void, Never> = .init()
     
     //MARK: - Private
     private var store: ProductsStore = MockProductsStore()

@@ -1,21 +1,21 @@
 
-/* subscribe to this subscription button title */
-"subscribe" = "подписаться на этот заголовок кнопки подписки";
+/* subscribe {x} */
+"subscribe" = "подписаться";
 
-/* restore purchases button title */
-"restore" = "восстановить название кнопки покупок";
+/* restore {x} */
+"restore" = "восстановить";
 
-/* url link */
-"privacy policy" = "URL-ссылка";
+/* privacy policy */
+"privacy policy" = "политика конфиденциальности";
 
-/* url link */
-"terms of use" = "URL-ссылка";
+/* terms of use */
+"terms of use" = "Условия эксплуатации";
 
-/* error alert title */
-"Error" = "заголовок предупреждения об ошибке";
+/* Error */
+"Error" = "Ошибка";
 
-/* dismiss alert button */
-"OK" = "кнопка отключения оповещения";
+/* OK */
+"OK" = "ХОРОШО";
 
 /* Cancel */
 "cancel" = "Отмена";
@@ -29,7 +29,7 @@
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
 "reviewprompt.message" = "Если вам нравится наше приложение, подумайте о том, чтобы дать ему обзор, вы также можете отправить нам любой отзыв по электронной почте.";
 
-/* enjoying %@? */
+/* enjoying {x}%@? */
 "reviewPrompt.title" = "наслаждаетесь %@?";
 
 /* free for {x}%@ */
