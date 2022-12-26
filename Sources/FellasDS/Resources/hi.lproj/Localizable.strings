@@ -11,8 +11,8 @@
 /* privacy policy */
 "privacy policy" = "गोपनीयता नीति";
 
-/* rate {x} */
-"rate" = "दर";
+/* rate {app} */
+"rate" = "एप्प का मूल्यांकन";
 
 /* restore {x} */
 "restore" = "पुनर्स्थापित करें";

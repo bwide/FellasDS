@@ -11,8 +11,8 @@
 /* privacy policy */
 "privacy policy" = "隐私政策";
 
-/* rate {x} */
-"rate" = "费率";
+/* rate {app} */
+"rate" = "评价应用";
 
 /* restore {x} */
 "restore" = "恢复";

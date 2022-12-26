@@ -11,8 +11,8 @@
 /* privacy policy */
 "privacy policy" = "개인 정보 정책";
 
-/* rate {x} */
-"rate" = "비율";
+/* rate {app} */
+"rate" = "앱 평가";
 
 /* restore {x} */
 "restore" = "복원";

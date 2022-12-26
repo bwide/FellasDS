@@ -11,8 +11,8 @@
 /* privacy policy */
 "privacy policy" = "politique de confidentialité";
 
-/* rate {x} */
-"rate" = "taux";
+/* rate {app} */
+"rate" = "application de taux";
 
 /* restore {x} */
 "restore" = "restaurer";
