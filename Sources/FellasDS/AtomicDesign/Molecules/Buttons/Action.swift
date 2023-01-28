@@ -25,7 +25,7 @@ public struct DSActionButtonStyle: ButtonStyle {
                            isEnabled: isEnabled)
             )
             .withLoader()
-            .clipShape(RoundedRectangle(cornerRadius: .ds.cornerRadius.small))
+            .clipShape(Capsule())
     }
 }
 
