@@ -26,10 +26,10 @@ struct DSTabButtonStylePreview: PreviewProvider {
     static var previews: some View {
         Group {
             Button(action: {
-                print("signature")
+                
             }, label: {
                 Image(systemName: "signature")
-                Text("signature")
+                Text(verbatim: "signature")
             })
             .buttonStyle(.dsToolItem)
         }

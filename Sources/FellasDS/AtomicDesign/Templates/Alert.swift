@@ -8,23 +8,23 @@
 import Foundation
 import SwiftUI
 
-public struct AlertModifier<ErrorType: Error & CustomStringConvertible>: ViewModifier {
+public struct AlertModifier: ViewModifier {
     
-    @Binding var error: ErrorType?
+    @Binding var error: Error?
     @State var isPresented: Bool = false
     
     public func body(content: Content) -> some View {
         content
-            .alert("Error", isPresented: .constant(error != nil)) {
-                Button("ok", role: .none, action: { error = nil })
+            .alert(String.s.error, isPresented: .constant(error != nil)) {
+                Button(String.s.ok, role: .none, action: { error = nil })
             } message: {
-                Text(error?.description ?? "")
+                Text(error?.localizedDescription ?? "")
             }
     }
 }
 
 public extension View {
-    func alert<ErrorType: Error & CustomStringConvertible>(error: Binding<ErrorType?>) -> some View {
+    func alert(error: Binding<Error?>) -> some View {
         self
             .modifier(AlertModifier(error: error))
     }

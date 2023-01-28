@@ -1,0 +1,37 @@
+
+/* Cancel */
+"cancel" = "Cancelar";
+
+/* Error */
+"Error" = "Erro";
+
+/* OK */
+"OK" = "OK";
+
+/* privacy policy */
+"privacy policy" = "política de Privacidade";
+
+/* rate {app} */
+"rate" = "avaliar";
+
+/* restore {x} */
+"restore" = "restaurar";
+
+/* If you like our app, consider giving it a review, you can also send us any feedback through email */
+"reviewprompt.message" = "Se você gosta de nosso aplicativo, considere fazer uma revisão, você também pode nos enviar qualquer feedback por e-mail";
+
+/* enjoying {x}%@? */
+"reviewPrompt.title" = "curtindo %@?";
+
+/* Send feedback */
+"sendFeedback.button" = "Enviar comentários";
+
+/* subscribe {x} */
+"subscribe" = "inscreva-se";
+
+/* free for {x}%@ */
+"subscription.offer" = "grátis por %@";
+
+/* terms of use */
+"terms of use" = "termos de uso";
+

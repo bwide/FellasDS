@@ -1,0 +1,37 @@
+
+/* Cancel */
+"cancel" = "Отмена";
+
+/* Error */
+"Error" = "Ошибка";
+
+/* OK */
+"OK" = "ХОРОШО";
+
+/* privacy policy */
+"privacy policy" = "политика конфиденциальности";
+
+/* rate {app} */
+"rate" = "оценить";
+
+/* restore {x} */
+"restore" = "восстановить";
+
+/* If you like our app, consider giving it a review, you can also send us any feedback through email */
+"reviewprompt.message" = "Если вам нравится наше приложение, подумайте о том, чтобы дать ему обзор, вы также можете отправить нам любой отзыв по электронной почте.";
+
+/* enjoying {x}%@? */
+"reviewPrompt.title" = "наслаждаетесь %@?";
+
+/* Send feedback */
+"sendFeedback.button" = "Отправить отзыв";
+
+/* subscribe {x} */
+"subscribe" = "подписаться";
+
+/* free for {x}%@ */
+"subscription.offer" = "бесплатно для %@";
+
+/* terms of use */
+"terms of use" = "Условия эксплуатации";
+

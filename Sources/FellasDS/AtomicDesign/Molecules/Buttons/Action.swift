@@ -25,7 +25,7 @@ public struct DSActionButtonStyle: ButtonStyle {
                            isEnabled: isEnabled)
             )
             .withLoader()
-            .clipShape(RoundedRectangle(cornerRadius: .ds.cornerRadius.small))
+            .clipShape(Capsule())
     }
 }
 
@@ -57,10 +57,16 @@ struct DSActionPreview: PreviewProvider {
     static var previews: some View {
         Group {
             VStack {
-                Button("Text", action: {})
+                Button {
+                } label: {
+                    Text(verbatim: "Text")
+                }
                     .buttonStyle(.dsAction)
                     .isLoading(false)
-                Button("Text", action: {})
+                Button {
+                } label: {
+                    Text(verbatim: "Text")
+                }
                     .buttonStyle(.dsAction)
                     .isLoading(true)
             }

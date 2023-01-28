@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+#if os(iOS)
 public struct BottomSheet<Label: View>: ViewModifier {
     
     @Binding public var isPresented: Bool
@@ -54,3 +55,4 @@ public extension View {
         modifier(BottomSheet(isPresented: isPresented, label: content))
     }
 }
+#endif

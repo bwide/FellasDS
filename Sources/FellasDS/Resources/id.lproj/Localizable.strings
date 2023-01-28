@@ -1,0 +1,37 @@
+
+/* Cancel */
+"cancel" = "Membatalkan";
+
+/* Error */
+"Error" = "Kesalahan";
+
+/* OK */
+"OK" = "Oke";
+
+/* privacy policy */
+"privacy policy" = "Kebijakan pribadi";
+
+/* rate {app} */
+"rate" = "beri peringkat";
+
+/* restore {x} */
+"restore" = "pulihkan";
+
+/* If you like our app, consider giving it a review, you can also send us any feedback through email */
+"reviewprompt.message" = "Jika Anda menyukai aplikasi kami, pertimbangkan untuk memberikan ulasan, Anda juga dapat mengirimkan umpan balik kepada kami melalui email";
+
+/* enjoying {x}%@? */
+"reviewPrompt.title" = "menikmati %@?";
+
+/* Send feedback */
+"sendFeedback.button" = "Kirim umpan balik";
+
+/* subscribe {x} */
+"subscribe" = "berlangganan";
+
+/* free for {x}%@ */
+"subscription.offer" = "gratis untuk %@";
+
+/* terms of use */
+"terms of use" = "syarat Penggunaan";
+
