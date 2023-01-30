@@ -47,7 +47,7 @@ public struct DSRowPickerItem<Content: View>: View {
         .overlay {
             if selected {
                 RoundedRectangle(cornerRadius: .ds.cornerRadius.medium)
-                    .strokeBorder(.black, lineWidth: 3)
+                    .strokeBorder(Color.ds.brand.tertiary, lineWidth: 3)
             }
         }
     }
@@ -55,6 +55,7 @@ public struct DSRowPickerItem<Content: View>: View {
     @ViewBuilder
     var pickerImage: some View {
         Image(systemName: style.image(selected: selected))
+            .foregroundColor(.ds.brand.tertiary)
     }
 }
 
