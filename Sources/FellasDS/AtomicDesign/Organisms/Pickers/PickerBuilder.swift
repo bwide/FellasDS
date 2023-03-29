@@ -33,9 +33,9 @@ public enum VerticalPickerBuilder {
     
     public static func buildBlock<ID: Hashable, Data: RandomAccessCollection, Content: View>(
         _ loop: ForEach<Data, ID, Content>
-    ) -> [TagView] where Data.Element: Identifiable {
+    ) -> [TagView] where Data.Element: Hashable {
         loop.data.map {
-            TagView(label: AnyView(loop.content($0)), id: $0.id)
+            TagView(label: AnyView(loop.content($0)), id: $0)
         }
     }
     
