@@ -37,7 +37,7 @@ public struct DSAsyncImageContent: View {
             image
                 .resizable()
                 .padding(ds: .medium)
-                .scaledToFit()
+                .scaledToFill()
         case .failure(let error):
             Text(error.localizedDescription)
         default:
