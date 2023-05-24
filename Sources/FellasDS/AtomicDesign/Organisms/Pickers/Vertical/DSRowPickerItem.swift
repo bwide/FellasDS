@@ -8,16 +8,34 @@
 import Foundation
 import SwiftUI
 
-public struct DSRowPickerItem<Content: View>: View {
+protocol Taggable {
+    var tag: AnyHashable { get set }
+    var vm: DSPickerSelectionViewModel { get }
+    func withTag(_ tag: AnyHashable) -> Self
+}
+
+extension Taggable {
+    var selected: Bool {
+        tag == vm.selection
+    }
+    
+    func onTapGesture() {
+        if selected {
+            vm.selection = nil
+        } else {
+            vm.selection = tag
+        }
+    }
+}
+
+
+public struct DSRowPickerItem<Content: View>: View, Taggable {
     
     public var content: () -> Content
     public var style: Style = .single
     
-    internal var tag: AnyHashable = UUID()
+    var tag: AnyHashable = UUID()
     @EnvironmentObject var vm: DSPickerSelectionViewModel
-    var selected: Bool {
-        tag == vm.selection
-    }
     
     public init(@ViewBuilder content: @escaping () -> Content) {
         self.content = content
@@ -25,13 +43,7 @@ public struct DSRowPickerItem<Content: View>: View {
     
     public var body: some View {
         contentView
-            .onTapGesture {
-                if selected {
-                    vm.selection = nil
-                } else {
-                    vm.selection = tag
-                }
-            }
+            .onTapGesture { onTapGesture() }
     }
     
     @ViewBuilder
