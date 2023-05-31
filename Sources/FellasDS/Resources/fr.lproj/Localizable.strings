@@ -29,6 +29,9 @@
 /* subscribe {x} */
 "subscribe" = "s'abonner";
 
+/* Best Deal */
+"subscription.deal" = "Meilleure affaire";
+
 /* free for {x}%@ */
 "subscription.offer" = "gratuit pour  %@";
 

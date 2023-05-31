@@ -6,7 +6,7 @@
 "Error" = "गलती";
 
 /* OK */
-"OK" = "ठीक है";
+"OK" = "ठीक";
 
 /* privacy policy */
 "privacy policy" = "गोपनीयता नीति";
@@ -28,6 +28,9 @@
 
 /* subscribe {x} */
 "subscribe" = "सदस्यता लें";
+
+/* Best Deal */
+"subscription.deal" = "सर्वश्रेष्ठ सौदा";
 
 /* free for {x}%@ */
 "subscription.offer" = "%@ के लिए निःशुल्क";

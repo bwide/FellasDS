@@ -29,6 +29,9 @@
 /* subscribe {x} */
 "subscribe" = "订阅";
 
+/* Best Deal */
+"subscription.deal" = "最划算的价钱";
+
 /* free for {x}%@ */
 "subscription.offer" = "%@ 免费";
 

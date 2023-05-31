@@ -48,16 +48,17 @@ public struct SubscriptionPickerView<VM: SubscriptionPickerViewModelProtocol>: V
     @ViewBuilder
     func view(for reason: SubscriptionReason) -> some View {
         VStack {
+            Text(reason.title)
+                .textStyle(ds: .title1)
             Image(systemName: reason.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(ds: .medium)
-            Text(reason.title)
-                .textStyle(ds: .title2)
             Spacer()
                 .frame(height: .ds.spacing.medium)
             Text(reason.subtitle)
-                .textStyle(ds: .caption1)
+                .textStyle(ds: .subhead)
+            Spacer()
         }
     }
     
@@ -77,19 +78,28 @@ public struct SubscriptionPickerView<VM: SubscriptionPickerViewModelProtocol>: V
     @ViewBuilder
     func view(for product: (any ProductProvider)?) -> some View {
         if let product = product {
-            HStack(alignment: .bottom) {
+            HStack(alignment: .center) {
                 VStack(alignment: .leading, spacing: .ds.spacing.small) {
                     Text(product.displayName)
+                        .textStyle(ds: .headline, color: .ds.text.grouped.secondary)
+                    Text(product.displayPrice)
                         .textStyle(ds: .title2)
-                    HStack {
-                        Text(product.displayPrice)
-                            .textStyle(ds: .headline)
-                        Spacer()
-                        Text(product.displayIntroductoryOffer)
-                            .textStyle(ds: .footnote)
-                    }
                 }
                 Spacer()
+                VStack(alignment: .trailing, spacing: .ds.spacing.small) {
+                    Text(product.displayIntroductoryOffer)
+                        .textStyle(ds: .footnote)
+                    if product.subscriptionPeriod == .year {
+                        Text(String.s.bestDeal)
+                            .textStyle(ds: .headline)
+                            .padding(.vertical, .ds.spacing.xxxSmall)
+                            .padding(.horizontal, .ds.spacing.small)
+                            .background {
+                                Capsule()
+                                    .fill(Color.ds.brand.primary)
+                            }
+                    }
+                }
             }
         }
     }

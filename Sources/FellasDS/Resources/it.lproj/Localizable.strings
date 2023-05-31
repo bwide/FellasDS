@@ -29,9 +29,12 @@
 /* subscribe {x} */
 "subscribe" = "iscriviti";
 
+/* Best Deal */
+"subscription.deal" = "Miglior offerta";
+
 /* free for {x}%@ */
 "subscription.offer" = "gratis per %@";
 
 /* terms of use */
-"terms of use" = "Condizioni d'uso";
+"terms of use" = "termini di utilizzo";
 

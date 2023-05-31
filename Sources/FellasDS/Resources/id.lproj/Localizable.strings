@@ -6,7 +6,7 @@
 "Error" = "Kesalahan";
 
 /* OK */
-"OK" = "Oke";
+"OK" = "OKE";
 
 /* privacy policy */
 "privacy policy" = "Kebijakan pribadi";
@@ -28,6 +28,9 @@
 
 /* subscribe {x} */
 "subscribe" = "berlangganan";
+
+/* Best Deal */
+"subscription.deal" = "Kesepakatan Terbaik";
 
 /* free for {x}%@ */
 "subscription.offer" = "gratis untuk %@";

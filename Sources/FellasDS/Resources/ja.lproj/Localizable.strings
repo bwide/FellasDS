@@ -6,7 +6,7 @@
 "Error" = "エラー";
 
 /* OK */
-"OK" = "わかった";
+"OK" = "OK";
 
 /* privacy policy */
 "privacy policy" = "プライバシーポリシー";
@@ -15,22 +15,25 @@
 "rate" = "アプリを評価";
 
 /* restore {x} */
-"restore" = "を復元";
+"restore" = "を復元する";
 
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
-"reviewprompt.message" = "私たちのアプリが気に入ったら、レビューを投稿することを検討してください。メールでフィードバックを送信することもできます";
+"reviewprompt.message" = "私たちのアプリが気に入っていただけましたら、レビューをしていただくことをご検討ください。フィードバックは電子メールでお送りいただくこともできます。";
 
 /* enjoying {x}%@? */
-"reviewPrompt.title" = "%@を楽しんでいますか?";
+"reviewPrompt.title" = "%@ を楽しんでいますか?";
 
 /* Send feedback */
-"sendFeedback.button" = "フィードバックを送信";
+"sendFeedback.button" = "フィードバックを送信する";
 
 /* subscribe {x} */
-"subscribe" = "購読";
+"subscribe" = "を購読する";
+
+/* Best Deal */
+"subscription.deal" = "ベストディール";
 
 /* free for {x}%@ */
-"subscription.offer" = "%@ で無料";
+"subscription.offer" = "%@ は無料";
 
 /* terms of use */
 "terms of use" = "利用規約";

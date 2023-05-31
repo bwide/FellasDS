@@ -29,6 +29,9 @@
 /* subscribe {x} */
 "subscribe" = "подписаться";
 
+/* Best Deal */
+"subscription.deal" = "Лучшая сделка";
+
 /* free for {x}%@ */
 "subscription.offer" = "бесплатно для %@";
 

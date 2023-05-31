@@ -67,7 +67,7 @@ public struct DSRowPickerItem<Content: View>: View, Taggable {
     @ViewBuilder
     var pickerImage: some View {
         Image(systemName: style.image(selected: selected))
-            .foregroundColor(.ds.brand.tertiary)
+            .foregroundColor(.ds.text.grouped.primary)
     }
 }
 

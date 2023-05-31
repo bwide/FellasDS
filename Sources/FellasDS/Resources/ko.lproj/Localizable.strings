@@ -6,7 +6,7 @@
 "Error" = "오류";
 
 /* OK */
-"OK" = "확인";
+"OK" = "좋아요";
 
 /* privacy policy */
 "privacy policy" = "개인 정보 정책";
@@ -28,6 +28,9 @@
 
 /* subscribe {x} */
 "subscribe" = "구독";
+
+/* Best Deal */
+"subscription.deal" = "최상의 거래";
 
 /* free for {x}%@ */
 "subscription.offer" = "%@ 무료";

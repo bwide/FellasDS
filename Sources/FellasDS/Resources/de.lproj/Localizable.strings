@@ -18,16 +18,19 @@
 "restore" = "wiederherstellen";
 
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
-"reviewprompt.message" = "Wenn Ihnen unsere App gefällt, denken Sie darüber nach, sie zu bewerten. Sie können uns auch Feedback per E-Mail senden";
+"reviewprompt.message" = "Wenn Ihnen unsere App gefällt, denken Sie über eine Bewertung nach. Sie können uns auch Feedback per E-Mail senden";
 
 /* enjoying {x}%@? */
-"reviewPrompt.title" = "genießt %@?";
+"reviewPrompt.title" = "Genießen Sie %@?";
 
 /* Send feedback */
-"sendFeedback.button" = "Feedback schicken";
+"sendFeedback.button" = "Feedback abschicken";
 
 /* subscribe {x} */
-"subscribe" = "abonnieren";
+"subscribe" = "Abonnieren Sie";
+
+/* Best Deal */
+"subscription.deal" = "Bestes Angebot";
 
 /* free for {x}%@ */
 "subscription.offer" = "kostenlos für %@";
