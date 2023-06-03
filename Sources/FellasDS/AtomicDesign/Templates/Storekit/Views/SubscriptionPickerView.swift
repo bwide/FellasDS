@@ -91,7 +91,8 @@ public struct SubscriptionPickerView<VM: SubscriptionPickerViewModelProtocol>: V
                         .textStyle(ds: .footnote)
                     if product.subscriptionPeriod == .year {
                         Text(String.s.bestDeal)
-                            .textStyle(ds: .headline)
+                            .textStyle(ds: .callout,
+                                       color: .ds.text.grouped.primary)
                             .padding(.vertical, .ds.spacing.xxxSmall)
                             .padding(.horizontal, .ds.spacing.small)
                             .background {
@@ -140,7 +141,6 @@ struct SubscriptionPicker_Preview: PreviewProvider {
             SubscriptionPickerView(vm: MockSubscriptionPickerViewModel())
         }
         .navigationBarTitleDisplayMode(.inline)
-        .preferredColorScheme(.dark)
     }
 }
 
