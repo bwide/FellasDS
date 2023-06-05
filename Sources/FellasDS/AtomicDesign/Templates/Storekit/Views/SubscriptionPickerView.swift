@@ -81,14 +81,15 @@ public struct SubscriptionPickerView<VM: SubscriptionPickerViewModelProtocol>: V
             HStack(alignment: .center) {
                 VStack(alignment: .leading, spacing: .ds.spacing.small) {
                     Text(product.displayName)
-                        .textStyle(ds: .headline, color: .ds.text.grouped.secondary)
+                        .textStyle(ds: .headline, color: .ds.text.background.secondary)
                     Text(product.displayPrice)
                         .textStyle(ds: .title2)
                 }
                 Spacer()
                 VStack(alignment: .trailing, spacing: .ds.spacing.small) {
                     Text(product.displayIntroductoryOffer)
-                        .textStyle(ds: .footnote)
+                        .textStyle(ds: .footnote,
+                                   color: .ds.text.background.secondary)
                     if product.subscriptionPeriod == .year {
                         Text(String.s.bestDeal)
                             .textStyle(ds: .callout,
