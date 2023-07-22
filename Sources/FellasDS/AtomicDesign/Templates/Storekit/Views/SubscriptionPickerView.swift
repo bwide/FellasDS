@@ -20,18 +20,20 @@ public struct SubscriptionPickerView<VM: SubscriptionPickerViewModelProtocol>: V
     @StateObject var vm: VM
     
     public var body: some View {
-        ZStack {
-            Background(.secondary)
-            VStack(alignment: .leading, spacing: .ds.spacing.small) {
-                subscriptionHeadlines
-                subscriptionList
-                links
-                purchaseButton
+        NavigationView {
+            ZStack {
+                Background(.secondary)
+                VStack(alignment: .leading, spacing: .ds.spacing.small) {
+                    subscriptionHeadlines
+                    subscriptionList
+                    links
+                    purchaseButton
+                }
+                .padding(.horizontal, ds: .medium)
             }
-            .padding(.horizontal, ds: .medium)
+            .toolbar { toolbar }
+            .alert(error: $vm.error)
         }
-        .toolbar { toolbar }
-        .alert(error: $vm.error)
     }
     
     var subscriptionHeadlines: some View {
@@ -128,6 +130,7 @@ struct SubscriptionPicker_Preview: PreviewProvider {
             SubscriptionPickerView(vm: MockSubscriptionPickerViewModel())
         }
         .navigationBarTitleDisplayMode(.inline)
+        .preferredColorScheme(.dark)
     }
 }
 
