@@ -14,6 +14,7 @@ public struct DSLabelStyleVertical: LabelStyle {
             configuration.icon
             configuration.title
         })
+        .padding(ds: .xxSmall)
     }
 }
 
