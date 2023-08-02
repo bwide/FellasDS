@@ -1,4 +1,3 @@
-
 /* Cancel */
 "cancel" = "रद्द करना";
 
@@ -6,7 +5,7 @@
 "Error" = "गलती";
 
 /* OK */
-"OK" = "ठीक है";
+"OK" = "ठीक";
 
 /* privacy policy */
 "privacy policy" = "गोपनीयता नीति";
@@ -18,7 +17,7 @@
 "restore" = "पुनर्स्थापित करें";
 
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
-"reviewprompt.message" = "यदि आप हमारे ऐप को पसंद करते हैं, तो इसे समीक्षा देने पर विचार करें, आप हमें ईमेल के माध्यम से कोई प्रतिक्रिया भी भेज सकते हैं";
+"reviewprompt.message" = "यदि आपको हमारा ऐप पसंद आता है, तो इसकी समीक्षा करने पर विचार करें, आप हमें ईमेल के माध्यम से भी कोई प्रतिक्रिया भेज सकते हैं";
 
 /* enjoying {x}%@? */
 "reviewPrompt.title" = "%@ का आनंद ले रहे हैं?";

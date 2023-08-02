@@ -8,106 +8,73 @@
 import Foundation
 
 struct Strings {
-    var subscribe: String {
-        NSLocalizedString(
-            "subscribe",
-            bundle: .module,
-            comment: "subscribe {x}"
-        ).localizedCapitalized
-    }
+    var subscribe = localizable(
+        key: "subscribe",
+        text: "subscribe {x}"
+    )
     
-    var restore: String {
-        NSLocalizedString(
-            "restore",
-            bundle: .module,
-            comment: "restore {x}"
-        ).localizedCapitalized
-    }
+    var restore = localizable(
+        key: "restore",
+        text: "restore {x}"
+    )
     
-    var privacyPolicy: String {
-        NSLocalizedString(
-            "privacy policy",
-            bundle: .module,
-            comment: "privacy policy"
-        ).localizedCapitalized
-    }
+    var privacyPolicy = localizable(
+        key: "privacy policy",
+        text: "privacy policy"
+    )
     
-    var termsOfUse: String {
-        NSLocalizedString(
-            "terms of use",
-            bundle: .module,
-            comment: "terms of use"
-        ).localizedCapitalized
-    }
+    var termsOfUse = localizable(
+        key: "terms of use",
+        text: "terms of use"
+    )
     
-    var error: String {
-        NSLocalizedString(
-            "Error",
-            bundle: .module,
-            comment: "Error"
-        ).localizedCapitalized
-    }
+    var error = localizable(
+        key: "Error",
+        text: "Error"
+    )
     
-    var ok: String {
-        NSLocalizedString(
-            "OK",
-            bundle: .module,
-            comment: "OK"
-        ).localizedCapitalized
-    }
+    var ok = localizable(
+        key: "OK",
+        text: "OK"
+    )
     
-    var cancel: String {
-        NSLocalizedString(
-            "cancel",
-            bundle: .module,
-            comment: "Cancel"
-        ).localizedCapitalized
-    }
+    var cancel = localizable(
+        key: "cancel",
+        text: "Cancel"
+    )
     
-    var rate: String {
-        NSLocalizedString(
-            "rate",
-            bundle: .module,
-            comment: "rate {app}"
-        ).localizedCapitalized
-    }
+    var rate = localizable(
+        key: "rate",
+        text: "rate {app}"
+    )
     
-    var sendFeedback: String {
-        NSLocalizedString(
-            "sendFeedback.button",
-            bundle: .module,
-            comment: "Send feedback"
-        ).localizedCapitalized
-    }
+    var sendFeedback = localizable(
+        key: "sendFeedback.button",
+        text: "Send feedback"
+    )
     
-    var reviewPromptMessage: String {
-        NSLocalizedString(
-            "reviewprompt.message",
-            bundle: .module,
-            comment: "If you like our app, consider giving it a review, you can also send us any feedback through email"
-        ).localizedCapitalized
-    }
+    var reviewPromptMessage = localizable(
+        key: "reviewprompt.message",
+        text: "If you like our app, consider giving it a review, you can also send us any feedback through email"
+    )
     
     var reviewPromptTitle: String {
         let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String
         ?? "this app"
         
-        let ans = NSLocalizedString(
-            "reviewPrompt.title",
-            bundle: .module,
-            comment: "enjoying {x}%@?"
-        ).localizedCapitalized
+        let ans = Self.localizable(
+            key: "reviewPrompt.title",
+            text: "enjoying {x}%@?"
+        )
         
         return String(format: ans, appName)
     }
     
     func introductoryOffer(period: String) -> String {
-        let ans = NSLocalizedString(
-            "subscription.offer",
-            bundle: .module,
-            comment: "free for {x}%@"
-        ).localizedCapitalized
-        
+        let ans = Self.localizable(
+            key: "subscription.offer",
+            text: "free for {x}%@"
+        )
         return String(format: ans, period)
     }
 }
@@ -116,4 +83,14 @@ struct Strings {
 
 extension String {
     static let s = Strings()
+}
+
+extension Strings {
+    static func localizable(key: String, text: String) -> String {
+        NSLocalizedString(
+            key,
+            bundle: .module,
+            comment: text
+        ).localizedCapitalized
+    }
 }

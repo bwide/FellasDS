@@ -1,4 +1,3 @@
-
 /* Cancel */
 "cancel" = "取消";
 
@@ -18,10 +17,10 @@
 "restore" = "恢复";
 
 /* If you like our app, consider giving it a review, you can also send us any feedback through email */
-"reviewprompt.message" = "如果您喜欢我们的应用，请考虑给它一个评论，您也可以通过电子邮件向我们发送任何反馈";
+"reviewprompt.message" = "如果您喜欢我们的应用程序，请考虑给它一个评论，您也可以通过电子邮件向我们发送任何反馈";
 
 /* enjoying {x}%@? */
-"reviewPrompt.title" = "享受 %@？";
+"reviewPrompt.title" = "喜欢%@吗？";
 
 /* Send feedback */
 "sendFeedback.button" = "发送反馈";
