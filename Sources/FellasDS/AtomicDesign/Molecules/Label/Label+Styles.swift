@@ -10,11 +10,11 @@ import SwiftUI
 
 public struct DSLabelStyleVertical: LabelStyle {
     public func makeBody(configuration: Configuration) -> some View {
-        VStack(spacing: .ds.spacing.xxSmall, content: {
+        VStack(spacing: .ds.spacing.xxxSmall, content: {
             configuration.icon
             configuration.title
         })
-        .padding(ds: .xxSmall)
+        .padding(ds: .xxxSmall)
     }
 }
 
