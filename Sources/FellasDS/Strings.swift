@@ -79,8 +79,6 @@ struct Strings {
     }
 }
 
-// TODO: not sure if i can inject a localization from code
-
 extension String {
     static let s = Strings()
 }
