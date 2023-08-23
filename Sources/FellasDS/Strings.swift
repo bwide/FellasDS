@@ -8,98 +8,97 @@
 import Foundation
 import FellasLocalization
 
-struct Strings {
-    var subscribe: String {
-        String.localizable(
-            key: "subscribe",
-            text: "subscribe {x}"
+enum Strings {
+    static var subscribe: String {
+        String(
+            localized: "subscribe",
+            bundle: Locale.bundle,
+            comment: "subscribe {x}"
         )
     }
     
-    var restore: String {
-        String.localizable(
-            key: "restore",
-            text: "restore {x}"
+    static var restore: String {
+        String(
+            localized: "restore",
+            bundle: Locale.bundle,
+            comment: "restore {x}"
         )
     }
     
-    var privacyPolicy: String {
-        String.localizable(
-            key: "privacy policy",
-            text: "privacy policy"
+    static var privacyPolicy: String {
+        String(
+            localized: "privacy policy",
+            bundle: Locale.bundle,
+            comment: "privacy policy"
         )
     }
     
-    var termsOfUse: String {
-        String.localizable(
-            key: "terms of use",
-            text: "terms of use"
+    static var termsOfUse: String {
+        String(
+            localized: "terms of use",
+            bundle: Locale.bundle,
+            comment: "terms of use"
         )
     }
     
-    var error: String {
-        String.localizable(
-            key: "Error",
-            text: "Error"
+    static var error: String {
+        String(
+            localized: "Error",
+            bundle: Locale.bundle,
+            comment: "Error"
         )
     }
     
-    var ok: String {
-        String.localizable(
-            key: "OK",
-            text: "OK"
+    static var ok: String {
+        String(
+            localized: "OK",
+            bundle: Locale.bundle,
+            comment: "OK"
         )
     }
     
-    var cancel: String {
-        String.localizable(
-            key: "cancel",
-            text: "Cancel"
+    static var cancel: String {
+        String(
+            localized: "cancel",
+            bundle: Locale.bundle,
+            comment: "Cancel"
         )
     }
     
-    var rate: String {
-        String.localizable(
-            key: "rate",
-            text: "rate {app}"
+    static var rate: String {
+        String(
+            localized: "rate",
+            bundle: Locale.bundle,
+            comment: "rate {app}"
         )
     }
     
-    var sendFeedback: String {
-        String.localizable(
-            key: "sendFeedback.button",
-            text: "Send feedback"
+    static var sendFeedback: String {
+        String(
+            localized: "sendFeedback.button",
+            bundle: Locale.bundle,
+            comment: "Send feedback"
         )
     }
     
-    var reviewPromptMessage: String {
-        String.localizable(
-            key: "reviewprompt.message",
-            text: "If you like our app, consider giving it a review, you can also send us any feedback through email"
+    static var reviewPromptMessage: String {
+        String(
+            localized: "reviewprompt.message",
+            bundle: Locale.bundle,
+            comment: "If you like our app, consider giving it a review, you can also send us any feedback through email"
         )
     }
     
-    var reviewPromptTitle: String {
+    static var reviewPromptTitle: String {
         let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String
         ?? "this app"
         
-        let ans = String.localizable(
-            key: "reviewPrompt.title",
-            text: "enjoying {x}%@?"
+        let ans = String(
+            localized: "localized.title",
+            bundle: Locale.bundle,
+            comment: "enjoying {x}%@?"
         )
         
         return String(format: ans, appName)
     }
-    
-    func introductoryOffer(period: String) -> String {
-        let ans = String.localizable(
-            key: "subscription.offer",
-            text: "free for {x}%@"
-        )
-        return String(format: ans, period)
-    }
-}
-
-extension String {
-    static let s = Strings()
 }

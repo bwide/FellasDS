@@ -15,18 +15,18 @@ struct AppstoreReviewAlert: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .alert(String.s.reviewPromptTitle, isPresented: $isPresented) {
-                Button(String.s.sendFeedback) {
+            .alert(Strings.reviewPromptTitle, isPresented: $isPresented) {
+                Button(Strings.sendFeedback) {
                     handleFeedback()
                 }
-                Button(String.s.rate) {
+                Button(Strings.rate) {
                     handleAppstoreReview()
                 }
-                Button(String.s.cancel, role: .cancel) {
+                Button(Strings.cancel, role: .cancel) {
                     handleCancel()
                 }
             } message: {
-                Text(String.s.reviewPromptMessage)
+                Text(Strings.reviewPromptMessage)
             }
 
     }

@@ -24,6 +24,7 @@ let package = Package(
         .target(
             name: "FellasDS",
             dependencies: ["FellasLocalization"],
+            path: "Sources/FellasDS",
             resources: [.process("Resources")]
         ),
         .testTarget(
