@@ -1,853 +1,853 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "cancel" : {
-      "comment" : "Cancel",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "يلغي"
+  "sourceLanguage": "en",
+  "strings": {
+    "cancel": {
+      "comment": "Cancel",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u064a\u0644\u063a\u064a"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stornieren"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stornieren"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancelar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annuler"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "रद्द करना"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0930\u0926\u094d\u0926 \u0915\u0930\u0928\u093e"
           }
         },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Membatalkan"
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Membatalkan"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annulla"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annulla"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "キャンセル"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u30ad\u30e3\u30f3\u30bb\u30eb"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "취소"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ucde8\uc18c"
           }
         },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancelar"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Отмена"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u041e\u0442\u043c\u0435\u043d\u0430"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "取消"
-          }
-        }
-      }
-    },
-    "Error" : {
-      "comment" : "Error",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "خطأ"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fehler"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Error"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Erreur"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "गलती"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kesalahan"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Errore"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "エラー"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "오류"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Erro"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ошибка"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "错误"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u53d6\u6d88"
           }
         }
       }
     },
-    "localized.title" : {
-      "comment" : "enjoying {x}%@?",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "تعليق %@؟"
+    "Error": {
+      "comment": "Error",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u062e\u0637\u0623"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ kommentieren?"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fehler"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Comentando %@?"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "commenter %@ ?"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erreur"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "टिप्पणी कर रहे हैं %@?"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0917\u0932\u0924\u0940"
           }
         },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "memberi komentar %@?"
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kesalahan"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "commentando %@?"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Errore"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ をコメントしていますか?"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u30a8\u30e9\u30fc"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "댓글 %@?"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\uc624\ub958"
           }
         },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "comentando %@?"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erro"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "комментируешь %@?"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u041e\u0448\u0438\u0431\u043a\u0430"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "评论 %@？"
-          }
-        }
-      }
-    },
-    "OK" : {
-      "comment" : "OK",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "نعم"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "DE ACUERDO"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "D'ACCORD"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ठीक है"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OKE"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "わかりました"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "좋아요"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ХОРОШО"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "好的"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u9519\u8bef"
           }
         }
       }
     },
-    "privacy policy" : {
-      "comment" : "privacy policy",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "سياسة الخصوصية"
+    "localized.title": {
+      "comment": "enjoying {x}%@?",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u062a\u0639\u0644\u064a\u0642 %@\u061f"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Datenschutzrichtlinie"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ kommentieren?"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "política de privacidad"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u00bfComentando %@?"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "politique de confidentialité"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "commenter %@\u00a0?"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "गोपनीयता नीति"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u091f\u093f\u092a\u094d\u092a\u0923\u0940 \u0915\u0930 \u0930\u0939\u0947 \u0939\u0948\u0902 %@?"
           }
         },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kebijakan pribadi"
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "memberi komentar %@?"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "politica sulla riservatezza"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "commentando %@?"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "プライバシーポリシー"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ \u3092\u30b3\u30e1\u30f3\u30c8\u3057\u3066\u3044\u307e\u3059\u304b?"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "개인 정보 정책"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ub313\uae00 %@?"
           }
         },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "política de Privacidade"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "comentando %@?"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "политика конфиденциальности"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0438\u0440\u0443\u0435\u0448\u044c %@?"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "隐私政策"
-          }
-        }
-      }
-    },
-    "rate" : {
-      "comment" : "rate {app}",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "قيم التطبيق"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bewertungs App"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "calificar aplicacion"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "application de taux"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "एप्प का मूल्यांकन"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "menilai"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "valuta"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アプリを評価"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "앱 평가"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "avaliar"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "оцените"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "评价应用"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u8bc4\u8bba %@\uff1f"
           }
         }
       }
     },
-    "restore" : {
-      "comment" : "restore {x}",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "استعادة"
+    "OK": {
+      "comment": "OK",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0646\u0639\u0645"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "wiederherstellen"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "restaurar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DE ACUERDO"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "restaurer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "D'ACCORD"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "पुनर्स्थापित करें"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0920\u0940\u0915 \u0939\u0948"
           }
         },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "pulihkan"
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OKE"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ripristina"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "を復元する"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u308f\u304b\u308a\u307e\u3057\u305f"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "복원"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\uc88b\uc544\uc694"
           }
         },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "restaurar"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "восстановить"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0425\u041e\u0420\u041e\u0428\u041e"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "恢复"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u597d\u7684"
           }
         }
       }
     },
-    "reviewprompt.message" : {
-      "comment" : "If you like our app, consider giving it a review, you can also send us any feedback through email",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "إذا أعجبك تطبيقنا، ففكر في مراجعته، ويمكنك أيضًا إرسال أي تعليقات إلينا عبر البريد الإلكتروني"
+    "privacy policy": {
+      "comment": "privacy policy",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0633\u064a\u0627\u0633\u0629 \u0627\u0644\u062e\u0635\u0648\u0635\u064a\u0629"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wenn Ihnen unsere App gefällt, denken Sie über eine Bewertung nach. Sie können uns auch Feedback per E-Mail senden"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Datenschutzrichtlinie"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si le gusta nuestra aplicación, considere darle una reseña, también puede enviarnos sus comentarios por correo electrónico."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pol\u00edtica de privacidad"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si vous aimez notre application, pensez à lui donner votre avis, vous pouvez également nous envoyer vos commentaires par e-mail."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "politique de confidentialit\u00e9"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "यदि आपको हमारा ऐप पसंद आता है, तो इसकी समीक्षा करने पर विचार करें, आप हमें ईमेल के माध्यम से भी कोई प्रतिक्रिया भेज सकते हैं"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0917\u094b\u092a\u0928\u0940\u092f\u0924\u093e \u0928\u0940\u0924\u093f"
           }
         },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jika Anda menyukai aplikasi kami, pertimbangkan untuk memberikan ulasan, Anda juga dapat mengirimkan umpan balik kepada kami melalui email"
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kebijakan pribadi"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se ti piace la nostra app, valuta la possibilità di recensirla, puoi anche inviarci qualsiasi feedback tramite e-mail"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "politica sulla riservatezza"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "私たちのアプリが気に入っていただけましたら、レビューをしていただくことをご検討ください。フィードバックは電子メールでお送りいただくこともできます。"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u30dd\u30ea\u30b7\u30fc"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "저희 앱이 마음에 드신다면 리뷰를 남겨주세요. 이메일을 통해 피드백을 보내주실 수도 있습니다."
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\uac1c\uc778 \uc815\ubcf4 \uc815\ucc45"
           }
         },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se você gosta de nosso aplicativo, considere fazer uma avaliação. Você também pode nos enviar comentários por e-mail"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pol\u00edtica de Privacidade"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Если вам нравится наше приложение, рассмотрите возможность оставить на него отзыв. Вы также можете отправить нам отзыв по электронной почте."
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "如果您喜欢我们的应用程序，请考虑给它一个评论，您也可以通过电子邮件向我们发送任何反馈"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u9690\u79c1\u653f\u7b56"
           }
         }
       }
     },
-    "sendFeedback.button" : {
-      "comment" : "Send feedback",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ارسل رأيك"
+    "rate": {
+      "comment": "rate {app}",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0642\u064a\u0645 \u0627\u0644\u062a\u0637\u0628\u064a\u0642"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Feedback abschicken"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bewertungs App"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enviar comentarios"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "calificar aplicacion"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envoyer des commentaires"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "application de taux"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "प्रतिक्रिया भेजें"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u090f\u092a\u094d\u092a \u0915\u093e \u092e\u0942\u0932\u094d\u092f\u093e\u0902\u0915\u0928"
           }
         },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kirim masukan"
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "menilai"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Invia feedback"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "valuta"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "フィードバックを送信する"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u30a2\u30d7\u30ea\u3092\u8a55\u4fa1"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "피드백 보내기"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\uc571 \ud3c9\uac00"
           }
         },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enviar comentários"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "avaliar"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Отправить отзыв"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u043e\u0446\u0435\u043d\u0438\u0442\u0435"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "发送反馈"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u8bc4\u4ef7\u5e94\u7528"
           }
         }
       }
     },
-    "subscribe" : {
-      "comment" : "subscribe {x}",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "الاشتراك"
+    "restore": {
+      "comment": "restore {x}",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0627\u0633\u062a\u0639\u0627\u062f\u0629"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abonnieren Sie"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "wiederherstellen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "suscríbete"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "restaurar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "abonnez-vous"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "restaurer"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "सदस्यता लें"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u092a\u0941\u0928\u0930\u094d\u0938\u094d\u0925\u093e\u092a\u093f\u0924 \u0915\u0930\u0947\u0902"
           }
         },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "berlangganan"
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pulihkan"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "iscriviti"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ripristina"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "を購読する"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u3092\u5fa9\u5143\u3059\u308b"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "구독"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ubcf5\uc6d0"
           }
         },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "inscreva-se"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "restaurar"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "подписаться"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "订阅"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u6062\u590d"
           }
         }
       }
     },
-    "terms of use" : {
-      "comment" : "terms of use",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "شروط الاستخدام"
+    "reviewprompt.message": {
+      "comment": "If you like our app, consider giving it a review, you can also send us any feedback through email",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0625\u0630\u0627 \u0623\u0639\u062c\u0628\u0643 \u062a\u0637\u0628\u064a\u0642\u0646\u0627\u060c \u0641\u0641\u0643\u0631 \u0641\u064a \u0645\u0631\u0627\u062c\u0639\u062a\u0647\u060c \u0648\u064a\u0645\u0643\u0646\u0643 \u0623\u064a\u0636\u064b\u0627 \u0625\u0631\u0633\u0627\u0644 \u0623\u064a \u062a\u0639\u0644\u064a\u0642\u0627\u062a \u0625\u0644\u064a\u0646\u0627 \u0639\u0628\u0631 \u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nutzungsbedingungen"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wenn Ihnen unsere App gef\u00e4llt, denken Sie \u00fcber eine Bewertung nach. Sie k\u00f6nnen uns auch Feedback per E-Mail senden"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "condiciones de uso"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si le gusta nuestra aplicaci\u00f3n, considere darle una rese\u00f1a, tambi\u00e9n puede enviarnos sus comentarios por correo electr\u00f3nico."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "conditions d'utilisation"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si vous aimez notre application, pensez \u00e0 lui donner votre avis, vous pouvez \u00e9galement nous envoyer vos commentaires par e-mail."
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "उपयोग की शर्तें"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u092f\u0926\u093f \u0906\u092a\u0915\u094b \u0939\u092e\u093e\u0930\u093e \u0910\u092a \u092a\u0938\u0902\u0926 \u0906\u0924\u093e \u0939\u0948, \u0924\u094b \u0907\u0938\u0915\u0940 \u0938\u092e\u0940\u0915\u094d\u0937\u093e \u0915\u0930\u0928\u0947 \u092a\u0930 \u0935\u093f\u091a\u093e\u0930 \u0915\u0930\u0947\u0902, \u0906\u092a \u0939\u092e\u0947\u0902 \u0908\u092e\u0947\u0932 \u0915\u0947 \u092e\u093e\u0927\u094d\u092f\u092e \u0938\u0947 \u092d\u0940 \u0915\u094b\u0908 \u092a\u094d\u0930\u0924\u093f\u0915\u094d\u0930\u093f\u092f\u093e \u092d\u0947\u091c \u0938\u0915\u0924\u0947 \u0939\u0948\u0902"
           }
         },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "syarat Penggunaan"
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jika Anda menyukai aplikasi kami, pertimbangkan untuk memberikan ulasan, Anda juga dapat mengirimkan umpan balik kepada kami melalui email"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "termini di utilizzo"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se ti piace la nostra app, valuta la possibilit\u00e0 di recensirla, puoi anche inviarci qualsiasi feedback tramite e-mail"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "利用規約"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u79c1\u305f\u3061\u306e\u30a2\u30d7\u30ea\u304c\u6c17\u306b\u5165\u3063\u3066\u3044\u305f\u3060\u3051\u307e\u3057\u305f\u3089\u3001\u30ec\u30d3\u30e5\u30fc\u3092\u3057\u3066\u3044\u305f\u3060\u304f\u3053\u3068\u3092\u3054\u691c\u8a0e\u304f\u3060\u3055\u3044\u3002\u30d5\u30a3\u30fc\u30c9\u30d0\u30c3\u30af\u306f\u96fb\u5b50\u30e1\u30fc\u30eb\u3067\u304a\u9001\u308a\u3044\u305f\u3060\u304f\u3053\u3068\u3082\u3067\u304d\u307e\u3059\u3002"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이용약관"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\uc800\ud76c \uc571\uc774 \ub9c8\uc74c\uc5d0 \ub4dc\uc2e0\ub2e4\uba74 \ub9ac\ubdf0\ub97c \ub0a8\uaca8\uc8fc\uc138\uc694. \uc774\uba54\uc77c\uc744 \ud1b5\ud574 \ud53c\ub4dc\ubc31\uc744 \ubcf4\ub0b4\uc8fc\uc2e4 \uc218\ub3c4 \uc788\uc2b5\ub2c8\ub2e4."
           }
         },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "termos de uso"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se voc\u00ea gosta de nosso aplicativo, considere fazer uma avalia\u00e7\u00e3o. Voc\u00ea tamb\u00e9m pode nos enviar coment\u00e1rios por e-mail"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Условия эксплуатации"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0415\u0441\u043b\u0438 \u0432\u0430\u043c \u043d\u0440\u0430\u0432\u0438\u0442\u0441\u044f \u043d\u0430\u0448\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435, \u0440\u0430\u0441\u0441\u043c\u043e\u0442\u0440\u0438\u0442\u0435 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u043e\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u043d\u0430 \u043d\u0435\u0433\u043e \u043e\u0442\u0437\u044b\u0432. \u0412\u044b \u0442\u0430\u043a\u0436\u0435 \u043c\u043e\u0436\u0435\u0442\u0435 \u043e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u043d\u0430\u043c \u043e\u0442\u0437\u044b\u0432 \u043f\u043e \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u043e\u0439 \u043f\u043e\u0447\u0442\u0435."
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用条款"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u5982\u679c\u60a8\u559c\u6b22\u6211\u4eec\u7684\u5e94\u7528\u7a0b\u5e8f\uff0c\u8bf7\u8003\u8651\u7ed9\u5b83\u4e00\u4e2a\u8bc4\u8bba\uff0c\u60a8\u4e5f\u53ef\u4ee5\u901a\u8fc7\u7535\u5b50\u90ae\u4ef6\u5411\u6211\u4eec\u53d1\u9001\u4efb\u4f55\u53cd\u9988"
+          }
+        }
+      }
+    },
+    "sendFeedback.button": {
+      "comment": "Send feedback",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0627\u0631\u0633\u0644 \u0631\u0623\u064a\u0643"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Feedback abschicken"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviar comentarios"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoyer des commentaires"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u092a\u094d\u0930\u0924\u093f\u0915\u094d\u0930\u093f\u092f\u093e \u092d\u0947\u091c\u0947\u0902"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kirim masukan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Invia feedback"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u30d5\u30a3\u30fc\u30c9\u30d0\u30c3\u30af\u3092\u9001\u4fe1\u3059\u308b"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud53c\ub4dc\ubc31 \ubcf4\ub0b4\uae30"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviar coment\u00e1rios"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u043e\u0442\u0437\u044b\u0432"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u53d1\u9001\u53cd\u9988"
+          }
+        }
+      }
+    },
+    "subscribe": {
+      "comment": "subscribe {x}",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abonnieren Sie"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "suscr\u00edbete"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "abonnez-vous"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0938\u0926\u0938\u094d\u092f\u0924\u093e \u0932\u0947\u0902"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "berlangganan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iscriviti"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u3092\u8cfc\u8aad\u3059\u308b"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\uad6c\ub3c5"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "inscreva-se"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u043f\u043e\u0434\u043f\u0438\u0441\u0430\u0442\u044c\u0441\u044f"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u8ba2\u9605"
+          }
+        }
+      }
+    },
+    "terms of use": {
+      "comment": "terms of use",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0634\u0631\u0648\u0637 \u0627\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nutzungsbedingungen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "condiciones de uso"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "conditions d'utilisation"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0909\u092a\u092f\u094b\u0917 \u0915\u0940 \u0936\u0930\u094d\u0924\u0947\u0902"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "syarat Penggunaan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "termini di utilizzo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u5229\u7528\u898f\u7d04"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\uc774\uc6a9\uc57d\uad00"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "termos de uso"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0423\u0441\u043b\u043e\u0432\u0438\u044f \u044d\u043a\u0441\u043f\u043b\u0443\u0430\u0442\u0430\u0446\u0438\u0438"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u4f7f\u7528\u6761\u6b3e"
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }
