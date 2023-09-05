@@ -9,6 +9,12 @@ import Foundation
 import CoreGraphics
 
 public enum DSSize: CGFloat, CaseIterable {
+    /// 8
+    case xxxSmall = 8
+    /// 12
+    case xxSmall = 12
+    /// 18
+    case xSmall = 18
     /// 30
     case small = 30
     /// 60
@@ -20,6 +26,12 @@ public enum DSSize: CGFloat, CaseIterable {
 }
 
 public struct DSSizes {
+    /// 8
+    public let xxxSmall = DSSize.xxxSmall.rawValue
+    /// 12
+    public let xxSmall = DSSize.xxSmall.rawValue
+    /// 18
+    public let xSmall = DSSize.xSmall.rawValue
     /// 30
     public let small = DSSize.small.rawValue
     /// 60
