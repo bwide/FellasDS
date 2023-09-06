@@ -75,7 +75,7 @@ enum Strings {
     
     static var sendFeedback: String {
         String(
-            localized: "sendFeedback.button",
+            localized: "Send feedback",
             bundle: Locale.bundle,
             comment: "Send feedback"
         )
@@ -83,7 +83,7 @@ enum Strings {
     
     static var reviewPromptMessage: String {
         String(
-            localized: "reviewprompt.message",
+            localized: "If you like our app, consider giving it a review, you can also send us any feedback through email",
             bundle: Locale.bundle,
             comment: "If you like our app, consider giving it a review, you can also send us any feedback through email"
         )
@@ -94,7 +94,7 @@ enum Strings {
         ?? "this app"
         
         let ans = String(
-            localized: "localized.title",
+            localized: "enjoying {x}%@?",
             bundle: Locale.bundle,
             comment: "enjoying {x}%@?"
         )

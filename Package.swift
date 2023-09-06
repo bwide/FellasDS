@@ -25,7 +25,8 @@ let package = Package(
             name: "FellasDS",
             dependencies: ["FellasLocalization"],
             path: "Sources/FellasDS",
-            resources: [.process("Resources")]
+            resources: [.process("Resources")],
+            swiftSettings: [.unsafeFlags(["-Xfrontend", "-debug-time-function-bodies"], .when(configuration: .debug))]
         ),
         .testTarget(
             name: "FellasDSTests",
