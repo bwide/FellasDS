@@ -11,7 +11,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "FellasDS",
-            targets: ["FellasDS"]),
+            targets: ["FellasDS"]
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -25,8 +26,7 @@ let package = Package(
             name: "FellasDS",
             dependencies: ["FellasLocalization"],
             path: "Sources/FellasDS",
-            resources: [.process("Resources")],
-            swiftSettings: [.unsafeFlags(["-Xfrontend", "-debug-time-function-bodies"], .when(configuration: .debug))]
+            resources: [.process("Resources")]
         ),
         .testTarget(
             name: "FellasDSTests",
