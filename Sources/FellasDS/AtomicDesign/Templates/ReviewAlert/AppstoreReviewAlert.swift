@@ -12,7 +12,11 @@ import StoreKit
 struct AppstoreReviewAlert: ViewModifier {
     
     @Binding var isPresented: Bool
-    @State var isFeedbackPromptPresented: Bool = false
+    
+    var onNegativeReview: () -> Void
+    var onPositiveReview: () -> Void
+    
+    @State private var isFeedbackPromptPresented: Bool = false
     
     func body(content: Content) -> some View {
         content
@@ -56,11 +60,13 @@ extension AppstoreReviewAlert {
         }
         
         SKStoreReviewController.requestReview(in: scene)
+        onPositiveReview()
     }
     
     func handleNegativeFeedback() {
         isPresented = false
         isFeedbackPromptPresented = true
+        onNegativeReview()
     }
     
     func handleCancelFeedback() {
@@ -75,15 +81,23 @@ extension AppstoreReviewAlert {
 }
 
 public extension View {
-    func appStoreReviewAlert(_ isPresented: Binding<Bool>) -> some View {
-        modifier(AppstoreReviewAlert(isPresented: isPresented))
+    func appStoreReviewAlert(
+        _ isPresented: Binding<Bool>,
+        onNegativeReview: @escaping () -> Void,
+        onPositiveReview: @escaping () -> Void
+    ) -> some View {
+        modifier(AppstoreReviewAlert(
+            isPresented: isPresented,
+            onNegativeReview: onNegativeReview,
+            onPositiveReview: onPositiveReview)
+        )
     }
 }
 
 struct AppstoreReviewAlert_Preview: PreviewProvider {
     static var previews: some View {
         Background(.primary)
-            .appStoreReviewAlert(.constant(true))
+            .appStoreReviewAlert(.constant(true), onNegativeReview: {}, onPositiveReview: {})
     }
 }
 
