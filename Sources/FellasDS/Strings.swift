@@ -8,7 +8,7 @@
 import Foundation
 import FellasLocalization
 
-enum Strings {
+public enum Strings {
     static var subscribe: String {
         String(
             localized: "Subscribe",
@@ -67,7 +67,7 @@ enum Strings {
     
     // MARK: - Review Prompt
     
-    static var yes: String {
+    public static var yes: String {
         String(
             localized: "Yes",
             bundle: .module.localizedBundle,
@@ -75,7 +75,7 @@ enum Strings {
         ).localizedCapitalized
     }
     
-    static var no: String {
+    public static var no: String {
         String(
             localized: "No",
             bundle: .module.localizedBundle,
