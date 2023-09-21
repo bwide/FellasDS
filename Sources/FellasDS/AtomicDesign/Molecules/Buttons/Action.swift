@@ -29,7 +29,7 @@ public struct DSActionButtonStyle: ButtonStyle {
     }
 }
 
-public extension Button {
+public extension View {
     @ViewBuilder
     func hoveringActionButton() -> some View {
         HoveringActionButton {
