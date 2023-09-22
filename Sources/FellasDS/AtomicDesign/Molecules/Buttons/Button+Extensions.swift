@@ -13,7 +13,7 @@ extension ButtonStyle {
     func background(
         _ configuration: Configuration,
         isEnabled: Bool,
-        dsColor: DSColor = DSBrandColor.primary
+        dsColor: DSColor = DSBrandColor.secondary
     ) -> some View {
         dsColor.color
             .opacity(configuration.opacity(isEnabled: isEnabled))

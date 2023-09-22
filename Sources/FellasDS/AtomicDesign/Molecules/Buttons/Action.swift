@@ -21,10 +21,9 @@ public struct DSActionButtonStyle: ButtonStyle {
             Spacer()
         }
             .background(
-              //  background(configuration,
-                //           isEnabled: isEnabled)
-                .green
-            )
+                background(configuration,
+                           isEnabled: isEnabled
+                          ))
             .withLoader()
             .clipShape(Capsule())
     }
