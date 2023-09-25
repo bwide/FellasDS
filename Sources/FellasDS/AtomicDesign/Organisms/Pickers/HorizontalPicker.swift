@@ -65,7 +65,7 @@ struct HorizontalPicler_Previews: PreviewProvider {
     static var previews: some View {
         DSPicker {
             ForEach([1,2,3,4], id: \.self) { n in
-                Text("\(n)")
+                Text(String(stringLiteral: "\(n)"))
             }
         }
         .padding(.horizontal, ds: .medium)
