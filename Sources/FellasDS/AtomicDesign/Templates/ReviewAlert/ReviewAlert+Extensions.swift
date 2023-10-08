@@ -7,6 +7,21 @@
 
 import Foundation
 import SwiftUI
+import OSLog
+
+let logger = Logger(subsystem: "Storekit", category: "Review")
+
+public extension View {
+    /**
+        Sets up  reviewAlertService environment key
+     
+     - Parameters:
+     allowsReviewPrompt: allows or blocks review alerts, defaults to true
+     */
+    func withReviewAlertService(allowsReviewPrompt: Bool = true) -> some View {
+        modifier(ReviewAlertModifier(allowsReviewPrompt: allowsReviewPrompt))
+    }
+}
 
 // MARK: - Service
 
@@ -18,6 +33,19 @@ public class ReviewAlertService: ObservableObject {
     init(allowsReviewPrompt: Bool) {
         self.allowsReviewPrompt = allowsReviewPrompt
     }
+    
+    // MARK: - Public
+    public func presentReviewPrompt() {
+        guard canShowPrompt else {
+            logger.log("can't show prompt until: \(self.dateForNextPrompt.formatted(.dateTime))")
+            return
+        }
+
+        isPresented = true
+        lastPrompt = .now
+    }
+    
+    // MARK: - Private
     
     private var lastPrompt: Date {
         get {
@@ -55,13 +83,6 @@ public class ReviewAlertService: ObservableObject {
         lastPrompt.timeIntervalSinceReferenceDate
     }
     
-    public func presentReviewPrompt() {
-        guard canShowPrompt else { return }
-
-        isPresented = true
-        lastPrompt = .now
-    }
-    
     fileprivate func handlePositiveFeedback() {
         let components = DateComponents(month: 3)
         dateForNextPrompt = Calendar.current.date(byAdding: components, to: .now) ?? .now
@@ -88,19 +109,11 @@ struct ReviewAlertModifier: ViewModifier {
             }, onPositiveReview: {
                 service.handlePositiveFeedback()
             })
-            .onReceive(service.$isPresented, perform: { // TODO: can i avoid this?
-                isPresented = $0
-            })
+            .onReceive(service.$isPresented) { isPresented = $0 }
             .environment(
                 \.reviewAlertService,
                  ReviewAlertService(allowsReviewPrompt: allowsReviewPrompt)
             )
-    }
-}
-
-public extension View {
-    func withReviewAlertService(allowsReviewPrompt: Bool = true) -> some View {
-        modifier(ReviewAlertModifier(allowsReviewPrompt: allowsReviewPrompt))
     }
 }
 
