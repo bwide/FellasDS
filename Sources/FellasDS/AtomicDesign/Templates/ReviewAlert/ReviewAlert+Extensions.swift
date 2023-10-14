@@ -41,26 +41,11 @@ public class ReviewAlertService: ObservableObject {
             return
         }
 
+        isPresented = false
         isPresented = true
-        lastPrompt = .distantPast
     }
     
     // MARK: - Private
-    
-    private var lastPrompt: Date {
-        get {
-            guard
-                let ans = UserDefaults.standard.object(forKey: "lastPrompt") as? Date
-            else {
-                return Date.now
-            }
-            
-            return ans
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: "lastPrompt")
-        }
-    }
     
     private var dateForNextPrompt: Date {
         get {
@@ -68,7 +53,7 @@ public class ReviewAlertService: ObservableObject {
                 let ans =
                     UserDefaults.standard.object(forKey: "nextPrompt") as? Date else
             {
-                return Date.now
+                return Date.distantPast
             }
             return ans
         }
@@ -79,8 +64,7 @@ public class ReviewAlertService: ObservableObject {
     
     private var canShowPrompt: Bool {
         allowsReviewPrompt &&
-        dateForNextPrompt.timeIntervalSinceReferenceDate <
-        lastPrompt.timeIntervalSinceReferenceDate
+        dateForNextPrompt.timeIntervalSinceReferenceDate < Date.now.timeIntervalSinceReferenceDate
     }
     
     fileprivate func handlePositiveFeedback() {
@@ -109,11 +93,9 @@ struct ReviewAlertModifier: ViewModifier {
             }, onPositiveReview: {
                 service.handlePositiveFeedback()
             })
-            .onReceive(service.$isPresented) { isPresented = $0 }
-            .environment(
-                \.reviewAlertService,
-                 ReviewAlertService(allowsReviewPrompt: allowsReviewPrompt)
-            )
+            .onReceive(service.$isPresented) {
+                isPresented = $0
+            }
     }
 }
 
@@ -124,9 +106,8 @@ public struct ReviewAlertServiceKey: EnvironmentKey {
 }
 
 public extension EnvironmentValues {
-    fileprivate(set) var reviewAlertService: ReviewAlertService {
+    var reviewAlertService: ReviewAlertService {
         get { self[ReviewAlertServiceKey.self] }
-        set { self[ReviewAlertServiceKey.self] = newValue }
     }
 }
 
