@@ -42,7 +42,7 @@ public class ReviewAlertService: ObservableObject {
         }
 
         isPresented = true
-        lastPrompt = .now
+        lastPrompt = .distantPast
     }
     
     // MARK: - Private
