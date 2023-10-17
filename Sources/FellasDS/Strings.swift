@@ -49,7 +49,7 @@ public enum Strings {
         ).localizedCapitalized
     }
     
-    static var ok: String {
+    public static var ok: String {
         String(
             localized: "OK",
             bundle: .module.localizedBundle,
@@ -57,7 +57,7 @@ public enum Strings {
         ).localizedCapitalized
     }
     
-    static var cancel: String {
+    public static var cancel: String {
         String(
             localized: "cancel",
             bundle: .module.localizedBundle,
