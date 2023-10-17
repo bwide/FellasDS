@@ -7,6 +7,21 @@
 
 import Foundation
 import SwiftUI
+import OSLog
+
+let logger = Logger(subsystem: "Storekit", category: "Review")
+
+public extension View {
+    /**
+        Sets up  reviewAlertService environment key
+     
+     - Parameters:
+     allowsReviewPrompt: allows or blocks review alerts, defaults to true
+     */
+    func withReviewAlertService(allowsReviewPrompt: Bool = true) -> some View {
+        modifier(ReviewAlertModifier(allowsReviewPrompt: allowsReviewPrompt))
+    }
+}
 
 // MARK: - Service
 
@@ -19,20 +34,18 @@ public class ReviewAlertService: ObservableObject {
         self.allowsReviewPrompt = allowsReviewPrompt
     }
     
-    private var lastPrompt: Date {
-        get {
-            guard
-                let ans = UserDefaults.standard.object(forKey: "lastPrompt") as? Date
-            else {
-                return Date.now
-            }
-            
-            return ans
+    // MARK: - Public
+    public func presentReviewPrompt() {
+        guard canShowPrompt else {
+            logger.log("can't show prompt until: \(self.dateForNextPrompt.formatted(.dateTime))")
+            return
         }
-        set {
-            UserDefaults.standard.set(newValue, forKey: "lastPrompt")
-        }
+
+        isPresented = false
+        isPresented = true
     }
+    
+    // MARK: - Private
     
     private var dateForNextPrompt: Date {
         get {
@@ -40,7 +53,7 @@ public class ReviewAlertService: ObservableObject {
                 let ans =
                     UserDefaults.standard.object(forKey: "nextPrompt") as? Date else
             {
-                return Date.now
+                return Date.distantPast
             }
             return ans
         }
@@ -51,15 +64,7 @@ public class ReviewAlertService: ObservableObject {
     
     private var canShowPrompt: Bool {
         allowsReviewPrompt &&
-        dateForNextPrompt.timeIntervalSinceReferenceDate <
-        lastPrompt.timeIntervalSinceReferenceDate
-    }
-    
-    public func presentReviewPrompt() {
-        guard canShowPrompt else { return }
-
-        isPresented = true
-        lastPrompt = .now
+        dateForNextPrompt.timeIntervalSinceReferenceDate < Date.now.timeIntervalSinceReferenceDate
     }
     
     fileprivate func handlePositiveFeedback() {
@@ -88,19 +93,9 @@ struct ReviewAlertModifier: ViewModifier {
             }, onPositiveReview: {
                 service.handlePositiveFeedback()
             })
-            .onReceive(service.$isPresented, perform: { // TODO: can i avoid this?
+            .onReceive(service.$isPresented) {
                 isPresented = $0
-            })
-            .environment(
-                \.reviewAlertService,
-                 ReviewAlertService(allowsReviewPrompt: allowsReviewPrompt)
-            )
-    }
-}
-
-public extension View {
-    func withReviewAlertService(allowsReviewPrompt: Bool = true) -> some View {
-        modifier(ReviewAlertModifier(allowsReviewPrompt: allowsReviewPrompt))
+            }
     }
 }
 
@@ -111,9 +106,8 @@ public struct ReviewAlertServiceKey: EnvironmentKey {
 }
 
 public extension EnvironmentValues {
-    fileprivate(set) var reviewAlertService: ReviewAlertService {
+    var reviewAlertService: ReviewAlertService {
         get { self[ReviewAlertServiceKey.self] }
-        set { self[ReviewAlertServiceKey.self] = newValue }
     }
 }
 

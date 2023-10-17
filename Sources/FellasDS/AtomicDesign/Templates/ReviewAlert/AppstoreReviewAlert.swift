@@ -80,7 +80,7 @@ extension AppstoreReviewAlert {
     }
 }
 
-public extension View {
+extension View {
     func appStoreReviewAlert(
         _ isPresented: Binding<Bool>,
         onNegativeReview: @escaping () -> Void,
@@ -93,6 +93,7 @@ public extension View {
         )
     }
 }
+
 
 struct AppstoreReviewAlert_Preview: PreviewProvider {
     static var previews: some View {
