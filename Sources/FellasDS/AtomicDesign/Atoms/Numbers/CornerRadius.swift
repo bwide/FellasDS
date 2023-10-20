@@ -30,6 +30,7 @@ extension View {
 
 public enum DSCornerRadius: CGFloat, CaseIterable {
 
+    case zero = 0
     case xSmall = 4
     case small = 8
     case medium = 16
@@ -40,8 +41,10 @@ public enum DSCornerRadius: CGFloat, CaseIterable {
 
 public struct DSCornerRadii {
     
+    /// small: 0
+    public var zero = DSCornerRadius.zero.rawValue
     /// small: 4
-    public var xSmall = DSCornerRadius.small.rawValue
+    public var xSmall = DSCornerRadius.xSmall.rawValue
     /// small: 8
     public var small = DSCornerRadius.small.rawValue
     /// medium: 16

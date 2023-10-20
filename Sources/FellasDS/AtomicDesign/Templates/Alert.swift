@@ -15,8 +15,8 @@ public struct AlertModifier: ViewModifier {
     
     public func body(content: Content) -> some View {
         content
-            .alert(String.s.error, isPresented: .constant(error != nil)) {
-                Button(String.s.ok, role: .none, action: { error = nil })
+            .alert(Strings.error, isPresented: .constant(error != nil)) {
+                Button(Strings.ok, role: .none, action: { error = nil })
             } message: {
                 Text(error?.localizedDescription ?? "")
             }
