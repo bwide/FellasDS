@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import FellasStoreKit
 import SwiftResources
 
 public extension View {
@@ -69,7 +68,7 @@ public struct OnboardingContent: View {
     
     public var body: some View {
         if showsPaywall {
-            Paywall().tint(.ds.brand.primary)
+            Paywall()
         } else {
             VStack(spacing: .ds.spacing.xxLarge) {
                 steps
