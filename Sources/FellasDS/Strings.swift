@@ -6,97 +6,118 @@
 //
 
 import Foundation
+import FellasLocalization
 
-private func localizable(key: String, text: String) -> String {
-    NSLocalizedString(
-        key,
-        bundle: .module,
-        comment: text
-    ).localizedCapitalized
-}
-
-struct Strings {
+public enum Strings {
+    static var subscribe: String {
+        String(
+            localized: "Subscribe",
+            bundle: .module.localizedBundle,
+            comment: "subscribe <to this app>"
+        ).localizedCapitalized
+    }
     
+    static var restore: String {
+        String(
+            localized: "restore",
+            bundle: .module.localizedBundle,
+            comment: "restore <purchases>"
+        ).localizedCapitalized
+    }
     
-    var subscribe = localizable(
-        key: "subscribe",
-        text: "subscribe {x}"
-    )
+    static var privacyPolicy: String {
+        String(
+            localized: "privacy policy",
+            bundle: .module.localizedBundle,
+            comment: "privacy policy"
+        ).localizedCapitalized
+    }
     
-    var restore = localizable(
-        key: "restore",
-        text: "restore {x}"
-    )
+    static var termsOfUse: String {
+        String(
+            localized: "terms of use",
+            bundle: .module.localizedBundle,
+            comment: "terms of use"
+        ).localizedCapitalized
+    }
     
-    var privacyPolicy = localizable(
-        key: "privacy policy",
-        text: "privacy policy"
-    )
+    static var error: String {
+        String(
+            localized: "Error",
+            bundle: .module.localizedBundle,
+            comment: "Error"
+        ).localizedCapitalized
+    }
     
-    var termsOfUse = localizable(
-        key: "terms of use",
-        text: "terms of use"
-    )
+    public static var ok: String {
+        String(
+            localized: "OK",
+            bundle: .module.localizedBundle,
+            comment: "OK"
+        ).localizedCapitalized
+    }
     
-    var error = localizable(
-        key: "Error",
-        text: "Error"
-    )
+    public static var cancel: String {
+        String(
+            localized: "cancel",
+            bundle: .module.localizedBundle,
+            comment: "Cancel"
+        ).localizedCapitalized
+    }
     
-    var ok = localizable(
-        key: "OK",
-        text: "OK"
-    )
+    // MARK: - Review Prompt
     
-    var cancel = localizable(
-        key: "cancel",
-        text: "Cancel"
-    )
+    public static var yes: String {
+        String(
+            localized: "Yes",
+            bundle: .module.localizedBundle,
+            comment: "Yes"
+        ).localizedCapitalized
+    }
     
-    var rate = localizable(
-        key: "rate",
-        text: "rate {app}"
-    )
+    public static var no: String {
+        String(
+            localized: "No",
+            bundle: .module.localizedBundle,
+            comment: "No"
+        ).localizedCapitalized
+    }
     
-    var sendFeedback = localizable(
-        key: "sendFeedback.button",
-        text: "Send feedback"
-    )
+    static var reviewPromptMessage: String {
+        String(
+            localized: "Are you enjoying the app so far?",
+            bundle: .module.localizedBundle,
+            comment: "Are you enjoying the app so far?"
+        ).localizedCapitalized
+    }
     
-    var reviewPromptMessage = localizable(
-        key: "reviewprompt.message",
-        text: "If you like our app, consider giving it a review, you can also send us any feedback through email"
-    )
-    
-    var reviewPromptTitle: String {
+    static var reviewPromptTitle: String {
         let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String
         ?? "this app"
         
-        let ans = localizable(
-            key: "reviewPrompt.title",
-            text: "enjoying {x}%@?"
+        let ans = String(
+            localized: "Rate %@?",
+            bundle: .module.localizedBundle,
+            comment: "Rate <our app>%@?"
         )
         
-        return String(format: ans, appName)
+        return String(format: ans, appName).localizedCapitalized
     }
     
-    var bestDeal = localizable(
-        key: "subscription.deal",
-        text: "Best Deal"
-    )
+    // MARK: - Feedback prompt
     
-    func introductoryOffer(period: String) -> String {
-        let ans = localizable(
-            key: "subscription.offer",
-            text: "free for {x}%@"
-        )
-        
-        return String(format: ans, period)
+    static var feedbackPromptTitle: String {
+        String(
+            localized: "Give Feedback",
+            bundle: .module.localizedBundle,
+            comment: "Give Feedback <about our app>"
+        ).localizedCapitalized
     }
-}
-
-// TODO: not sure if i can inject a localization from code
-
-extension String {
-    static let s = Strings()
+    static var feedbackPromptMessage: String {
+        String(
+            localized: "Please take a moment to share feedback. It helps improving your experience.",
+            bundle: .module.localizedBundle,
+            comment: "Please take a moment to share feedback. It helps improving your experience."
+        ).localizedCapitalized
+    }
 }

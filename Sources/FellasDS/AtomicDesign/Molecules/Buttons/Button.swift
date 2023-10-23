@@ -17,13 +17,6 @@ public enum DSButtonStyle {
     case toolItem
 }
 
-public struct DSButtonStyles {
-    public let pill = DSPillButtonStyle()
-    public let action = DSActionButtonStyle()
-    public let round = DSRoundButtonStyle()
-    public let toolItem = DSToolItemStyle()
-}
-
 public extension ButtonStyle where Self == DSPillButtonStyle {
     static var dsPill: DSPillButtonStyle { DSPillButtonStyle() }
 }
