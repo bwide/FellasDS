@@ -1,1787 +1,1790 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "Are you enjoying the app so far?": {
-      "comment": "Are you enjoying the app so far?",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0647\u0644 \u062a\u0633\u062a\u0645\u062a\u0639 \u0628\u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u062d\u062a\u0649 \u0627\u0644\u0622\u0646\u061f"
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Are you enjoying the app so far?" : {
+      "comment" : "Are you enjoying the app so far?",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هل تستمتع بالتطبيق حتى الآن؟"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hat Ihnen die App bisher gefallen?"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyder du appen indtil videre?"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u00bfEst\u00e1s disfrutando la aplicaci\u00f3n hasta ahora?"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hat Ihnen die App bisher gefallen?"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Appr\u00e9ciez-vous l\u2019application jusqu\u2019\u00e0 pr\u00e9sent\u00a0?"
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Απολαμβάνετε την εφαρμογή μέχρι στιγμής;"
           }
         },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0915\u094d\u092f\u093e \u0906\u092a \u0905\u092c \u0924\u0915 \u0910\u092a \u0915\u093e \u0906\u0928\u0902\u0926 \u0932\u0947 \u0930\u0939\u0947 \u0939\u0948\u0902?"
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you enjoying the app so far?"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apakah Anda menikmati aplikasinya sejauh ini?"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Estás disfrutando la aplicación hasta ahora?"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ti \u00e8 piaciuta l'app finora?"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautitko sovelluksesta toistaiseksi?"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u3053\u308c\u307e\u3067\u306e\u3068\u3053\u308d\u3001\u30a2\u30d7\u30ea\u306f\u697d\u3057\u3093\u3067\u3044\u307e\u3059\u304b\uff1f"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appréciez-vous l’application jusqu’à présent ?"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\uc9c0\uae08\uae4c\uc9c0 \uc571\uc744 \uc990\uaca8 \uc0ac\uc6a9\ud558\uace0 \uacc4\uc2dc\ub098\uc694?"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "האם אתה נהנה מהאפליקציה עד כה?"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Voc\u00ea est\u00e1 gostando do aplicativo at\u00e9 agora?"
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "क्या आप अब तक ऐप का आनंद ले रहे हैं?"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0412\u0430\u043c \u043f\u043e\u043a\u0430 \u043d\u0440\u0430\u0432\u0438\u0442\u0441\u044f \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435?"
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eddig tetszik az alkalmazás?"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u5230\u76ee\u524d\u4e3a\u6b62\uff0c\u60a8\u559c\u6b22\u8fd9\u4e2a\u5e94\u7528\u7a0b\u5e8f\u5417\uff1f"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apakah Anda menikmati aplikasinya sejauh ini?"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nyder du appen indtil videre?"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ti è piaciuta l'app finora?"
           }
         },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0391\u03c0\u03bf\u03bb\u03b1\u03bc\u03b2\u03ac\u03bd\u03b5\u03c4\u03b5 \u03c4\u03b7\u03bd \u03b5\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ae \u03bc\u03ad\u03c7\u03c1\u03b9 \u03c3\u03c4\u03b9\u03b3\u03bc\u03ae\u03c2;"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "これまでのところ、アプリは楽しんでいますか？"
           }
         },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Are you enjoying the app so far?"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금까지 앱을 즐겨 사용하고 계시나요?"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nautitko sovelluksesta toistaiseksi?"
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Você está gostando do aplicativo até agora?"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05d4\u05d0\u05dd \u05d0\u05ea\u05d4 \u05e0\u05d4\u05e0\u05d4 \u05de\u05d4\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d4 \u05e2\u05d3 \u05db\u05d4?"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Você está gostando do aplicativo até agora?"
           }
         },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Eddig tetszik az alkalmaz\u00e1s?"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вам пока нравится приложение?"
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Voc\u00ea est\u00e1 gostando do aplicativo at\u00e9 agora?"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şu ana kadar uygulamadan memnun musunuz?"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u015eu ana kadar uygulamadan memnun musunuz?"
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чи подобається вам додаток?"
           }
         },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0427\u0438 \u043f\u043e\u0434\u043e\u0431\u0430\u0454\u0442\u044c\u0441\u044f \u0432\u0430\u043c \u0434\u043e\u0434\u0430\u0442\u043e\u043a?"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cho đến nay bạn có thích ứng dụng này không?"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cho \u0111\u1ebfn nay b\u1ea1n c\u00f3 th\u00edch \u1ee9ng d\u1ee5ng n\u00e0y kh\u00f4ng?"
-          }
-        }
-      }
-    },
-    "cancel": {
-      "comment": "Cancel",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u064a\u0644\u063a\u064a"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Stornieren"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancelar"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Annuler"
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0930\u0926\u094d\u0926 \u0915\u0930\u0928\u093e"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Membatalkan"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Annulla"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u30ad\u30e3\u30f3\u30bb\u30eb"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\ucde8\uc18c"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancelar"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u041e\u0442\u043c\u0435\u043d\u0430"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u53d6\u6d88"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Afbestille"
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u039c\u03b1\u03c4\u03b1\u03af\u03c9\u03c3\u03b7"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancel"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Peruuttaa"
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05dc\u05b0\u05d1\u05b7\u05d8\u05b5\u05dc"
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Megsz\u00fcnteti"
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancelar"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0130ptal etmek"
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0421\u043a\u0430\u0441\u0443\u0432\u0430\u0442\u0438"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "H\u1ee7y b\u1ecf"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到目前为止，您喜欢这个应用程序吗？"
           }
         }
       }
     },
-    "Error": {
-      "comment": "Error",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u062e\u0637\u0623"
+    "cancel" : {
+      "comment" : "Cancel",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يلغي"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fehler"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afbestille"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Error"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stornieren"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Erreur"
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ματαίωση"
           }
         },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0917\u0932\u0924\u0940"
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Kesalahan"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Errore"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peruuttaa"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u30a8\u30e9\u30fc"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\uc624\ub958"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לְבַטֵל"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Erro"
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रद्द करना"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u041e\u0448\u0438\u0431\u043a\u0430"
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Megszünteti"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u9519\u8bef"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Membatalkan"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fejl"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annulla"
           }
         },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u039b\u03ac\u03b8\u03bf\u03c2"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
           }
         },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Error"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취소"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Virhe"
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05e9\u05c1\u05b0\u05d2\u05b4\u05d9\u05d0\u05b8\u05d4"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
           }
         },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hiba"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отмена"
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Erro"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İptal etmek"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hata"
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скасувати"
           }
         },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u041f\u043e\u043c\u0438\u043b\u043a\u0430"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hủy bỏ"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "L\u1ed7i"
-          }
-        }
-      }
-    },
-    "Give Feedback": {
-      "comment": "Give Feedback <about our app>",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u062a\u0642\u062f\u064a\u0645 \u0645\u0644\u0627\u062d\u0638\u0627\u062a"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Geben Sie Feedback"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dar comentarios"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Donnez votre avis"
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u092a\u094d\u0930\u0924\u093f\u0915\u094d\u0930\u093f\u092f\u093e \u0926\u0947\u0902"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Berikan Masukan"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fornisci feedback"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u30d5\u30a3\u30fc\u30c9\u30d0\u30c3\u30af\u3092\u9001\u4fe1\u3059\u308b"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\uc758\uacac\uc744 \ubcf4\ub0b4\uc8fc\uc138\uc694."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "D\u00ea feedback"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u041e\u0441\u0442\u0430\u0432\u044c\u0442\u0435 \u043e\u0442\u0437\u044b\u0432"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u63d0\u4f9b\u53cd\u9988"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Giv feedback"
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u03a3\u03c4\u03b5\u03af\u03bb\u03c4\u03b5 \u03c3\u03c7\u03cc\u03bb\u03b9\u03b1"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Give Feedback"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Anna palautetta"
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05ea\u05df \u05de\u05e9\u05d5\u05d1"
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Adjon visszajelz\u00e9st"
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "D\u00ea feedback"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Geri Bildirimde Bulunun"
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u041d\u0430\u0434\u0456\u0448\u043b\u0456\u0442\u044c \u0432\u0456\u0434\u0433\u0443\u043a"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0110\u01b0a ra ph\u1ea3n h\u1ed3i"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
           }
         }
       }
     },
-    "No": {
-      "comment": "No",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0644\u0627"
+    "Continue" : {
+
+    },
+    "Error" : {
+      "comment" : "Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خطأ"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NEIN"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fejl"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fehler"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Non"
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Λάθος"
           }
         },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0928\u0939\u0940\u0902"
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TIDAK"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NO"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Virhe"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u3044\u3044\u3048"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erreur"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\uc544\ub2c8\uc694"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שְׁגִיאָה"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "N\u00e3o"
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गलती"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u041d\u0435\u0442"
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiba"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u4e0d"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kesalahan"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ingen"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Errore"
           }
         },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u039f\u03c7\u03b9"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エラー"
           }
         },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오류"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ei"
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erro"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05dc\u05d0"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erro"
           }
         },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nem"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка"
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "N\u00e3o"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hata"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "HAYIR"
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Помилка"
           }
         },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u041d\u0435\u043c\u0430\u0454"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lỗi"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "KH\u00d4NG"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "错误"
           }
         }
       }
     },
-    "OK": {
-      "comment": "OK",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0646\u0639\u0645"
+    "Give Feedback" : {
+      "comment" : "Give Feedback <about our app>",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تقديم ملاحظات"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "OK"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giv feedback"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DE ACUERDO"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geben Sie Feedback"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "D'ACCORD"
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Στείλτε σχόλια"
           }
         },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0920\u0940\u0915 \u0939\u0948"
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Give Feedback"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "OKE"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dar comentarios"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "OK"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anna palautetta"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u308f\u304b\u308a\u307e\u3057\u305f"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Donnez votre avis"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\uc88b\uc544\uc694"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תן משוב"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "OK"
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रतिक्रिया दें"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0425\u041e\u0420\u041e\u0428\u041e"
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adjon visszajelzést"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u597d\u7684"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berikan Masukan"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Okay"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fornisci feedback"
           }
         },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0395\u03bd\u03c4\u03ac\u03be\u03b5\u03b9"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フィードバックを送信する"
           }
         },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "OK"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "의견을 보내주세요."
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "OK"
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dê feedback"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05d1\u05e1\u05d3\u05e8"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dê feedback"
           }
         },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "rendben"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оставьте отзыв"
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "OK"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geri Bildirimde Bulunun"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TAMAM"
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Надішліть відгук"
           }
         },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0432 \u043f\u043e\u0440\u044f\u0434\u043a\u0443"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đưa ra phản hồi"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0110\u01af\u1ee2C R\u1ed2I"
-          }
-        }
-      }
-    },
-    "Please take a moment to share feedback. It helps improving your experience.": {
-      "comment": "Please take a moment to share feedback. It helps improving your experience.",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u064a\u0631\u062c\u0649 \u062a\u062e\u0635\u064a\u0635 \u0628\u0639\u0636 \u0627\u0644\u0648\u0642\u062a \u0644\u0645\u0634\u0627\u0631\u0643\u0629 \u0627\u0644\u062a\u0639\u0644\u064a\u0642\u0627\u062a. \u064a\u0633\u0627\u0639\u062f \u0639\u0644\u0649 \u062a\u062d\u0633\u064a\u0646 \u062a\u062c\u0631\u0628\u062a\u0643."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bitte nehmen Sie sich einen Moment Zeit, um uns Feedback zu geben. Es tr\u00e4gt dazu bei, Ihre Erfahrung zu verbessern."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "T\u00f3mese un momento para compartir sus comentarios. Ayuda a mejorar tu experiencia."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Veuillez prendre un moment pour partager vos commentaires. Cela aide \u00e0 am\u00e9liorer votre exp\u00e9rience."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0915\u0943\u092a\u092f\u093e \u092a\u094d\u0930\u0924\u093f\u0915\u094d\u0930\u093f\u092f\u093e \u0938\u093e\u091d\u093e \u0915\u0930\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0915\u0941\u091b \u0938\u092e\u092f \u0928\u093f\u0915\u093e\u0932\u0947\u0902\u0964 \u092f\u0939 \u0906\u092a\u0915\u0947 \u0905\u0928\u0941\u092d\u0935 \u0915\u094b \u092c\u0947\u0939\u0924\u0930 \u092c\u0928\u093e\u0928\u0947 \u092e\u0947\u0902 \u092e\u0926\u0926 \u0915\u0930\u0924\u093e \u0939\u0948\u0964"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mohon luangkan waktu sejenak untuk berbagi masukan. Ini membantu meningkatkan pengalaman Anda."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Per favore, prenditi un momento per condividere il tuo feedback. Aiuta a migliorare la tua esperienza."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u305c\u3072\u30d5\u30a3\u30fc\u30c9\u30d0\u30c3\u30af\u3092\u5171\u6709\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u30a8\u30af\u30b9\u30da\u30ea\u30a8\u30f3\u30b9\u3092\u5411\u4e0a\u3055\u305b\u308b\u306e\u306b\u5f79\u7acb\u3061\u307e\u3059\u3002"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\uc7a0\uc2dc \uc2dc\uac04\uc744 \ub0b4\uc5b4 \ud53c\ub4dc\ubc31\uc744 \uacf5\uc720\ud574\uc8fc\uc138\uc694. \uc774\ub294 \uadc0\ud558\uc758 \uacbd\ud5d8\uc744 \ud5a5\uc0c1\uc2dc\ud0a4\ub294 \ub370 \ub3c4\uc6c0\uc774 \ub429\ub2c8\ub2e4."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reserve um momento para compartilhar coment\u00e1rios. Isso ajuda a melhorar sua experi\u00eancia."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u043d\u0430\u0439\u0434\u0438\u0442\u0435 \u043c\u0438\u043d\u0443\u0442\u043a\u0443, \u0447\u0442\u043e\u0431\u044b \u043f\u043e\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f \u043e\u0442\u0437\u044b\u0432\u043e\u043c. \u042d\u0442\u043e \u043f\u043e\u043c\u043e\u0433\u0430\u0435\u0442 \u0443\u043b\u0443\u0447\u0448\u0438\u0442\u044c \u0432\u0430\u0448 \u043e\u043f\u044b\u0442."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u8bf7\u82b1\u4e00\u70b9\u65f6\u95f4\u5206\u4eab\u53cd\u9988\u3002\u5b83\u6709\u52a9\u4e8e\u6539\u5584\u60a8\u7684\u4f53\u9a8c\u3002"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Brug venligst et \u00f8jeblik p\u00e5 at dele feedback. Det hj\u00e6lper med at forbedre din oplevelse."
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0391\u03c6\u03b9\u03b5\u03c1\u03ce\u03c3\u03c4\u03b5 \u03bb\u03af\u03b3\u03bf \u03c7\u03c1\u03cc\u03bd\u03bf \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03bc\u03bf\u03b9\u03c1\u03b1\u03c3\u03c4\u03b5\u03af\u03c4\u03b5 \u03c4\u03b1 \u03c3\u03c7\u03cc\u03bb\u03b9\u03ac \u03c3\u03b1\u03c2. \u0392\u03bf\u03b7\u03b8\u03ac \u03c3\u03c4\u03b7 \u03b2\u03b5\u03bb\u03c4\u03af\u03c9\u03c3\u03b7 \u03c4\u03b7\u03c2 \u03b5\u03bc\u03c0\u03b5\u03b9\u03c1\u03af\u03b1\u03c2 \u03c3\u03b1\u03c2."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Please take a moment to share feedback. It helps improving your experience."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "K\u00e4yt\u00e4 hetki palautteen jakamiseen. Se auttaa parantamaan kokemustasi."
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05d0\u05e0\u05d0 \u05d4\u05e7\u05d3\u05e9 \u05e8\u05d2\u05e2 \u05db\u05d3\u05d9 \u05dc\u05e9\u05ea\u05e3 \u05de\u05e9\u05d5\u05d1. \u05d6\u05d4 \u05e2\u05d5\u05d6\u05e8 \u05dc\u05e9\u05e4\u05e8 \u05d0\u05ea \u05d4\u05d7\u05d5\u05d5\u05d9\u05d4 \u05e9\u05dc\u05da."
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "K\u00e9rj\u00fck, sz\u00e1njon egy percet a visszajelz\u00e9s megoszt\u00e1s\u00e1ra. Seg\u00edt az \u00e9lm\u00e9ny jav\u00edt\u00e1s\u00e1ban."
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reserve um momento para compartilhar coment\u00e1rios. Isso ajuda a melhorar sua experi\u00eancia."
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "L\u00fctfen geri bildiriminizi payla\u015fmak i\u00e7in bir dakikan\u0131z\u0131 ay\u0131r\u0131n. Deneyiminizi geli\u015ftirmenize yard\u0131mc\u0131 olur."
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0411\u0443\u0434\u044c \u043b\u0430\u0441\u043a\u0430, \u0437\u043d\u0430\u0439\u0434\u0456\u0442\u044c \u0445\u0432\u0438\u043b\u0438\u043d\u043a\u0443, \u0449\u043e\u0431 \u043d\u0430\u0434\u0456\u0441\u043b\u0430\u0442\u0438 \u0432\u0456\u0434\u0433\u0443\u043a. \u0426\u0435 \u0434\u043e\u043f\u043e\u043c\u0430\u0433\u0430\u0454 \u043f\u043e\u043a\u0440\u0430\u0449\u0438\u0442\u0438 \u0432\u0430\u0448 \u0434\u043e\u0441\u0432\u0456\u0434."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vui l\u00f2ng d\u00e0nh ch\u00fat th\u1eddi gian \u0111\u1ec3 chia s\u1ebb ph\u1ea3n h\u1ed3i. N\u00f3 gi\u00fap c\u1ea3i thi\u1ec7n tr\u1ea3i nghi\u1ec7m c\u1ee7a b\u1ea1n."
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提供反馈"
           }
         }
       }
     },
-    "privacy policy": {
-      "comment": "privacy policy",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0633\u064a\u0627\u0633\u0629 \u0627\u0644\u062e\u0635\u0648\u0635\u064a\u0629"
+    "No" : {
+      "comment" : "No",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Datenschutzrichtlinie"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "pol\u00edtica de privacidad"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NEIN"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "politique de confidentialit\u00e9"
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Οχι"
           }
         },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0917\u094b\u092a\u0928\u0940\u092f\u0924\u093e \u0928\u0940\u0924\u093f"
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Kebijakan pribadi"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "politica sulla riservatezza"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u30dd\u30ea\u30b7\u30fc"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\uac1c\uc778 \uc815\ubcf4 \uc815\ucc45"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לא"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "pol\u00edtica de Privacidade"
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नहीं"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438"
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nem"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u9690\u79c1\u653f\u7b56"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TIDAK"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fortrolighedspolitik"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NO"
           }
         },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u03c0\u03bf\u03bb\u03b9\u03c4\u03b9\u03ba\u03ae \u03b1\u03c0\u03bf\u03c1\u03c1\u03ae\u03c4\u03bf\u03c5"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "いいえ"
           }
         },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "privacy policy"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아니요"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tietosuojak\u00e4yt\u00e4nt\u00f6"
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05de\u05d3\u05d9\u05e0\u05d9\u05d5\u05ea \u05d4\u05e4\u05e8\u05d8\u05d9\u05d5\u05ea"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não"
           }
         },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Adatv\u00e9delmi ir\u00e1nyelvek"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет"
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "pol\u00edtica de Privacidade"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HAYIR"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gizlilik Politikas\u0131"
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Немає"
           }
         },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u043f\u043e\u043b\u0456\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0456\u0434\u0435\u043d\u0446\u0456\u0439\u043d\u043e\u0441\u0442\u0456"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KHÔNG"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ch\u00ednh s\u00e1ch b\u1ea3o m\u1eadt"
-          }
-        }
-      }
-    },
-    "Rate %@?": {
-      "comment": "Rate <our app>%@?",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0642\u064a\u0645 %@\u061f"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@ bewerten?"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u00bfCalificar %@?"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u00c9valuez %@\u00a0?"
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@ \u0930\u0947\u091f \u0915\u0930\u0947\u0902?"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nilai %@?"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Valuta %@?"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@ \u3092\u8a55\u4fa1\u3057\u307e\u3059\u304b?"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@\uc744(\ub97c) \ud3c9\uac00\ud574 \uc8fc\uc138\uc694."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Avalie %@?"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u041e\u0446\u0435\u043d\u0438\u0442\u0435 %@?"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u8bc4\u4ef7%@\uff1f"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bed\u00f8mme  %@?"
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0391\u03be\u03b9\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03c4\u03b7\u03bd %@;"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rate %@?"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Arvioi %@?"
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05dc\u05d3\u05e8\u05d2 \u05d0\u05ea %@?"
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u00c9rt\u00e9keli az %@?"
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Avalie %@?"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@ derecelendirin mi?"
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u041e\u0446\u0456\u043d\u0438\u0442\u0438 %@?"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0110\u00e1nh gi\u00e1 %@?"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不"
           }
         }
       }
     },
-    "restore": {
-      "comment": "restore <purchases>",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0627\u0633\u062a\u0639\u0627\u062f\u0629"
+    "OK" : {
+      "comment" : "OK",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نعم"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "wiederherstellen"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okay"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "restaurar"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "restaurer les"
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Εντάξει"
           }
         },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u092a\u0941\u0928\u0930\u094d\u0938\u094d\u0925\u093e\u092a\u093f\u0924 \u0915\u0930\u0947\u0902"
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "pulihkan"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DE ACUERDO"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ripristinare"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u3092\u5fa9\u5143\u3059\u308b"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "D'ACCORD"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\ubcf5\uc6d0"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בסדר"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "restaurar"
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ठीक है"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c"
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "rendben"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u6062\u590d"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OKE"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "gendan"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u03b5\u03c0\u03b1\u03bd\u03b1\u03c6\u03bf\u03c1\u03ac"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "わかりました"
           }
         },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "restore"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "좋아요"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "palauttaa"
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05e9\u05d7\u05d6\u05e8"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "vissza\u00e1ll\u00edtani a"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ХОРОШО"
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "restaurar"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TAMAM"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "geri y\u00fckle"
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "в порядку"
           }
         },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0432\u0456\u0434\u043d\u043e\u0432\u0438\u0442\u0438"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ĐƯỢC RỒI"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "kh\u00f4i ph\u1ee5c"
-          }
-        }
-      }
-    },
-    "Subscribe": {
-      "comment": "subscribe <to this app>",
-      "localizations": {
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "inscreva-se"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "iscriviti"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u8ba2\u9605"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "abonnez-vous"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abonnieren Sie"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "suscr\u00edbete"
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0915\u0940 \u0938\u0926\u0938\u094d\u092f\u0924\u093e \u0932\u0947\u0902"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "berlangganan"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u767b\u9332\u3059\u308b"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\uad6c\ub3c5"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u043f\u043e\u0434\u043f\u0438\u0441\u0430\u0442\u044c\u0441\u044f"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "abonner"
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u03b5\u03b3\u03b3\u03c1\u03b1\u03c6\u03b5\u03af\u03c4\u03b5"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "subscribe"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "tilaa"
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05d4\u05d9\u05e8\u05e9\u05dd"
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "iratkozzon fel"
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "inscreva-se"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "abone ol"
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u043f\u0456\u0434\u043f\u0438\u0441\u0430\u0442\u0438\u0441\u044f"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0111\u0103ng k\u00fd"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "好的"
           }
         }
       }
     },
-    "terms of use": {
-      "comment": "terms of use",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0634\u0631\u0648\u0637 \u0627\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645"
+    "Please take a moment to share feedback. It helps improving your experience." : {
+      "comment" : "Please take a moment to share feedback. It helps improving your experience.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يرجى تخصيص بعض الوقت لمشاركة التعليقات. يساعد على تحسين تجربتك."
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nutzungsbedingungen"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brug venligst et øjeblik på at dele feedback. Det hjælper med at forbedre din oplevelse."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "condiciones de uso"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitte nehmen Sie sich einen Moment Zeit, um uns Feedback zu geben. Es trägt dazu bei, Ihre Erfahrung zu verbessern."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "conditions d'utilisation"
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αφιερώστε λίγο χρόνο για να μοιραστείτε τα σχόλιά σας. Βοηθά στη βελτίωση της εμπειρίας σας."
           }
         },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0909\u092a\u092f\u094b\u0917 \u0915\u0940 \u0936\u0930\u094d\u0924\u0947\u0902"
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please take a moment to share feedback. It helps improving your experience."
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "syarat Penggunaan"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tómese un momento para compartir sus comentarios. Ayuda a mejorar tu experiencia."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "termini di utilizzo"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käytä hetki palautteen jakamiseen. Se auttaa parantamaan kokemustasi."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u5229\u7528\u898f\u7d04"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veuillez prendre un moment pour partager vos commentaires. Cela aide à améliorer votre expérience."
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\uc774\uc6a9 \uc57d\uad00"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אנא הקדש רגע כדי לשתף משוב. זה עוזר לשפר את החוויה שלך."
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "termos de uso"
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कृपया प्रतिक्रिया साझा करने के लिए कुछ समय निकालें। यह आपके अनुभव को बेहतर बनाने में मदद करता है।"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0423\u0441\u043b\u043e\u0432\u0438\u044f \u044d\u043a\u0441\u043f\u043b\u0443\u0430\u0442\u0430\u0446\u0438\u0438"
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kérjük, szánjon egy percet a visszajelzés megosztására. Segít az élmény javításában."
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u4f7f\u7528\u6761\u6b3e"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mohon luangkan waktu sejenak untuk berbagi masukan. Ini membantu meningkatkan pengalaman Anda."
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "vilk\u00e5r for brug"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Per favore, prenditi un momento per condividere il tuo feedback. Aiuta a migliorare la tua esperienza."
           }
         },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u03cc\u03c1\u03bf\u03b9 \u03c7\u03c1\u03ae\u03c3\u03b7\u03c2"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ぜひフィードバックを共有してください。エクスペリエンスを向上させるのに役立ちます。"
           }
         },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "terms of use"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잠시 시간을 내어 피드백을 공유해주세요. 이는 귀하의 경험을 향상시키는 데 도움이 됩니다."
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "k\u00e4ytt\u00f6ehdot"
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reserve um momento para compartilhar comentários. Isso ajuda a melhorar sua experiência."
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05ea\u05e0\u05d0\u05d9 \u05e9\u05d9\u05de\u05d5\u05e9"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reserve um momento para compartilhar comentários. Isso ajuda a melhorar sua experiência."
           }
         },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "haszn\u00e1lati felt\u00e9telek"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пожалуйста, найдите минутку, чтобы поделиться отзывом. Это помогает улучшить ваш опыт."
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "termos de uso"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lütfen geri bildiriminizi paylaşmak için bir dakikanızı ayırın. Deneyiminizi geliştirmenize yardımcı olur."
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "kullan\u0131m \u015eartlar\u0131"
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Будь ласка, знайдіть хвилинку, щоб надіслати відгук. Це допомагає покращити ваш досвід."
           }
         },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0423\u043c\u043e\u0432\u0438 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u043d\u043d\u044f"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vui lòng dành chút thời gian để chia sẻ phản hồi. Nó giúp cải thiện trải nghiệm của bạn."
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0111i\u1ec1u kho\u1ea3n s\u1eed d\u1ee5ng"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请花一点时间分享反馈。它有助于改善您的体验。"
           }
         }
       }
     },
-    "Yes": {
-      "comment": "Yes",
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0646\u0639\u0645"
+    "privacy policy" : {
+      "comment" : "privacy policy",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سياسة الخصوصية"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ja"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fortrolighedspolitik"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "S\u00ed"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datenschutzrichtlinie"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Oui"
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "πολιτική απορρήτου"
           }
         },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0939\u093e\u0901"
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "privacy policy"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ya"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "política de privacidad"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "S\u00cc"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tietosuojakäytäntö"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u306f\u3044"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "politique de confidentialité"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\uc608"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מדיניות הפרטיות"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sim"
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गोपनीयता नीति"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0414\u0430"
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adatvédelmi irányelvek"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u662f\u7684"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kebijakan pribadi"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ja"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "politica sulla riservatezza"
           }
         },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u039d\u03b1\u03af"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プライバシーポリシー"
           }
         },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Yes"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개인 정보 정책"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Joo"
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "política de Privacidade"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05db\u05df"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "política de Privacidade"
           }
         },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Igen"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "политика конфиденциальности"
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sim"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gizlilik Politikası"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Evet"
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "політика конфіденційності"
           }
         },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0422\u0430\u043a"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chính sách bảo mật"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0110\u00fang"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐私政策"
+          }
+        }
+      }
+    },
+    "Rate %@?" : {
+      "comment" : "Rate <our app>%@?",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قيم %@؟"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedømme  %@?"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ bewerten?"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αξιολογήστε την %@;"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate %@?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Calificar %@?"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arvioi %@?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Évaluez %@ ?"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לדרג את %@?"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ रेट करें?"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Értékeli az %@?"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nilai %@?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valuta %@?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ を評価しますか?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@을(를) 평가해 주세요."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avalie %@?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avalie %@?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оцените %@?"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ derecelendirin mi?"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оцінити %@?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đánh giá %@?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "评价%@？"
+          }
+        }
+      }
+    },
+    "restore" : {
+      "comment" : "restore <purchases>",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استعادة"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "gendan"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "wiederherstellen"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "επαναφορά"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "restore"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "restaurar"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "palauttaa"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "restaurer les"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שחזר"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पुनर्स्थापित करें"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "visszaállítani a"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "pulihkan"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ripristinare"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "を復元する"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "복원"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "restaurar"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "restaurar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "восстановить"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "geri yükle"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "відновити"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "khôi phục"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复"
+          }
+        }
+      }
+    },
+    "Subscribe" : {
+      "comment" : "subscribe <to this app>",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الاشتراك"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "abonner"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnieren Sie"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "εγγραφείτε"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subscribe"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "suscríbete"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tilaa"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "abonnez-vous"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הירשם"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "की सदस्यता लें"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iratkozzon fel"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "berlangganan"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iscriviti"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登録する"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "구독"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "inscreva-se"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "inscreva-se"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "подписаться"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "abone ol"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "підписатися"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "đăng ký"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "订阅"
+          }
+        }
+      }
+    },
+    "terms of use" : {
+      "comment" : "terms of use",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شروط الاستخدام"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "vilkår for brug"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutzungsbedingungen"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "όροι χρήσης"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "terms of use"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "condiciones de uso"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "käyttöehdot"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "conditions d'utilisation"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תנאי שימוש"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "उपयोग की शर्तें"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "használati feltételek"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "syarat Penggunaan"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "termini di utilizzo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "利用規約"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이용 약관"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "termos de uso"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "termos de uso"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Условия эксплуатации"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "kullanım Şartları"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Умови користування"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "điều khoản sử dụng"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用条款"
+          }
+        }
+      }
+    },
+    "Yes" : {
+      "comment" : "Yes",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نعم"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ja"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ja"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ναί"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sí"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Joo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oui"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כן"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हाँ"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Igen"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ya"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SÌ"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "はい"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sim"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sim"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Да"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evet"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Так"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đúng"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "是的"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }
