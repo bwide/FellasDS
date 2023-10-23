@@ -78,8 +78,8 @@ public struct DSPicker<ID: Hashable>: View {
         style
             .makeBody(configuration: content())
             .environmentObject(vm)
-            .onChange(of: vm.selection) { newValue in
-                selection = newValue as? ID
+            .onChange(of: vm.selection) {
+                selection = vm.selection as? ID
             }
     }
 }
