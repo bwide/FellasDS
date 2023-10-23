@@ -82,13 +82,14 @@ public struct OnboardingContent: View {
     @ViewBuilder
     var steps: some View {
         ScrollViewReader { proxy in
-            VStack(alignment: .leading, spacing: .ds.spacing.large) {
-                ForEach(indexes, id: \.self) { index in
-                    onboardingItem(at: index, with: proxy)
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: .ds.spacing.large) {
+                    ForEach(indexes, id: \.self) { index in
+                        onboardingItem(at: index, with: proxy)
+                    }
                 }
+                .padding(.bottom, 800)
             }
-            .padding(.bottom, 800)
-            .scrollIfNeeded(.fixed)
         }
     }
     
