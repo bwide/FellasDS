@@ -10,6 +10,12 @@ import SwiftUI
 import SwiftResources
 
 public extension View {
+    func forceOnboarding(_ value: Bool) -> some View {
+        task {
+            UserDefaults.standard
+                .setValue(value, forKey: "didShowOnboarding")
+        }
+    }
     func onboarding(
         force: Bool = false,
         @OnboardingContentBuilder _ onboarding: @escaping () -> OnboardingContent
