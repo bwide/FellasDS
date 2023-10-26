@@ -9,14 +9,21 @@ import Foundation
 import SwiftUI
 import FellasStoreKit
 
-@available(iOS 17.0, *)
 public extension View {
-    func paywallButton() -> some View {
-        modifier(PaywallButtonModifier())
+    func withPaywallToolbarButton() -> some View {
+        if #available(iOS 17.0, *) {
+            return self.modifier(PaywallButtonModifier())
+        } else {
+            return self
+        }
     }
     
     func paywallFeature(_ action: SubscriptionStatus.Action) -> some View {
-        modifier(PaywallFeatureModifier(action: action))
+        if #available(iOS 17.0, *) {
+            return modifier(PaywallFeatureModifier(action: action))
+        } else {
+            return self
+        }
     }
 }
 
