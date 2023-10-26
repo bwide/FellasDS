@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import FellasStoreKit
 
+@available(iOS 17.0, *)
 public extension View {
     func paywallButton() -> some View {
         modifier(PaywallButtonModifier())
@@ -19,6 +20,7 @@ public extension View {
     }
 }
 
+@available(iOS 17.0, *)
 struct PaywallFeatureModifier: ViewModifier {
     
     var action: SubscriptionStatus.Action
@@ -41,6 +43,7 @@ struct PaywallFeatureModifier: ViewModifier {
     }
 }
 
+@available(iOS 17.0, *)
 struct PaywallModifier: ViewModifier {
     
     @Binding var shouldPresentPaywall: Bool
@@ -64,6 +67,7 @@ struct PaywallModifier: ViewModifier {
 
 }
 
+@available(iOS 17.0, *)
 struct PaywallButtonModifier: ViewModifier {
     
     @Environment(\.subscriptionStatus) private var subscriptionStatus

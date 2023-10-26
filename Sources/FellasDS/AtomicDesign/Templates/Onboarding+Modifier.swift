@@ -7,8 +7,8 @@
 
 import Foundation
 import SwiftUI
-import SwiftResources
 
+@available(iOS 17.0, *)
 public extension View {
     func onboarding(
         force: Bool = false,
@@ -23,6 +23,7 @@ public extension View {
     }
 }
 
+@available(iOS 17.0, *)
 struct OnboardingModifier: ViewModifier {
     
     var onboarding: () -> OnboardingContent
@@ -45,12 +46,14 @@ struct OnboardingModifier: ViewModifier {
     }
 }
 
+@available(iOS 17.0, *)
 extension OnboardingModifier {
     func onDismissOnboarding() {
         didShowOnboarding = true
     }
 }
 
+@available(iOS 17.0, *)
 public struct OnboardingContent: View {
     var views: [AnyView]
     var indexes: Range<Int>
@@ -125,6 +128,7 @@ public struct OnboardingContent: View {
     }
 }
 
+@available(iOS 17.0, *)
 @resultBuilder
 public enum OnboardingContentBuilder {
     public static func buildBlock(_ components: (any View)...) -> OnboardingContent {
@@ -133,17 +137,21 @@ public enum OnboardingContentBuilder {
 }
 
 #Preview {
-    Color.blue
-        .onboarding {
-            Text("lorem ipsum dolor sit amet")
-            Text("lorem ipsum dolor sit amet 2")
-            Text("lorem ipsum dolor sit amet 3")
-            Text("lorem ipsum dolor sit amet 4")
-            Text("lorem ipsum dolor sit amet 5")
-            Text("lorem ipsum dolor sit amet 6")
-            Text("lorem ipsum dolor sit amet 7")
-            Text("lorem ipsum dolor sit amet 8")
-            Text("lorem ipsum dolor sit amet 9")
-            Text("lorem ipsum dolor sit amet 0")
-        }
+    if #available(iOS 17.0, *) {
+        Color.blue
+            .onboarding {
+                Text("lorem ipsum dolor sit amet")
+                Text("lorem ipsum dolor sit amet 2")
+                Text("lorem ipsum dolor sit amet 3")
+                Text("lorem ipsum dolor sit amet 4")
+                Text("lorem ipsum dolor sit amet 5")
+                Text("lorem ipsum dolor sit amet 6")
+                Text("lorem ipsum dolor sit amet 7")
+                Text("lorem ipsum dolor sit amet 8")
+                Text("lorem ipsum dolor sit amet 9")
+                Text("lorem ipsum dolor sit amet 0")
+            }
+    } else {
+        Color.blue
+    }
 }

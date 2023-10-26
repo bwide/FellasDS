@@ -10,6 +10,7 @@ import SwiftUI
 import StoreKit
 import FellasStoreKit
 
+@available(iOS 17.0, *)
 public struct Paywall: View {
     
     @Environment(\.subscriptionIDs) private var subscriptionIDs
@@ -24,6 +25,7 @@ public struct Paywall: View {
     }
 }
 
+@available(iOS 17.0, *)
 extension Paywall {
     var privacyPolicy: URL {
         URL(
@@ -37,6 +39,7 @@ extension Paywall {
     }
 }
 
+@available(iOS 17.0, *)
 public extension View {
     func paywall(isPresented: Binding<Bool>, onDismiss: @escaping () -> Void = {}) -> some View {
         modifier(
@@ -46,5 +49,9 @@ public extension View {
 }
 
 #Preview {
-    Paywall()
+    if #available(iOS 17.0, *) {
+        Paywall()
+    } else {
+        Color.black
+    }
 }
