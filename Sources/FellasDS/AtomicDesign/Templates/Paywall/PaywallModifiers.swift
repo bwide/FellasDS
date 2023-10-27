@@ -10,7 +10,7 @@ import SwiftUI
 import FellasStoreKit
 
 public extension View {
-    func paywallButton() -> some View {
+    func withPaywallToolbarButton() -> some View {
         modifier(PaywallButtonModifier())
     }
     

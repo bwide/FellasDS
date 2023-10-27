@@ -26,6 +26,7 @@ public struct DSActionButtonStyle: ButtonStyle {
             )
             .withLoader()
             .clipShape(Capsule())
+            .frame(maxWidth: 400)
     }
 }
 
