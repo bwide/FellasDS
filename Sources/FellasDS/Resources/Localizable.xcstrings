@@ -396,6 +396,18 @@
             "state": "translated",
             "value": "\u7ee7\u7eed"
           }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continuar"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u091c\u093e\u0930\u0940 \u0930\u0916\u0928\u093e"
+          }
         }
       }
     },
