@@ -68,14 +68,22 @@ public struct OnboardingContent: View {
     }
     
     @State private var selection: Int = 0
+    @Environment(\.dismiss) var dismiss
+    @Environment(\.subscriptionStatus) var subscriptionStatus
     
-    private var showsPaywall: Bool {
+    private var shouldFinish: Bool {
         selection >= views.endIndex
     }
     
     public var body: some View {
-        if showsPaywall {
-            Paywall()
+        if shouldFinish {
+            switch subscriptionStatus {
+            case .subscribed:
+                Color.clear
+                    .onAppear { dismiss() }
+            case .notSubscribed:
+                Paywall()
+            }
         } else {
             VStack(spacing: .ds.spacing.xxLarge) {
                 steps
@@ -117,7 +125,7 @@ public struct OnboardingContent: View {
     
     @ViewBuilder
     var button: some View {
-        if !showsPaywall { // paywall index
+        if !shouldFinish {
             Button(action: next, label: {
                 Text("Continue")
             })
@@ -145,12 +153,8 @@ public enum OnboardingContentBuilder {
             Text("lorem ipsum dolor sit amet")
             Text("lorem ipsum dolor sit amet 2")
             Text("lorem ipsum dolor sit amet 3")
-            Text("lorem ipsum dolor sit amet 4")
-            Text("lorem ipsum dolor sit amet 5")
-            Text("lorem ipsum dolor sit amet 6")
-            Text("lorem ipsum dolor sit amet 7")
-            Text("lorem ipsum dolor sit amet 8")
-            Text("lorem ipsum dolor sit amet 9")
-            Text("lorem ipsum dolor sit amet 0")
         }
+        .withSubscriptionService(
+            mock: .notSubscribed
+        )
 }
