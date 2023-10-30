@@ -16,15 +16,16 @@ public extension View {
                 .setValue(value, forKey: "didShowOnboarding")
         }
     }
+    
     func onboarding(
-        force: Bool = false,
+        force isOnboarding: Bool? = false,
         @OnboardingContentBuilder _ onboarding: @escaping () -> OnboardingContent
     ) -> some View {
         modifier(OnboardingModifier(onboarding))
             .task {
-                guard force else { return }
+                guard let isOnboarding else { return }
                 UserDefaults.standard
-                    .setValue(false, forKey: "didShowOnboarding")
+                    .setValue(isOnboarding, forKey: "didShowOnboarding")
             }
     }
 }
