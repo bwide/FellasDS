@@ -8,34 +8,39 @@
 import Foundation
 import SwiftUI
 import SwiftResources
+import FellasStoreKit
 
 public extension View {
-    func forceOnboarding(_ value: Bool) -> some View {
+    func forceOnboarding(_ value: Bool? = nil) -> some View {
         task {
+            guard let value else { return }
             UserDefaults.standard
-                .setValue(value, forKey: "didShowOnboarding")
+                .setValue(!value, forKey: "didShowOnboarding")
+            PromoManager.isPromoActive = !value
         }
     }
     
     func onboarding(
-        force isOnboarding: Bool? = false,
-        @OnboardingContentBuilder _ onboarding: @escaping () -> OnboardingContent
+        force isOnboarding: Bool? = nil,
+        @OnboardingContentBuilder _ onboarding: @escaping () -> OnboardingContent,
+        onDisappear: @escaping () -> Void = {}
     ) -> some View {
-        modifier(OnboardingModifier(onboarding))
-            .task {
-                guard let isOnboarding else { return }
-                UserDefaults.standard
-                    .setValue(isOnboarding, forKey: "didShowOnboarding")
-            }
+        modifier(OnboardingModifier(onboarding, onDisappear: onDisappear))
+            .forceOnboarding(isOnboarding)
     }
 }
 
 struct OnboardingModifier: ViewModifier {
     
     var onboarding: () -> OnboardingContent
+    var onDisappear: () -> Void
     
-    init(@OnboardingContentBuilder _ onboarding: @escaping () -> OnboardingContent) {
+    init(
+        @OnboardingContentBuilder _ onboarding: @escaping () -> OnboardingContent,
+        onDisappear: @escaping () -> Void
+    ) {
         self.onboarding = onboarding
+        self.onDisappear = onDisappear
     }
     
     @State private var isPresented: Bool = false
@@ -46,7 +51,7 @@ struct OnboardingModifier: ViewModifier {
             .fullScreenCover(isPresented: $isPresented, onDismiss: onDismissOnboarding, content: {
                 onboarding()
             })
-            .task {
+            .onAppear {
                 isPresented = !didShowOnboarding
             }
     }
@@ -55,6 +60,7 @@ struct OnboardingModifier: ViewModifier {
 extension OnboardingModifier {
     func onDismissOnboarding() {
         didShowOnboarding = true
+        onDisappear()
     }
 }
 
