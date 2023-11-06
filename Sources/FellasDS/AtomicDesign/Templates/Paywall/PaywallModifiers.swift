@@ -9,27 +9,48 @@ import Foundation
 import SwiftUI
 import FellasStoreKit
 
+public protocol PaywallActionable {
+    func canPerformAction(with status: SubscriptionStatus) -> Bool
+}
+
+public struct AlwaysPaywallAction: PaywallActionable {
+    
+    public init() { }
+    
+    public func canPerformAction(with status: FellasStoreKit.SubscriptionStatus) -> Bool {
+        return status == .subscribed
+    }
+}
+
 public extension View {
     func withPaywallToolbarButton() -> some View {
         modifier(PaywallButtonModifier())
     }
     
-    func paywallFeature(_ action: SubscriptionStatus.Action) -> some View {
+    func paywallFeature(_ action: any PaywallActionable) -> some View {
         modifier(PaywallFeatureModifier(action: action))
+    }
+    
+    func paywallButton() -> some View {
+        modifier(PaywallFeatureModifier(action: AlwaysPaywallAction(), hideForSubscribedUsers: true))
     }
 }
 
 struct PaywallFeatureModifier: ViewModifier {
     
-    var action: SubscriptionStatus.Action
+    var action: any PaywallActionable
     
     @Environment(\.subscriptionStatus) private var subscriptionStatus
     @Environment(\.subscriptionStatusIsLoading) private var subscriptionStatusIsLoading
     
     @State private var isPresentingPaywall: Bool = false
     
+    var hideForSubscribedUsers: Bool = false
+    
     func body(content: Content) -> some View {
-        if !subscriptionStatusIsLoading, subscriptionStatus.canPerformAction(action) {
+        if hideForSubscribedUsers && subscriptionStatus == .subscribed {
+          EmptyView()
+        } else if !subscriptionStatusIsLoading, action.canPerformAction(with: subscriptionStatus) {
             content
         } else {
             content
@@ -57,7 +78,7 @@ struct PaywallModifier: ViewModifier {
                 Paywall()
                     .onDisappear { onDismiss() }
             }
-            .onChange(of: isPresentingPaywall) {
+            .onChange(of: shouldPresentPaywall) {
                 isPresentingPaywall = !subscriptionStatusIsLoading && subscriptionStatus.shouldShowPaywall && shouldPresentPaywall
             }
     }
@@ -81,11 +102,49 @@ struct PaywallButtonModifier: ViewModifier {
         if !subscriptionStatusIsLoading, subscriptionStatus.shouldShowPaywall {
             ToolbarItem(placement: .topBarLeading) {
                 Button(action: { isPresentingPaywall = true }, label: {
-                    Image(systemName: "crown.fill")
-                        .foregroundColor(.yellow)
+                    PaywallButtonLabel()
                 })
             }
         }
     }
 }
 
+public struct PaywallButtonLabel: View {
+    
+    public init() { }
+    
+    @State var isJiggly: Bool = false
+    @AppStorage("promo") var promo = false
+    
+    var animation: Animation {
+        .easeInOut(duration: 0.15)
+        .repeatForever(autoreverses: true)
+    }
+    
+    public var body: some View {
+        Image(systemName: "crown.fill")
+            .foregroundColor(.yellow)
+            .rotationEffect(.degrees(isJiggly ? 5 : 0))
+            .rotation3DEffect(
+                .degrees(-5),
+                axis: (x: 0.0, y: -5.0, z: 0.0)
+            )
+            .animation(
+                animation,
+                value: isJiggly
+            )
+            .onAppear {
+                isJiggly = promo
+            }
+            .onChange(of: promo) {
+                isJiggly = promo
+            }
+    }
+}
+
+#Preview {
+    PaywallButtonLabel()
+        .task {
+            PromoManager.isPromoActive = true
+        }
+}
