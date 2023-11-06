@@ -17,7 +17,7 @@ public struct Paywall: View {
     public init() {}
     
     public var body: some View {
-        SubscriptionStoreView(groupID: subscriptionIDs.group)
+        SubscriptionStoreView(productIDs: subscriptionIDs.subscriptions)
             .subscriptionStorePolicyDestination(url: privacyPolicy, for: .privacyPolicy)
             .subscriptionStorePolicyDestination(url: termsOfUse, for: .termsOfService)
             .tint(.ds.brand.primary)

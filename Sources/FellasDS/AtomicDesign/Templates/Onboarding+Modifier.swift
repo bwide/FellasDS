@@ -8,27 +8,39 @@
 import Foundation
 import SwiftUI
 import SwiftResources
+import FellasStoreKit
 
 public extension View {
+    func forceOnboarding(_ value: Bool? = nil) -> some View {
+        task {
+            guard let value else { return }
+            UserDefaults.standard
+                .setValue(!value, forKey: "didShowOnboarding")
+            PromoManager.isPromoActive = !value
+        }
+    }
+    
     func onboarding(
-        force: Bool = false,
-        @OnboardingContentBuilder _ onboarding: @escaping () -> OnboardingContent
+        force isOnboarding: Bool? = nil,
+        @OnboardingContentBuilder _ onboarding: @escaping () -> OnboardingContent,
+        onDisappear: @escaping () -> Void = {}
     ) -> some View {
-        modifier(OnboardingModifier(onboarding))
-            .task {
-                guard force else { return }
-                UserDefaults.standard
-                    .setValue(false, forKey: "didShowOnboarding")
-            }
+        modifier(OnboardingModifier(onboarding, onDisappear: onDisappear))
+            .forceOnboarding(isOnboarding)
     }
 }
 
 struct OnboardingModifier: ViewModifier {
     
     var onboarding: () -> OnboardingContent
+    var onDisappear: () -> Void
     
-    init(@OnboardingContentBuilder _ onboarding: @escaping () -> OnboardingContent) {
+    init(
+        @OnboardingContentBuilder _ onboarding: @escaping () -> OnboardingContent,
+        onDisappear: @escaping () -> Void
+    ) {
         self.onboarding = onboarding
+        self.onDisappear = onDisappear
     }
     
     @State private var isPresented: Bool = false
@@ -39,7 +51,7 @@ struct OnboardingModifier: ViewModifier {
             .fullScreenCover(isPresented: $isPresented, onDismiss: onDismissOnboarding, content: {
                 onboarding()
             })
-            .task {
+            .onAppear {
                 isPresented = !didShowOnboarding
             }
     }
@@ -48,6 +60,7 @@ struct OnboardingModifier: ViewModifier {
 extension OnboardingModifier {
     func onDismissOnboarding() {
         didShowOnboarding = true
+        onDisappear()
     }
 }
 
@@ -61,14 +74,22 @@ public struct OnboardingContent: View {
     }
     
     @State private var selection: Int = 0
+    @Environment(\.dismiss) var dismiss
+    @Environment(\.subscriptionStatus) var subscriptionStatus
     
-    private var showsPaywall: Bool {
+    private var shouldFinish: Bool {
         selection >= views.endIndex
     }
     
     public var body: some View {
-        if showsPaywall {
-            Paywall()
+        if shouldFinish {
+            switch subscriptionStatus {
+            case .subscribed:
+                Color.clear
+                    .onAppear { dismiss() }
+            case .notSubscribed:
+                Paywall()
+            }
         } else {
             VStack(spacing: .ds.spacing.xxLarge) {
                 steps
@@ -82,13 +103,14 @@ public struct OnboardingContent: View {
     @ViewBuilder
     var steps: some View {
         ScrollViewReader { proxy in
-            VStack(alignment: .leading, spacing: .ds.spacing.large) {
-                ForEach(indexes, id: \.self) { index in
-                    onboardingItem(at: index, with: proxy)
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: .ds.spacing.large) {
+                    ForEach(indexes, id: \.self) { index in
+                        onboardingItem(at: index, with: proxy)
+                    }
                 }
+                .padding(.bottom, 800)
             }
-            .padding(.bottom, 800)
-            .scrollIfNeeded(.fixed)
         }
     }
     
@@ -109,7 +131,7 @@ public struct OnboardingContent: View {
     
     @ViewBuilder
     var button: some View {
-        if !showsPaywall { // paywall index
+        if !shouldFinish {
             Button(action: next, label: {
                 Text("Continue")
             })
@@ -137,12 +159,8 @@ public enum OnboardingContentBuilder {
             Text("lorem ipsum dolor sit amet")
             Text("lorem ipsum dolor sit amet 2")
             Text("lorem ipsum dolor sit amet 3")
-            Text("lorem ipsum dolor sit amet 4")
-            Text("lorem ipsum dolor sit amet 5")
-            Text("lorem ipsum dolor sit amet 6")
-            Text("lorem ipsum dolor sit amet 7")
-            Text("lorem ipsum dolor sit amet 8")
-            Text("lorem ipsum dolor sit amet 9")
-            Text("lorem ipsum dolor sit amet 0")
         }
+        .withSubscriptionService(
+            mock: .notSubscribed
+        )
 }
