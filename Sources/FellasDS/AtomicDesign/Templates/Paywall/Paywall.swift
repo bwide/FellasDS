@@ -13,6 +13,7 @@ import FellasStoreKit
 public struct Paywall: View {
     
     @Environment(\.subscriptionIDs) private var subscriptionIDs
+    @Environment(\.reviewAlertService) private var reviewAlertService
     
     public init() {}
     
@@ -21,6 +22,9 @@ public struct Paywall: View {
             .subscriptionStorePolicyDestination(url: privacyPolicy, for: .privacyPolicy)
             .subscriptionStorePolicyDestination(url: termsOfUse, for: .termsOfService)
             .tint(.ds.brand.primary)
+            .onDisappear {
+                reviewAlertService.presentReviewPrompt()
+            }
     }
 }
 

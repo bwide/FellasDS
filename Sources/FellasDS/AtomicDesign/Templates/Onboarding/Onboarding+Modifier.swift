@@ -71,27 +71,29 @@ public struct OnboardingContent: View {
     init(views: [any View]) {
         self.views = views.map { AnyView($0) }
         self.indexes = 0..<self.views.count
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color.ds.brand.tertiary)
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor(
+            Color.ds.text.background.primary.opacity(ds: .disabled)
+        )
     }
     
     @State private var selection: Int = 0
+    @State private var shouldFinish: Bool = false
+
     @Environment(\.dismiss) var dismiss
     @Environment(\.subscriptionStatus) var subscriptionStatus
     
-    private var shouldFinish: Bool {
-        selection >= views.endIndex
-    }
     
     public var body: some View {
         if shouldFinish {
             switch subscriptionStatus {
             case .subscribed:
-                Color.clear
-                    .onAppear { dismiss() }
+                Color.clear.onAppear { dismiss() }
             case .notSubscribed:
                 Paywall()
             }
         } else {
-            VStack(spacing: .ds.spacing.xxLarge) {
+            VStack(spacing: .ds.spacing.xLarge) {
                 steps
                 button
             }
@@ -102,31 +104,14 @@ public struct OnboardingContent: View {
     
     @ViewBuilder
     var steps: some View {
-        ScrollViewReader { proxy in
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: .ds.spacing.large) {
-                    ForEach(indexes, id: \.self) { index in
-                        onboardingItem(at: index, with: proxy)
-                    }
-                }
-                .padding(.bottom, 800)
-            }
-        }
-    }
-    
-    @ViewBuilder
-    func onboardingItem(at index: Int, with proxy: ScrollViewProxy) -> some View {
-        if selection >= index {
-            HStack {
+        TabView(selection: $selection)  {
+            ForEach(indexes, id: \.self) { index in
                 views[index]
-                Spacer()
-            }
-            .id(index)
-            .transition(.opacity)
-            .onAppear {
-                proxy.scrollTo(index, anchor: .bottom)
+                    .id(index)
             }
         }
+        .tabViewStyle(.page(indexDisplayMode: .always))
+        .tint(.ds.brand.primary)
     }
     
     @ViewBuilder
@@ -140,25 +125,91 @@ public struct OnboardingContent: View {
     }
     
     func next() {
-        withAnimation {
-            selection += 1
+        if selection >= views.endIndex-1 {
+            shouldFinish = true
+        } else {
+            withAnimation {
+                selection += 1
+            }
         }
     }
 }
 
 @resultBuilder
 public enum OnboardingContentBuilder {
-    public static func buildBlock(_ components: (any View)...) -> OnboardingContent {
+    public static func buildBlock(_ component: OnboardingContent) -> OnboardingContent {
+        component
+    }
+    
+    public static func buildBlock(_ components: [OnboardingPage]) -> OnboardingContent {
         OnboardingContent(views: components)
+    }
+    
+    public static func buildBlock(_ components: OnboardingPage...) -> OnboardingContent {
+        OnboardingContent(views: components)
+    }
+}
+
+@resultBuilder
+public enum OnboardingPageContentBuilder {
+    public static func buildBlock(
+        _ image: Image, _ title: String, _ subtitle: String
+    ) -> OnboardingPageContent {
+        OnboardingPageContent(image: image, title: title, subtitle: subtitle)
+    }
+}
+
+public struct OnboardingPageContent {
+    var image: Image
+    var title: String
+    var subtitle: String
+}
+
+public struct OnboardingPage: View {
+
+    var content: OnboardingPageContent
+    
+    public init(@OnboardingPageContentBuilder _ content: () -> OnboardingPageContent) {
+        self.content = content()
+    }
+    
+    var appIconRoundedSize: CGSize {
+        let size = CGSize.ds.large
+        let ratio = 1/6.4
+        let side = size*ratio
+        return CGSize(width: side, height: side)
+    }
+
+    public var body: some View {
+        VStack(alignment: .center, spacing: .ds.spacing.xLarge) {
+            content.image
+                .resizable()
+                .scaledToFit()
+                .frame(ds: .large)
+                .clipShape(RoundedRectangle(cornerSize: appIconRoundedSize))
+            Text(content.title)
+                .textStyle(ds: .title1)
+            Text(content.subtitle)
+                .multilineTextAlignment(.center)
+                .textStyle(ds: .body)
+        }
     }
 }
 
 #Preview {
     Color.blue
         .onboarding {
-            Text("lorem ipsum dolor sit amet")
-            Text("lorem ipsum dolor sit amet 2")
-            Text("lorem ipsum dolor sit amet 3")
+            OnboardingPage {
+                Image(systemName: "heart")
+                "Title 1"
+                "lorem ipsum dolor sit amet 1"
+            }
+            
+            OnboardingPage {
+                Image(systemName: "heart")
+                "Title 2"
+                "lorem ipsum dolor sit amet 2"
+            }
         }
         .withSubscriptionService(
             mock: .notSubscribed
