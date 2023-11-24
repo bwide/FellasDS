@@ -39,6 +39,8 @@ public struct Paywall: View {
     @State var selection: Product?
     @State var subscriptions: [Product] = []
     
+    public init() { }
+    
 //    var buttonText: String {
 //        guard let selection else { return Strings.subscribe }
 //        return selection.hasIntroductoryOffer
