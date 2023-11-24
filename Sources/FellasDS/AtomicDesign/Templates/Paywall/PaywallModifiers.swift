@@ -34,6 +34,10 @@ public extension View {
     func paywallButton() -> some View {
         modifier(PaywallFeatureModifier(action: AlwaysPaywallAction(), hideForSubscribedUsers: true))
     }
+    
+    func withPaywallContent(@PaywallBuilder _ content: () -> PaywallContent) -> some View {
+        environment(\.paywallContent, content())
+    }
 }
 
 struct PaywallFeatureModifier: ViewModifier {
@@ -139,6 +143,17 @@ public struct PaywallButtonLabel: View {
             .onChange(of: promo) {
                 isJiggly = promo
             }
+    }
+}
+
+public struct PaywallContentKey: EnvironmentKey {
+    public static var defaultValue: PaywallContent?
+}
+
+public extension EnvironmentValues {
+    var paywallContent: PaywallContent? {
+        get { self[PaywallContentKey.self] }
+        set { self[PaywallContentKey.self] = newValue }
     }
 }
 

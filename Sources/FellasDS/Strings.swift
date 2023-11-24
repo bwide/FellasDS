@@ -25,22 +25,6 @@ public enum Strings {
         ).localizedCapitalized
     }
     
-    static var privacyPolicy: String {
-        String(
-            localized: "privacy policy",
-            bundle: .module.localizedBundle,
-            comment: "privacy policy"
-        ).localizedCapitalized
-    }
-    
-    static var termsOfUse: String {
-        String(
-            localized: "terms of use",
-            bundle: .module.localizedBundle,
-            comment: "terms of use"
-        ).localizedCapitalized
-    }
-    
     static var error: String {
         String(
             localized: "Error",
@@ -113,6 +97,7 @@ public enum Strings {
             comment: "Give Feedback <about our app>"
         ).localizedCapitalized
     }
+    
     static var feedbackPromptMessage: String {
         String(
             localized: "Please take a moment to share feedback. It helps improving your experience.",

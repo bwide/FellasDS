@@ -90,7 +90,9 @@ public struct OnboardingContent: View {
             case .subscribed:
                 Color.clear.onAppear { dismiss() }
             case .notSubscribed:
-                Paywall()
+                NavigationStack {
+                    Paywall()
+                }
             }
         } else {
             VStack(spacing: .ds.spacing.xLarge) {
