@@ -21,7 +21,7 @@ public enum Strings {
         String(
             localized: "restore",
             bundle: .module.localizedBundle,
-            comment: "restore <purchases>"
+            comment: "Restore <purchases>"
         )
     }
     
