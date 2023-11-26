@@ -14,31 +14,15 @@ public enum Strings {
             localized: "Subscribe",
             bundle: .module.localizedBundle,
             comment: "subscribe <to this app>"
-        ).localizedCapitalized
+        )
     }
     
     static var restore: String {
         String(
             localized: "restore",
             bundle: .module.localizedBundle,
-            comment: "restore <purchases>"
-        ).localizedCapitalized
-    }
-    
-    static var privacyPolicy: String {
-        String(
-            localized: "privacy policy",
-            bundle: .module.localizedBundle,
-            comment: "privacy policy"
-        ).localizedCapitalized
-    }
-    
-    static var termsOfUse: String {
-        String(
-            localized: "terms of use",
-            bundle: .module.localizedBundle,
-            comment: "terms of use"
-        ).localizedCapitalized
+            comment: "Restore <purchases>"
+        )
     }
     
     static var error: String {
@@ -46,7 +30,7 @@ public enum Strings {
             localized: "Error",
             bundle: .module.localizedBundle,
             comment: "Error"
-        ).localizedCapitalized
+        )
     }
     
     public static var ok: String {
@@ -54,7 +38,7 @@ public enum Strings {
             localized: "OK",
             bundle: .module.localizedBundle,
             comment: "OK"
-        ).localizedCapitalized
+        )
     }
     
     public static var cancel: String {
@@ -62,7 +46,7 @@ public enum Strings {
             localized: "cancel",
             bundle: .module.localizedBundle,
             comment: "Cancel"
-        ).localizedCapitalized
+        )
     }
     
     // MARK: - Review Prompt
@@ -72,7 +56,7 @@ public enum Strings {
             localized: "Yes",
             bundle: .module.localizedBundle,
             comment: "Yes"
-        ).localizedCapitalized
+        )
     }
     
     public static var no: String {
@@ -80,7 +64,7 @@ public enum Strings {
             localized: "No",
             bundle: .module.localizedBundle,
             comment: "No"
-        ).localizedCapitalized
+        )
     }
     
     static var reviewPromptMessage: String {
@@ -88,7 +72,7 @@ public enum Strings {
             localized: "Are you enjoying the app so far?",
             bundle: .module.localizedBundle,
             comment: "Are you enjoying the app so far?"
-        ).localizedCapitalized
+        )
     }
     
     static var reviewPromptTitle: String {
@@ -101,7 +85,7 @@ public enum Strings {
             comment: "Rate <our app>%@?"
         )
         
-        return String(format: ans, appName).localizedCapitalized
+        return String(format: ans, appName)
     }
     
     // MARK: - Feedback prompt
@@ -111,13 +95,14 @@ public enum Strings {
             localized: "Give Feedback",
             bundle: .module.localizedBundle,
             comment: "Give Feedback <about our app>"
-        ).localizedCapitalized
+        )
     }
+    
     static var feedbackPromptMessage: String {
         String(
             localized: "Please take a moment to share feedback. It helps improving your experience.",
             bundle: .module.localizedBundle,
             comment: "Please take a moment to share feedback. It helps improving your experience."
-        ).localizedCapitalized
+        )
     }
 }

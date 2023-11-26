@@ -57,19 +57,19 @@ extension EnvironmentValues {
 
 public struct DSPicker<ID: Hashable>: View {
     
-    @Binding var selection: ID?
-    @ObservedObject var vm: DSPickerSelectionViewModel
-    var content: () -> DSPickerStyleConfiguration
+    @Binding private var selection: ID
+    @ObservedObject private var vm: DSPickerSelection
+    private var content: () -> DSPickerStyleConfiguration
     
     @Environment(\.pickerStyle) var style
     
     public init(
-        selection: Binding<ID?> = .constant(0),
+        selection: Binding<ID> = .constant(0),
         @VerticalPickerBuilder content: @escaping () -> DSPickerStyleConfiguration
     ) {
         self._selection = selection
         self.content = content
-        self.vm = DSPickerSelectionViewModel(
+        self.vm = DSPickerSelection(
             selection: selection.wrappedValue
         )
     }
@@ -78,9 +78,9 @@ public struct DSPicker<ID: Hashable>: View {
         style
             .makeBody(configuration: content())
             .environmentObject(vm)
-            .onChange(of: vm.selection) {
-                selection = vm.selection as? ID
-            }
+            .onReceive(vm.$selection, perform: {
+                selection = $0 as! ID
+            })
     }
 }
 
@@ -90,7 +90,7 @@ public extension View {
     }
 }
 
-class DSPickerSelectionViewModel: ObservableObject {
+class DSPickerSelection: ObservableObject {
     @Published var selection: AnyHashable?
     
     init(selection: AnyHashable?) {

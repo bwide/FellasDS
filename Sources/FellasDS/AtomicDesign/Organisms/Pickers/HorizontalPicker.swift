@@ -25,7 +25,7 @@ public struct HorizontalPickerStyle: DSPickerStyle {
 
 struct DSHorizontalPickerItem<Content: View>: View, Taggable {
         
-    @EnvironmentObject var vm: DSPickerSelectionViewModel
+    @EnvironmentObject var vm: DSPickerSelection
     var tag: AnyHashable = UUID()
     var content: () -> Content
     

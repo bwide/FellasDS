@@ -10,7 +10,7 @@ import SwiftUI
 
 protocol Taggable {
     var tag: AnyHashable { get set }
-    var vm: DSPickerSelectionViewModel { get }
+    var vm: DSPickerSelection { get }
     func withTag(_ tag: AnyHashable) -> Self
 }
 
@@ -35,7 +35,7 @@ public struct DSRowPickerItem<Content: View>: View, Taggable {
     public var style: Style = .single
     
     var tag: AnyHashable = UUID()
-    @EnvironmentObject var vm: DSPickerSelectionViewModel
+    @EnvironmentObject var vm: DSPickerSelection
     
     public init(@ViewBuilder content: @escaping () -> Content) {
         self.content = content

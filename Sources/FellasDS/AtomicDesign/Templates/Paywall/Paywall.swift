@@ -10,17 +10,77 @@ import SwiftUI
 import StoreKit
 import FellasStoreKit
 
+@resultBuilder
+public enum PaywallBuilder {
+    public static func buildBlock(
+        _ title: String, _ subtitle: String, _ labels: Label<Text, Image>...
+    ) -> PaywallContent {
+        PaywallContent(title: title, subtitle: subtitle, labels: labels)
+    }
+}
+
+public struct PaywallContent {
+    var title: String
+    var subtitle: String
+    var labels: [Label<Text, Image>]
+    
+    var labelData: Range<Int> { 0..<labels.count }
+    
+    @ViewBuilder func label(for index: Int) -> some View { labels[index] }
+}
+
 public struct Paywall: View {
     
+    @Environment(\.paywallContent) private var content
     @Environment(\.subscriptionIDs) private var subscriptionIDs
+    @Environment(\.reviewAlertService) private var reviewAlertService
+    @Environment(\.dismiss) private var dismiss
     
-    public init() {}
+    @State var selection: Product?
+    @State var subscriptions: [Product] = []
+    
+    public init() { }
+    
+//    var buttonText: String {
+//        guard let selection else { return Strings.subscribe }
+//        return selection.hasIntroductoryOffer
+//        ? Strings.tryForFree
+//        : Strings.subscribe
+//    }
     
     public var body: some View {
-        SubscriptionStoreView(productIDs: subscriptionIDs.subscriptions)
+        Group {
+            if let content {
+                SubscriptionStoreView(
+                    productIDs: subscriptionIDs.subscriptions,
+                    marketingContent: { marketingContent(content) }
+                )
+            } else {
+                SubscriptionStoreView(
+                    productIDs: subscriptionIDs.subscriptions
+                )
+            }
+        }
             .subscriptionStorePolicyDestination(url: privacyPolicy, for: .privacyPolicy)
             .subscriptionStorePolicyDestination(url: termsOfUse, for: .termsOfService)
             .tint(.ds.brand.primary)
+            .onDisappear {
+                reviewAlertService.presentReviewPrompt()
+            }
+    }
+    
+    @ViewBuilder
+    func marketingContent(_ content: PaywallContent) -> some View {
+        VStack(spacing: .ds.spacing.medium) {
+            Text(content.title)
+                .textStyle(ds: .title1)
+            Text(content.subtitle)
+            ForEach(content.labelData, id: \.self) {
+                content.label(for: $0)
+            }
+        }
+        .multilineTextAlignment(.center)
+        .textStyle(ds: .body)
     }
 }
 
@@ -46,5 +106,36 @@ public extension View {
 }
 
 #Preview {
-    Paywall()
+    
+    struct MockSubscriptions: SubscriptionIdentifying {
+        var group: String = ""
+        
+        var subscriptions: [String] = [
+            "company.fellas.bible.year.2",
+            "company.fellas.bible.month.2"
+        ]
+        
+        func identify(productID: FellasStoreKit.ProductID) -> FellasStoreKit.SubscriptionStatus {
+            productID.starts(with: "company.fellas.bible")
+            ? .subscribed
+            : .notSubscribed
+        }
+        
+        
+    }
+    
+    return NavigationStack {
+        Paywall()
+            .withPaywallContent {
+                "Title"
+                "Et natus aut ipsa saepe neque vitae. Veniam in facere nam quam vitae ut. Ipsum quisquam reprehenderit quo quod"
+                Label("Label 1", systemImage: "checkmark")
+                Label("Label 2", systemImage: "checkmark")
+                Label("Label 3", systemImage: "checkmark")
+            }
+            .withSubscriptionService(
+                identifiers: MockSubscriptions(),
+                mock: .notSubscribed
+            )
+    }
 }

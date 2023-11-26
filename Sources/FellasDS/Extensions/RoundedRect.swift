@@ -22,7 +22,7 @@ struct RoundedCorner: Shape {
 }
 
 extension View {
-    func roundedCorners(_ radius: DSCornerRadius, corners: UIRectCorner) -> some View {
+    func roundedCorners(_ radius: DSCornerRadius, corners: UIRectCorner = .allCorners) -> some View {
         clipShape( RoundedCorner(radius: radius.rawValue, corners: corners) )
     }
 }

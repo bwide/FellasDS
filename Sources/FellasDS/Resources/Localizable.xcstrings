@@ -94,12 +94,6 @@
             "value": "\uc9c0\uae08\uae4c\uc9c0 \uc571\uc744 \uc990\uaca8 \uc0ac\uc6a9\ud558\uace0 \uacc4\uc2dc\ub098\uc694?"
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Voc\u00ea est\u00e1 gostando do aplicativo at\u00e9 agora?"
-          }
-        },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
@@ -134,6 +128,132 @@
           "stringUnit": {
             "state": "translated",
             "value": "\u5230\u76ee\u524d\u4e3a\u6b62\uff0c\u60a8\u559c\u6b22\u8fd9\u4e2a\u5e94\u7528\u7a0b\u5e8f\u5417\uff1f"
+          }
+        }
+      }
+    },
+    "Better value": {
+      "comment": "Better value",
+      "extractionState": "stale",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0623\u0641\u0636\u0644 \u0642\u064a\u0645\u0629"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bedre v\u00e6rdi"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Besserer Wert"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u039a\u03b1\u03bb\u03cd\u03c4\u03b5\u03c1\u03b7 \u03b1\u03be\u03af\u03b1"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Better value"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mejor valor"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parempi arvo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meilleure valeur"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05e2\u05e8\u05da \u05d8\u05d5\u05d1 \u05d9\u05d5\u05ea\u05e8"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jobb \u00e9rt\u00e9k"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nilai yang lebih baik"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Migliore valore"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u3088\u308a\u826f\u3044\u4fa1\u5024"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ub354 \ub098\uc740 \uac00\uce58"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Melhor valor"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u041b\u0443\u0447\u0448\u0430\u044f \u0446\u0435\u043d\u0430"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daha iyi de\u011fer"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u041a\u0440\u0430\u0449\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u043d\u044f"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gi\u00e1 tr\u1ecb h\u01a1n"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u66f4\u597d\u7684\u4ef7\u503c"
           }
         }
       }
@@ -231,12 +351,6 @@
             "value": "\ucde8\uc18c"
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancelar"
-          }
-        },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
@@ -271,6 +385,258 @@
           "stringUnit": {
             "state": "translated",
             "value": "\u53d6\u6d88"
+          }
+        }
+      }
+    },
+    "Cancel anytime": {
+      "comment": "Cancel anytime",
+      "extractionState": "stale",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0625\u0644\u063a\u0627\u0621 \u0641\u064a \u0623\u064a \u0648\u0642\u062a"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuller n\u00e5r som helst"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jederzeit k\u00fcndbar"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0391\u03ba\u03cd\u03c1\u03c9\u03c3\u03b7 \u03b1\u03bd\u03ac \u03c0\u03ac\u03c3\u03b1 \u03c3\u03c4\u03b9\u03b3\u03bc\u03ae"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel anytime"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar en cualquier momento"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peru milloin tahansa"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler \u00e0 tout moment"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05d1\u05d8\u05dc \u05d1\u05db\u05dc \u05e2\u05ea"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "B\u00e1rmikor lemondhatja"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Batalkan kapan saja"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annulla in qualsiasi momento"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u3044\u3064\u3067\u3082\u30ad\u30e3\u30f3\u30bb\u30eb\u53ef\u80fd"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\uc5b8\uc81c\ub4e0\uc9c0 \ucde8\uc18c"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancele a qualquer momento"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u041e\u0442\u043c\u0435\u043d\u0438\u0442\u044c \u0432 \u043b\u044e\u0431\u043e\u0435 \u0432\u0440\u0435\u043c\u044f"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0130stedi\u011finiz zaman iptal edin"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0421\u043a\u0430\u0441\u0443\u0432\u0430\u0442\u0438 \u0431\u0443\u0434\u044c-\u043a\u043e\u043b\u0438"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "H\u1ee7y b\u1ea5t c\u1ee9 l\u00fac n\u00e0o"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u968f\u65f6\u53d6\u6d88"
+          }
+        }
+      }
+    },
+    "close": {
+      "comment": "close",
+      "extractionState": "stale",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u064a\u063a\u0644\u0642"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "t\u00e6t"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "schlie\u00dfen"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u039a\u03bb\u03b5\u03af\u03c3\u03b5"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "close"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cerca"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "kiinni"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "fermer"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05e1\u05d2\u05d5\u05e8"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bez\u00e1r\u00e1s"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "menutup"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "vicino"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u8fd1\u3044"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ub2eb\ub2e4"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "fechar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0437\u0430\u043a\u0440\u044b\u0432\u0430\u0442\u044c"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "kapal\u0131"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0437\u0430\u043a\u0440\u0438\u0442\u0438"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0111\u00f3ng"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u5173\u95ed"
           }
         }
       }
@@ -331,6 +697,12 @@
             "value": "\u05dc\u05b0\u05d4\u05b7\u05de\u05e9\u05c1\u05b4\u05d9\u05da"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u091c\u093e\u0930\u0940 \u0930\u0916\u0928\u093e"
+          }
+        },
         "hu": {
           "stringUnit": {
             "state": "translated",
@@ -361,7 +733,7 @@
             "value": "\uacc4\uc18d\ud558\ub2e4"
           }
         },
-        "pt": {
+        "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "Continuar"
@@ -395,18 +767,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "\u7ee7\u7eed"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Continuar"
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u091c\u093e\u0930\u0940 \u0930\u0916\u0928\u093e"
           }
         }
       }
@@ -502,12 +862,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "\uc624\ub958"
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Erro"
           }
         },
         "pt-BR": {
@@ -641,12 +995,6 @@
             "value": "\uc758\uacac\uc744 \ubcf4\ub0b4\uc8fc\uc138\uc694."
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "D\u00ea feedback"
-          }
-        },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
@@ -776,12 +1124,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "\uc544\ub2c8\uc694"
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "N\u00e3o"
           }
         },
         "pt-BR": {
@@ -915,12 +1257,6 @@
             "value": "\uc88b\uc544\uc694"
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "OK"
-          }
-        },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
@@ -1052,12 +1388,6 @@
             "value": "\uc7a0\uc2dc \uc2dc\uac04\uc744 \ub0b4\uc5b4 \ud53c\ub4dc\ubc31\uc744 \uacf5\uc720\ud574\uc8fc\uc138\uc694. \uc774\ub294 \uadc0\ud558\uc758 \uacbd\ud5d8\uc744 \ud5a5\uc0c1\uc2dc\ud0a4\ub294 \ub370 \ub3c4\uc6c0\uc774 \ub429\ub2c8\ub2e4."
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reserve um momento para compartilhar coment\u00e1rios. Isso ajuda a melhorar sua experi\u00eancia."
-          }
-        },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
@@ -1096,8 +1426,9 @@
         }
       }
     },
-    "privacy policy": {
-      "comment": "privacy policy",
+    "privacy.policy": {
+      "comment": "Privacy policy",
+      "extractionState": "stale",
       "localizations": {
         "ar": {
           "stringUnit": {
@@ -1120,19 +1451,19 @@
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "\u03c0\u03bf\u03bb\u03b9\u03c4\u03b9\u03ba\u03ae \u03b1\u03c0\u03bf\u03c1\u03c1\u03ae\u03c4\u03bf\u03c5"
+            "value": "\u03a0\u03bf\u03bb\u03b9\u03c4\u03b9\u03ba\u03ae \u03b1\u03c0\u03bf\u03c1\u03c1\u03ae\u03c4\u03bf\u03c5"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "privacy policy"
+            "value": "Privacy policy"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "pol\u00edtica de privacidad"
+            "value": "Pol\u00edtica de privacidad"
           }
         },
         "fi": {
@@ -1144,19 +1475,13 @@
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "politique de confidentialit\u00e9"
+            "value": "Politique de confidentialit\u00e9"
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
             "value": "\u05de\u05d3\u05d9\u05e0\u05d9\u05d5\u05ea \u05d4\u05e4\u05e8\u05d8\u05d9\u05d5\u05ea"
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0917\u094b\u092a\u0928\u0940\u092f\u0924\u093e \u0928\u0940\u0924\u093f"
           }
         },
         "hu": {
@@ -1174,7 +1499,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "politica sulla riservatezza"
+            "value": "Politica sulla riservatezza"
           }
         },
         "ja": {
@@ -1189,22 +1514,16 @@
             "value": "\uac1c\uc778 \uc815\ubcf4 \uc815\ucc45"
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "pol\u00edtica de Privacidade"
-          }
-        },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "pol\u00edtica de Privacidade"
+            "value": "Pol\u00edtica de Privacidade"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "\u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438"
+            "value": "\u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438"
           }
         },
         "tr": {
@@ -1216,7 +1535,7 @@
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "\u043f\u043e\u043b\u0456\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0456\u0434\u0435\u043d\u0446\u0456\u0439\u043d\u043e\u0441\u0442\u0456"
+            "value": "\u041f\u043e\u043b\u0456\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0456\u0434\u0435\u043d\u0446\u0456\u0439\u043d\u043e\u0441\u0442\u0456"
           }
         },
         "vi": {
@@ -1326,12 +1645,6 @@
             "value": "%@\uc744(\ub97c) \ud3c9\uac00\ud574 \uc8fc\uc138\uc694."
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Avalie %@?"
-          }
-        },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
@@ -1371,7 +1684,7 @@
       }
     },
     "restore": {
-      "comment": "restore <purchases>",
+      "comment": "Restore <purchases>",
       "localizations": {
         "ar": {
           "stringUnit": {
@@ -1382,7 +1695,7 @@
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "gendan"
+            "value": "Gendan"
           }
         },
         "de": {
@@ -1394,31 +1707,31 @@
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "\u03b5\u03c0\u03b1\u03bd\u03b1\u03c6\u03bf\u03c1\u03ac"
+            "value": "\u0395\u03c0\u03b1\u03bd\u03b1\u03c6\u03bf\u03c1\u03ac"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "restore"
+            "value": "Restore"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "restaurar"
+            "value": "Restaurar"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "palauttaa"
+            "value": "Palauta"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "restaurer les"
+            "value": "Restaurer les"
           }
         },
         "he": {
@@ -1436,19 +1749,19 @@
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "vissza\u00e1ll\u00edtani a"
+            "value": "A  vissza\u00e1ll\u00edt\u00e1sa"
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "pulihkan"
+            "value": "Pulihkan"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "ripristinare"
+            "value": "Ripristina"
           }
         },
         "ja": {
@@ -1463,22 +1776,16 @@
             "value": "\ubcf5\uc6d0"
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "restaurar"
-          }
-        },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "restaurar"
+            "value": "Restaurar"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "\u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c"
+            "value": "\u0412\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c"
           }
         },
         "tr": {
@@ -1490,13 +1797,13 @@
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "\u0432\u0456\u0434\u043d\u043e\u0432\u0438\u0442\u0438"
+            "value": "\u0412\u0456\u0434\u043d\u043e\u0432\u0438\u0442\u0438"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "kh\u00f4i ph\u1ee5c"
+            "value": "Kh\u00f4i ph\u1ee5c"
           }
         },
         "zh-Hans": {
@@ -1600,12 +1907,6 @@
             "value": "\uad6c\ub3c5"
           }
         },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "inscreva-se"
-          }
-        },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
@@ -1644,8 +1945,135 @@
         }
       }
     },
-    "terms of use": {
-      "comment": "terms of use",
+    "subscription.offer": {
+      "comment": "<1 month>%@ free",
+      "extractionState": "stale",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ \u0645\u062c\u0627\u0646\u064b\u0627"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ gratis"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ kostenlos"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ \u03b4\u03c9\u03c1\u03b5\u03ac\u03bd"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ free"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ gratis"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ ilmaiseksi"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ gratuit"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ \u05d1\u05d7\u05d9\u05e0\u05dd"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ ingyenes"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ gratis"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ gratis"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ \u7121\u6599"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ \ubb34\ub8cc"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ gr\u00e1tis"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ \u00fccretsiz"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ \u0431\u0435\u0437\u043a\u043e\u0448\u0442\u043e\u0432\u043d\u043e"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ mi\u1ec5n ph\u00ed"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@\u514d\u8d39"
+          }
+        }
+      }
+    },
+    "terms.of.use": {
+      "comment": "Terms of use",
+      "extractionState": "stale",
       "localizations": {
         "ar": {
           "stringUnit": {
@@ -1656,7 +2084,7 @@
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "vilk\u00e5r for brug"
+            "value": "Vilk\u00e5r for brug"
           }
         },
         "de": {
@@ -1668,31 +2096,31 @@
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "\u03cc\u03c1\u03bf\u03b9 \u03c7\u03c1\u03ae\u03c3\u03b7\u03c2"
+            "value": "\u039f\u03c1\u03bf\u03b9 \u03c7\u03c1\u03ae\u03c3\u03b7\u03c2"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "terms of use"
+            "value": "Terms of use"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "condiciones de uso"
+            "value": "Condiciones de uso"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "k\u00e4ytt\u00f6ehdot"
+            "value": "K\u00e4ytt\u00f6ehdot"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "conditions d'utilisation"
+            "value": "Conditions d'utilisation"
           }
         },
         "he": {
@@ -1701,28 +2129,22 @@
             "value": "\u05ea\u05e0\u05d0\u05d9 \u05e9\u05d9\u05de\u05d5\u05e9"
           }
         },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0909\u092a\u092f\u094b\u0917 \u0915\u0940 \u0936\u0930\u094d\u0924\u0947\u0902"
-          }
-        },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "haszn\u00e1lati felt\u00e9telek"
+            "value": "Haszn\u00e1lati felt\u00e9telek"
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "syarat Penggunaan"
+            "value": "Syarat Penggunaan"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "termini di utilizzo"
+            "value": "Termini di utilizzo"
           }
         },
         "ja": {
@@ -1734,19 +2156,13 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "\uc774\uc6a9 \uc57d\uad00"
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "termos de uso"
+            "value": "\uc774\uc6a9\uc57d\uad00"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "termos de uso"
+            "value": "Termos de uso"
           }
         },
         "ru": {
@@ -1758,25 +2174,151 @@
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "kullan\u0131m \u015eartlar\u0131"
+            "value": "Kullan\u0131m \u015eartlar\u0131"
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "\u0423\u043c\u043e\u0432\u0438 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u043d\u043d\u044f"
+            "value": "\u0423\u043c\u043e\u0432\u0438 \u0432\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u0430\u043d\u043d\u044f"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "\u0111i\u1ec1u kho\u1ea3n s\u1eed d\u1ee5ng"
+            "value": "\u0110i\u1ec1u kho\u1ea3n s\u1eed d\u1ee5ng"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "\u4f7f\u7528\u6761\u6b3e"
+          }
+        }
+      }
+    },
+    "try.free": {
+      "comment": "try for free",
+      "extractionState": "stale",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u062d\u0627\u0648\u0644 \u0645\u062c\u0627\u0646\u0627"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pr\u00f8v gratis"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "kostenlos ausprobieren"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u03b4\u03bf\u03ba\u03af\u03bc\u03b1\u03c3\u03b5 \u03b4\u03c9\u03c1\u03b5\u03ac\u03bd"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "try for free"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "prueba gratis"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kokeile ilmaiseksi"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "essayer gratuitement"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05e0\u05e1\u05d4 \u05d1\u05d7\u05d9\u05e0\u05dd"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pr\u00f3b\u00e1ld ki ingyen"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "coba gratis"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "prova gratis"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u7121\u6599\u3067\u304a\u8a66\u3057\u304f\u3060\u3055\u3044"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ubb34\ub8cc\ub85c \uc0ac\uc6a9\ud574 \ubcf4\uc138\uc694"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Experimentar gratuitamente"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u043f\u043e\u043f\u0440\u043e\u0431\u0443\u0439 \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u00fccretsiz deneyin"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0441\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0431\u0435\u0437\u043a\u043e\u0448\u0442\u043e\u0432\u043d\u043e"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "th\u1eed mi\u1ec5n ph\u00ed"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u514d\u8d39\u8bd5\u7528"
           }
         }
       }
@@ -1872,12 +2414,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "\uc608"
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sim"
           }
         },
         "pt-BR": {
