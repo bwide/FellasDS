@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-public struct DSLabelStyleVertical: LabelStyle {
+public struct DSVerticalLabelStyle: LabelStyle {
     public func makeBody(configuration: Configuration) -> some View {
         VStack(spacing: .ds.spacing.xxxSmall, content: {
             configuration.icon
@@ -18,7 +18,6 @@ public struct DSLabelStyleVertical: LabelStyle {
     }
 }
 
-public extension LabelStyle where Self == DSLabelStyleVertical {
-    static var dsVertical: DSLabelStyleVertical { DSLabelStyleVertical() }
+public extension LabelStyle where Self == DSVerticalLabelStyle {
+    static var dsVertical: DSVerticalLabelStyle { DSVerticalLabelStyle() }
 }
-
