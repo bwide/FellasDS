@@ -63,6 +63,7 @@ public struct Paywall: View {
         }
             .subscriptionStorePolicyDestination(url: privacyPolicy, for: .privacyPolicy)
             .subscriptionStorePolicyDestination(url: termsOfUse, for: .termsOfService)
+            .storeButton(.visible, for: .restorePurchases)
             .tint(.ds.brand.primary)
             .onDisappear {
                 reviewAlertService.presentReviewPrompt()
