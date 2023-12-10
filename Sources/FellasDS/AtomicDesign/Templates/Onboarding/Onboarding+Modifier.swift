@@ -190,6 +190,7 @@ public struct OnboardingPage: View {
                 .frame(ds: .large)
                 .clipShape(RoundedRectangle(cornerSize: appIconRoundedSize))
             Text(content.title)
+                .multilineTextAlignment(.center)
                 .textStyle(ds: .title1)
             Text(content.subtitle)
                 .multilineTextAlignment(.center)

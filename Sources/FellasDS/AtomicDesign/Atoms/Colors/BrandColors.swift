@@ -15,7 +15,7 @@ public enum DSBrandColor: String, DSColor, CaseIterable {
     case tertiary = "Tertiary"
 
     public var color: Color {
-        Color("Brand\(rawValue)", bundle: Bundle.module)
+        Color("Brand\(rawValue)", bundle: Bundle.main)
     }
 }
 

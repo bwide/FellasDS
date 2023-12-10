@@ -21,8 +21,8 @@ public extension View {
      */
     func withReviewAlertService(
         allowsReviewPrompt: Bool = true,
-        promptPositiveCooldown: DateComponents,
-        promptNegativeCooldown: DateComponents
+        promptPositiveCooldown: DateComponents = .init(month: 3),
+        promptNegativeCooldown: DateComponents = .init(day: 3)
     ) -> some View {
         modifier(
             ReviewAlertModifier(
