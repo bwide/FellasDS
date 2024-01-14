@@ -119,10 +119,8 @@ public struct OnboardingContent: View {
     @ViewBuilder
     var button: some View {
         if !shouldFinish {
-            Button(action: next, label: {
-                Text("Continue")
-            })
-            .buttonStyle(.dsAction)
+            Button("Continue", action: next)
+                .buttonStyle(.dsAction)
         }
     }
     
@@ -155,9 +153,9 @@ public enum OnboardingContentBuilder {
 @resultBuilder
 public enum OnboardingPageContentBuilder {
     public static func buildBlock(
-        _ image: Image, _ title: String, _ subtitle: String
+        _ image: Image, _ title: String, _ subtitle: String, _ options: Label<Text, Image>...
     ) -> OnboardingPageContent {
-        OnboardingPageContent(image: image, title: title, subtitle: subtitle)
+        OnboardingPageContent(image: image, title: title, subtitle: subtitle, options: options)
     }
 }
 
@@ -165,14 +163,19 @@ public struct OnboardingPageContent {
     var image: Image
     var title: String
     var subtitle: String
+    var options: [Label<Text, Image>]
 }
+
+// MARK: - OnboardingPage
 
 public struct OnboardingPage: View {
 
     var content: OnboardingPageContent
+    var indexes: [Int] = []
     
     public init(@OnboardingPageContentBuilder _ content: () -> OnboardingPageContent) {
         self.content = content()
+        self.indexes = Array(0..<self.content.options.count)
     }
     
     var appIconRoundedSize: CGSize {
@@ -183,18 +186,40 @@ public struct OnboardingPage: View {
     }
 
     public var body: some View {
-        VStack(alignment: .center, spacing: .ds.spacing.xLarge) {
+        VStack(spacing: .zero) {
+            header
+            
+            Spacer().frame(height: .ds.spacing.large)
+            
+            Text(content.subtitle)
+                .multilineTextAlignment(.leading)
+                .textStyle(ds: .body)
+            
+            Spacer().frame(height: .ds.spacing.xxLarge)
+            
+            DSPicker {
+                ForEach(indexes, id: \.self) { item in
+                    content.options[item]
+                }
+            }
+            .textStyle(ds: .title3)
+            .padding(.bottom, ds: .xxxLarge)
+            .dsPickerStyle(.vertical)
+            
+            Spacer()
+        }
+    }
+    
+    var header: some View {
+        HStack(spacing: .ds.spacing.xLarge) {
             content.image
                 .resizable()
                 .scaledToFit()
-                .frame(ds: .large)
+                .frame(ds: .medium)
                 .clipShape(RoundedRectangle(cornerSize: appIconRoundedSize))
             Text(content.title)
-                .multilineTextAlignment(.center)
+                .multilineTextAlignment(.leading)
                 .textStyle(ds: .title1)
-            Text(content.subtitle)
-                .multilineTextAlignment(.center)
-                .textStyle(ds: .body)
         }
     }
 }
@@ -204,17 +229,25 @@ public struct OnboardingPage: View {
         .onboarding {
             OnboardingPage {
                 Image(systemName: "heart")
-                "Title 1"
-                "lorem ipsum dolor sit amet 1"
+                
+                "Long title with question about app?"
+                "subtitle text saying something long as well, no more than two lines of length"
+                
+                
+                Label("test 1", systemImage: "heart")
+                Label("test 2", systemImage: "heart.fill")
+
             }
             
             OnboardingPage {
                 Image(systemName: "heart")
                 "Title 2"
                 "lorem ipsum dolor sit amet 2"
+                Label("test 1", systemImage: "heart")
             }
         }
         .withSubscriptionService(
             mock: .notSubscribed
         )
+        .preferredColorScheme(.dark)
 }
