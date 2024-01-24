@@ -11,7 +11,7 @@ import SwiftResources
 import FellasStoreKit
 
 public extension View {
-    func forceOnboarding(_ value: Bool? = nil) -> some View {
+    private func forceOnboarding(_ value: Bool? = nil) -> some View {
         task {
             guard let value else { return }
             UserDefaults.standard
@@ -25,7 +25,10 @@ public extension View {
         @OnboardingContentBuilder _ onboarding: @escaping () -> OnboardingContent,
         onDisappear: @escaping () -> Void = {}
     ) -> some View {
-        modifier(OnboardingModifier(onboarding, onDisappear: onDisappear))
+        modifier(OnboardingModifier(
+            onboarding,
+            onDisappear: onDisappear
+        ))
             .forceOnboarding(isOnboarding)
     }
 }
@@ -65,6 +68,7 @@ extension OnboardingModifier {
 }
 
 public struct OnboardingContent: View {
+    
     var views: [AnyView]
     var indexes: Range<Int>
     
@@ -77,9 +81,12 @@ public struct OnboardingContent: View {
         )
     }
     
-    @State private var selection: Int = 0
+    @State private var currentIndex: Int = 0
     @State private var shouldFinish: Bool = false
-
+    
+    @State private var progress: Double = 0
+    @State var timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
+    
     @Environment(\.dismiss) var dismiss
     @Environment(\.subscriptionStatus) var subscriptionStatus
     
@@ -106,7 +113,7 @@ public struct OnboardingContent: View {
     
     @ViewBuilder
     var steps: some View {
-        TabView(selection: $selection)  {
+        TabView(selection: $currentIndex)  {
             ForEach(indexes, id: \.self) { index in
                 views[index]
                     .id(index)
@@ -118,20 +125,39 @@ public struct OnboardingContent: View {
     
     @ViewBuilder
     var button: some View {
-        if !shouldFinish {
+        if currentIndex == indexes.endIndex-1 {
+            ProgressView(value: progress)
+                .progressViewStyle(.linear)
+                .onReceive(timer) { _ in
+                    guard progress <= 1 else {
+                        stopTimer()
+                        next()
+                        return
+                    }
+                    progress += 0.002
+                }
+        } else if !shouldFinish {
             Button("Continue", action: next)
                 .buttonStyle(.dsAction)
         }
     }
     
     func next() {
-        if selection >= views.endIndex-1 {
+        if currentIndex >= views.endIndex-1 {
             shouldFinish = true
         } else {
             withAnimation {
-                selection += 1
+                currentIndex += 1
             }
         }
+    }
+    
+    func stopTimer() {
+        self.timer.upstream.connect().cancel()
+    }
+    
+    func startTimer() {
+        self.timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     }
 }
 
@@ -145,105 +171,60 @@ public enum OnboardingContentBuilder {
         OnboardingContent(views: components)
     }
     
-    public static func buildBlock(_ components: OnboardingPage...) -> OnboardingContent {
-        OnboardingContent(views: components)
+    public static func buildBlock<Intro: View, Outro: View>(
+        _ intro: Intro,
+        _ outro: Outro,
+        _ components: OnboardingPage...
+    ) -> OnboardingContent {
+        OnboardingContent(views: [intro]+components+[outro])
     }
 }
 
-@resultBuilder
-public enum OnboardingPageContentBuilder {
-    public static func buildBlock(
-        _ image: Image, _ title: String, _ subtitle: String, _ options: Label<Text, Image>...
-    ) -> OnboardingPageContent {
-        OnboardingPageContent(image: image, title: title, subtitle: subtitle, options: options)
-    }
-}
-
-public struct OnboardingPageContent {
-    var image: Image
-    var title: String
-    var subtitle: String
-    var options: [Label<Text, Image>]
-}
-
-// MARK: - OnboardingPage
-
-public struct OnboardingPage: View {
-
-    var content: OnboardingPageContent
-    var indexes: [Int] = []
-    
-    public init(@OnboardingPageContentBuilder _ content: () -> OnboardingPageContent) {
-        self.content = content()
-        self.indexes = Array(0..<self.content.options.count)
-    }
-    
-    var appIconRoundedSize: CGSize {
-        let size = CGSize.ds.large
-        let ratio = 1/6.4
-        let side = size*ratio
-        return CGSize(width: side, height: side)
-    }
-
-    public var body: some View {
-        VStack(spacing: .zero) {
-            header
-            
-            Spacer().frame(height: .ds.spacing.large)
-            
-            Text(content.subtitle)
-                .multilineTextAlignment(.leading)
-                .textStyle(ds: .body)
-            
-            Spacer().frame(height: .ds.spacing.xxLarge)
-            
-            DSPicker {
-                ForEach(indexes, id: \.self) { item in
-                    content.options[item]
-                }
-            }
-            .textStyle(ds: .title3)
-            .padding(.bottom, ds: .xxxLarge)
-            .dsPickerStyle(.vertical)
-            
-            Spacer()
-        }
-    }
-    
-    var header: some View {
-        HStack(spacing: .ds.spacing.xLarge) {
-            content.image
-                .resizable()
-                .scaledToFit()
-                .frame(ds: .medium)
-                .clipShape(RoundedRectangle(cornerSize: appIconRoundedSize))
-            Text(content.title)
-                .multilineTextAlignment(.leading)
-                .textStyle(ds: .title1)
-        }
-    }
-}
 
 #Preview {
     Color.blue
+    .fixedSize(horizontal: false, vertical: false)
+    .background(Color.red)
         .onboarding {
+            VStack {
+                Text("intro")
+            }
+            
+            VStack {
+                Text("outro")
+            }
+            
             OnboardingPage {
                 Image(systemName: "heart")
                 
-                "Long title with question about app?"
-                "subtitle text saying something long as well, no more than two lines of length"
+                "how would you describe your current experience with the bible?"
                 
                 
-                Label("test 1", systemImage: "heart")
-                Label("test 2", systemImage: "heart.fill")
+                Label("📖 i've read nothing", systemImage: "")
+                Label("i know a few verses", systemImage: "heart")
+                // ...
+                // ...
 
             }
             
             OnboardingPage {
                 Image(systemName: "heart")
-                "Title 2"
-                "lorem ipsum dolor sit amet 2"
-                Label("test 1", systemImage: "heart")
+                "What does reading the bible bring you?"
+                
+                Label("motivation", systemImage: "heart")
+                Label("guidance", systemImage: "heart")
+                // ...
+                // ...
+            }
+            
+            OnboardingPage {
+                Image(systemName: "heart")
+                "what do you expect from this app?"
+                
+                Label("improve my knowledge", systemImage: "heart")
+                Label("daily motivation", systemImage: "heart")
+                // ...
+                // ...
             }
         }
         .withSubscriptionService(
