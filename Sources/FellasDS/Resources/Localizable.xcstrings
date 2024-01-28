@@ -1,6 +1,130 @@
 {
   "sourceLanguage": "en",
   "strings": {
+    "\ud83d\udcd6 i've read nothing": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 \u0644\u0645 \u0623\u0642\u0631\u0623 \u0634\u064a\u0626\u064b\u0627"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 Jeg har intet l\u00e6st"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6ich habe nichts gelesen"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 \u0394\u03b5\u03bd \u03ad\u03c7\u03c9 \u03b4\u03b9\u03b1\u03b2\u03ac\u03c3\u03b5\u03b9 \u03c4\u03af\u03c0\u03bf\u03c4\u03b1"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 i've read nothing"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 no he le\u00eddo nada"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 En ole lukenut mit\u00e4\u00e4n"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 je n'ai rien lu"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 \u05dc\u05d0 \u05e7\u05e8\u05d0\u05ea\u05d9 \u05db\u05dc\u05d5\u05dd"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 Nem olvastam semmit"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 aku belum membaca apa pun"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 non ho letto nulla"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6\u4f55\u3082\u8aad\u3093\u3067\u3044\u306a\u3044"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 \ub09c \uc544\ubb34\uac83\ub3c4 \uc77d\uc9c0 \uc54a\uc558\uc5b4"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 n\u00e3o li nada"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 \u044f \u043d\u0438\u0447\u0435\u0433\u043e \u043d\u0435 \u0447\u0438\u0442\u0430\u043b"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 hi\u00e7bir \u015fey okumad\u0131m"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 \u042f \u043d\u0456\u0447\u043e\u0433\u043e \u043d\u0435 \u0447\u0438\u0442\u0430\u0432"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6 t\u00f4i ch\u01b0a \u0111\u1ecdc g\u00ec c\u1ea3"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud83d\udcd6\u6211\u4ec0\u4e48\u4e5f\u6ca1\u8bfb"
+          }
+        }
+      }
+    },
     "Are you enjoying the app so far?": {
       "comment": "Are you enjoying the app so far?",
       "localizations": {
@@ -771,6 +895,130 @@
         }
       }
     },
+    "daily motivation": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0627\u0644\u062f\u0627\u0641\u0639 \u0627\u0644\u064a\u0648\u0645\u064a"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "daglig motivation"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "t\u00e4gliche Motivation"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u03ba\u03b1\u03b8\u03b7\u03bc\u03b5\u03c1\u03b9\u03bd\u03cc \u03ba\u03af\u03bd\u03b7\u03c4\u03c1\u03bf"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "daily motivation"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motivaci\u00f3n diaria"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "p\u00e4ivitt\u00e4ist\u00e4 motivaatiota"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motivation quotidienne"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05de\u05d5\u05d8\u05d9\u05d1\u05e6\u05d9\u05d4 \u05d9\u05d5\u05de\u05d9\u05d5\u05de\u05d9\u05ea"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "napi motiv\u00e1ci\u00f3"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motivasi sehari-hari"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motivazione quotidiana"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u65e5\u3005\u306e\u30e2\u30c1\u30d9\u30fc\u30b7\u30e7\u30f3"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ub9e4\uc77c\uc758 \ub3d9\uae30\ubd80\uc5ec"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motiva\u00e7\u00e3o di\u00e1ria"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0435\u0436\u0435\u0434\u043d\u0435\u0432\u043d\u0430\u044f \u043c\u043e\u0442\u0438\u0432\u0430\u0446\u0438\u044f"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "g\u00fcnl\u00fck motivasyon"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0449\u043e\u0434\u0435\u043d\u043d\u0430 \u043c\u043e\u0442\u0438\u0432\u0430\u0446\u0456\u044f"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0111\u1ed9ng l\u1ef1c h\u00e0ng ng\u00e0y"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u6bcf\u65e5\u52a8\u529b"
+          }
+        }
+      }
+    },
     "Error": {
       "comment": "Error",
       "localizations": {
@@ -1033,6 +1281,998 @@
         }
       }
     },
+    "guidance": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0625\u0631\u0634\u0627\u062f"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "vejledning"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orientierungshilfe"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u03bf\u03b4\u03b7\u03b3\u03af\u03b1"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "guidance"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "gu\u00eda"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "opastusta"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "conseils"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05d4\u05b7\u05d3\u05b0\u05e8\u05b8\u05db\u05b8\u05d4"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "tan\u00e1csad\u00e1s"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "panduan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "guida"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u30ac\u30a4\u30c0\u30f3\u30b9"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\uc548\ub0b4"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "orienta\u00e7\u00e3o"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "rehberlik"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u043a\u0435\u0440\u0456\u0432\u043d\u0438\u0446\u0442\u0432\u043e"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "h\u01b0\u1edbng d\u1eabn"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u6307\u5bfc"
+          }
+        }
+      }
+    },
+    "i know a few verses": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0623\u0646\u0627 \u0623\u0639\u0631\u0641 \u0628\u0639\u0636 \u0627\u0644\u0622\u064a\u0627\u062a"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "jeg kender et par vers"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ich kenne ein paar Verse"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u03be\u03ad\u03c1\u03c9 \u03bc\u03b5\u03c1\u03b9\u03ba\u03bf\u03cd\u03c2 \u03c3\u03c4\u03af\u03c7\u03bf\u03c5\u03c2"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "i know a few verses"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "conozco algunos versos"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "tied\u00e4n muutaman s\u00e4keen"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "je connais quelques vers"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05d0\u05e0\u05d9 \u05d9\u05d5\u05d3\u05e2 \u05db\u05de\u05d4 \u05e4\u05e1\u05d5\u05e7\u05d9\u05dd"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "tudok n\u00e9h\u00e1ny verset"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "aku tahu beberapa ayat"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "conosco alcuni versi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u79c1\u306f\u3044\u304f\u3064\u304b\u306e\u8a69\u3092\u77e5\u3063\u3066\u3044\u307e\u3059"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ub09c \uba87 \uad6c\uc808\uc744 \uc54c\uc544\uc694"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "eu conhe\u00e7o alguns versos"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u044f \u0437\u043d\u0430\u044e \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0441\u0442\u0438\u0445\u043e\u0432"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "birka\u00e7 ayet biliyorum"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u044f \u0437\u043d\u0430\u044e \u043a\u0456\u043b\u044c\u043a\u0430 \u0432\u0456\u0440\u0448\u0456\u0432"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "t\u00f4i bi\u1ebft m\u1ed9t v\u00e0i c\u00e2u th\u01a1"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u6211\u77e5\u9053\u51e0\u8282\u7ecf\u6587"
+          }
+        }
+      }
+    },
+    "improve my knowledge": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u062a\u062d\u0633\u064a\u0646 \u0645\u0639\u0631\u0641\u062a\u064a"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "forbedre min viden"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "mein Wissen verbessern"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u03b2\u03b5\u03bb\u03c4\u03b9\u03ce\u03c3\u03c9 \u03c4\u03b9\u03c2 \u03b3\u03bd\u03ce\u03c3\u03b5\u03b9\u03c2 \u03bc\u03bf\u03c5"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "improve my knowledge"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "mejorar mis conocimientos"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "parantaa tiet\u00e4myst\u00e4ni"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "am\u00e9liorer mes connaissances"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05dc\u05e9\u05e4\u05e8 \u05d0\u05ea \u05d4\u05d9\u05d3\u05e2 \u05e9\u05dc\u05d9"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "fejleszteni tud\u00e1somat"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "meningkatkan pengetahuan saya"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "migliorare la mia conoscenza"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u79c1\u306e\u77e5\u8b58\u3092\u5411\u4e0a\u3055\u305b\u308b"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ub0b4 \uc9c0\uc2dd\uc744 \ud5a5\uc0c1\uc2dc\ucf1c\ub77c"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "melhorar meu conhecimento"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0443\u043b\u0443\u0447\u0448\u0438\u0442\u044c \u0441\u0432\u043e\u0438 \u0437\u043d\u0430\u043d\u0438\u044f"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "bilgimi geli\u015ftirmek"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u043f\u043e\u043a\u0440\u0430\u0449\u0438\u0442\u0438 \u0441\u0432\u043e\u0457 \u0437\u043d\u0430\u043d\u043d\u044f"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "n\u00e2ng cao hi\u1ec3u bi\u1ebft"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u63d0\u9ad8\u6211\u7684\u77e5\u8bc6"
+          }
+        }
+      }
+    },
+    "intro": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0645\u0642\u062f\u0645\u0629"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "intro"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einf\u00fchrung"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u03b5\u03b9\u03c3\u03b1\u03b3\u03c9\u03b3\u03ae"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "intro"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "introducci\u00f3n"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "intro"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "introduction"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05d4\u05e7\u05d3\u05de\u05d4"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "bevezet\u0151"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "intro"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "introduzione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u30a4\u30f3\u30c8\u30ed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\uc18c\uac1c"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "introdu\u00e7\u00e3o"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0432\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u0435"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "giri\u015f"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0432\u0441\u0442\u0443\u043f"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ph\u1ea7n gi\u1edbi thi\u1ec7u"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u4ecb\u7ecd"
+          }
+        }
+      }
+    },
+    "Label 1": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0627\u0644\u062a\u0633\u0645\u064a\u0629 1"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiket 1"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etikett 1"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0395\u03c4\u03b9\u03ba\u03ad\u03c4\u03b1 1"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Label 1"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiqueta 1"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tunniste 1"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u00c9tiquette 1"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05ea\u05d5\u05d5\u05d9\u05ea 1"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1. c\u00edmke"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Label 1"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etichetta 1"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u30e9\u30d9\u30eb1"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ub77c\ubca8 1"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiqueta 1"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u042d\u0442\u0438\u043a\u0435\u0442\u043a\u0430 1"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiket 1"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u041c\u0456\u0442\u043a\u0430 1"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nh\u00e3n 1"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u6807\u7b7e1"
+          }
+        }
+      }
+    },
+    "Label 2": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0627\u0644\u062a\u0633\u0645\u064a\u0629 2"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiket 2"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etikett 2"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0395\u03c4\u03b9\u03ba\u03ad\u03c4\u03b1 2"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Label 2"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiqueta 2"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tunniste 2"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u00c9tiquette 2"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05ea\u05d5\u05d5\u05d9\u05ea 2"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2. c\u00edmke"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Label 2"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etichetta 2"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u30e9\u30d9\u30eb2"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ub77c\ubca8 2"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiqueta 2"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u042d\u0442\u0438\u043a\u0435\u0442\u043a\u0430 2"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiket 2"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u041c\u0456\u0442\u043a\u0430 2"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nh\u00e3n 2"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u6807\u7b7e2"
+          }
+        }
+      }
+    },
+    "Label 3": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0627\u0644\u062a\u0633\u0645\u064a\u0629 3"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiket 3"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etikett 3"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0395\u03c4\u03b9\u03ba\u03ad\u03c4\u03b1 3"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Label 3"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiqueta 3"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiketti 3"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u00c9tiquette 3"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05ea\u05d5\u05d5\u05d9\u05ea 3"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3. c\u00edmke"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Label 3"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etichetta 3"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u30e9\u30d9\u30eb 3"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ub77c\ubca8 3"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiqueta 3"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u042d\u0442\u0438\u043a\u0435\u0442\u043a\u0430 3"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiket 3"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u041c\u0456\u0442\u043a\u0430 3"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nh\u00e3n 3"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u6807\u7b7e3"
+          }
+        }
+      }
+    },
+    "motivation": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u062a\u062d\u0641\u064a\u0632"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motivering"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivation"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u03ba\u03af\u03bd\u03b7\u03c4\u03c1\u03bf"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motivation"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motivaci\u00f3n"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motivaatio"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motivation"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05de\u05d5\u05b9\u05d8\u05b4\u05d9\u05d1\u05b8\u05e6\u05b4\u05d9\u05b8\u05d4"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motiv\u00e1ci\u00f3"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motivasi"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motivazione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u30e2\u30c1\u30d9\u30fc\u30b7\u30e7\u30f3"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ub3d9\uae30 \ubd80\uc5ec"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motiva\u00e7\u00e3o"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u043c\u043e\u0442\u0438\u0432\u0430\u0446\u0438\u044f"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "motivasyon"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u043c\u043e\u0442\u0438\u0432\u0430\u0446\u0456\u044f"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0111\u1ed9ng l\u1ef1c"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u52a8\u673a"
+          }
+        }
+      }
+    },
     "No": {
       "comment": "No",
       "localizations": {
@@ -1291,6 +2531,130 @@
           "stringUnit": {
             "state": "translated",
             "value": "\u597d\u7684"
+          }
+        }
+      }
+    },
+    "outro": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u062e\u0627\u062a\u0645\u0629"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "outro"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Outro"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u03ad\u03be\u03c9"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "outro"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "final"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "outro"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sortie"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "outro"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "outro"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "luar"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "conclusione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u30a2\u30a6\u30c8\u30ed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\uc544\uc6c3\ud2b8\ub85c"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "outro"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u0438\u0435"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u00e7\u0131k\u0131\u015f"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "outro"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "h\u01b0\u1edbng ngo\u1ea1i"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u5c3e\u58f0"
           }
         }
       }

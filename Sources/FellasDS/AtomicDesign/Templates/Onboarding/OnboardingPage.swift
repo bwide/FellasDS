@@ -44,15 +44,16 @@ public struct OnboardingPage: View {
 
     public var body: some View {
         VStack(spacing: .zero) {
-            Spacer().frame(height: .ds.spacing.xxLarge)
+            Spacer()
             header
-            Spacer().frame(height: .ds.spacing.xxLarge)
+            Spacer()
             
             DSPicker {
                 ForEach(indexes, id: \.self) { item in
                     content.options[item]
                 }
             }
+            .frame(maxHeight: .infinity)
             .textStyle(ds: .title3)
             .padding(.bottom, ds: .xxxLarge)
             .dsPickerStyle(.vertical)
@@ -66,8 +67,9 @@ public struct OnboardingPage: View {
             content.image
                 .resizable()
                 .scaledToFit()
-                .frame(ds: .medium)
+                .frame(ds: .large)
                 .clipShape(RoundedRectangle(cornerSize: appIconRoundedSize))
+            
             Text(content.title)
                 .multilineTextAlignment(.leading)
                 .textStyle(ds: .title1)

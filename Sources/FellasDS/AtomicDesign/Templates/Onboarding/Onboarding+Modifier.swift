@@ -11,7 +11,8 @@ import SwiftResources
 import FellasStoreKit
 
 public extension View {
-    private func forceOnboarding(_ value: Bool? = nil) -> some View {
+    #if DEBUG
+    func forceOnboarding(_ value: Bool? = nil) -> some View {
         task {
             guard let value else { return }
             UserDefaults.standard
@@ -19,6 +20,7 @@ public extension View {
             PromoManager.isPromoActive = !value
         }
     }
+    #endif
     
     func onboarding(
         force isOnboarding: Bool? = nil,
@@ -119,26 +121,28 @@ public struct OnboardingContent: View {
                     .id(index)
             }
         }
-        .tabViewStyle(.page(indexDisplayMode: .always))
+        .tabViewStyle(.page(indexDisplayMode: .never))
         .tint(.ds.brand.primary)
     }
     
     @ViewBuilder
     var button: some View {
-        if currentIndex == indexes.endIndex-1 {
-            ProgressView(value: progress)
-                .progressViewStyle(.linear)
-                .onReceive(timer) { _ in
-                    guard progress <= 1 else {
-                        stopTimer()
-                        next()
-                        return
+        Group {
+            if currentIndex == indexes.endIndex-1 {
+                ProgressView(value: progress)
+                    .progressViewStyle(.dsProgrressBar)
+                    .onReceive(timer) { _ in
+                        guard progress <= 1 else {
+                            stopTimer()
+                            next()
+                            return
+                        }
+                        progress += 0.002
                     }
-                    progress += 0.002
-                }
-        } else if !shouldFinish {
-            Button("Continue", action: next)
-                .buttonStyle(.dsAction)
+            } else if !shouldFinish {
+                Button("Continue", action: next)
+                    .buttonStyle(.dsAction)
+            }
         }
     }
     
@@ -165,10 +169,6 @@ public struct OnboardingContent: View {
 public enum OnboardingContentBuilder {
     public static func buildBlock(_ component: OnboardingContent) -> OnboardingContent {
         component
-    }
-    
-    public static func buildBlock(_ components: [OnboardingPage]) -> OnboardingContent {
-        OnboardingContent(views: components)
     }
     
     public static func buildBlock<Intro: View, Outro: View>(
