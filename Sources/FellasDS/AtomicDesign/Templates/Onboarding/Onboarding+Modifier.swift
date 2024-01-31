@@ -11,7 +11,6 @@ import SwiftResources
 import FellasStoreKit
 
 public extension View {
-    #if DEBUG
     func forceOnboarding(_ value: Bool? = nil) -> some View {
         task {
             guard let value else { return }
@@ -20,7 +19,6 @@ public extension View {
             PromoManager.isPromoActive = !value
         }
     }
-    #endif
     
     func onboarding(
         force isOnboarding: Bool? = nil,
