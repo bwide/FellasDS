@@ -85,6 +85,9 @@ struct PaywallModifier: ViewModifier {
             .onChange(of: shouldPresentPaywall) {
                 isPresentingPaywall = !subscriptionStatusIsLoading && subscriptionStatus.shouldShowPaywall && shouldPresentPaywall
             }
+            .onChange(of: subscriptionStatusIsLoading) {
+                isPresentingPaywall = !subscriptionStatusIsLoading && subscriptionStatus.shouldShowPaywall && shouldPresentPaywall
+            }
     }
 
 }
