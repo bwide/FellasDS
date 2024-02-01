@@ -34,13 +34,6 @@ public struct OnboardingPage: View {
         self.content = content()
         self.indexes = Array(0..<self.content.options.count)
     }
-    
-    var appIconRoundedSize: CGSize {
-        let size = CGSize.ds.large
-        let ratio = 1/6.4
-        let side = size*ratio
-        return CGSize(width: side, height: side)
-    }
 
     public var body: some View {
         VStack(spacing: .zero) {
@@ -56,6 +49,7 @@ public struct OnboardingPage: View {
             .frame(maxHeight: .infinity)
             .textStyle(ds: .title3)
             .padding(.bottom, ds: .xxxLarge)
+            .padding(.horizontal, ds: .small)
             .dsPickerStyle(.vertical)
             
             Spacer()
@@ -68,11 +62,33 @@ public struct OnboardingPage: View {
                 .resizable()
                 .scaledToFit()
                 .frame(ds: .large)
-                .clipShape(RoundedRectangle(cornerSize: appIconRoundedSize))
             
             Text(content.title)
                 .multilineTextAlignment(.leading)
                 .textStyle(ds: .title1)
         }
+    }
+}
+
+public extension View {
+    func appIconBorders() -> some View {
+        modifier(AppIconBorders())
+    }
+}
+
+struct AppIconBorders: ViewModifier {
+    
+    @State private var size: CGSize = .zero
+    
+    private func appIconRoundedCorners(for size: Double) -> CGSize {
+        let ratio = 1/6.4
+        let side = size*ratio
+        return CGSize(width: side, height: side)
+    }
+    
+    func body(content: Content) -> some View {
+        content
+            .readSize($size)
+            .clipShape(RoundedRectangle(cornerSize: appIconRoundedCorners(for: max(size.width, size.height))))
     }
 }
