@@ -102,12 +102,16 @@ public struct OnboardingContent: View {
                 }
             }
         } else {
-            VStack(spacing: .ds.spacing.xLarge) {
+            ZStack {
                 steps
-                button
+                VStack {
+                    Spacer()
+                    button
+                        .padding(ds: .large)
+                }
             }
             .textStyle(ds: .largeTitle)
-            .padding(ds: .medium)
+            .ignoresSafeArea()
         }
     }
     
@@ -117,6 +121,7 @@ public struct OnboardingContent: View {
             ForEach(indexes, id: \.self) { index in
                 views[index]
                     .id(index)
+                    .fixedSize(horizontal: false, vertical: false)
             }
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
@@ -185,7 +190,7 @@ public enum OnboardingContentBuilder {
     .background(Color.red)
         .onboarding {
             VStack {
-                Text("intro")
+                Text("intro testing")
             }
             
             VStack {

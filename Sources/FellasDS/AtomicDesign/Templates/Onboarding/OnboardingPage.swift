@@ -36,26 +36,52 @@ public struct OnboardingPage: View {
     }
 
     public var body: some View {
+        ZStack {
+            background
+            foreground
+                .padding(ds: .medium)
+        }
+    }
+    
+    @ViewBuilder
+    var background: some View {
+        GeometryReader { geometry in
+            ZStack {
+                Color.ds.background.secondary
+                VStack {
+                    Spacer().frame(height: geometry.size.height/3)
+                    Color.ds.brand.tertiary
+                        .frame(width: geometry.size.width*2)
+                        .clipShape(RotatedShape(shape: Rectangle(), angle: .degrees(25), anchor: .topLeading))
+                        .frame(width: geometry.size.width)
+                        .clipShape(Rectangle())
+                }
+            }
+        }
+        .ignoresSafeArea()
+    }
+    
+    @ViewBuilder
+    var foreground: some View {
         VStack(spacing: .zero) {
             Spacer()
             header
             Spacer()
-            
             DSPicker {
                 ForEach(indexes, id: \.self) { item in
                     content.options[item]
                 }
             }
-            .frame(maxHeight: .infinity)
+            .fixedSize(horizontal: false, vertical: true)
             .textStyle(ds: .title3)
             .padding(.bottom, ds: .xxxLarge)
             .padding(.horizontal, ds: .small)
             .dsPickerStyle(.vertical)
-            
             Spacer()
         }
     }
     
+    @ViewBuilder
     var header: some View {
         VStack(spacing: .ds.spacing.xLarge) {
             content.image
@@ -90,5 +116,29 @@ struct AppIconBorders: ViewModifier {
         content
             .readSize($size)
             .clipShape(RoundedRectangle(cornerSize: appIconRoundedCorners(for: max(size.width, size.height))))
+    }
+}
+
+#Preview {
+    OnboardingPage {
+        Image(systemName: "heart")
+        "What should the title be?"
+        
+        Label(
+            title: { Text("Label with long title testing two lines of text here") },
+            icon: { Image(systemName: "42.circle") }
+        )
+        Label(
+            title: { Text("Label with long title testing two lines of text here") },
+            icon: { Image(systemName: "42.circle") }
+        )
+        Label(
+            title: { Text("Label") },
+            icon: { Image(systemName: "42.circle") }
+        )
+        Label(
+            title: { Text("Label") },
+            icon: { Image(systemName: "42.circle") }
+        )
     }
 }

@@ -61,6 +61,7 @@ public struct Paywall: View {
                 )
             }
         }
+            .subscriptionStoreButtonLabel(.multiline)
             .subscriptionStorePolicyDestination(url: privacyPolicy, for: .privacyPolicy)
             .subscriptionStorePolicyDestination(url: termsOfUse, for: .termsOfService)
             .storeButton(.visible, for: .restorePurchases)
@@ -109,15 +110,15 @@ public extension View {
 #Preview {
     
     struct MockSubscriptions: SubscriptionIdentifying {
-        var group: String = ""
+        var group: String = "A3B522EF"
         
         var subscriptions: [String] = [
-            "company.fellas.bible.year.2",
-            "company.fellas.bible.month.2"
+            "fellasds.premium.month",
+            "fellasds.premium.year"
         ]
         
         func identify(productID: FellasStoreKit.ProductID) -> FellasStoreKit.SubscriptionStatus {
-            productID.starts(with: "company.fellas.bible")
+            productID.starts(with: "fellasds.premium")
             ? .subscribed
             : .notSubscribed
         }
