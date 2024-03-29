@@ -10,27 +10,27 @@ import SwiftUI
 
 @resultBuilder
 public enum OnboardingPageContentBuilder {
-    public static func buildBlock<Icon: View, Option: View>(
-        _ image: Icon, _ title: String, _ options: Option...
-    ) -> OnboardingPageContent<Icon, Option> {
-        OnboardingPageContent(image: image, title: title, options: options)
+    public static func buildBlock<Option: View>(
+        _ image: any View, _ title: String, _ options: Option...
+    ) -> OnboardingPageContent<Option> {
+        OnboardingPageContent(image: AnyView(image), title: title, options: options)
     }
 }
 
-public struct OnboardingPageContent<Image: View, Option: View> {
-    var image: Image
+public struct OnboardingPageContent<Option: View> {
+    var image: AnyView
     var title: String
     var options: [Option]
 }
 
 // MARK: - OnboardingPage
 
-public struct OnboardingPage<Icon: View, Option: View>: View {
+public struct OnboardingPage<Option: View>: View {
 
-    var content: OnboardingPageContent<Icon, Option>
+    var content: OnboardingPageContent<Option>
     var indexes: [Int] = []
     
-    public init(@OnboardingPageContentBuilder _ content: () -> OnboardingPageContent<Icon, Option>) {
+    public init(@OnboardingPageContentBuilder _ content: () -> OnboardingPageContent<Option>) {
         self.content = content()
         self.indexes = Array(0..<self.content.options.count)
     }

@@ -169,10 +169,10 @@ public enum OnboardingContentBuilder {
         component
     }
     
-    public static func buildBlock<Intro: View, Outro: View, Option: View, Icon: View>(
+    public static func buildBlock<Intro: View, Outro: View, Option: View>(
         _ intro: Intro,
         _ outro: Outro,
-        _ components: OnboardingPage<Icon, Option>...
+        _ components: OnboardingPage<Option>...
     ) -> OnboardingContent {
         OnboardingContent(views: [intro]+components, outro: outro)
     }
