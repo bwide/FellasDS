@@ -73,38 +73,16 @@ public struct OnboardingPage<Icon: View, Option: View>: View {
         }
         .fixedSize(horizontal: false, vertical: true)
         .textStyle(ds: .subhead)
-        .padding(.bottom, ds: .xxxLarge)
         .dsPickerStyle(.vertical)
-    }
-}
-
-public extension View {
-    func appIconBorders() -> some View {
-        modifier(AppIconBorders())
-    }
-}
-
-struct AppIconBorders: ViewModifier {
-    
-    @State private var size: CGSize = .zero
-    
-    private func appIconRoundedCorners(for size: Double) -> CGSize {
-        let ratio = 1/6.4
-        let side = size*ratio
-        return CGSize(width: side, height: side)
-    }
-    
-    func body(content: Content) -> some View {
-        content
-            .readSize($size)
-            .clipShape(RoundedRectangle(cornerSize: appIconRoundedCorners(for: max(size.width, size.height))))
     }
 }
 
 #Preview {
     OnboardingPage {
         Image(systemName: "heart")
-        "What should the title be?"
+            .frame(ds:.x_large)
+        
+        "What should a long title with two lines be?"
         
         Label(
             title: { Text("Label with long title testing two lines of text here") },
