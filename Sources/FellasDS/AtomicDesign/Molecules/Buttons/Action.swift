@@ -16,7 +16,7 @@ public struct DSActionButtonStyle: ButtonStyle {
             Spacer()
             configuration.label
                 .textStyle(ds: .title2, color: .white)
-                .padding(.vertical, .ds.spacing.medium)
+                .padding(.vertical, .ds.spacing.small)
                 .padding(.horizontal, .ds.spacing.medium)
             Spacer()
         }
@@ -25,7 +25,7 @@ public struct DSActionButtonStyle: ButtonStyle {
                            isEnabled: isEnabled)
             )
             .withLoader()
-            .clipShape(Capsule())
+            .clipShape(RoundedRectangle(cornerRadius: .ds.cornerRadius.small))
             .frame(maxWidth: 400)
     }
 }

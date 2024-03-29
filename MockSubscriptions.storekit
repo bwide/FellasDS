@@ -77,11 +77,7 @@
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "616CFC16",
-          "introductoryOffer" : {
-            "internalID" : "32536C46",
-            "paymentMode" : "free",
-            "subscriptionPeriod" : "P3D"
-          },
+          "introductoryOffer" : null,
           "localizations" : [
             {
               "description" : "Monthly plan",
@@ -131,7 +127,7 @@
           "codeOffers" : [
 
           ],
-          "displayPrice" : "0.99",
+          "displayPrice" : "9.99",
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "235C0BA2",
@@ -160,7 +156,7 @@
           "codeOffers" : [
 
           ],
-          "displayPrice" : "0.99",
+          "displayPrice" : "9.99",
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "B9442D62",

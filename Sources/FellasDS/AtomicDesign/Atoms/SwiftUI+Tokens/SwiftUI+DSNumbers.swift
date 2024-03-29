@@ -28,6 +28,7 @@ public struct DSNumbers {
     public var spacing = DSSpacings()
     public var opacity = DSOpacities()
     public var cornerRadius = DSCornerRadii()
+    public var size = DSSizes()
 }
 
 //MARK: - Size

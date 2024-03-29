@@ -51,9 +51,10 @@ public struct DSRowPickerItem<Content: View>: View, Taggable {
         HStack(spacing: .ds.spacing.xxSmall) {
             content()
             Spacer()
-            pickerImage
+//            pickerImage
         }
-        .padding(.ds.spacing.medium)
+        .padding(.horizontal, .ds.spacing.medium)
+        .padding(.vertical, .ds.spacing.small)
         .background { Background(.primary) }
         .clipShape(RoundedRectangle(cornerRadius: .ds.cornerRadius.medium))
         .overlay {

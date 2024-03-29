@@ -70,10 +70,12 @@ extension OnboardingModifier {
 public struct OnboardingContent: View {
     
     var views: [AnyView]
+    var outro: any View
     var indexes: Range<Int>
     
-    init(views: [any View]) {
+    init(views: [any View], outro: any View) {
         self.views = views.map { AnyView($0) }
+        self.outro = outro
         self.indexes = 0..<self.views.count
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color.ds.brand.tertiary)
         UIPageControl.appearance().pageIndicatorTintColor = UIColor(
@@ -83,35 +85,46 @@ public struct OnboardingContent: View {
     
     @State private var currentIndex: Int = 0
     @State private var shouldFinish: Bool = false
-    
-    @State private var progress: Double = 0
-    @State var timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
+    @State private var shouldShowOutro: Bool = false
     
     @Environment(\.dismiss) var dismiss
     @Environment(\.subscriptionStatus) var subscriptionStatus
     
-    
     public var body: some View {
         if shouldFinish {
-            switch subscriptionStatus {
-            case .subscribed:
-                Color.clear.onAppear { dismiss() }
-            case .notSubscribed:
-                NavigationStack {
-                    Paywall()
-                }
-            }
+            paywall
+        } else if shouldShowOutro {
+            AnyView(outro)
+                .onAppear(perform: {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
+                        print("execute")
+                        next()
+                    })
+                })
         } else {
             ZStack {
                 steps
                 VStack {
                     Spacer()
                     button
-                        .padding(ds: .large)
+                        .padding(.vertical, ds: .xxLarge)
+                        .padding(.horizontal, ds: .large)
                 }
             }
             .textStyle(ds: .largeTitle)
             .ignoresSafeArea()
+        }
+    }
+    
+    @ViewBuilder
+    var paywall: some View {
+        switch subscriptionStatus {
+        case .subscribed:
+            Color.clear.onAppear { dismiss() }
+        case .notSubscribed:
+            NavigationStack {
+                Paywall()
+            }
         }
     }
     
@@ -130,41 +143,23 @@ public struct OnboardingContent: View {
     
     @ViewBuilder
     var button: some View {
-        Group {
-            if currentIndex == indexes.endIndex-1 {
-                ProgressView(value: progress)
-                    .progressViewStyle(.dsProgrressBar)
-                    .onReceive(timer) { _ in
-                        guard progress <= 1 else {
-                            stopTimer()
-                            next()
-                            return
-                        }
-                        progress += 0.002
-                    }
-            } else if !shouldFinish {
-                Button("Continue", action: next)
-                    .buttonStyle(.dsAction)
-            }
+        if !shouldFinish {
+            Button("Continue", action: next)
+                .buttonStyle(.dsAction)
         }
     }
     
     func next() {
-        if currentIndex >= views.endIndex-1 {
+        if currentIndex == views.endIndex-1 {
+            shouldShowOutro = true
+        } else if shouldShowOutro {
             shouldFinish = true
-        } else {
-            withAnimation {
-                currentIndex += 1
-            }
+            shouldShowOutro = false
         }
-    }
-    
-    func stopTimer() {
-        self.timer.upstream.connect().cancel()
-    }
-    
-    func startTimer() {
-        self.timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
+        
+        withAnimation {
+            currentIndex += 1
+        }
     }
 }
 
@@ -174,27 +169,27 @@ public enum OnboardingContentBuilder {
         component
     }
     
-    public static func buildBlock<Intro: View, Outro: View>(
+    public static func buildBlock<Intro: View, Outro: View, Option: View, Icon: View>(
         _ intro: Intro,
         _ outro: Outro,
-        _ components: OnboardingPage...
+        _ components: OnboardingPage<Icon, Option>...
     ) -> OnboardingContent {
-        OnboardingContent(views: [intro]+components+[outro])
+        OnboardingContent(views: [intro]+components, outro: outro)
     }
 }
 
 
 #Preview {
     Color.blue
-    .fixedSize(horizontal: false, vertical: false)
-    .background(Color.red)
-        .onboarding {
-            VStack {
-                Text("intro testing")
+        .onboarding(force: true) {
+            OnboardingIntro {
+                Image(systemName: "heart")
+                "Titlte"
+                "subtitle"
             }
             
-            VStack {
-                Text("outro")
+            OnboardingOutro {
+                Image(systemName: "heart")
             }
             
             OnboardingPage {
@@ -233,5 +228,4 @@ public enum OnboardingContentBuilder {
         .withSubscriptionService(
             mock: .notSubscribed
         )
-        .preferredColorScheme(.dark)
 }

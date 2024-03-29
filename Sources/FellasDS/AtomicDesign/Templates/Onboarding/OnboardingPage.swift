@@ -10,89 +10,71 @@ import SwiftUI
 
 @resultBuilder
 public enum OnboardingPageContentBuilder {
-    public static func buildBlock(
-        _ image: Image, _ title: String, _ options: Label<Text, Image>...
-    ) -> OnboardingPageContent {
+    public static func buildBlock<Icon: View, Option: View>(
+        _ image: Icon, _ title: String, _ options: Option...
+    ) -> OnboardingPageContent<Icon, Option> {
         OnboardingPageContent(image: image, title: title, options: options)
     }
 }
 
-public struct OnboardingPageContent {
+public struct OnboardingPageContent<Image: View, Option: View> {
     var image: Image
     var title: String
-    var options: [Label<Text, Image>]
+    var options: [Option]
 }
 
 // MARK: - OnboardingPage
 
-public struct OnboardingPage: View {
+public struct OnboardingPage<Icon: View, Option: View>: View {
 
-    var content: OnboardingPageContent
+    var content: OnboardingPageContent<Icon, Option>
     var indexes: [Int] = []
     
-    public init(@OnboardingPageContentBuilder _ content: () -> OnboardingPageContent) {
+    public init(@OnboardingPageContentBuilder _ content: () -> OnboardingPageContent<Icon, Option>) {
         self.content = content()
         self.indexes = Array(0..<self.content.options.count)
     }
 
     public var body: some View {
-        ZStack {
-            background
-            foreground
-                .padding(ds: .medium)
-        }
-    }
-    
-    @ViewBuilder
-    var background: some View {
-        GeometryReader { geometry in
-            ZStack {
-                Color.ds.background.secondary
-                VStack {
-                    Spacer().frame(height: geometry.size.height/3)
-                    Color.ds.brand.tertiary
-                        .frame(width: geometry.size.width*2)
-                        .clipShape(RotatedShape(shape: Rectangle(), angle: .degrees(25), anchor: .topLeading))
-                        .frame(width: geometry.size.width)
-                        .clipShape(Rectangle())
+        VStack {
+            Spacer()
+            content.image
+            ZStack(alignment: .leading) {
+                Color.ds.brand.primary
+                    .opacity(ds: .disabled)
+                    .roundedCorners(.medium, corners: [.topLeft, .topRight])
+                VStack(spacing: .ds.spacing.large) {
+                    title
+                    picker
+                    Spacer()
                 }
+                .padding(.horizontal, ds: .large)
             }
+            .zIndex(-1)
         }
         .ignoresSafeArea()
     }
     
-    @ViewBuilder
-    var foreground: some View {
-        VStack(spacing: .zero) {
-            Spacer()
-            header
-            Spacer()
-            DSPicker {
-                ForEach(indexes, id: \.self) { item in
-                    content.options[item]
-                }
-            }
-            .fixedSize(horizontal: false, vertical: true)
-            .textStyle(ds: .title3)
-            .padding(.bottom, ds: .xxxLarge)
-            .padding(.horizontal, ds: .small)
-            .dsPickerStyle(.vertical)
+    var title: some View {
+        HStack {
+            Text(content.title)
+                .textStyle(ds: .title1)
+                .padding(.top, ds: .xxLarge)
             Spacer()
         }
     }
     
     @ViewBuilder
-    var header: some View {
-        VStack(spacing: .ds.spacing.xLarge) {
-            content.image
-                .resizable()
-                .scaledToFit()
-                .frame(ds: .large)
-            
-            Text(content.title)
-                .multilineTextAlignment(.leading)
-                .textStyle(ds: .title1)
+    var picker: some View {
+        DSPicker {
+            ForEach(indexes, id: \.self) { item in
+                content.options[item]
+            }
         }
+        .fixedSize(horizontal: false, vertical: true)
+        .textStyle(ds: .subhead)
+        .padding(.bottom, ds: .xxxLarge)
+        .dsPickerStyle(.vertical)
     }
 }
 

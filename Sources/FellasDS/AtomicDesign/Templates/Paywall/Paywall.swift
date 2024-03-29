@@ -9,20 +9,25 @@ import Foundation
 import SwiftUI
 import StoreKit
 import FellasStoreKit
+import Shiny
 
 @resultBuilder
 public enum PaywallBuilder {
-    public static func buildBlock(
-        _ title: String, _ subtitle: String, _ labels: Label<Text, Image>...
+    public static func buildBlock<Icon: View>(
+        _ title: String, _ subtitle: String, _ labels: Label<Text, Icon>...
     ) -> PaywallContent {
-        PaywallContent(title: title, subtitle: subtitle, labels: labels)
+        PaywallContent(
+            title: title,
+            subtitle: subtitle,
+            labels: labels.map { AnyView($0) }
+        )
     }
 }
 
 public struct PaywallContent {
     var title: String
     var subtitle: String
-    var labels: [Label<Text, Image>]
+    var labels: [AnyView]
     
     var labelData: Range<Int> { 0..<labels.count }
     
@@ -61,7 +66,17 @@ public struct Paywall: View {
                 )
             }
         }
-            .subscriptionStoreButtonLabel(.multiline)
+        .subscriptionStoreControlIcon(icon: { product, info in
+            if info.subscriptionPeriod.unit == .year {
+                Text(monthlyPrice(for: product))
+                    .font(.headline)
+                    .fontWeight(.black)
+                    .shiny(.rainbow)
+                Spacer()
+            }
+        })
+        .subscriptionStoreControlStyle(.prominentPicker)
+        .subscriptionStoreButtonLabel(.action)
             .subscriptionStorePolicyDestination(url: privacyPolicy, for: .privacyPolicy)
             .subscriptionStorePolicyDestination(url: termsOfUse, for: .termsOfService)
             .storeButton(.visible, for: .restorePurchases)
@@ -73,15 +88,15 @@ public struct Paywall: View {
     
     @ViewBuilder
     func marketingContent(_ content: PaywallContent) -> some View {
-        VStack(spacing: .ds.spacing.medium) {
+        VStack(alignment: .leading, spacing: .ds.spacing.medium) {
             Text(content.title)
                 .textStyle(ds: .title1)
-            Text(content.subtitle)
             ForEach(content.labelData, id: \.self) {
                 content.label(for: $0)
             }
+            Text(content.subtitle)
         }
-        .multilineTextAlignment(.center)
+        .multilineTextAlignment(.leading)
         .textStyle(ds: .body)
     }
 }
@@ -96,6 +111,16 @@ extension Paywall {
         URL(
             string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula"
         )!
+    }
+    
+    var currencyCode: String {
+        Locale.current.currency?.identifier ??
+        "USD"
+    }
+    
+    func monthlyPrice(for product: Product) -> String {
+        let monthlyPrice = product.price/12
+        return "\(monthlyPrice.formatted(.currency(code: currencyCode)))/\(Product.SubscriptionPeriod.Unit.month.localizedDescription)"
     }
 }
 

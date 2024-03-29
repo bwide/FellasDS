@@ -17,8 +17,8 @@ public enum DSSize: CGFloat, CaseIterable {
     case xSmall = 18
     /// 30
     case small = 30
-    /// 60
-    case medium = 60
+    /// 54
+    case medium = 48
     /// 90
     case large = 90
     /// 180

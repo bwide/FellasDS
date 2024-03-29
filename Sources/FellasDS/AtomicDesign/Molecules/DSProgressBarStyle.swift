@@ -16,14 +16,14 @@ struct DSProgressBarStyle: ProgressViewStyle {
     func makeBody(configuration: Configuration) -> some View {
         ZStack {
             Rectangle()
-                .fill(Color.ds.text.background.tertiary)
-                .opacity(0.8)
+                .fill(Color.ds.brand.primary)
+                .opacity(0.7)
             Rectangle()
                 .fill(Color.ds.brand.primary)
                 .scaleEffect(x: configuration.fractionCompleted ?? 0, anchor: .leading)
         }
-        .clipShape(Capsule())
-        .frame(height: 22)
+        .clipShape(RoundedRectangle(cornerRadius: .ds.cornerRadius.small))
+        .frame(height: .ds.size.medium)
     }
 }
 

@@ -1,6 +1,16 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@/%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@/%2$@"
+          }
+        }
+      }
+    },
     "📖 i've read nothing" : {
       "localizations" : {
         "ar" : {
@@ -1832,9 +1842,6 @@
         }
       }
     },
-    "intro testing" : {
-
-    },
     "Label" : {
 
     },
@@ -2624,6 +2631,7 @@
       }
     },
     "outro" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2752,6 +2760,9 @@
           }
         }
       }
+    },
+    "Personalizing your experience" : {
+
     },
     "Please take a moment to share feedback. It helps improving your experience." : {
       "comment" : "Please take a moment to share feedback. It helps improving your experience.",
