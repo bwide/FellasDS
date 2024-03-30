@@ -76,7 +76,7 @@ public struct Paywall: View {
             }
         })
         .subscriptionStoreControlStyle(.prominentPicker)
-        .subscriptionStoreButtonLabel(.action)
+        .subscriptionStoreButtonLabel(.multiline)
             .subscriptionStorePolicyDestination(url: privacyPolicy, for: .privacyPolicy)
             .subscriptionStorePolicyDestination(url: termsOfUse, for: .termsOfService)
             .storeButton(.visible, for: .restorePurchases)
@@ -96,6 +96,7 @@ public struct Paywall: View {
             }
             Text(content.subtitle)
         }
+        .padding(.horizontal, ds: .large)
         .multilineTextAlignment(.leading)
         .textStyle(ds: .body)
     }
