@@ -38,7 +38,9 @@ public struct OnboardingPage<Option: View>: View {
     public var body: some View {
         VStack {
             Spacer()
-            content.image
+            content
+                .image
+                .padding(.horizontal, ds: .small)
             ZStack(alignment: .leading) {
                 Color.ds.brand.primary
                     .opacity(ds: .disabled)

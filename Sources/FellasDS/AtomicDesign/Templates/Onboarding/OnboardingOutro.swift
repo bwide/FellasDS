@@ -41,6 +41,7 @@ public struct OnboardingOutro<Image: View>: View {
             Spacer()
             content
                 .image
+                .padding(.horizontal, ds: .small)
             ZStack(alignment: .leading) {
                 Color.ds.brand.primary
                     .opacity(ds: .disabled)
@@ -57,7 +58,7 @@ public struct OnboardingOutro<Image: View>: View {
             }
             .zIndex(-1)
         }
-        .ignoresSafeArea(edges: .vertical)
+        .ignoresSafeArea()
     }
     
     @ViewBuilder
