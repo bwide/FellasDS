@@ -198,8 +198,8 @@ public enum OnboardingContentBuilder {
                 "how would you describe your current experience with the bible?"
                 
                 
-                Label("📖 i've read nothing", systemImage: "")
-                Label("i know a few verses", systemImage: "heart")
+                Text(verbatim: "📖 i've read nothing")
+                Text(verbatim: "i know a few verses")
                 // ...
                 // ...
 
@@ -209,8 +209,8 @@ public enum OnboardingContentBuilder {
                 Image(systemName: "heart")
                 "What does reading the bible bring you?"
                 
-                Label("motivation", systemImage: "heart")
-                Label("guidance", systemImage: "heart")
+                Text(verbatim: "motivation")
+                Text(verbatim: "guidance")
                 // ...
                 // ...
             }
@@ -219,8 +219,8 @@ public enum OnboardingContentBuilder {
                 Image(systemName: "heart")
                 "what do you expect from this app?"
                 
-                Label("improve my knowledge", systemImage: "heart")
-                Label("daily motivation", systemImage: "heart")
+                Text(verbatim: "improve my knowledge")
+                Text(verbatim: "daily motivation")
                 // ...
                 // ...
             }

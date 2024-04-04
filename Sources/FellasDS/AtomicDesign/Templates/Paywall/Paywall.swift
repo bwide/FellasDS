@@ -68,7 +68,7 @@ public struct Paywall: View {
         }
         .subscriptionStoreControlIcon(icon: { product, info in
             if info.subscriptionPeriod.unit == .year {
-                Text(monthlyPrice(for: product))
+                Text(verbatim: monthlyPrice(for: product))
                     .font(.headline)
                     .fontWeight(.black)
                     .shiny(.rainbow)

@@ -105,4 +105,14 @@ public enum Strings {
             comment: "Please take a moment to share feedback. It helps improving your experience."
         )
     }
+    
+    // MARK: - Onboarding
+    
+    static var onboardingOutroTitle: String {
+        String(
+            localized: "onboarding.outro.title",
+            bundle: .module.localizedBundle,
+            comment: "Personalizing your experience"
+        )
+    }
 }

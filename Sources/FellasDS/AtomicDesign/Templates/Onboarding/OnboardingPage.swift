@@ -87,19 +87,19 @@ public struct OnboardingPage<Option: View>: View {
         "What should a long title with two lines be?"
         
         Label(
-            title: { Text("Label with long title testing two lines of text here") },
+            title: { Text(verbatim: "Label with long title testing two lines of text here") },
             icon: { Image(systemName: "42.circle") }
         )
         Label(
-            title: { Text("Label with long title testing two lines of text here") },
+            title: { Text(verbatim: "Label with long title testing two lines of text here") },
             icon: { Image(systemName: "42.circle") }
         )
         Label(
-            title: { Text("Label") },
+            title: { Text(verbatim: "Label") },
             icon: { Image(systemName: "42.circle") }
         )
         Label(
-            title: { Text("Label") },
+            title: { Text(verbatim: "Label") },
             icon: { Image(systemName: "42.circle") }
         )
     }

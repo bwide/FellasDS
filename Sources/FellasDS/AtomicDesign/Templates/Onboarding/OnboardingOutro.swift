@@ -48,7 +48,7 @@ public struct OnboardingOutro<Image: View>: View {
                     .roundedCorners(.medium, corners: [.topLeft, .topRight])
                 VStack(alignment: .leading, spacing: .ds.spacing.xLarge) {
                     elipses
-                    Text("Personalizing your experience")
+                    Text(Strings.onboardingOutroTitle)
                         .textStyle(ds: .largeTitle)
                     Spacer()
                     progressBar
@@ -86,12 +86,11 @@ public struct OnboardingOutro<Image: View>: View {
         ProgressView(value: progress, total: totalTime)
             .progressViewStyle(.dsProgrressBar)
             .onReceive(timer) { _ in
-                progress += frameRate
-                
-                guard progress <= totalTime else {
+                guard progress+frameRate < totalTime else {
                     stopTimer()
                     return
                 }
+                progress += frameRate
             }
     }
 }
