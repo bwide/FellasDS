@@ -79,7 +79,11 @@ public struct DSPicker<ID: Hashable>: View {
             .makeBody(configuration: content())
             .environmentObject(vm)
             .onReceive(vm.$selection, perform: {
-                selection = $0 as! ID
+                guard let id = $0 as? ID else {
+                    logger.log("Error receiving id \($0?.description ?? "")")
+                    return
+                }
+                selection = id
             })
     }
 }
