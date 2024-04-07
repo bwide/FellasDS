@@ -68,7 +68,7 @@ public struct Paywall: View {
         }
         .subscriptionStoreControlIcon(icon: { product, info in
             if info.subscriptionPeriod.unit == .year {
-                Text(verbatim: monthlyPrice(for: product))
+                Text(Strings.yearlyDiscount)
                     .font(.headline)
                     .fontWeight(.black)
                     .shiny(.rainbow)
@@ -117,11 +117,6 @@ extension Paywall {
     var currencyCode: String {
         Locale.current.currency?.identifier ??
         "USD"
-    }
-    
-    func monthlyPrice(for product: Product) -> String {
-        let monthlyPrice = product.price/12
-        return "\(monthlyPrice.formatted(.currency(code: currencyCode)))/\(Product.SubscriptionPeriod.Unit.month.localizedDescription)"
     }
 }
 

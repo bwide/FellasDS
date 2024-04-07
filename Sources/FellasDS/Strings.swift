@@ -115,4 +115,12 @@ public enum Strings {
             comment: "Personalizing your experience"
         )
     }
+    
+    static var yearlyDiscount: String {
+        String(
+            localized: "yearly.discount",
+            bundle: .module.localizedBundle,
+            comment: "2 Months off!"
+        )
+    }
 }
