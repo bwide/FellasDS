@@ -22,7 +22,7 @@ public enum DSSize: CGFloat, CaseIterable {
     /// 90
     case large = 90
     /// 180
-    case x_large = 180
+    case xLarge = 180
 }
 
 public struct DSSizes {
@@ -39,5 +39,5 @@ public struct DSSizes {
     /// 90
     public let large = DSSize.large.rawValue
     /// 180
-    public let x_large = DSSize.x_large.rawValue
+    public let xLarge = DSSize.xLarge.rawValue
 }

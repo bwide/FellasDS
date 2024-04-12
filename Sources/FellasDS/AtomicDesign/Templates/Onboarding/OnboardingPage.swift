@@ -82,7 +82,7 @@ public struct OnboardingPage<Option: View>: View {
 #Preview {
     OnboardingPage {
         Image(systemName: "heart")
-            .frame(ds:.x_large)
+            .frame(ds:.xLarge)
         
         "What should a long title with two lines be?"
         
