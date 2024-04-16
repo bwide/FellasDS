@@ -46,13 +46,6 @@ public struct Paywall: View {
     
     public init() { }
     
-//    var buttonText: String {
-//        guard let selection else { return Strings.subscribe }
-//        return selection.hasIntroductoryOffer
-//        ? Strings.tryForFree
-//        : Strings.subscribe
-//    }
-    
     public var body: some View {
         Group {
             if let content {
@@ -75,30 +68,42 @@ public struct Paywall: View {
                 Spacer()
             }
         })
-        .subscriptionStoreControlStyle(.prominentPicker)
         .subscriptionStoreButtonLabel(.multiline)
-            .subscriptionStorePolicyDestination(url: privacyPolicy, for: .privacyPolicy)
-            .subscriptionStorePolicyDestination(url: termsOfUse, for: .termsOfService)
-            .storeButton(.visible, for: .restorePurchases)
-            .tint(.ds.brand.primary)
-            .onDisappear {
-                reviewAlertService.presentReviewPrompt()
-            }
+        .subscriptionStoreControlBackground(
+            LinearGradient(
+                colors: [.ds.brand.primary, .ds.background.tertiary],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        )
+        .subscriptionStorePolicyDestination(url: privacyPolicy, for: .privacyPolicy)
+        .subscriptionStorePolicyDestination(url: termsOfUse, for: .termsOfService)
+        .subscriptionStorePolicyForegroundStyle(Color.ds.text.background.primary)
+        .storeButton(.visible, for: .restorePurchases)
+        .tint(.ds.brand.primary)
+        .onDisappear {
+            reviewAlertService.presentReviewPrompt()
+        }
+        
     }
     
     @ViewBuilder
     func marketingContent(_ content: PaywallContent) -> some View {
-        VStack(alignment: .leading, spacing: .ds.spacing.medium) {
-            Text(content.title)
-                .textStyle(ds: .title1)
-            ForEach(content.labelData, id: \.self) {
-                content.label(for: $0)
+        ZStack {
+            Color.ds.brand.primary.ignoresSafeArea()
+            
+            VStack(alignment: .leading, spacing: .ds.spacing.medium) {
+                Label(content.title, systemImage: "crown.fill")
+                    .textStyle(ds: .largeTitle)
+                ForEach(content.labelData, id: \.self) {
+                    content.label(for: $0)
+                }
+                Text(content.subtitle)
             }
-            Text(content.subtitle)
+            .padding(.horizontal, ds: .large)
+            .multilineTextAlignment(.leading)
+            .textStyle(ds: .body)
         }
-        .padding(.horizontal, ds: .large)
-        .multilineTextAlignment(.leading)
-        .textStyle(ds: .body)
     }
 }
 

@@ -55,7 +55,7 @@ public struct DSRowPickerItem<Content: View>: View, Taggable {
         }
         .padding(.horizontal, .ds.spacing.medium)
         .padding(.vertical, .ds.spacing.small)
-        .background { Background(.primary) }
+        .background { Background(.secondary) }
         .clipShape(RoundedRectangle(cornerRadius: .ds.cornerRadius.medium))
         .overlay {
             if selected {

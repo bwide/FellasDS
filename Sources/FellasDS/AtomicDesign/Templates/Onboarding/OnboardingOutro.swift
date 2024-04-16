@@ -47,10 +47,10 @@ public struct OnboardingOutro<Image: View>: View {
                     .opacity(ds: .disabled)
                     .roundedCorners(.medium, corners: [.topLeft, .topRight])
                 VStack(alignment: .leading, spacing: .ds.spacing.xLarge) {
+                    Spacer()
                     elipses
                     Text(Strings.onboardingOutroTitle)
                         .textStyle(ds: .largeTitle)
-                    Spacer()
                     progressBar
                 }
                 .padding(.vertical, ds: .xxLarge)
