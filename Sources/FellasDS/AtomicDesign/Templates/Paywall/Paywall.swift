@@ -157,9 +157,9 @@ public extension View {
             .withPaywallContent {
                 "Title"
                 "Et natus aut ipsa saepe neque vitae. Veniam in facere nam quam vitae ut. Ipsum quisquam reprehenderit quo quod"
-                Label("Label 1", systemImage: "checkmark")
-                Label("Label 2", systemImage: "checkmark")
-                Label("Label 3", systemImage: "checkmark")
+                Label(String(stringLiteral: "Label 1"), systemImage: "checkmark")
+                Label(String(stringLiteral: "Label 2"), systemImage: "checkmark")
+                Label(String(stringLiteral: "Label 3"), systemImage: "checkmark")
             }
             .withSubscriptionService(
                 identifiers: MockSubscriptions(),
