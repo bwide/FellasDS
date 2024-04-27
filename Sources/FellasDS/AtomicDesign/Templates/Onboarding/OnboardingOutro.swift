@@ -43,8 +43,7 @@ public struct OnboardingOutro<Image: View>: View {
                 .image
                 .padding(.horizontal, ds: .small)
             ZStack(alignment: .leading) {
-                Color.ds.brand.primary
-                    .opacity(ds: .disabled)
+                Color.ds.brand.tertiary
                     .roundedCorners(.medium, corners: [.topLeft, .topRight])
                 VStack(alignment: .leading, spacing: .ds.spacing.xLarge) {
                     Spacer()

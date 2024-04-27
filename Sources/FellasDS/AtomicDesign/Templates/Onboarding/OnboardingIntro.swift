@@ -36,8 +36,7 @@ public struct OnboardingIntro<Image: View>: View {
                 .image
                 .padding(.horizontal, ds: .small)
             ZStack(alignment: .leading) {
-                Color.ds.brand.primary
-                    .opacity(ds: .disabled)
+                Color.ds.brand.tertiary
                     .roundedCorners(.medium, corners: [.topLeft, .topRight])
                 headers
                 .padding(.top, ds: .xxLarge)

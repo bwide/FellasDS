@@ -15,7 +15,10 @@ public struct DSActionButtonStyle: ButtonStyle {
         HStack {
             Spacer()
             configuration.label
-                .textStyle(ds: .title2, color: .white)
+                .textStyle(
+                    ds: .title2,
+                    color: .ds.text.grouped.primary
+                )
                 .padding(.vertical, .ds.spacing.small)
                 .padding(.horizontal, .ds.spacing.medium)
             Spacer()

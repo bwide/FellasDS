@@ -11,6 +11,8 @@ import Combine
 
 public struct VerticalPickerStyle: DSPickerStyle {
     
+    var grouped: Bool
+    
     public func makeBody(configuration: Configuration) -> some View {
         VStack(spacing: .ds.spacing.small) {
             ForEach(configuration.views) { view in
@@ -18,6 +20,7 @@ public struct VerticalPickerStyle: DSPickerStyle {
                     view.label
                 }
                 .withTag(view.id)
+                .backgroundStyle(grouped ? .grouped : .background)
             }
         }
     }

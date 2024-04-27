@@ -19,7 +19,8 @@ public protocol DSPickerStyle {
 }
 
 public extension DSPickerStyle where Self == VerticalPickerStyle {
-    static var vertical: VerticalPickerStyle { VerticalPickerStyle() }
+    static var verticalBackground: VerticalPickerStyle { VerticalPickerStyle(grouped: false) }
+    static var verticalGrouped: VerticalPickerStyle { VerticalPickerStyle(grouped: true) }
 }
 
 public extension DSPickerStyle where Self == HorizontalPickerStyle {
@@ -45,7 +46,7 @@ public struct DSPickerStyleConfiguration {
 }
 
 struct PickerStyleKey: EnvironmentKey {
-  static var defaultValue = AnyPickerStyle(style: VerticalPickerStyle())
+  static var defaultValue = AnyPickerStyle(style: VerticalPickerStyle(grouped: false))
 }
 
 extension EnvironmentValues {
@@ -113,23 +114,36 @@ public struct DSPickerPreview: View {
     
     public var body: some View {
         ZStack {
-            Background(.secondary)
             VStack {
+                Background(.tertiary)
+                Color.ds.brand.tertiary.ignoresSafeArea()
+            }
+            VStack {
+                Spacer()
+                
                 Text(String(stringLiteral: "selected: \(selection ?? "")"))
                 
-                DSPicker(selection: $selection) {
-                    ForEach(items) { fruit in
-                        Text(fruit.name)
-                    }
-                }
-                .dsPickerStyle(.vertical)
+                picker
+                    .dsPickerStyle(.verticalBackground)
                 
-                DSPicker(selection: $selection) {
-                    ForEach(items) { fruit in
-                        Text(fruit.name)
-                    }
-                }
-                .dsPickerStyle(.horizontal)
+                picker
+                    .dsPickerStyle(.horizontal)
+                
+                Spacer()
+                
+                picker
+                    .dsPickerStyle(.verticalGrouped)
+                
+                Spacer()
+            }
+            .padding(.horizontal, ds: .medium)
+        }
+    }
+    
+    var picker: some View {
+        DSPicker(selection: $selection) {
+            ForEach(items) { fruit in
+                Text(fruit.name)
             }
         }
     }
@@ -145,8 +159,6 @@ public struct Fruit: Identifiable, CustomStringConvertible {
     public var description: String { name }
 }
 
-struct DSPicker_Preview: PreviewProvider {
-    static var previews: some View {
-        DSPickerPreview()
-    }
+#Preview {
+    DSPickerPreview()
 }

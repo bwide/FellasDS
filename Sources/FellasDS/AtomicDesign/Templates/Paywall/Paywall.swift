@@ -13,25 +13,25 @@ import Shiny
 
 @resultBuilder
 public enum PaywallBuilder {
-    public static func buildBlock<Icon: View>(
-        _ title: String, _ subtitle: String, _ labels: Label<Text, Icon>...
+    public static func buildBlock<Label: View, TextLabel: View>(
+        _ text: TextLabel,
+        _ labels: Label...
     ) -> PaywallContent {
         PaywallContent(
-            title: title,
-            subtitle: subtitle,
-            labels: labels.map { AnyView($0) }
+            paywallLabels: AnyView({
+                VStack {
+                    ForEach(labels.indices, id: \.self) {
+                        labels[$0]
+                    }
+                    text
+                }
+            }())
         )
     }
 }
 
 public struct PaywallContent {
-    var title: String
-    var subtitle: String
-    var labels: [AnyView]
-    
-    var labelData: Range<Int> { 0..<labels.count }
-    
-    @ViewBuilder func label(for index: Int) -> some View { labels[index] }
+    var paywallLabels: AnyView
 }
 
 public struct Paywall: View {
@@ -93,12 +93,9 @@ public struct Paywall: View {
             Color.ds.brand.primary.ignoresSafeArea()
             
             VStack(alignment: .leading, spacing: .ds.spacing.medium) {
-                Label(content.title, systemImage: "crown.fill")
+                Label(Strings.paywallTitle, systemImage: "crown.fill")
                     .textStyle(ds: .largeTitle)
-                ForEach(content.labelData, id: \.self) {
-                    content.label(for: $0)
-                }
-                Text(content.subtitle)
+                content.paywallLabels
             }
             .padding(.horizontal, ds: .large)
             .multilineTextAlignment(.leading)
@@ -155,8 +152,7 @@ public extension View {
     return NavigationStack {
         Paywall()
             .withPaywallContent {
-                "Title"
-                "Et natus aut ipsa saepe neque vitae. Veniam in facere nam quam vitae ut. Ipsum quisquam reprehenderit quo quod"
+                Text(verbatim: "Et natus aut ipsa saepe neque vitae. Veniam in facere nam quam vitae ut. Ipsum quisquam reprehenderit quo quod")
                 Label(String(stringLiteral: "Label 1"), systemImage: "checkmark")
                 Label(String(stringLiteral: "Label 2"), systemImage: "checkmark")
                 Label(String(stringLiteral: "Label 3"), systemImage: "checkmark")

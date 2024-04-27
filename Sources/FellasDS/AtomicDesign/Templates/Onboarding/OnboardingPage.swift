@@ -42,8 +42,7 @@ public struct OnboardingPage<Option: View>: View {
                 .image
                 .padding(.horizontal, ds: .small)
             ZStack(alignment: .leading) {
-                Color.ds.brand.primary
-                    .opacity(ds: .disabled)
+                Color.ds.brand.tertiary
                     .roundedCorners(.medium, corners: [.topLeft, .topRight])
                 VStack(spacing: .ds.spacing.large) {
                     title
@@ -75,14 +74,16 @@ public struct OnboardingPage<Option: View>: View {
         }
         .fixedSize(horizontal: false, vertical: true)
         .textStyle(ds: .subhead)
-        .dsPickerStyle(.vertical)
+        .dsPickerStyle(.verticalGrouped)
     }
 }
 
 #Preview {
     OnboardingPage {
-        Image(systemName: "heart")
-            .frame(ds:.xLarge)
+        Image(.illustration1)
+            .resizable()
+            .frame(height: 300)
+            .offset(y: 70)
         
         "What should a long title with two lines be?"
         

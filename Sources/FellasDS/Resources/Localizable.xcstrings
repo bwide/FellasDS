@@ -655,360 +655,6 @@
         }
       }
     },
-    "Label 1": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0627\u0644\u062a\u0633\u0645\u064a\u0629 1"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etiket 1"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etikett 1"
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0395\u03c4\u03b9\u03ba\u03ad\u03c4\u03b1 1"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etiqueta 1"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tunniste 1"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u00c9tiquette 1"
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05ea\u05d5\u05d5\u05d9\u05ea 1"
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1. c\u00edmke"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Label 1"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etichetta 1"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u30e9\u30d9\u30eb1"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\ub77c\ubca8 1"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etiqueta 1"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u042d\u0442\u0438\u043a\u0435\u0442\u043a\u0430 1"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etiket 1"
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u041c\u0456\u0442\u043a\u0430 1"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nh\u00e3n 1"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u6807\u7b7e1"
-          }
-        }
-      }
-    },
-    "Label 2": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0627\u0644\u062a\u0633\u0645\u064a\u0629 2"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etiket 2"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etikett 2"
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0395\u03c4\u03b9\u03ba\u03ad\u03c4\u03b1 2"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etiqueta 2"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tunniste 2"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u00c9tiquette 2"
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05ea\u05d5\u05d5\u05d9\u05ea 2"
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "2. c\u00edmke"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Label 2"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etichetta 2"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u30e9\u30d9\u30eb2"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\ub77c\ubca8 2"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etiqueta 2"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u042d\u0442\u0438\u043a\u0435\u0442\u043a\u0430 2"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etiket 2"
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u041c\u0456\u0442\u043a\u0430 2"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nh\u00e3n 2"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u6807\u7b7e2"
-          }
-        }
-      }
-    },
-    "Label 3": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0627\u0644\u062a\u0633\u0645\u064a\u0629 3"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etiket 3"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etikett 3"
-          }
-        },
-        "el": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u0395\u03c4\u03b9\u03ba\u03ad\u03c4\u03b1 3"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etiqueta 3"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etiketti 3"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u00c9tiquette 3"
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u05ea\u05d5\u05d5\u05d9\u05ea 3"
-          }
-        },
-        "hu": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "3. c\u00edmke"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Label 3"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etichetta 3"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u30e9\u30d9\u30eb 3"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\ub77c\ubca8 3"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etiqueta 3"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u042d\u0442\u0438\u043a\u0435\u0442\u043a\u0430 3"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etiket 3"
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u041c\u0456\u0442\u043a\u0430 3"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nh\u00e3n 3"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\u6807\u7b7e3"
-          }
-        }
-      }
-    },
     "No": {
       "comment": "No",
       "localizations": {
@@ -1313,7 +959,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kokemuksen mukauttaminen"
+            "value": "Kokemuksesi mukauttaminen"
           }
         },
         "fr": {
@@ -1392,6 +1038,131 @@
           "stringUnit": {
             "state": "translated",
             "value": "\u4e2a\u6027\u5316\u60a8\u7684\u4f53\u9a8c"
+          }
+        }
+      }
+    },
+    "paywall.title": {
+      "comment": "Get Premium <features>",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0627\u062d\u0635\u0644 \u0639\u0644\u0649  \u0627\u0644\u0645\u062a\u0645\u064a\u0632\u0629"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "F\u00e5 Premium"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Holen Sie sich Premium-"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u0391\u03c0\u03bf\u03ba\u03c4\u03ae\u03c3\u03c4\u03b5 Premium"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get Premium"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obtenga  Premium"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hanki Premium"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obtenez des  Premium"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u05e7\u05d1\u05dc \u05e4\u05e8\u05d9\u05de\u05d9\u05d5\u05dd"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szerezze be a Premium"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dapatkan  Premium"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ottieni  Premium"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u30d7\u30ec\u30df\u30a2\u30e0  \u3092\u5165\u624b"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\ud504\ub9ac\ubbf8\uc5c4  \ubc1b\uae30"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obtenha  Premium"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u0435 \u041f\u0440\u0435\u043c\u0438\u0443\u043c"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Premium 'i edinin"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u041e\u0442\u0440\u0438\u043c\u0430\u0439\u0442\u0435 \u043f\u0440\u0435\u043c\u0456\u0443\u043c"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nh\u1eadn  cao c\u1ea5p"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\u83b7\u53d6\u9ad8\u7ea7\u7248"
           }
         }
       }

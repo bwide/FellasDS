@@ -9,6 +9,9 @@ import Foundation
 import FellasLocalization
 
 public enum Strings {
+    
+    // MARK: - Paywall
+    
     static var subscribe: String {
         String(
             localized: "Subscribe",
@@ -22,6 +25,14 @@ public enum Strings {
             localized: "restore",
             bundle: .module.localizedBundle,
             comment: "Restore <purchases>"
+        )
+    }
+    
+    static var paywallTitle: String {
+        String(
+            localized: "paywall.title",
+            bundle: .module.localizedBundle,
+            comment: "Get Premium <features>"
         )
     }
     

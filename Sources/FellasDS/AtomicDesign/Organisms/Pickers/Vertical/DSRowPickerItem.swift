@@ -33,6 +33,7 @@ public struct DSRowPickerItem<Content: View>: View, Taggable {
     
     public var content: () -> Content
     public var style: Style = .single
+    public var backgroundStyle: BGStyle = .background
     
     var tag: AnyHashable = UUID()
     @EnvironmentObject var vm: DSPickerSelection
@@ -53,14 +54,18 @@ public struct DSRowPickerItem<Content: View>: View, Taggable {
             Spacer()
 //            pickerImage
         }
+        .textStyle(
+            ds: .body,
+            color: backgroundStyle.textColor
+        )
         .padding(.horizontal, .ds.spacing.medium)
         .padding(.vertical, .ds.spacing.small)
-        .background { Background(.secondary) }
+        .background { backgroundStyle.backgroundColor }
         .clipShape(RoundedRectangle(cornerRadius: .ds.cornerRadius.medium))
         .overlay {
             if selected {
                 RoundedRectangle(cornerRadius: .ds.cornerRadius.medium)
-                    .strokeBorder(Color.ds.brand.tertiary, lineWidth: 3)
+                    .strokeBorder(backgroundStyle.selectionOverlayColor, lineWidth: 3)
             }
         }
     }
@@ -112,23 +117,61 @@ public extension DSRowPickerItem {
         }
     }
     
+    enum BGStyle {
+        case background, grouped
+        
+        var textColor: Color {
+            switch self {
+            case .grouped: .ds.text.grouped.primary
+            case .background: .ds.text.background.primary
+            }
+        }
+        
+        var backgroundColor: Color {
+            switch self {
+            case .grouped: .ds.brand.secondary
+            case .background: .ds.background.secondary
+            }
+        }
+        
+        var selectionOverlayColor: Color {
+            switch self {
+            case .grouped: .ds.text.grouped.secondary
+            case .background: Color.ds.brand.tertiary
+            }
+        }
+    }
+    
+    // MARK: - Internal initializers
+    
     internal init(content: @escaping () -> Content,
                   style: DSRowPickerItem<Content>.Style,
+                  backgroundStyle: DSRowPickerItem<Content>.BGStyle,
                   tag: AnyHashable) {
         self.content = content
         self.style = style
+        self.backgroundStyle = backgroundStyle
         self.tag = tag
+    }
+    
+    func backgroundStyle(_ backgroundStyle: DSRowPickerItem<Content>.BGStyle) -> DSRowPickerItem {
+        DSRowPickerItem(content: content,
+                        style: style,
+                        backgroundStyle: backgroundStyle,
+                        tag: tag)
     }
     
     func selection(_ style: DSRowPickerItem<Content>.Style) -> DSRowPickerItem {
         DSRowPickerItem(content: content,
                         style: style,
+                        backgroundStyle: backgroundStyle,
                         tag: tag)
     }
     
     func withTag(_ tag: AnyHashable) -> DSRowPickerItem {
         DSRowPickerItem(content: content,
                         style: style,
+                        backgroundStyle: backgroundStyle,
                         tag: tag)
     }
 }
