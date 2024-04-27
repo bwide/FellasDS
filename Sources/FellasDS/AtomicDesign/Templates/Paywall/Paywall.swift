@@ -19,7 +19,7 @@ public enum PaywallBuilder {
     ) -> PaywallContent {
         PaywallContent(
             paywallLabels: AnyView({
-                VStack {
+                VStack(alignment: .leading, spacing: .ds.spacing.small) {
                     ForEach(labels.indices, id: \.self) {
                         labels[$0]
                     }
