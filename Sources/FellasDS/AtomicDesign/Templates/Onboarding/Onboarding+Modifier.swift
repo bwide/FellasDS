@@ -111,7 +111,6 @@ public struct OnboardingContent: View {
                         .padding(.horizontal, ds: .large)
                 }
             }
-            .textStyle(ds: .largeTitle)
             .ignoresSafeArea()
         }
     }
@@ -169,12 +168,25 @@ public enum OnboardingContentBuilder {
         component
     }
     
-    public static func buildBlock<Intro: View, Outro: View, Option: View>(
+    public static func buildBlock<Intro: View, Outro: View, Option: View, Option1: View, Option2: View>(
         _ intro: Intro,
-        _ outro: Outro,
-        _ components: OnboardingPage<Option>...
+        _ components1: Option,
+        _ components2: Option1,
+        _ components3: Option2,
+        _ outro: Outro
     ) -> OnboardingContent {
-        OnboardingContent(views: [intro]+components, outro: outro)
+        OnboardingContent(views: [intro, components1, components2, components3], outro: outro)
+    }
+    
+    public static func buildBlock<Intro: View, Outro: View, Option: View, Option1: View, Option2: View, Option3: View>(
+        _ intro: Intro,
+        _ components1: Option,
+        _ components2: Option1,
+        _ components3: Option2,
+        _ components4: Option3,
+        _ outro: Outro
+    ) -> OnboardingContent {
+        OnboardingContent(views: [intro, components1, components2, components3, components4], outro: outro)
     }
 }
 
@@ -186,10 +198,6 @@ public enum OnboardingContentBuilder {
                 Image(systemName: "heart")
                 "Titlte"
                 "subtitle"
-            }
-            
-            OnboardingOutro {
-                Image(systemName: "heart")
             }
             
             OnboardingPage {
@@ -223,6 +231,10 @@ public enum OnboardingContentBuilder {
                 Text(verbatim: "daily motivation")
                 // ...
                 // ...
+            }
+            
+            OnboardingOutro {
+                Image(systemName: "heart")
             }
         }
         .withSubscriptionService(

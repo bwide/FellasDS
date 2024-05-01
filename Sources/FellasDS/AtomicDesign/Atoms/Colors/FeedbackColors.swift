@@ -10,9 +10,9 @@ import SwiftUI
 
 public enum DSFeedbackColor: String, DSColor, CaseIterable {
 
-    case success = "Success"
+    case positive = "Positive"
     case warning = "Warning"
-    case error = "Error"
+    case negative = "Negative"
 
     public var color: Color {
         Color("Feedback\(rawValue)", bundle: Bundle.module)
@@ -20,7 +20,7 @@ public enum DSFeedbackColor: String, DSColor, CaseIterable {
 }
 
 public struct FDSFeedbackColors {
-    public let success = DSFeedbackColor.success.color
+    public let positive = DSFeedbackColor.positive.color
     public let warning = DSFeedbackColor.warning.color
-    public let error = DSFeedbackColor.error.color
+    public let negative = DSFeedbackColor.negative.color
 }
