@@ -85,7 +85,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "\u3053\u308c\u307e\u3067\u306e\u3068\u3053\u308d\u3001\u30a2\u30d7\u30ea\u306f\u697d\u3057\u3093\u3067\u3044\u307e\u3059\u304b\uff1f"
+            "value": "\u3053\u308c\u307e\u3067\u306e\u3068\u3053\u308d\u3001\u30a2\u30d7\u30ea\u3092\u697d\u3057\u3093\u3067\u3044\u307e\u3059\u304b?"
           }
         },
         "ko": {
@@ -935,7 +935,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Personalisierung Ihrer Erfahrung"
+            "value": "Personalisieren Sie Ihr Erlebnis"
           }
         },
         "el": {
@@ -959,7 +959,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kokemuksesi mukauttaminen"
+            "value": "Kokemuksen mukauttaminen"
           }
         },
         "fr": {
@@ -1257,7 +1257,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "\uc7a0\uc2dc \uc2dc\uac04\uc744 \ub0b4\uc5b4 \ud53c\ub4dc\ubc31\uc744 \uacf5\uc720\ud574\uc8fc\uc138\uc694. \uacbd\ud5d8\uc744 \ud5a5\uc0c1\ud558\ub294 \ub370 \ub3c4\uc6c0\uc774 \ub429\ub2c8\ub2e4."
+            "value": "\uc7a0\uc2dc \uc2dc\uac04\uc744 \ub0b4\uc5b4 \ud53c\ub4dc\ubc31\uc744 \uacf5\uc720\ud574\uc8fc\uc138\uc694. \uc774\ub294 \uadc0\ud558\uc758 \uacbd\ud5d8\uc744 \ud5a5\uc0c1\uc2dc\ud0a4\ub294 \ub370 \ub3c4\uc6c0\uc774 \ub429\ub2c8\ub2e4."
           }
         },
         "pt-BR": {

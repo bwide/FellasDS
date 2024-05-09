@@ -31,8 +31,13 @@ public extension View {
         modifier(PaywallFeatureModifier(action: action))
     }
     
-    func paywallButton() -> some View {
-        modifier(PaywallFeatureModifier(action: AlwaysPaywallAction(), hideForSubscribedUsers: true))
+    @ViewBuilder
+    func paywallButton(_ enabled: Bool = true) -> some View {
+        if enabled {
+            modifier(PaywallFeatureModifier(action: AlwaysPaywallAction(), hideForSubscribedUsers: true))
+        } else {
+            self
+        }
     }
     
     func withPaywallContent(@PaywallBuilder _ content: () -> PaywallContent) -> some View {
