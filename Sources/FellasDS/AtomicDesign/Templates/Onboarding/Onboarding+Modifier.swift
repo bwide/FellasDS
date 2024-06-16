@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import SwiftResources
 import FellasStoreKit
+import FellasAnalytics
 
 public extension View {
     func forceOnboarding(_ value: Bool? = nil) -> some View {
@@ -89,6 +90,7 @@ public struct OnboardingContent: View {
     
     @Environment(\.dismiss) var dismiss
     @Environment(\.subscriptionStatus) var subscriptionStatus
+    @Environment(\.analytics) var analytics
     
     public var body: some View {
         if shouldFinish {
@@ -96,10 +98,12 @@ public struct OnboardingContent: View {
         } else if shouldShowOutro {
             AnyView(outro)
                 .onAppear(perform: {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
-                        print("execute")
+                    logAppear(index: views.count)
+                    
+                    Task { @MainActor in
+                        try? await Task.sleep(for: .seconds(4))
                         next()
-                    })
+                    }
                 })
         } else {
             ZStack {
@@ -134,6 +138,9 @@ public struct OnboardingContent: View {
                 views[index]
                     .id(index)
                     .fixedSize(horizontal: false, vertical: false)
+                    .onAppear(perform: {
+                        logAppear(index: index)
+                    })
             }
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
@@ -148,7 +155,7 @@ public struct OnboardingContent: View {
         }
     }
     
-    func next() {
+    private func next() {
         if currentIndex == views.endIndex-1 {
             shouldShowOutro = true
         } else if shouldShowOutro {
@@ -159,6 +166,10 @@ public struct OnboardingContent: View {
         withAnimation {
             currentIndex += 1
         }
+    }
+    
+    private func logAppear(index: Int) {
+        analytics.log(event: .init(name: "onboarding_s\(index+1)"))
     }
 }
 

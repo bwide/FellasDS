@@ -39,8 +39,11 @@ public struct Paywall: View {
     @Environment(\.paywallContent) private var content
     @Environment(\.subscriptionIDs) private var subscriptionIDs
     @Environment(\.reviewAlertService) private var reviewAlertService
+    @Environment(\.subscriptionStatus) private var subscriptionStatus
     @Environment(\.dismiss) private var dismiss
-    
+    @Environment(\.analytics) private var analytics
+
+    private var paywallID = 1 // TODO
     @State var selection: Product?
     @State var subscriptions: [Product] = []
     
@@ -83,6 +86,13 @@ public struct Paywall: View {
         .tint(.ds.brand.primary)
         .onDisappear {
             reviewAlertService.presentReviewPrompt()
+            switch subscriptionStatus {
+            case .subscribed: logSuccess()
+            case .notSubscribed: logSkip()
+            }
+        }
+        .onAppear {
+            logAppear()
         }
         
     }
@@ -119,6 +129,24 @@ extension Paywall {
     var currencyCode: String {
         Locale.current.currency?.identifier ??
         "USD"
+    }
+    
+    var screenProperties: [String: Any] {
+        [
+            "paywall_id" : paywallID
+        ]
+    }
+    
+    func logAppear() {
+        analytics.log(event: .init(name: "paywall_s1", properties: screenProperties))
+    }
+    
+    func logSkip() {
+        analytics.log(event: .init(name: "paywall_button_skip", properties: screenProperties))
+    }
+    
+    func logSuccess() {
+        analytics.log(event: .init(name: "paywall_button_accept", properties: screenProperties))
     }
 }
 

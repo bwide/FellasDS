@@ -20,6 +20,7 @@ let package = Package(
         .package(url: "https://github.com/bwide/FellasLocalization", from: "1.0.0"),
         .package(url: "https://github.com/bwide/FellasStoreKit", from: "1.2.0"),
         .package(path: "../../Packages/SwiftResources"),
+        .package(path: "../../Packages/FellasAnalytics"),
         .package(name: "Shiny", url: "https://github.com/maustinstar/shiny", from: "0.0.1")
     ],
     targets: [
@@ -27,7 +28,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "FellasDS",
-            dependencies: ["FellasLocalization", "FellasStoreKit", "SwiftResources", "Shiny"],
+            dependencies: ["FellasLocalization", "FellasStoreKit", "SwiftResources", "Shiny", "FellasAnalytics"],
             path: "Sources/FellasDS",
             resources: [.process("Resources")]
         ),
