@@ -9,8 +9,11 @@
 import Adapty
 import Foundation
 import SwiftUI
+import FellasStoreKit
 
 struct PaywallView: View {
+    
+    @Environment(\.paywallContent) private var paywallContent
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var paywallService: PaywallService
     @EnvironmentObject var userService: UserService
@@ -24,13 +27,21 @@ struct PaywallView: View {
 
     var body: some View {
         ZStack {
-            backgorundColor.ignoresSafeArea()
-            VStack {
-                topCloseButton
-                Spacer()
-                descriptionGroup
-                Spacer()
+            VStack(spacing: .zero) {
+                if let paywallContent {
+                    marketingContent(paywallContent)
+                        .background {
+                            Color.ds.brand.primary.ignoresSafeArea()
+                        }
+                }
                 buttonGroup
+                    .background {
+                        LinearGradient(
+                            colors: [.ds.brand.primary, .ds.background.tertiary],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    }
             }
             .disabled(isLoading)
             progressView
@@ -44,39 +55,45 @@ struct PaywallView: View {
 
     var topCloseButton: some View {
         HStack {
+            Spacer()
             Button(
                 role: .destructive,
                 action: {
                     presentationMode.wrappedValue.dismiss()
                 },
                 label: {
-                    Image.System.close
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                        .foregroundColor(textColor)
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.title2)
+                        .foregroundStyle(.regularMaterial)
                 }
-            ).padding()
-            Spacer()
+            )
         }
-        .padding()
     }
 
     // MARK: - description
-
-    var descriptionGroup: some View {
-        VStack {
-            Image(paywallService.paywallViewModel?.iconName ?? "")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(maxWidth: 200, maxHeight: 200, alignment: .center)
-            Text(paywallService.paywallViewModel?.description ?? "")
-                .font(.title)
-                .multilineTextAlignment(.center)
-                .frame(maxWidth: .infinity)
+    
+    @ViewBuilder
+    func marketingContent(_ content: PaywallContent) -> some View {
+        VStack(alignment: .leading, spacing: .ds.spacing.medium) {
+            topCloseButton
+            Label(
+                title: { Text(Strings.paywallTitle) },
+                icon: { descriptionIcon }
+            )
+                .textStyle(ds: .largeTitle)
+            content.paywallLabels
         }
-        .fixedSize(horizontal: false, vertical: true)
-        .foregroundColor(textColor)
-        .padding()
+        .padding(.horizontal, ds: .large)
+        .multilineTextAlignment(.leading)
+        .textStyle(ds: .body)
+    }
+    
+    var descriptionIcon: Image {
+        if let iconName = paywallService.paywallViewModel?.iconName {
+            Image(iconName)
+        } else {
+            Image(systemName: "crown.fill")
+        }
     }
 
     // MARK: - button group
@@ -89,6 +106,7 @@ struct PaywallView: View {
                     buyButton(title: model?.buyActionTitle ?? "", product: product)
                 }
             }
+            Spacer()
             restoreButton
         }
         .padding()
@@ -163,7 +181,7 @@ struct PaywallView: View {
                 }
             },
             label: {
-                Text(paywallService.paywallViewModel?.restoreActionTitle ?? "")
+                Text(paywallService.paywallViewModel?.restoreActionTitle ?? "restore")
                     .font(.title3)
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .padding()
@@ -176,9 +194,9 @@ struct PaywallView: View {
 
     var progressView: some View {
         ZStack {
-            Color.Palette.background.ignoresSafeArea().opacity(0.3)
+            Color.ds.background.primary.ignoresSafeArea().opacity(0.3)
             ProgressView()
-                .progressViewStyle(CircularProgressViewStyle(tint: Color.Palette.accentContent))
+                .progressViewStyle(CircularProgressViewStyle(tint: Color.ds.text.background.primary))
                 .scaleEffect(1.5, anchor: .center)
                 .animation(.easeOut, value: isLoading)
         }
@@ -207,19 +225,19 @@ struct PaywallView: View {
 
 extension PaywallView {
     var backgorundColor: Color {
-        paywallService.paywallViewModel?.backgroundColor ?? Color.Palette.accent
+        paywallService.paywallViewModel?.backgroundColor ?? Color.ds.brand.secondary
     }
 
     var textColor: Color {
-        paywallService.paywallViewModel?.textColor ?? Color.Palette.accentContent
+        paywallService.paywallViewModel?.textColor ?? Color.ds.text.background.primary
     }
 
     var buyButtonTextColor: Color {
-        paywallService.paywallViewModel?.buyButtonStyle.buttonTextColor ?? Color.Palette.accent
+        paywallService.paywallViewModel?.buyButtonStyle.buttonTextColor ?? Color.ds.brand.secondary
     }
 
     var buyButtonColor: Color {
-        paywallService.paywallViewModel?.buyButtonStyle.buttonColor ?? Color.Palette.accentContent
+        paywallService.paywallViewModel?.buyButtonStyle.buttonColor ?? Color.ds.text.background.primary
     }
 }
 
@@ -228,5 +246,23 @@ extension PaywallView {
 struct PaywallView_Previews: PreviewProvider {
     static var previews: some View {
         PaywallView()
+            .withSubscriptionService(mock: .notSubscribed)
+            .withPaywallContent {
+                Text("description")
+                
+                Label {
+                    Text("Label 1")
+                } icon: {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.ds.feedback.positive)
+                }
+                
+                Label {
+                    Text("Label 2")
+                } icon: {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.ds.feedback.positive)
+                }
+            }
     }
 }
