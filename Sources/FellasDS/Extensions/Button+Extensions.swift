@@ -25,3 +25,11 @@ extension ButtonStyle.Configuration {
         (isPressed || !isEnabled) ? DSOpacity.disabled.rawValue : DSOpacity.opaque.rawValue
     }
 }
+
+extension View {
+    @ViewBuilder func isHidden(_ hidden: Bool, removeIfHidden: Bool = false) -> some View {
+        if hidden {
+            if !removeIfHidden { self.hidden() }
+        } else { self }
+    }
+}
