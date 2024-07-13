@@ -32,3 +32,7 @@ public extension ButtonStyle where Self == DSRoundButtonStyle {
 public extension ButtonStyle where Self == DSToolItemStyle {
     static var dsToolItem: DSToolItemStyle { DSToolItemStyle() }
 }
+
+public extension ButtonStyle where Self == DSMaterialStyle {
+    static var dsMaterial: DSMaterialStyle { DSMaterialStyle() }
+}

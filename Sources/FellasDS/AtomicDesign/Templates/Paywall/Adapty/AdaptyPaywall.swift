@@ -11,12 +11,15 @@ import Foundation
 import SwiftUI
 import FellasStoreKit
 
-struct PaywallView: View {
+struct AdaptyPaywall: View {
     
     @Environment(\.paywallContent) private var paywallContent
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.subscriptionStatus) private var subscriptionStatus
+    
     @EnvironmentObject var paywallService: PaywallService
     @EnvironmentObject var userService: UserService
+    
     @State var isLoading: Bool = false
     @State var errorAlertMessage: String?
     @State var shouldShowErrorAlert: Bool = false
@@ -86,61 +89,49 @@ struct PaywallView: View {
         .padding(.horizontal, ds: .large)
         .multilineTextAlignment(.leading)
         .textStyle(ds: .body)
+        .safeAreaPadding(.top)
     }
     
     var descriptionIcon: Image {
-        if let iconName = paywallService.paywallViewModel?.iconName {
-            Image(iconName)
-        } else {
-            Image(systemName: "crown.fill")
-        }
+        guard let vm = paywallService.paywallViewModel else { return Image(systemName: "square.and.arrow.up") }
+        return Image(systemName: vm.iconName)
     }
 
     // MARK: - button group
 
+    @ViewBuilder
     var buttonGroup: some View {
-        VStack {
-            HStack(alignment: .center, spacing: 12) {
-                let model = paywallService.paywallViewModel
-                ForEach(model?.productModels ?? [], id: \.id) { product in
-                    buyButton(title: model?.buyActionTitle ?? "", product: product)
+        if let model = paywallService.paywallViewModel {
+            VStack {
+                ForEach(model.productModels, id: \.id) { product in
+                    buyButton(
+                        title: model.buyActionTitle,
+                        product: product
+                    )
                 }
+                Spacer()
+                restoreButton
             }
-            Spacer()
-            restoreButton
+            .padding()
+        } else {
+            EmptyView()
         }
-        .padding()
     }
 
     // MARK: - buyButton
 
     func buyButton(title: String, product: ProductItemModel) -> some View {
         Button(
-            action: {
-                guard
-                    let product = paywallService.paywallProducts?.first(where: { $0.vendorProductId == product.id })
-                else {
-                    updateErrorAlert(isShown: true, title: "No product found")
-                    return
-                }
-                isLoading = true
-                userService.makePurchase(for: product) { succeeded, error in
-                    isLoading = false
-                    guard succeeded else {
-                        error.map { print($0) }
-                        return
-                    }
-                    alertMessage = "Success!"
-                    shouldShowAlert = true
-                }
-            },
+            action: { purchase(product: product) },
             label: { buyButtonLabel(title: title, product: product) }
         )
     }
 
     func buyButtonLabel(title: String, product: ProductItemModel) -> some View {
         let discount = product.introductoryDiscount
-        let discountText = discount.map { "\($0.localizedPeriod) for \($0.localizedPrice)"} ?? ""
+        let discountText = discount
+            .map { "\($0.localizedPeriod) for \($0.localizedPrice)"} ?? ""
+        
         return ZStack {
             RoundedRectangle(cornerRadius: 30, style: .continuous)
                 .fill(buyButtonColor)
@@ -157,9 +148,10 @@ struct PaywallView: View {
                     .padding(.top, 10)
                     .isHidden(discount == nil, removeIfHidden: true)
             }
-            .padding()
+            .padding(.ds.spacing.medium)
             .foregroundColor(buyButtonTextColor)
-        }.frame(maxHeight: 200, alignment: .center)
+        }
+        .fixedSize(horizontal: false, vertical: true)
     }
 
     // MARK: - restore button
@@ -221,23 +213,50 @@ struct PaywallView: View {
     }
 }
 
+extension AdaptyPaywall {
+    func purchase(product: ProductItemModel) {
+        guard
+            let product = paywallService.paywallProducts?.first(where: { $0.vendorProductId == product.id })
+        else {
+            updateErrorAlert(isShown: true, title: "No product found")
+            return
+        }
+        
+        isLoading = true
+        
+        userService.makePurchase(for: product) { succeeded, error in
+            isLoading = false
+            guard succeeded else {
+                error.map { print($0) }
+                return
+            }
+            alertMessage = "Success!"
+            shouldShowAlert = true
+        }
+    }
+}
+
 // MARK: - Colors
 
-extension PaywallView {
+extension AdaptyPaywall {
     var backgorundColor: Color {
-        paywallService.paywallViewModel?.backgroundColor ?? Color.ds.brand.secondary
+//        paywallService.paywallViewModel?.backgroundColor ??
+        Color.ds.brand.secondary
     }
 
     var textColor: Color {
-        paywallService.paywallViewModel?.textColor ?? Color.ds.text.background.primary
+//        paywallService.paywallViewModel?.textColor ??
+        Color.ds.text.background.primary
     }
 
     var buyButtonTextColor: Color {
-        paywallService.paywallViewModel?.buyButtonStyle.buttonTextColor ?? Color.ds.brand.secondary
+//        paywallService.paywallViewModel?.buyButtonStyle.buttonTextColor ??
+        Color.ds.brand.secondary
     }
 
     var buyButtonColor: Color {
-        paywallService.paywallViewModel?.buyButtonStyle.buttonColor ?? Color.ds.text.background.primary
+//        paywallService.paywallViewModel?.buyButtonStyle.buttonColor ??
+        Color.ds.text.background.primary
     }
 }
 
@@ -245,7 +264,7 @@ extension PaywallView {
 
 struct PaywallView_Previews: PreviewProvider {
     static var previews: some View {
-        PaywallView()
+        Paywall()
             .withSubscriptionService(mock: .notSubscribed)
             .withPaywallContent {
                 Text("description")

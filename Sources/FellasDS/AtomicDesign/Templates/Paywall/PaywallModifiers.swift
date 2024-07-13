@@ -40,8 +40,13 @@ public extension View {
         }
     }
     
-    func withPaywallContent(@PaywallBuilder _ content: () -> PaywallContent) -> some View {
-        environment(\.paywallContent, content())
+    func withPaywallContent(
+        paywallType: PaywallType = .default,
+        @PaywallBuilder _ content: () -> PaywallContent
+    ) -> some View {
+        self
+            .environment(\.paywallContent, content())
+            .environment(\.paywallType, paywallType)
     }
 }
 
@@ -128,6 +133,8 @@ public struct PaywallButtonLabel: View {
     @State var isJiggly: Bool = false
     @AppStorage("promo") var promo = false
     
+    private var degrees: Double = 5
+    
     var animation: Animation {
         .easeInOut(duration: 0.15)
         .repeatForever(autoreverses: true)
@@ -136,23 +143,41 @@ public struct PaywallButtonLabel: View {
     public var body: some View {
         Image(systemName: "crown.fill")
             .foregroundColor(.yellow)
-            .rotationEffect(.degrees(isJiggly ? 5 : 0))
-            .rotation3DEffect(
-                .degrees(-5),
-                axis: (x: 0.0, y: -5.0, z: 0.0)
-            )
-            .animation(
-                animation,
-                value: isJiggly
-            )
-            .onAppear {
-                isJiggly = promo
-            }
-            .onChange(of: promo) {
-                isJiggly = promo
-            }
+//            .rotationEffect(.degrees(isJiggly ? degrees : 0))
+//            .rotation3DEffect(
+//                .degrees(-degrees),
+//                axis: (x: 0.0, y: -degrees, z: 0.0)
+//            )
+//            .animation(
+//                animation,
+//                value: isJiggly
+//            )
+//            .onAppear {
+//                isJiggly = promo
+//            }
+//            .onChange(of: promo) {
+//                isJiggly = promo
+//            }
     }
 }
+
+// MARK: - Environment
+
+public enum PaywallType {
+    case adapty, `default`
+}
+
+public struct PaywallTypeKey: EnvironmentKey {
+    public static var defaultValue: PaywallType = .default
+}
+
+public extension EnvironmentValues {
+    var paywallType: PaywallType {
+        get { self[PaywallTypeKey.self] }
+        set { self[PaywallTypeKey.self] = newValue }
+    }
+}
+
 
 public struct PaywallContentKey: EnvironmentKey {
     public static var defaultValue: PaywallContent?

@@ -30,11 +30,23 @@ public enum PaywallBuilder {
     }
 }
 
+public struct Paywall: View {
+    
+    @Environment(\.paywallType) var paywallType
+    
+    public var body: some View {
+        switch paywallType {
+        case .adapty: AdaptyPaywall()
+        case .default: StandardPaywall()
+        }
+    }
+}
+
 public struct PaywallContent {
     var paywallLabels: AnyView
 }
 
-public struct Paywall: View {
+struct StandardPaywall: View {
     
     @Environment(\.paywallContent) private var content
     @Environment(\.subscriptionIDs) private var subscriptionIDs
@@ -114,7 +126,7 @@ public struct Paywall: View {
     }
 }
 
-extension Paywall {
+extension StandardPaywall {
     var privacyPolicy: URL {
         URL(
             string: "https://pages.flycricket.io/better-pdf-scanner/privacy.html"
@@ -161,6 +173,8 @@ public extension View {
 #Preview {
     
     struct MockSubscriptions: SubscriptionIdentifying {
+        var adaptyAPIKey: String?
+        
         var group: String = "A3B522EF"
         
         var subscriptions: [String] = [
