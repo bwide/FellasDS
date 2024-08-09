@@ -59,7 +59,7 @@ extension EnvironmentValues {
 public struct DSPicker<ID: Hashable>: View {
     
     @Binding private var selection: ID
-    @ObservedObject private var vm: DSPickerSelection
+    @StateObject private var vm: DSPickerSelection
     private var content: () -> DSPickerStyleConfiguration
     
     @Environment(\.pickerStyle) var style
@@ -70,8 +70,11 @@ public struct DSPicker<ID: Hashable>: View {
     ) {
         self._selection = selection
         self.content = content
-        self.vm = DSPickerSelection(
-            selection: selection.wrappedValue
+        self._vm = StateObject(
+            wrappedValue:
+                DSPickerSelection(
+                    selection: selection.wrappedValue
+                )
         )
     }
     
@@ -81,11 +84,24 @@ public struct DSPicker<ID: Hashable>: View {
             .environmentObject(vm)
             .onReceive(vm.$selection, perform: {
                 guard let id = $0 as? ID else {
-                    logger.log("Error receiving id \($0?.description ?? "")")
+                    logger.log("Error receiving id \($0?.description ?? "") as \(ID.Type.self)")
                     return
                 }
                 selection = id
+                logger.log("selected \(String(describing: id))")
             })
+            .onChange(of: selection) { oldValue, newValue in
+                if let optionalValue = newValue as? Optional<AnyHashable> {
+                    switch optionalValue {
+                    case .none:
+                        break
+                    case let .some(value):
+                        vm.selection = value
+                    }
+                } else {
+                    vm.selection = newValue
+                }
+            }
     }
 }
 

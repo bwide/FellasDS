@@ -11,7 +11,7 @@ import Foundation
 import SwiftUI
 import FellasStoreKit
 
-struct AdaptyPaywall: View {
+struct AdaptyPaywall<PaywallService: PaywallServicing>: View {
     
     @Environment(\.paywallContent) private var paywallContent
     @Environment(\.presentationMode) var presentationMode
@@ -20,37 +20,49 @@ struct AdaptyPaywall: View {
     @EnvironmentObject var paywallService: PaywallService
     @EnvironmentObject var userService: UserService
     
-    @State var isLoading: Bool = false
-    @State var errorAlertMessage: String?
-    @State var shouldShowErrorAlert: Bool = false
-    @State var alertMessage: String?
-    @State var shouldShowAlert: Bool = false
+    @State private var isLoading: Bool = false
+    @State private var errorAlertMessage: String?
+    @State private var shouldShowErrorAlert: Bool = false
+    @State private var alertMessage: String?
+    @State private var shouldShowAlert: Bool = false
+    
+    @State private var selectedProduct: ProductItemModel? = nil
+    @State private var isFreeTrial: Bool = true
 
     // MARK: - body
 
     var body: some View {
         ZStack {
-            VStack(spacing: .zero) {
-                if let paywallContent {
-                    marketingContent(paywallContent)
-                        .background {
-                            Color.ds.brand.primary.ignoresSafeArea()
-                        }
-                }
-                buttonGroup
-                    .background {
-                        LinearGradient(
-                            colors: [.ds.brand.primary, .ds.background.tertiary],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                    }
-            }
-            .disabled(isLoading)
+            paywall
+                .disabled(isLoading)
             progressView
                 .isHidden(!isLoading)
-        }.onAppear {
-            paywallService.logPaywallDisplay()
+        }
+        .onAppear { paywallService.logPaywallDisplay() }
+        .onChange(of: isFreeTrial) { _,_ in onUpdateFreeTrial() }
+        .onChange(of: selectedProduct) { _,_ in onUpdateSelected() }
+        .onChange(of: paywallService.paywallViewModel?.productModels, initial: true) {
+            onUpdateProducts()
+        }
+    }
+    
+    var paywall: some View {
+        VStack(spacing: .zero) {
+            if let paywallContent {
+                marketingContent(paywallContent)
+                    .background {
+                        Color.ds.brand.primary.ignoresSafeArea()
+                    }
+            }
+            buttonGroup
+                .background {
+                    LinearGradient(
+                        colors: [.ds.brand.primary, .ds.background.tertiary],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .ignoresSafeArea()
+                }
         }
     }
 
@@ -71,6 +83,7 @@ struct AdaptyPaywall: View {
                 }
             )
         }
+        .safeAreaPadding(.top)
     }
 
     // MARK: - description
@@ -78,18 +91,18 @@ struct AdaptyPaywall: View {
     @ViewBuilder
     func marketingContent(_ content: PaywallContent) -> some View {
         VStack(alignment: .leading, spacing: .ds.spacing.medium) {
-            topCloseButton
+//            topCloseButton //hard paywall
             Label(
                 title: { Text(Strings.paywallTitle) },
                 icon: { descriptionIcon }
             )
                 .textStyle(ds: .largeTitle)
+            
             content.paywallLabels
         }
         .padding(.horizontal, ds: .large)
         .multilineTextAlignment(.leading)
         .textStyle(ds: .body)
-        .safeAreaPadding(.top)
     }
     
     var descriptionIcon: Image {
@@ -102,84 +115,69 @@ struct AdaptyPaywall: View {
     @ViewBuilder
     var buttonGroup: some View {
         if let model = paywallService.paywallViewModel {
-            VStack {
-                ForEach(model.productModels, id: \.id) { product in
-                    buyButton(
-                        title: model.buyActionTitle,
-                        product: product
-                    )
-                }
+            VStack(spacing: .zero) {
                 Spacer()
-                restoreButton
+                
+                Toggle(Strings.freeTrialToggle, isOn: $isFreeTrial)
+                    .textStyle(ds: .title2)
+                    .padding(.ds.spacing.medium)
+                
+                DSPicker(selection: $selectedProduct) {
+                    ForEach(model.productModels, id: \.self) { product in
+                        label(for: product)
+                    }
+                }
+                .dsPickerStyle(.verticalBackground)
+                
+                buyButton
+                footerSection
             }
             .padding()
         } else {
-            EmptyView()
+            Color.clear
         }
     }
+    
+    // MARK: - Product
+    @ViewBuilder
+    func label(for product: ProductItemModel) -> some View {
+        HStack(alignment: .bottom) {
+            Spacer()
+            Text(product.period)
+                .textStyle(ds: .title2)
+            Text("/ \(product.priceString)")
+                .textStyle(ds: .headline)
+            Spacer()
+        }
+        .padding(.ds.spacing.xxSmall)
+        .foregroundColor(buyButtonTextColor)
+    }
+    
 
     // MARK: - buyButton
 
-    func buyButton(title: String, product: ProductItemModel) -> some View {
+    @ViewBuilder
+    var buyButton: some View {
         Button(
-            action: { purchase(product: product) },
-            label: { buyButtonLabel(title: title, product: product) }
-        )
-    }
-
-    func buyButtonLabel(title: String, product: ProductItemModel) -> some View {
-        let discount = product.introductoryDiscount
-        let discountText = discount
-            .map { "\($0.localizedPeriod) for \($0.localizedPrice)"} ?? ""
-        
-        return ZStack {
-            RoundedRectangle(cornerRadius: 30, style: .continuous)
-                .fill(buyButtonColor)
-            VStack {
-                Text(product.period)
-                    .font(.title)
-                Text(title)
-                    .font(.body)
-                Text(product.priceString)
-                    .font(.title2)
-                Text(discountText)
-                    .font(.title3)
-                    .lineLimit(2)
-                    .padding(.top, 10)
-                    .isHidden(discount == nil, removeIfHidden: true)
+            action: { purchase() },
+            label: {
+                Text(buyButtonText)
             }
-            .padding(.ds.spacing.medium)
-            .foregroundColor(buyButtonTextColor)
-        }
-        .fixedSize(horizontal: false, vertical: true)
+        )
+        .buttonStyle(.dsAction)
+        .padding(.vertical, ds: .xxLarge)
     }
 
     // MARK: - restore button
 
-    var restoreButton: some View {
-        Button(
-            role: .none,
-            action: {
-                isLoading = true
-                userService.restorePurchases { isPremium, error in
-                    isLoading = false
-                    guard error == nil else {
-                        errorAlertMessage = "Could not restore purchases."
-                        shouldShowErrorAlert = true
-                        return
-                    }
-                    alertMessage = "Successfully restored purchases!"
-                    shouldShowAlert = true
-                }
-            },
-            label: {
-                Text(paywallService.paywallViewModel?.restoreActionTitle ?? "restore")
-                    .font(.title3)
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .padding()
-                    .foregroundColor(textColor)
-            }
-        )
+    var footerSection: some View {
+        HStack {
+            Link(Strings.termsOfUse, destination: termsOfUse)
+            Link(Strings.privacyPolicy, destination: privacyPolicy)
+            Button(Strings.restore, action: { restoreTapped() })
+                .foregroundColor(textColor)
+        }
+        .font(.title3)
     }
 
     // MARK: - progress view
@@ -192,33 +190,30 @@ struct AdaptyPaywall: View {
                 .scaleEffect(1.5, anchor: .center)
                 .animation(.easeOut, value: isLoading)
         }
-        .alert(errorAlertMessage ?? "Error occurred", isPresented: $shouldShowErrorAlert) {
-            Button("OK", role: .cancel) {
+        .alert(errorAlertMessage ?? Strings.error, isPresented: $shouldShowErrorAlert) {
+            Button(Strings.ok, role: .cancel) {
                 errorAlertMessage = nil
                 shouldShowErrorAlert = false
             }
         }
-        .alert(alertMessage ?? "Success!", isPresented: $shouldShowAlert) {
-            Button("OK", role: .cancel) {
+        .alert(alertMessage ?? Strings.success, isPresented: $shouldShowAlert) {
+            Button(Strings.ok, role: .cancel) {
                 alertMessage = nil
                 shouldShowAlert = false
                 presentationMode.wrappedValue.dismiss()
             }
         }
     }
-
-    private func updateErrorAlert(isShown: Bool, title: String) {
-        errorAlertMessage = title
-        shouldShowErrorAlert = isShown
-    }
 }
 
 extension AdaptyPaywall {
-    func purchase(product: ProductItemModel) {
+    func purchase() {
         guard
-            let product = paywallService.paywallProducts?.first(where: { $0.vendorProductId == product.id })
+            let selectedProduct,
+            let products = paywallService.paywallProducts,
+            let product = products.first(where: { $0.vendorProductId == selectedProduct.id })
         else {
-            updateErrorAlert(isShown: true, title: "No product found")
+            updateErrorAlert(isShown: true, title: Strings.noProduct)
             return
         }
         
@@ -226,13 +221,63 @@ extension AdaptyPaywall {
         
         userService.makePurchase(for: product) { succeeded, error in
             isLoading = false
+            
             guard succeeded else {
                 error.map { print($0) }
                 return
             }
-            alertMessage = "Success!"
+            alertMessage = Strings.success
             shouldShowAlert = true
         }
+    }
+    
+    func restoreTapped() {
+        isLoading = true
+        
+        userService.restorePurchases { isPremium, error in
+            isLoading = false
+            
+            guard error == nil else {
+                errorAlertMessage = Strings.restoreAlertError
+                shouldShowErrorAlert = true
+                return
+            }
+            
+            alertMessage = isPremium
+            ? Strings.restoreAlertSuccessPremium
+            : Strings.restoreAlertSuccessNotPremium
+            
+            shouldShowAlert = true
+        }
+    }
+    
+    private func updateErrorAlert(isShown: Bool, title: String) {
+        errorAlertMessage = title
+        shouldShowErrorAlert = isShown
+    }
+    
+    private func onUpdateFreeTrial() {
+        selectProduct()
+    }
+    
+    private func onUpdateSelected() {
+        isFreeTrial = selectedProduct?.introductoryDiscount != nil
+    }
+    
+    private func onUpdateProducts() {
+        selectProduct()
+    }
+    
+    private func selectProduct() {
+        guard let product = paywallService.paywallViewModel?
+            .productModels
+            .first(where: {
+                isFreeTrial
+                ? $0.introductoryDiscount != nil
+                : $0.introductoryDiscount == nil
+            }) else { return }
+        
+        selectedProduct = product
     }
 }
 
@@ -248,6 +293,10 @@ extension AdaptyPaywall {
 //        paywallService.paywallViewModel?.textColor ??
         Color.ds.text.background.primary
     }
+    
+    var buyButtonText: String {
+        isFreeTrial ? Strings.subscribeFreeTrial : Strings.subscribe
+    }
 
     var buyButtonTextColor: Color {
 //        paywallService.paywallViewModel?.buyButtonStyle.buttonTextColor ??
@@ -258,30 +307,59 @@ extension AdaptyPaywall {
 //        paywallService.paywallViewModel?.buyButtonStyle.buttonColor ??
         Color.ds.text.background.primary
     }
+    
+    var privacyPolicy: URL {
+        URL(
+            string: "https://madduck.com/wp-content/uploads/2022/11/Publishing-Privacy-Policy.pdf"
+        )!
+    }
+    var termsOfUse: URL {
+        URL(
+            string: "https://madduck.com/terms-of-use/"
+        )!
+    }
 }
 
 // MARK: - preview
 
-struct PaywallView_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview {
+    
+    struct MockSubscriptions: SubscriptionIdentifying {
+        var adaptyAPIKey: String? = "public_live_8v7C0A1S.5szHELZbG2nprTmjotym"
+        
+        var group: String = "A3B522EF"
+        
+        var subscriptions: [String] = [
+            "company.fellas.bible.month",
+            "company.fellas.bible.month"
+        ]
+        
+        func identify(productID: FellasStoreKit.ProductID) -> FellasStoreKit.SubscriptionStatus {
+            productID.starts(with: "fellasds.premium")
+            ? .subscribed
+            : .notSubscribed
+        }
+        
+        
+    }
+    
+    return NavigationStack {
         Paywall()
-            .withSubscriptionService(mock: .notSubscribed)
-            .withPaywallContent {
-                Text("description")
-                
-                Label {
-                    Text("Label 1")
-                } icon: {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.ds.feedback.positive)
-                }
-                
-                Label {
-                    Text("Label 2")
-                } icon: {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.ds.feedback.positive)
-                }
+            .withPaywallContent(paywallType: .mockAdapty) {
+                Text(verbatim: "Et natus aut ipsa saepe neque vitae. Veniam in facere nam quam vitae ut. Ipsum quisquam reprehenderit quo quod")
+                Label(String(stringLiteral: "Label 1"), systemImage: "checkmark")
+                Label(String(stringLiteral: "Label 2"), systemImage: "checkmark")
+                Label(String(stringLiteral: "Label 3"), systemImage: "checkmark")
             }
+            .withSubscriptionService(
+                identifiers: MockSubscriptions(),
+                mock: .notSubscribed
+            )
+    }
+}
+
+extension String {
+    var optional: String? {
+        Optional.some(self)
     }
 }

@@ -36,7 +36,8 @@ public struct Paywall: View {
     
     public var body: some View {
         switch paywallType {
-        case .adapty: AdaptyPaywall()
+        case .adapty: AdaptyPaywall<PaywallService>()
+        case .mockAdapty: AdaptyPaywall<PaywallMockService>()
         case .default: StandardPaywall()
         }
     }
@@ -129,12 +130,12 @@ struct StandardPaywall: View {
 extension StandardPaywall {
     var privacyPolicy: URL {
         URL(
-            string: "https://pages.flycricket.io/better-pdf-scanner/privacy.html"
+            string: "https://madduck.com/wp-content/uploads/2022/11/Publishing-Privacy-Policy.pdf"
         )!
     }
     var termsOfUse: URL {
         URL(
-            string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula"
+            string: "https://madduck.com/terms-of-use/"
         )!
     }
     
@@ -173,13 +174,13 @@ public extension View {
 #Preview {
     
     struct MockSubscriptions: SubscriptionIdentifying {
-        var adaptyAPIKey: String?
+        var adaptyAPIKey: String? = "public_live_8v7C0A1S.5szHELZbG2nprTmjotym"
         
         var group: String = "A3B522EF"
         
         var subscriptions: [String] = [
-            "fellasds.premium.month",
-            "fellasds.premium.year"
+            "company.fellas.bible.month",
+            "company.fellas.bible.month"
         ]
         
         func identify(productID: FellasStoreKit.ProductID) -> FellasStoreKit.SubscriptionStatus {
@@ -193,7 +194,7 @@ public extension View {
     
     return NavigationStack {
         Paywall()
-            .withPaywallContent {
+            .withPaywallContent(paywallType: .mockAdapty) {
                 Text(verbatim: "Et natus aut ipsa saepe neque vitae. Veniam in facere nam quam vitae ut. Ipsum quisquam reprehenderit quo quod")
                 Label(String(stringLiteral: "Label 1"), systemImage: "checkmark")
                 Label(String(stringLiteral: "Label 2"), systemImage: "checkmark")

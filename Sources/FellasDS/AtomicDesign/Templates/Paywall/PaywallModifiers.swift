@@ -62,7 +62,7 @@ struct PaywallFeatureModifier: ViewModifier {
     var hideForSubscribedUsers: Bool = false
     
     func body(content: Content) -> some View {
-        if hideForSubscribedUsers && subscriptionStatus == .subscribed {
+        if hideForSubscribedUsers && subscriptionStatus == .subscribed || subscriptionStatusIsLoading {
           EmptyView()
         } else if !subscriptionStatusIsLoading, action.canPerformAction(with: subscriptionStatus) {
             content
@@ -111,7 +111,7 @@ struct PaywallButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .toolbar { toolbar }
-            .sheet(isPresented: $isPresentingPaywall) { Paywall() }
+            .fullScreenCover(isPresented: $isPresentingPaywall) { Paywall() }
     }
     
     @ToolbarContentBuilder
@@ -164,7 +164,7 @@ public struct PaywallButtonLabel: View {
 // MARK: - Environment
 
 public enum PaywallType {
-    case adapty, `default`
+    case adapty, `default`, mockAdapty
 }
 
 public struct PaywallTypeKey: EnvironmentKey {

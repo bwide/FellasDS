@@ -16,7 +16,8 @@ protocol Taggable {
 
 extension Taggable {
     var selected: Bool {
-        tag == vm.selection
+        guard let selection = vm.selection else { return false }
+        return tag == selection
     }
     
     func onTapGesture() {
@@ -37,6 +38,8 @@ public struct DSRowPickerItem<Content: View>: View, Taggable {
     
     var tag: AnyHashable = UUID()
     @EnvironmentObject var vm: DSPickerSelection
+    
+    @State var _selected: Bool = false
     
     public init(@ViewBuilder content: @escaping () -> Content) {
         self.content = content

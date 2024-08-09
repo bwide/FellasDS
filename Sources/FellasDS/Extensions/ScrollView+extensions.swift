@@ -33,19 +33,23 @@ struct ViewOffsetKey: PreferenceKey {
 }
 
 public extension View {
-    func onScrollsTo(offset: CGFloat, inCoordinateSpace coordinateSpace: String, didScrollToOffSet: (() -> Void)? = nil) -> some View {
-        modifier(ScrollViewContentModifier(coordinateSpace: coordinateSpace, triggerOffset: offset, didScrollToOffSet: didScrollToOffSet))
+    func onScrollToOffset(_ offset: CGFloat, in coordinateSpace: CoordinateSpace, _ onScrollToOffset: (() -> Void)? = nil) -> some View {
+        modifier(ScrollViewContentModifier(
+            coordinateSpace: coordinateSpace,
+            triggerOffset: offset,
+            onScrollToOffset: onScrollToOffset
+        ))
     }
 }
 
 struct ScrollViewContentModifier: ViewModifier {
     
-    var coordinateSpace: String
+    var coordinateSpace: CoordinateSpace
     var triggerOffset: CGFloat
     
-    var didScrollToOffSet: (() -> Void)?
+    var onScrollToOffset: (() -> Void)?
     
-    @State var offset: CGFloat = .zero
+    @State private var offset: CGFloat = .zero
     @State private var size: CGSize = .zero
     
     func body(content: Content) -> some View {
@@ -63,14 +67,14 @@ struct ScrollViewContentModifier: ViewModifier {
             }
             .onChange(of: offset) { oldValue, newValue in
                 if newValue >= triggerOffset {
-                    didScrollToOffSet?()
+                    onScrollToOffset?()
                 }
             }
     }
     
     func offset(for proxy: GeometryProxy) -> CGFloat {
         (
-            -proxy.frame(in: .named(coordinateSpace)).origin.y / proxy.size.height
+            -proxy.frame(in: coordinateSpace).origin.y / proxy.size.height
         ).rounded(toPlaces: 1)
     }
 }

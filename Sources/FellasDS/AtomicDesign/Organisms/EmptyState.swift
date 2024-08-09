@@ -10,10 +10,10 @@ import SwiftUI
 
 public struct EmptyState: View {
     
-    public var image: ImageResource
+    public var image: Image
     public var text: String
     
-    public init(image: ImageResource, text: String) {
+    public init(image: Image, text: String) {
         self.image = image
         self.text = text
     }
@@ -25,7 +25,7 @@ public struct EmptyState: View {
                 .scaledToFill()
                 .tint(.ds.text.background.primary)
             VStack {
-                Image(image)
+                image
                     .resizable()
                     .scaledToFit()
                     .padding(ds: .large)

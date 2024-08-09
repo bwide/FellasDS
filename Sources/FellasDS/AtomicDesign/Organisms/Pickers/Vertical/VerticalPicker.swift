@@ -19,8 +19,8 @@ public struct VerticalPickerStyle: DSPickerStyle {
                 DSRowPickerItem {
                     view.label
                 }
-                .withTag(view.id)
                 .backgroundStyle(grouped ? .grouped : .background)
+                .withTag(view.id)
             }
         }
     }

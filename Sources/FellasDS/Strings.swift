@@ -20,11 +20,27 @@ public enum Strings {
         )
     }
     
+    static var subscribeFreeTrial: String {
+        String(
+            localized: "start.free.trial",
+            bundle: .module.localizedBundle,
+            comment: "Start Free Trial"
+        )
+    }
+    
     static var restore: String {
         String(
             localized: "restore",
             bundle: .module.localizedBundle,
-            comment: "Restore <purchases>"
+            comment: "Restore"
+        )
+    }
+    
+    static var freeTrialToggle: String {
+        String(
+            localized: "free.trial.toggle",
+            bundle: .module.localizedBundle,
+            comment: "Enable 3-Day Free Trial"
         )
     }
     
@@ -33,6 +49,46 @@ public enum Strings {
             localized: "paywall.title",
             bundle: .module.localizedBundle,
             comment: "Get Premium <features>"
+        )
+    }
+    
+    static var termsOfUse: String {
+        String(
+            localized: "paywall.terms.of.use",
+            bundle: .module.localizedBundle,
+            comment: "Terms of Use"
+        )
+    }
+    
+    static var privacyPolicy: String {
+        String(
+            localized: "paywall.privacy.policy",
+            bundle: .module.localizedBundle,
+            comment: "Privacy Policy"
+        )
+    }
+    
+    static var paywallReview1: String {
+        String(
+            localized: "paywall.review.1",
+            bundle: .module.localizedBundle,
+            comment: "Wonderful app with insightful commentary on daily Bible verses."
+        )
+    }
+    
+    static var paywallReview2: String {
+        String(
+            localized: "paywall.review.2",
+            bundle: .module.localizedBundle,
+            comment: "Great app for spiritual growth and daily scripture insights."
+        )
+    }
+    
+    static var paywallReview3: String {
+        String(
+            localized: "paywall.review.3",
+            bundle: .module.localizedBundle,
+            comment: "Daily verses inspire me and deepen my understanding of faith."
         )
     }
     
@@ -57,6 +113,54 @@ public enum Strings {
             localized: "cancel",
             bundle: .module.localizedBundle,
             comment: "Cancel"
+        )
+    }
+    
+    public static var noProduct: String {
+        String(
+            localized: "no.product.found",
+            bundle: .module.localizedBundle,
+            comment: "No product found"
+        )
+    }
+    
+    public static var success: String {
+        String(
+            localized: "success",
+            bundle: .module.localizedBundle,
+            comment: "Success!"
+        )
+    }
+    
+    public static var restoreAlertError: String {
+        String(
+            localized: "restore.alert.error",
+            bundle: .module.localizedBundle,
+            comment: "Could not restore purchases."
+        )
+    }
+    
+    public static var restoreAlertSuccessPremium: String {
+        String(
+            localized: "restore.alert.success.premium",
+            bundle: .module.localizedBundle,
+            comment: "Successfully restored purchases!"
+        )
+    }
+    
+    public static var restoreAlertSuccessNotPremium: String {
+        String(
+            localized: "restore.alert.success.not.premium",
+            bundle: .module.localizedBundle,
+            comment: "No purchases found for this account"
+        )
+    }
+    
+    public static var restoreAlert: String {
+        String(
+            localized: "restore.alert.error",
+            bundle: .module.localizedBundle,
+            comment: "Could not restore purchases."
         )
     }
     
