@@ -28,11 +28,18 @@ struct AdaptyPaywall<PaywallService: PaywallServicing>: View {
     
     @State private var selectedProduct: ProductItemModel? = nil
     @State private var isFreeTrial: Bool = true
+    
+//    private var containsFreeTrial: Bool {
+//        paywallService.paywallViewModel?.productModels.contains {
+//            $0.introductoryDiscount != nil
+//        } ?? false
+//    }
 
     // MARK: - body
 
     var body: some View {
         ZStack {
+//            Background(.primary)
             paywall
                 .disabled(isLoading)
             progressView
@@ -48,22 +55,34 @@ struct AdaptyPaywall<PaywallService: PaywallServicing>: View {
     
     var paywall: some View {
         VStack(spacing: .zero) {
+            Spacer(minLength: .zero)
             if let paywallContent {
                 marketingContent(paywallContent)
-                    .background {
-                        Color.ds.brand.primary.ignoresSafeArea()
-                    }
             }
+            Spacer(minLength: .ds.spacing.medium)
             buttonGroup
-                .background {
-                    LinearGradient(
-                        colors: [.ds.brand.primary, .ds.background.tertiary],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
-                    .ignoresSafeArea()
-                }
         }
+        .background {
+            VStack(spacing: .zero) {
+                Image(.paywallBg)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .overlay {
+                        LinearGradient(
+                            colors: [.clear, .ds.background.primary],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    }
+                    .frame(maxHeight: 350)
+                Spacer()
+            }
+            .ignoresSafeArea()
+        }
+        .background {
+            Color.ds.background.primary.ignoresSafeArea()
+        }
+
     }
 
     // MARK: - top close button
@@ -90,24 +109,10 @@ struct AdaptyPaywall<PaywallService: PaywallServicing>: View {
     
     @ViewBuilder
     func marketingContent(_ content: PaywallContent) -> some View {
-        VStack(alignment: .leading, spacing: .ds.spacing.medium) {
-//            topCloseButton //hard paywall
-            Label(
-                title: { Text(Strings.paywallTitle) },
-                icon: { descriptionIcon }
-            )
-                .textStyle(ds: .largeTitle)
-            
+        VStack(alignment: .leading) {
             content.paywallLabels
         }
-        .padding(.horizontal, ds: .large)
-        .multilineTextAlignment(.leading)
         .textStyle(ds: .body)
-    }
-    
-    var descriptionIcon: Image {
-        guard let vm = paywallService.paywallViewModel else { return Image(systemName: "square.and.arrow.up") }
-        return Image(systemName: vm.iconName)
     }
 
     // MARK: - button group
@@ -116,11 +121,16 @@ struct AdaptyPaywall<PaywallService: PaywallServicing>: View {
     var buttonGroup: some View {
         if let model = paywallService.paywallViewModel {
             VStack(spacing: .zero) {
-                Spacer()
                 
                 Toggle(Strings.freeTrialToggle, isOn: $isFreeTrial)
-                    .textStyle(ds: .title2)
-                    .padding(.ds.spacing.medium)
+                    .textStyle(ds: .title3)
+                    .padding(.horizontal, .ds.spacing.medium)
+                    .padding(.vertical, .ds.spacing.small)
+                    .background { Color.ds.background.secondary.opacity(0.8) }
+                    .clipShape(RoundedRectangle(cornerRadius: .ds.cornerRadius.medium))
+                    
+                
+                Spacer().frame(height: .ds.spacing.medium)
                 
                 DSPicker(selection: $selectedProduct) {
                     ForEach(model.productModels, id: \.self) { product in
@@ -132,22 +142,22 @@ struct AdaptyPaywall<PaywallService: PaywallServicing>: View {
                 buyButton
                 footerSection
             }
-            .padding()
+            .padding(.horizontal)
         } else {
-            Color.clear
+            Text(paywallService.error?.localizedDescription ?? "error")
         }
     }
     
     // MARK: - Product
     @ViewBuilder
     func label(for product: ProductItemModel) -> some View {
-        HStack(alignment: .bottom) {
+        HStack
+        {
+            Text(product.period.localized)
+                .textStyle(ds: .title3)
             Spacer()
-            Text(product.period)
-                .textStyle(ds: .title2)
-            Text("/ \(product.priceString)")
-                .textStyle(ds: .headline)
-            Spacer()
+            Text(verbatim: "\(product.priceString)")
+                .textStyle(ds: .subhead)
         }
         .padding(.ds.spacing.xxSmall)
         .foregroundColor(buyButtonTextColor)
@@ -165,7 +175,8 @@ struct AdaptyPaywall<PaywallService: PaywallServicing>: View {
             }
         )
         .buttonStyle(.dsAction)
-        .padding(.vertical, ds: .xxLarge)
+        .fontWeight(.medium)
+        .padding(.vertical, ds: .medium)
     }
 
     // MARK: - restore button
@@ -175,9 +186,9 @@ struct AdaptyPaywall<PaywallService: PaywallServicing>: View {
             Link(Strings.termsOfUse, destination: termsOfUse)
             Link(Strings.privacyPolicy, destination: privacyPolicy)
             Button(Strings.restore, action: { restoreTapped() })
-                .foregroundColor(textColor)
+                .foregroundColor(.ds.text.background.primary)
         }
-        .font(.title3)
+        .safeAreaPadding(.bottom)
     }
 
     // MARK: - progress view
@@ -295,7 +306,9 @@ extension AdaptyPaywall {
     }
     
     var buyButtonText: String {
-        isFreeTrial ? Strings.subscribeFreeTrial : Strings.subscribe
+        isFreeTrial 
+        ? Strings.subscribeFreeTrial
+        : Strings.continue
     }
 
     var buyButtonTextColor: Color {
@@ -346,10 +359,18 @@ extension AdaptyPaywall {
     return NavigationStack {
         Paywall()
             .withPaywallContent(paywallType: .mockAdapty) {
-                Text(verbatim: "Et natus aut ipsa saepe neque vitae. Veniam in facere nam quam vitae ut. Ipsum quisquam reprehenderit quo quod")
-                Label(String(stringLiteral: "Label 1"), systemImage: "checkmark")
-                Label(String(stringLiteral: "Label 2"), systemImage: "checkmark")
-                Label(String(stringLiteral: "Label 3"), systemImage: "checkmark")
+                VStack(alignment: .leading) {
+                    Text(verbatim: "Inspiration of daily verses.")
+                        .textStyle(ds: .largeTitle)
+                    
+                    Text(verbatim: "Join our community of subscribers and dive deeper in daily verses")
+                }.padding(.horizontal, ds: .large)
+                
+                UserReviews {
+                    UserReview(review: "Wonderful app with insightful commentary on daily Bible verses.")
+                    UserReview(review: "Wonderful app with insightful commentary on daily Bible verses.")
+                    UserReview(review: "Wonderful app with insightful commentary on daily Bible verses.")
+                }
             }
             .withSubscriptionService(
                 identifiers: MockSubscriptions(),
@@ -361,5 +382,17 @@ extension AdaptyPaywall {
 extension String {
     var optional: String? {
         Optional.some(self)
+    }
+}
+
+extension FellasStoreKit.PeriodUnit {
+    var localized: String {
+        switch self {
+        case .day: return Strings.dayly
+        case .week: return Strings.weekly
+        case .month: return Strings.monthly
+        case .year: return Strings.yearly
+        case .unknown: return Strings.unknown
+        }
     }
 }

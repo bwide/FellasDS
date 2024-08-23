@@ -71,7 +71,7 @@ struct PaywallFeatureModifier: ViewModifier {
                 .allowsHitTesting(false)
                 .contentShape(Rectangle())
                 .onTapGesture { isPresentingPaywall = true }
-                .sheet(isPresented: $isPresentingPaywall) { Paywall() }
+                .fullScreenCover(isPresented: $isPresentingPaywall) { Paywall() }
         }
     }
 }
@@ -87,19 +87,24 @@ struct PaywallModifier: ViewModifier {
     @State private var isPresentingPaywall: Bool = false
     
     func body(content: Content) -> some View {
+        let _ = Self._printChanges()
+        let _ = print(subscriptionStatusIsLoading)
+        let _ = print(subscriptionStatus)
         content
-            .sheet(isPresented: $isPresentingPaywall) {
+            .fullScreenCover(isPresented: $isPresentingPaywall) {
                 Paywall()
                     .onDisappear { onDismiss() }
             }
-            .onChange(of: shouldPresentPaywall) {
-                isPresentingPaywall = !subscriptionStatusIsLoading && subscriptionStatus.shouldShowPaywall && shouldPresentPaywall
-            }
-            .onChange(of: subscriptionStatusIsLoading) {
-                isPresentingPaywall = !subscriptionStatusIsLoading && subscriptionStatus.shouldShowPaywall && shouldPresentPaywall
-            }
+            .onChange(of: shouldPresentPaywall) { updateIsPresentingPaywall() }
+            .onChange(of: subscriptionStatusIsLoading) { updateIsPresentingPaywall() }
     }
 
+    
+    func updateIsPresentingPaywall() {
+        isPresentingPaywall = !subscriptionStatusIsLoading &&
+        subscriptionStatus.shouldShowPaywall &&
+        shouldPresentPaywall
+    }
 }
 
 struct PaywallButtonModifier: ViewModifier {

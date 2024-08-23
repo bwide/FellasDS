@@ -36,24 +36,35 @@ public struct OnboardingPage<Option: View>: View {
     }
 
     public var body: some View {
-        VStack {
+        VStack(spacing: .ds.spacing.large) {
             Spacer()
-            content
-                .image
-                .padding(.horizontal, ds: .small)
-            ZStack(alignment: .leading) {
-                Color.ds.brand.tertiary
-                    .roundedCorners(.medium, corners: [.topLeft, .topRight])
-                VStack(spacing: .ds.spacing.large) {
-                    title
-                    picker
-                    Spacer()
-                }
-                .padding(.horizontal, ds: .large)
-            }
-            .zIndex(-1)
+            title
+            picker
         }
-        .ignoresSafeArea()
+        .padding(.horizontal, ds: .large)
+        .padding(.bottom, ds: .xxxLarge)
+        .padding(.bottom, ds: .xLarge)
+        .background {
+            GeometryReader { geo in
+                VStack(spacing: .zero) {
+                    content.image
+                        .frame(
+                            maxWidth: geo.size.width,
+                            maxHeight: 500
+                        )
+                        .overlay {
+                            LinearGradient(
+                                colors: [.clear, .ds.background.primary],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        }
+                    
+                    Color.ds.background.primary
+                }
+                .ignoresSafeArea()
+            }
+        }
     }
     
     var title: some View {
@@ -80,10 +91,8 @@ public struct OnboardingPage<Option: View>: View {
 
 #Preview {
     OnboardingPage {
-        Image(.illustration1)
+        Image(.paywallBg)
             .resizable()
-            .frame(height: 300)
-            .offset(y: 70)
         
         "What should a long title with two lines be?"
         

@@ -16,7 +16,15 @@ public enum Strings {
         String(
             localized: "Subscribe",
             bundle: .module.localizedBundle,
-            comment: "subscribe <to this app>"
+            comment: "Subscribe <to this app>"
+        )
+    }
+    
+    static var `continue`: String {
+        String(
+            localized: "Continue",
+            bundle: .module.localizedBundle,
+            comment: "Continue <to app>"
         )
     }
     
@@ -33,6 +41,46 @@ public enum Strings {
             localized: "restore",
             bundle: .module.localizedBundle,
             comment: "Restore"
+        )
+    }
+    
+    static var dayly: String {
+        String(
+            localized: "subscription.period.day",
+            bundle: .module.localizedBundle,
+            comment: "Daily"
+        )
+    }
+    
+    static var weekly: String {
+        String(
+            localized: "subscription.period.week",
+            bundle: .module.localizedBundle,
+            comment: "Weekly"
+        )
+    }
+    
+    static var monthly: String {
+        String(
+            localized: "subscription.period.month",
+            bundle: .module.localizedBundle,
+            comment: "Monthly"
+        )
+    }
+    
+    static var yearly: String {
+        String(
+            localized: "subscription.period.year",
+            bundle: .module.localizedBundle,
+            comment: "Yearly"
+        )
+    }
+    
+    static var unknown: String {
+        String(
+            localized: "subscription.period.unknown",
+            bundle: .module.localizedBundle,
+            comment: "Unknown"
         )
     }
     
@@ -65,30 +113,6 @@ public enum Strings {
             localized: "paywall.privacy.policy",
             bundle: .module.localizedBundle,
             comment: "Privacy Policy"
-        )
-    }
-    
-    static var paywallReview1: String {
-        String(
-            localized: "paywall.review.1",
-            bundle: .module.localizedBundle,
-            comment: "Wonderful app with insightful commentary on daily Bible verses."
-        )
-    }
-    
-    static var paywallReview2: String {
-        String(
-            localized: "paywall.review.2",
-            bundle: .module.localizedBundle,
-            comment: "Great app for spiritual growth and daily scripture insights."
-        )
-    }
-    
-    static var paywallReview3: String {
-        String(
-            localized: "paywall.review.3",
-            bundle: .module.localizedBundle,
-            comment: "Daily verses inspire me and deepen my understanding of faith."
         )
     }
     

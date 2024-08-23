@@ -13,26 +13,86 @@ import Shiny
 
 @resultBuilder
 public enum PaywallBuilder {
-    public static func buildBlock<Label: View, TextLabel: View>(
-        _ text: TextLabel,
-        _ labels: Label...
-    ) -> PaywallContent {
-        PaywallContent(
-            paywallLabels: AnyView({
-                VStack(alignment: .leading, spacing: .ds.spacing.small) {
-                    ForEach(labels.indices, id: \.self) {
-                        labels[$0]
-                    }
-                    text
-                }
-            }())
-        )
+    
+    public static func buildFinalResult<Label: View>(_ component: Label) -> PaywallContent {
+        PaywallContent(paywallLabels: AnyView(
+            HStack {
+                component
+                Spacer(minLength: .zero)
+            }
+        ))
+    }
+    
+    public static func buildBlock<Label1: View>(
+        _ label1: Label1
+    ) -> some View {
+        VStack(alignment: .leading, spacing: .ds.spacing.small) {
+            label1
+        }
+    }
+    
+    public static func buildBlock<Label1: View, Label2: View>(
+        _ label1: Label1,
+        _ label2: Label2
+    ) -> some View {
+        VStack(alignment: .leading, spacing: .ds.spacing.small) {
+            label1
+            label2
+        }
+    }
+    
+    public static func buildBlock<Label1: View, Label2: View, Label3: View>(
+        _ label1: Label1,
+        _ label2: Label2,
+        _ label3: Label3
+    ) -> some View {
+        VStack(alignment: .leading, spacing: .ds.spacing.small) {
+            label1
+            label2
+            label3
+        }
+    }
+    
+    public static func buildBlock<
+        Label1: View, Label2: View, Label3: View, Label4: View
+    >(
+        _ label1: Label1,
+        _ label2: Label2,
+        _ label3: Label3,
+        _ label4: Label4
+    ) -> some View {
+        VStack(alignment: .leading, spacing: .ds.spacing.small) {
+            label1
+            label2
+            label3
+            label4
+        }
+    }
+    
+    public static func buildBlock<
+        Label1: View, Label2: View, Label3: View, Label4: View, Label5: View
+    >(
+        _ label1: Label1,
+        _ label2: Label2,
+        _ label3: Label3,
+        _ label4: Label4,
+        _ label5: Label5
+    ) -> some View {
+        VStack(alignment: .leading, spacing: .ds.spacing.small) {
+            label1
+            label2
+            label3
+            label4
+            label5
+        }
     }
 }
 
 public struct Paywall: View {
     
     @Environment(\.paywallType) var paywallType
+    
+    public init() {}
     
     public var body: some View {
         switch paywallType {
@@ -55,7 +115,7 @@ struct StandardPaywall: View {
     @Environment(\.subscriptionStatus) private var subscriptionStatus
     @Environment(\.dismiss) private var dismiss
     @Environment(\.analytics) private var analytics
-
+    
     private var paywallID = 1 // TODO
     @State var selection: Product?
     @State var subscriptions: [Product] = []

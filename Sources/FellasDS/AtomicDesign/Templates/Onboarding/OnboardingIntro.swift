@@ -30,39 +30,52 @@ public struct OnboardingIntro<Image: View>: View {
     }
     
     public var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Spacer()
-            content
-                .image
-                .padding(.horizontal, ds: .small)
-            ZStack(alignment: .leading) {
-                Color.ds.brand.tertiary
-                    .roundedCorners(.medium, corners: [.topLeft, .topRight])
-                headers
-                .padding(.top, ds: .xxLarge)
+            headers
+                .padding(.vertical, ds: .xxLarge)
                 .padding(.horizontal, ds: .large)
-            }
-            .zIndex(-1)
+                .padding(.bottom, ds: .xxxLarge)
         }
-        .ignoresSafeArea()
+        .background {
+            GeometryReader { geo in
+                VStack(spacing: .zero) {
+                    content.image
+                        .frame(
+                            maxWidth: geo.size.width,
+                            maxHeight: 500
+                        )
+                        .overlay {
+                            LinearGradient(
+                                colors: [.clear, .ds.background.primary],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        }
+                    
+                    Color.ds.background.primary
+                }
+                .ignoresSafeArea()
+            }
+        }
     }
     
     var headers: some View {
         VStack(alignment: .leading, spacing: .ds.spacing.large) {
+            Spacer()
             Text(content.title)
                 .textStyle(ds: .largeTitle)
             Text(content.subtitle)
                 .textStyle(ds: .title3)
-            Spacer()
         }
+        .frame(maxWidth: .infinity)
     }
 }
 
 
 #Preview {
     OnboardingIntro {
-        Image(.illustration1)
-            .offset(y: 90)
+        Image(.paywallBg).resizable()
         "Title"
         "subtitle"
     }

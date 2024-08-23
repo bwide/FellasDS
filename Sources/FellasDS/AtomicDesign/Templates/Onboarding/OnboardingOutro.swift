@@ -37,27 +37,36 @@ public struct OnboardingOutro<Image: View>: View {
     }
     
     public var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: .ds.spacing.xLarge) {
             Spacer()
-            content
-                .image
-                .padding(.horizontal, ds: .small)
-            ZStack(alignment: .leading) {
-                Color.ds.brand.tertiary
-                    .roundedCorners(.medium, corners: [.topLeft, .topRight])
-                VStack(alignment: .leading, spacing: .ds.spacing.xLarge) {
-                    Spacer()
-                    elipses
-                    Text(Strings.onboardingOutroTitle)
-                        .textStyle(ds: .largeTitle)
-                    progressBar
-                }
-                .padding(.vertical, ds: .xxLarge)
-                .padding(.horizontal, ds: .large)
-            }
-            .zIndex(-1)
+            elipses
+            Text(Strings.onboardingOutroTitle)
+                .textStyle(ds: .largeTitle)
+            progressBar
         }
-        .ignoresSafeArea()
+        .padding(.vertical, ds: .xxLarge)
+        .padding(.horizontal, ds: .large)
+        .background {
+            GeometryReader { geo in
+                VStack(spacing: .zero) {
+                    content.image
+                        .frame(
+                            maxWidth: geo.size.width,
+                            maxHeight: 500
+                        )
+                        .overlay {
+                            LinearGradient(
+                                colors: [.clear, .ds.background.primary],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        }
+                    
+                    Color.ds.background.primary
+                }
+                .ignoresSafeArea()
+            }
+        }
     }
     
     @ViewBuilder
@@ -103,7 +112,7 @@ extension OnboardingOutro {
 
 #Preview {
     OnboardingOutro {
-        Image(.illustration1)
-            .offset(y: 90)
+        Image(.paywallBg)
+//            .offset(y: 90)
     }
 }
